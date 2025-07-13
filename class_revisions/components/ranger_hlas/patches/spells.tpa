@@ -9,6 +9,10 @@ LAF get_table_references STR_VAR
 RET_ARRAY spells = references END
 
 LAF get_table_references STR_VAR
+    tables = "subspells"
+RET_ARRAY subspells = references END
+
+LAF get_table_references STR_VAR
     tables = "effects"
 RET_ARRAY effects = references END
 
@@ -48,6 +52,40 @@ END
 
 DEFINE_PATCH_FUNCTION archer_ranged_criticals STR_VAR destination = "*" BEGIN
     LPF add_display_string INT_VAR tra_ref = 10100 END
+END
+
+DEFINE_PATCH_FUNCTION archer_precision_a STR_VAR destination = "*" BEGIN
+    LPF get_table_ref STR_VAR
+        value = "archer_precision_kill"
+        array = "subspells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        verbose = 1
+        match_opcode = 146          //Cast spell.
+    STR_VAR
+        match_resource = "spl#res"
+        resource = "%res%"
+    END    
+END
+
+DEFINE_PATCH_FUNCTION archer_precision STR_VAR destination = "*" BEGIN
+    LPF get_table_ref STR_VAR
+        value = "archer_precision_a"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        verbose = 1
+        match_opcode = 341          //Critical hit effect.
+    STR_VAR
+        match_resource = "spl#res"
+        resource = "%res%"
+    END    
 END
 
 DEFINE_PATCH_FUNCTION stalker_improved_spellbook STR_VAR destination = "*" BEGIN

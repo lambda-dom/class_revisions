@@ -31,11 +31,11 @@ This ability can be chosen once.~
 This ability can be chosen once.~
 
 @1110 = ~Precision~
-@1111 = ~With proper concentration a skilled archer can render his attacks more precise and deadlier. When activating this ability, for 4 rounds the archer gains a bonus of +5 to his THAC0 with missile weapons, +8 bonus to damage and a 20% chance per hit to instantly killed the target on a failed save vs. death; the target must also make a save vs. breath at -2 to avoid the force of the hit and being knocked back.
+@1111 = ~With proper concentration a skilled archer can render his attacks more precise and deadlier. When activating this ability, for 4 rounds the archer gains a bonus of +5 to his THAC0 with missile weapons and +10 bonus to damage. Any critical hit will instantly kill the target on a failed save vs. death at a penalty of -2.
 
-Precision has its drawbacks: it requires intense concentration, making defense and movement more difficult. Until the ability expires, his casting speed is increased by 4 and his AC is penalized by -5..
+Precision has its drawbacks: it requires intense concentration, making defense and movement more difficult. Until the ability expires, his casting speed is increased by 4 and his AC is penalized by -4.
 
-This ability can be chosen more than once and requires Improved Range Criticals.~
+This ability can be chosen more than once and requires Improved Ranged Criticals.~
 
 //Stalker.
 @1200 = ~Improved Spellbook~
