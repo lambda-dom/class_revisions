@@ -1,8 +1,6 @@
 2DA V1.0
 *
                                 install patch   over    destination
-ranger_toughness                1       *       0       #suf:b:RANGER_TOUGHNESS
-ranger_toughness                1       *       0       #suf:c:RANGER_TOUGHNESS
 ranger_nature_endurance_b       1       *       0       #suf:b:RANGER_NATURE_ENDURANCE
 ranger_nature_endurance_c       1       *       0       #suf:c:RANGER_NATURE_ENDURANCE
 ranger_nature_guardian_b        1       *       0       #suf:b:RANGER_NATURE_GUARDIAN
