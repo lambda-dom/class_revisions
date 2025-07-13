@@ -1,0 +1,8 @@
+2DA V1.0
+****
+                                install amount  prerequisite
+AP_RANGER_AMBIDEXTERITY         1       1       *
+AP_RANGER_TOUGHNESS             1       1       *
+GA_RANGER_NATURE_GUARDIAN       1       1       *
+GA_BEASTMASTER_MONSTER_SWARM    1       1       *
+GA_BEASTMASTER_NATURE_POWER     1       1       GA_BEASTMASTER_MONSTER_SWARM

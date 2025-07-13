@@ -1,0 +1,309 @@
+//Spellcasting.
+@1000 = ~Spellcasting Initial Level Bonus~
+@1001 = ~Gives a permanent bonus of 4 levels to divine spellcasting.~
+
+@1010 = ~Paladin Spellbook~
+@1011 = ~Trims down the Paladin spellbook.~
+
+@1020 = ~Spell Slot Penalty~
+@1021 = ~Gives a penalty of 1 spell slot for divine spells in levels 1 through 5.~
+
+@1030 = ~Spellcasting per Level Bonus~
+@1031 = ~Gives a permanent bonus of +1 to divine caster level.~
+
+//Immunities.
+@1100 = ~Disease Immunity~
+@1101 = ~Gives permanent immunity to disease.~
+
+@1110 = ~Immunity to Fear~
+@1111 = ~Gives permanent immunity to fear.~
+
+@1120 = ~Immunity to Charm~
+@1121 = ~Gives permanent immunity to charm.~
+
+@1130 = ~Immunity to Paralysis~
+@1131 = ~Gives permanent immunity to hold and paralyze.~
+
+@1140 = ~Immunity to Confusion~
+@1141 = ~Gives permanent immunity to confusion.~
+
+
+//Existing abilities.
+@1200 = ~Lay on Hands~
+@1201 = ~Lay on Hands
+Level: 1
+School: Necromancy
+Range: Touch
+Duration: Instant
+Casting Time: 1
+Area of Effect: Creature
+Saving Throw: None
+
+With this ability, the Paladin heals a target for 2 hit points per caster level, up to 40 hit points at 20th level. At 6th level, it cures the target from any disease. At 9th level, it also neutralizes any poison and intoxication effects.~
+
+@1210 = ~Detect Evil~
+@1211 = ~Detect Evil
+Level: 1
+School: Divination
+Range: Personal
+Duration: Instant
+Casting Time: 1
+Area of Effect: 30' radius
+Saving Throw: None
+
+With this ability, the Paladin discovers emanations of evil from any creature. Any evil creature within the range of the spell will briefly glow red.~
+
+@1220 = ~Protection From Evil~
+@1221 = ~Protection From Evil
+Level: 1
+School: Abjuration
+Range: Personal
+Duration: 24 hours
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None 
+
+When the Paladin casts this spell, he becomes protected from a magical barrier raised at a distance of one foot. The barrier moves with him and has two major effects: first, all attacks made by evil creatures against the protected creature receive a -2 penalty to their attack roll, and second, any saving throws caused by such attacks are made by the protected creature with a +2 bonus.~
+
+//New abilities.
+@1300 = ~Smite Evil~
+@1301 = ~Smite Evil
+Level: 1
+School: Necromancy
+Range: Personal
+Duration: 1 round
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None
+
+During the round when this ability is activated the Paladin gains +2 bonus to attack rolls against evil creatures, and any melee hit against an evil creature inflicts 1d6 additional points of magic damage. For every 4 levels, the damage done increases by 1d6, up to a maximum of 5d6 at 16th level.~
+
+//Auras.
+@1400 = ~Aura of Protection~
+@1401 = ~Permanent aura inflicting -1 thac0 penalty to every enemy within range.~
+
+@1410 = ~Aura of Justice~
+@1411 = ~Permanent aura inflicting -1 penalty to damage rolls to every enemy within range.~
+
+@1420 = ~Aura of Faith~
+@1421 = ~Permanent aura giving +1 bonus to all saves of every ally within range.~
+
+
+//Cavalier abilities.
+@2000 = ~Cavalier Spellbook~
+@2001 = ~Trims down the Cavalier spellbook.~
+
+@2100 = ~Cavalier Shield Specialization~
+@2101 = ~Gives specialization in Sword and Shield style.~
+
+//Spells.
+@2200 = ~Shield of Faith~
+@2201 = ~Shield of Faith
+Level: 2
+School: Abjuration
+Range: Personal
+Duration: 1 turn
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None
+
+This spell grants the Paladin a +2 bonus to armor class and saves vs. breath for one turn. The bonus increases by +1 at level 11 and then again at level 16. Multiple castings of this spell are not cumulative.~
+
+@2210 = ~Divine Retaliation~
+@2211 = ~Divine Retaliation
+Level: 3
+School: Evocation
+Range: Personal
+Duration: 1 turn
+Casting Time: 5
+Area of Effect: Special
+Saving Throw: None
+
+This spell protects the Cavalier from attacks made within a 5' radius of the caster. Opponents that hit the caster with a weapon or spell from within this radius will suffer 1d8+4 points of magic damage. Multiple castings of this spell are not cumulative, but it can be used in conjunction with similar effects. The retaliation is not affected by magic resistance.~
+
+@2220 = ~Heroism~
+@2221 = ~Heroism
+Level: 4
+School: Enchantment
+Range: Long
+Duration: 1 turn
+Casting Time: 4
+Area of Effect: 30' radius
+Saving Throw: None
+
+Upon uttering this spell, the Paladin and his allies' morale is raised by 2, as well as attack and damage rolls. Furthermore, affected creatures hit points are raised by 10%, and these bonus hit points are lost first when the recipient takes damage. The caster determines at what range he will cast the spell. At the instant the spell is completed, it affects all creatures in a 30 feet radius centered on the point selected by the caster.~
+
+@2230 = ~Shield Other~
+@2231 = ~Shield Other
+Level: 1
+School: Abjuration
+Range: Long
+Duration: 5 rounds
+Casting Time: 1
+Area of Effect: Target
+Saving Throw: None
+
+When the Cavalier casts a Shield Other spell on an ally, it causes all of his opponents to ignore his existence, as if he were invisible. While protected by this spell, the ally cannot take direct offensive action without breaking the spell, but may use non-attack spells focused on himself or otherwise act in any way that does not violate the prohibition against offensive action. This allows him to heal his wounds, for example, or to cast protection spells on himself. He cannot cast spells on other targets without ending the effects of the spell.~
+
+@2240 = ~Hold the Line~
+@2241 = ~Hold the Line
+Level: 5
+School: Alteration
+Range: Personal
+Duration: 1 turn
+Casting Time: 1 round
+Area of Effect: Caster
+Saving Throw: None
+
+When the Cavalier casts this spell he becomes protected against any effects that would repel him, like knockback, Dragon's wing buffet, etc.~
+
+//Inquisitor abilities.
+//Spellcasting.
+@3000 = ~Disable Spellcasting~
+@3001 = ~Disables Spellcasting.~
+
+@3010 = ~Disable Turn Undead~
+@3011 = ~Disables Turn Undead.~
+
+//Existing abilities.
+@3100 = ~True Sight~
+@3101 = ~True Sight
+Level: 5
+School: Divination
+Range: Personal
+Duration: 1 turn
+Casting Time: 1
+Area of Effect: 30' radius
+Saving Throw: None 
+
+With this ability, the Inquisitor gains the ability to see the exact locations of creatures or objects under displacement or invisibility effects, and see through illusions. This effectively neutralize spells such as Blur and Mirror Image, allow the Inquisitor to see and target invisible creatures normally, and make him unaffected by hostile illusion spells such as Spook and Shadow Door. The Inquisitor is also cured from any form of blindness and is immune to it for the duration of the spell. The effects of this ability cannot be dispelled.
+
+Note: True Seeing does not dispel illusionary clones such as those conjured by Mislead or Simulacrum, but instead clearly highlights them, revealing them as deceptions.~
+
+@3110 = ~Dispel Evil~
+@3111 = ~Dispel Evil
+Level: 1
+School: Abjuration
+Range: 30'
+Duration: Instant
+Casting Time: 1
+Area of Effect: 15' radius
+Saving Throw: None
+
+With this ability, the Inquisitor removes magical effects upon every evil enemy within the area. This includes effects given from spells and certain magical items such as wands. It does not, however, affect enchanted magical items or spell protections such as Spell Turning and Spell Deflection. The chance of the dispel succeeding is determined by the level of the Inquisitor, counted as 1.5 times higher, and the level of the magic being dispelled. The base chance of successfully dispelling is 50%. For every level that the Inquisitor of the Dispel Magic is above the target, <PRO_HISHER> chance of success increases by 5%. For every level that the Inquisitor is below the target, <PRO_HISHER> chance of success decreases by 10%. However, despite the difference in levels, there is always at least a 5% chance of success or failure.
+
+Note: While this spell dispels the individual effects of Grease, Web, Stinking Cloud, and other such spells, it does not dispel the area of effect.~
+
+//New abilities.
+@3200 = ~Banish Evil~
+@3201 = ~Banish Evil
+Level: 5
+School: Abjuration
+Range: Long
+Duration: Instant
+Casting Time: 1
+Area of Effect: 30' radius
+Saving Throw: None
+
+With this ability, the Inquisitor banishes evil, enemy summoned creatures in the area back to their proper plane. Magic resistance does not effect this spell.~
+
+@3300 = ~Iron Will~
+@3301 = ~Gives a permanent bonus of +1 to Save vs. spells.~
+
+//Undead hunter spells abilities.
+@4000 = ~Undead Hunter Spellbook~
+@4001 = ~Trims down the Unded Hunter spellbook.~
+
+@4010 = ~Turn Undead Bonus~
+@4011 = ~Grants a permanent bonus of +2 to Turn Undead level.~
+
+//Immunities.
+@4100 = ~Immunity to Level Drain~
+@4101 = ~Gives permanent immunity to level drain.~
+
+//New spells.
+@4200 = ~Halt Undead~
+@4201 = ~Halt Undead
+Level: 1
+School: Necromancy
+Range: Long
+Duration: 1 turn
+Casting Time: 2
+Area of Effect: Target, and enemies within 5'
+Saving Throw: Spell negates
+
+This spell stops undead creatures in their place for the duration of the spell. The effect is centered on the victim selected by the caster. Any undead creatures within 5 feet of the target are also affected. Those who succeed at a saving throw vs. spell at -2 are totally unaffected by the spell.~
+
+@4210 = ~Undead Bane~
+@4211 = ~Undead Bane
+Level: 2
+School: Necromancy
+Range: Personal
+Duration: 1 turn
+Casting Time: 3
+Area of Effect: Caster
+Saving Throw: None
+
+For the duration of this spell, the Undead Hunter has a bonus of +3 to thac0 and damage against undead. Multiple castings of this spell are not cumulative.~
+
+@4220 = ~Exorcism~
+@4221 = ~Exorcism
+Level: 3
+School: Necromancy
+Range: Personal
+Duration: 1 turn
+Casting Time: 4
+Area of Effect: Caster
+Saving Throw: None
+
+For the duration of this spell, any undead creature struck in melee by the Undead Hunter must make a save vs. spell or be destroyed. The save gains a penalty of -1 at level 17, increased to -2 at level 20. This spell is not affected by magic resistance. Multiple castings of Exorcism are not cumulative.~
+
+@4230 = ~Smite Undead~
+@4231 = ~Smite Undead
+Level: 4
+School: Necromancy
+Range: Long
+Duration: Special
+Casting Time: 3
+Area of Effect: 20' radius
+Saving Throw: Special
+
+With this spell the Undead Hunter draws down holy power to smite the undead. Undead creatures within the area of effect take 12d6 points of magic damage, with a successful saving throw vs. spell for half at a penalty of -2. Magic resistance does not affect this spell.~
+
+@4240 = ~Animate Skeleton Warrior~
+@4241 = ~Animate Skeleton Warrior
+Level: 5
+School: Necromancy
+Range: Long
+Duration: 5 turns
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+High-level Undead Hunters can use their necromantic powers to seek out and destroy undead abominations. With this spell, the Undead Hunter animates the corpse of a powerful skeleton warrior to aid him in battle. This powerful undead creature will remain under the caster's control until it is slain or the spell duration expires.
+~
+
+//Ability gaining strings.
+@10000 = ~Gained +4 casting level bonus.~
+@10005 = ~Gained +1 casting level bonus.~
+@10010 = ~Lost one spell per level.~
+@10020 = ~Gained immunity to all diseases.~
+@10030 = ~Gained immunity to fear.~
+@10040 = ~Gained immunity to charm.~
+@10050 = ~Gained immunity to paralysis.~
+@10060 = ~Gained immunity to confusion.~
+@10100 = ~Gained Aura of Protection.~
+@10110 = ~Gained Aura of Justice.~
+@10120 = ~Gained Aura of Faith.~
+
+//Cavalier ability gaining strings.
+@11000 = ~Gained specialization in Sword and Shield style.~
+
+//Inquisitor ability gaining strings.
+@12000 = ~Spellcasting Disabled.~
+@12001 = ~Turn Undead Disabled.~
+@12002 = ~Gained +1 to Saves vs. Spells.~
+
+//Kit ability gaining strings.
+@13000 = ~Gained immunity to level drain.~
+@13001 = ~Gained a bonus of +2 to the Turn Undead level.~

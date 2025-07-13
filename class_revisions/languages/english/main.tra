@@ -1,0 +1,19 @@
+//Component names.
+@1 = "Paladin"
+@2 = "Paladin HLA's"
+@3 = "Blackguard"
+@4 = "Blackguard HLA's"
+@5 = "Ranger"
+@6 = "Ranger HLA's"
+@11 = "Weapon Styles"
+
+//Error strings.
+//Engine error strings.
+@100 = "Mod only for BG2 enhanced edition games."
+
+//Engine error strings.
+@150 = "Requires the 'Paladin' component."
+@151 = "Main component of Spell Revisions mod required."
+@152 = "Requires the 'Blackguard' component."
+@153 = ~Requires the "Paladin HLA's" component.~
+@154 = "Requires the 'Ranger' component."

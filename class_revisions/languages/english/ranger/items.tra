@@ -1,0 +1,59 @@
+//Descriptions for arrows created by the Fashion Arrows.
+@1000 = "Frost Arrows +1"
+@1001 = "These Frost Arrows were created by the Archer's ability Fashion Arrows.
+
+STATISTICS:
+
+Combat Abilities:
+  Frost: creatures struck suffer 1d4 cold damage
+
+THAC0: +1 bonus
+Damage: 1d6 + 1
+Damage type: missile
+Weight: 0
+Launcher: Bow"
+
+@1010 = "Poisoned Arrows +1"
+@1011 = "These Poisoned Arrows were created by the Archer's ability Fashion Arrows.
+
+STATISTICS:
+
+Combat Abilities:
+  Empoisoned: creatures struck are poisoned on a failed save vs. poison, suffering 1 poison damage per third of a round for 3 rounds
+
+THAC0: +1 bonus
+Damage: 1d6 + 1
+Damage type: missile
+Weight: 0
+Launcher: Bow"
+
+@1020 = "Flaming Arrows +2"
+@1021 = "These Flaming Arrows were created by the Archer's ability Fashion Arrows.
+
+STATISTICS:
+
+Combat Abilities:
+  Flaming: creatures struck suffer 1d6 fire damaged
+
+THAC0: +2 bonus
+Damage: 1d6 + 2
+Damage type: missile
+Weight: 0
+Launcher: Bow"
+
+@1030 = "Acidic Arrows +3"
+@1031 = "These Acidic Arrows were created by the Archer's ability Fashion Arrows.
+
+STATISTICS:
+
+Combat Abilities:
+  Acidic: creatures struck suffer 1d4 acid damage, and on a failed save vs. breath an 1d4 acid damage on the following round
+
+THAC0: +3 bonus
+Damage: 1d6 + 3
+Damage type: missile
+Weight: 0
+Launcher: Bow"
+
+//Summon items.
+@1100 = "Panther Claws"

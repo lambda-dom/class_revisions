@@ -1,0 +1,16 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/kits.tpa"
+
+
+//Get reference tables.
+LAF get_table_references STR_VAR
+    tables = "ranger_spells:archer_spells:stalker_spells:beastmaster_spells"
+RET_ARRAY spl_references = references END
+
+
+//Patches.
+DEFINE_PATCH_FUNCTION make_table_replacements STR_VAR destination = "*" BEGIN
+    LPF make_clab_replacements STR_VAR array = "spl_references" END
+END

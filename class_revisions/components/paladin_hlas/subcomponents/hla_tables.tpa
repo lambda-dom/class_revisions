@@ -1,0 +1,76 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/hlas.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/spells.tpa"
+
+
+//Deduplicate tables.
+DEFINE_ACTION_FUNCTION deduplicate_tables BEGIN
+    //Deduplicate tables.
+    ACTION_DEFINE_ASSOCIATIVE_ARRAY kits BEGIN
+        "cavalier"      => "pa1"
+        "inquisitor"    => "pa2"
+        "undead_hunter" => "pa3"
+    END
+
+    LAF get_hla_table STR_VAR kit = "paladin" RET paladin_table = table END
+    ACTION_PHP_EACH kits AS kit => table BEGIN
+        LAF get_hla_table STR_VAR kit = "%kit%" RET original = table END
+        ACTION_IF ("%paladin_table%" STRING_EQUAL_CASE "%original%") BEGIN
+            LAF replace_table STR_VAR
+                kit = "%kit%"
+                original = "%original%"
+                new = "%table%"
+            END
+        END
+    END
+END
+
+//Table patches.
+DEFINE_PATCH_FUNCTION restrict_summon_deva BEGIN
+    PATCH_FOR_EACH hla IN
+        "PALADIN_SUMMON_DEVA"
+    BEGIN
+        LPF get_spell_res STR_VAR spell = "%hla%" RET res = resource END
+        PATCH_IF NOT ("%res%" STRING_EQUAL_CASE "*") BEGIN
+            //Check if ability is in.
+            LPF find_row_index INT_VAR col = 1 STR_VAR key = "GA_%res%" RET is_in_table = index END
+            PATCH_IF NOT (is_in_table = 0 - 1) BEGIN
+                LPF set_hla_attributes INT_VAR num_allowed = 1 STR_VAR hla = "GA_%res%" END
+            END
+        END ELSE BEGIN
+            PATCH_FAIL "restrict_summon_deva: hla '%hla%' not found."
+        END
+    END
+END
+
+DEFINE_ACTION_FUNCTION patch_paladin_hla_tables BEGIN
+    ACTION_FOR_EACH kit IN
+        "paladin"
+        "cavalier"
+        "inquisitor"
+        "undead_hunter"
+    BEGIN
+        LAF get_hla_table STR_VAR kit = "%kit%" RET table END
+
+        //Sanitize.
+        ACTION_IF ("%table%" STRING_EQUAL_CASE "*") BEGIN
+            FAIL "patch_hla_tables: hla table of kit '%kit%' not found."
+        END
+
+        //Patch.
+        LAF get_component_resources_dir RET resources = dir END
+        COPY_EXISTING "%table%.2da" "override"
+            //Restrict devas.
+            LPF restrict_summon_deva END
+
+            //Do additions and deletions.
+            LPF delete_hlas STR_VAR table = "%resources%/2da/%kit%_hlas_delete.2da" END
+            LPF add_hlas STR_VAR table = "%resources%/2da/%kit%_hlas_add.2da" END
+        PRETTY_PRINT_2DA
+        BUT_ONLY
+    END
+END
+
+//Main loop.
+LAF deduplicate_tables END
+LAF patch_paladin_hla_tables END

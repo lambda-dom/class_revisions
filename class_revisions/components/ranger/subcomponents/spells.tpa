@@ -1,0 +1,30 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+
+
+//Install spells.
+DEFINE_ACTION_FUNCTION install_ranger_spells BEGIN
+    //Initialization.
+    LAF get_component_root RET root = dir END
+    LAF get_component_resources_dir RET resources = dir END
+    LAF get_component_tra_dir RET tra = dir END
+
+    //Install spells.
+    ACTION_FOR_EACH kit IN
+        "ranger"
+        "archer"
+        "stalker"
+        "beastmaster"
+    BEGIN
+        LAF install_resources STR_VAR
+            type = "spell"
+            table = "%resources%/2da/%kit%_spells.2da"
+            tra = "%tra%/%kit%_spells.tra"
+            patches = "%root%/patches/%kit%_spells.tpa"
+        END
+    END
+END
+
+//Main loop.
+LAF install_ranger_spells END

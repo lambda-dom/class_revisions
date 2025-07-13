@@ -1,0 +1,105 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/spells.tpa"
+
+
+//Get reference tables. Separately to avoid reference clashing.
+LAF get_table_references STR_VAR
+    tables = "effects"
+RET_ARRAY eff_references = references END
+
+LAF get_table_references STR_VAR
+    tables = "subspells"
+RET_ARRAY subspl_references = references END
+
+LAF get_table_references STR_VAR
+    tables = "spells"
+RET_ARRAY spl_references = references END
+
+
+//Patches.
+//Demonic Wrath.
+DEFINE_PATCH_FUNCTION demonic_wrath BEGIN
+    LPF get_array_element STR_VAR
+        array = "subspl_references"
+        key = "demonic_wrath_knockback"
+    RET res = value END
+
+    PATCH_IF ("%res%" STRING_EQUAL_CASE "*") BEGIN
+        PATCH_FAIL "demonic_wrath: subspell 'demonic_wrath_knockback' not found"
+    END
+
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "knck#res"
+        resource = "%res%"
+    END
+END
+
+//Demonic Aura.
+DEFINE_PATCH_FUNCTION demonic_aura BEGIN
+    LPF get_array_element STR_VAR
+        array = "eff_references"
+        key = "fire_damage_2d6"
+    RET res = value END
+
+    //Patch-in melee effect.
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        verbose = 1
+        match_opcode = 248          //Melee effect.
+    STR_VAR
+        match_resource = ""
+        resource = "%res%"
+    END
+
+    LPF get_array_element STR_VAR
+        array = "spl_references"
+        key = "demonic_aura_a"
+    RET res = value END
+
+    //Retaliation.
+    PATCH_WITH_SCOPE BEGIN
+        LPF ALTER_EFFECT INT_VAR
+            check_globals = 0
+            verbose = 1
+            match_opcode = 232      //Cast spell on condition.
+        STR_VAR
+            match_resource = ""
+            resource = "%res%"
+        END
+    END
+END
+
+//Abyssal Shield.
+DEFINE_PATCH_FUNCTION abyssal_shield BEGIN
+    LPF get_spell_res STR_VAR spell = "CLERIC_MAGIC_RESISTANCE" RET res = resource END
+    PATCH_IF NOT ("%res%" STRING_EQUAL_CASE "*") BEGIN
+        LPF CLONE_EFFECT INT_VAR
+            check_globals = 0
+            verbose = 1
+            match_opcode = 321          //Remove effects by resource.
+        STR_VAR
+            insert = "first"
+            resource = "%res%"
+        END
+
+        LPF CLONE_EFFECT INT_VAR
+            check_globals = 0
+            verbose = 1
+            match_opcode = 27           //Acid resistance bonus.
+            opcode = 206                //Protection from spell.
+            parameter1 = 0              //Clean parameters.
+            parameter2 = 0
+        STR_VAR
+            insert = "last"
+            resource = "%res%"
+        END
+    END ELSE BEGIN
+        PATCH_FAIL "abyssal_shield: resource for 'CLERIC_MAGIC_RESISTANCE' not found."
+    END
+END

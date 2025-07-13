@@ -1,0 +1,58 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/internal/patchers.tpa"
+
+
+//Load references.
+LAF get_component_resources_dir RET resources = dir END
+LAF get_table_references STR_VAR
+    tables = "items"
+RET_ARRAY items = references END
+
+
+//Patches.
+DEFINE_PATCH_FUNCTION shambling_mound STR_VAR destination = "*" BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "shambling_mound_fists"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "shambling_mound_ring"
+        slot = "rring"
+        array = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION greater_wyvern STR_VAR destination = "*" BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "wyvern_bite"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "wyvern_head"
+        slot = "helmet"
+        array = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION black_spider STR_VAR destination = "*" BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "black_spider_sting"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "black_spider_ring"
+        slot = "rring"
+        array = "items"
+    END
+END

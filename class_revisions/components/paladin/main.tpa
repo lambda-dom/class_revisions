@@ -1,0 +1,55 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+
+
+//Initialization.
+LAF get_component_root RET root = dir END
+LAF get_component_resources_dir RET resources = dir END
+LAF get_component_tra_dir RET tra = dir END
+
+//Install spell symbols.
+LAF install_resources STR_VAR
+    type = "add_symbol"
+    table = "%resources%/2da/symbols.2da"
+END
+
+//Install icons.
+LAF install_resources STR_VAR
+    type = "icon"
+    table = "%resources%/2da/icons.2da"
+END
+
+//Install projectiles.
+LAF install_resources STR_VAR
+    type = "add_projectile"
+    table = "%resources%/2da/projectiles.2da"
+END
+
+//Install effects.
+LAF install_resources STR_VAR
+    type = "create_effect"
+    table = "%resources%/2da/effects.2da"
+END
+
+//Install spells.
+//In its own component to force reloading of ids files.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/spells.tpa"
+END
+
+//Install ability tables.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/tables.tpa"
+END
+
+//Patch proficiencies.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/proficiencies.tpa"
+END
+
+//Patch descriptions.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/descriptions.tpa"
+    tra = "%tra%/kits.tra"
+END

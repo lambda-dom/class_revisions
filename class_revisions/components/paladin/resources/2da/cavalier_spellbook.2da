@@ -1,0 +1,30 @@
+2DA V1.0
+****
+                                    level   base
+CLERIC_DOOM                         1       1
+CLERIC_MAGIC_STONE                  1       1
+CLERIC_HOLD_PERSON                  2       1
+CLERIC_FIND_TRAPS                   2       1
+CLERIC_SILENCE_15_FOOT              2       1
+CLERIC_RIGID_THINKING               3       1
+CLERIC_ANIMATE_DEAD                 3       1
+CLERIC_MISCAST_MAGIC                3       1
+CLERIC_HOLY_SMITE                   3       1
+CLERIC_UNHOLY_BLIGHT                3       1
+CLERIC_MENTAL_DOMINATION            4       1
+CLERIC_POISON                       4       1
+CLERIC_SLAY_LIVING                  5       1
+CLERIC_FLAME_STRIKE                 5       1
+CLERIC_RAISE_DEAD                   5       1
+CLERIC_CAUSE_LIGHT_WOUNDS           1       0
+CLERIC_CAUSE_MODERATE_WOUNDS        2       0
+CLERIC_CAUSE_MEDIUM_WOUNDS          3       0
+CLERIC_CAUSE_SERIOUS_WOUNDS         4       0
+CLERIC_CAUSE_CRITICAL_WOUNDS        5       0
+CLERIC_CONTAGION                    3       0
+CLERIC_REPULSION                    5       0
+CLERIC_CURSE                        1       0
+CLERIC_CAUSE_DISEASE                3       0
+CLERIC_CIRCLE_OF_BONES              3       0
+CLERIC_CLOUD_OF_PESTILENCE          4       0
+CLERIC_MASS_CAUSE_LIGHT_WOUNDS      5       0

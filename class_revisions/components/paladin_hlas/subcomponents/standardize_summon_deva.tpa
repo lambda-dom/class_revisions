@@ -1,0 +1,28 @@
+//Libraries.
+INCLUDE "%library_dir%/spells.tpa"
+
+
+//Standardize deva duration.
+WITH_SCOPE BEGIN
+    LAF get_spell_res STR_VAR spell = "PALADIN_SUMMON_DEVA" RET res_name = resource END
+    ACTION_IF NOT ("%res_name%" STRING_EQUAL_CASE "*") BEGIN
+        COPY_EXISTING "%res_name%.spl" "override"
+            tlk_ref = RESOLVE_STR_REF ((AT 1000))
+            LPF set_spell_field STR_VAR field = "descr" value = "%tlk_ref%" END
+
+            //Delete spurious headers.
+            FOR (i = 14; i <= 20; ++i) BEGIN
+                LPF DELETE_SPELL_HEADER INT_VAR min_level = i header_type = 1 END
+            END
+
+            //Alter duration.
+            LPF ALTER_SPELL_EFFECT INT_VAR
+                check_globals = 0
+                match_opcode = 177          //Use Eff.
+                duration = 300
+            END
+        BUT_ONLY
+    END ELSE BEGIN
+        FAIL "standardize_summon_deva: id of spell '%spell%' not found."
+    END
+END

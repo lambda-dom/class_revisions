@@ -1,0 +1,237 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/spells.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/internal/patchers.tpa"
+
+//Mod libraries.
+INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
+
+
+//Reference tables.
+LAF get_table_references STR_VAR
+    tables = "effects"
+RET_ARRAY effects = references END
+
+LAF get_table_references STR_VAR
+    tables = "ranger_spells"
+RET_ARRAY spells = references END
+
+LAF get_table_references STR_VAR
+    tables = "subspells"
+RET_ARRAY subspells = references END
+
+
+//Ranger spellcasting level bonus.
+DEFINE_PATCH_FUNCTION ranger_spell_initial_level BEGIN
+    //Inform user.
+    LPF add_display_string INT_VAR tra_ref = 10000 END
+END
+
+DEFINE_PATCH_FUNCTION ranger_spell_level_bonus BEGIN
+    //Inform user.
+    LPF add_display_string INT_VAR tra_ref = 10005 END
+END
+
+DEFINE_PATCH_FUNCTION ranger_spellbook_ranger BEGIN
+    LPF get_component_resources_dir RET dir END
+    LPF compose_spellbook STR_VAR
+        table = "%dir%/2da/ranger_spellbook.2da"
+    END
+END
+
+DEFINE_PATCH_FUNCTION ranger_spellbook_cleric_ranger BEGIN
+    LPF ranger_spellbook_ranger END
+
+    //Removal of druidic spells of level >= 5.
+    LPF gather_druid_spells RET_ARRAY exclusions = array END
+    PHP_EACH exclusions AS spell => level BEGIN
+        PATCH_IF level >= 5 BEGIN
+            LPF get_spell_res STR_VAR
+                spell = "%spell%"
+            RET res = resource END
+
+            LPF ADD_SPELL_EFFECT INT_VAR
+                opcode = 172            //Remove spell.
+                target = 2
+                timing = 4              //Delayed as in KR; with instant, sometimes it did not apply.
+                duration = 1
+                insert_point = 0 - 1    //Append.
+            STR_VAR
+                resource = "%res%"
+            END
+        END
+    END
+END
+
+DEFINE_PATCH_FUNCTION ranger_spellbook BEGIN
+    LPF get_table_ref STR_VAR
+        value = "ranger_spellbook_ranger"
+        array = "effects"
+        ext = "eff"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        match_opcode = 177              //Use eff.
+    STR_VAR
+        match_resource = "bkrn#res"
+        resource = "%res%"
+    END
+
+    LPF get_table_ref STR_VAR
+        value = "ranger_spellbook_cleric_ranger"
+        array = "effects"
+        ext = "eff"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        match_opcode = 177              //Use eff.
+    STR_VAR
+        match_resource = "bkcr#res"
+        resource = "%res%"
+    END
+END
+
+//Woodland Stride.
+DEFINE_PATCH_FUNCTION ranger_woodland_stride BEGIN
+    PATCH_FOR_EACH spell IN
+        "CLERIC_ENTANGLE"
+        "CLERIC_SPIKE_GROWTH"
+    BEGIN
+        LPF get_spell_res STR_VAR spell = "%spell%" RET resource END
+        PATCH_IF NOT ("%resource%" STRING_EQUAL_CASE "*") BEGIN
+            LPF ADD_SPELL_EFFECT INT_VAR
+                opcode = 206                    //Protection from spell.
+                target = 2
+                timing = 4                      //KR implementation detail.
+                duration = 1
+            STR_VAR
+                resource = "%resource%"
+            END
+        END ELSE BEGIN
+            PATCH_FAIL "ranger_woodland_stride: spell '%spell%' not found in 'spell.ids'."
+        END
+    END
+
+    //Inform user.
+    LPF add_display_string INT_VAR tra_ref = 10010 END
+END
+
+//Quary.
+DEFINE_PATCH_FUNCTION ranger_quarry BEGIN
+    LPF get_table_ref STR_VAR
+        value = "ranger_quarry_a"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        verbose = 1
+        match_opcode = 146              //Cast spell.
+    STR_VAR
+        match_resource = "quar#res"
+        resource = "%res%"
+    END
+END
+
+//Blades of Fire.
+DEFINE_PATCH_FUNCTION ranger_blades_fire BEGIN
+    //Patch melee effect.
+    LPF get_table_ref STR_VAR
+        value = "ranger_fire_blade_damage"
+        array = "effects"
+        ext = "eff"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        verbose = 1
+        match_opcode = 248              //Melee effect.
+    STR_VAR
+        match_resource = "fire#res"
+        resource = "%res%"
+    END
+
+    //Protection against spells.
+    PATCH_FOR_EACH resource IN
+        "potn13"                        //Oil of fiery burning.
+    BEGIN
+        LPF CLONE_EFFECT INT_VAR
+            check_globals = 0
+            verbose = 1
+            match_opcode = 321          //Remove effects by resource.
+            opcode = 321
+        STR_VAR
+            resource = "%resource%"
+            insert = "below"
+        END
+
+        LPF CLONE_EFFECT INT_VAR
+            check_globals = 0
+            verbose = 1
+            match_opcode = 321          //Remove effects by resource.
+            opcode = 206                //Protection from spell.
+            parameter1 = 0              //Cleaning.
+            parameter2 = 0
+            power = 1
+            timing = 0
+            dispel_resistance = 3
+            duration = 30
+        STR_VAR
+            match_resource = "%resource%"
+            resource = "%resource%"
+            insert = "last"
+        END
+    END
+END
+
+//Snare.
+DEFINE_PATCH_FUNCTION ranger_snare BEGIN
+    LPF get_table_ref STR_VAR
+        value = "ranger_snare_entangle"
+        array = "subspells"
+        ext = "spl"
+    RET res = resource END
+
+    //Cast subspell.
+    LPF ADD_SPELL_EFFECT INT_VAR
+        opcode = 146                        //Cast spell.
+        parameter2 = 1                      //Instantly.
+        target = 2
+        power = 2
+        timing = 1
+        savingthrow = 1 << 1                //Save vs. breath.
+        savebonus = 0 - 2
+    STR_VAR
+        resource = "%res%"
+    END
+END
+
+//Swift haste.
+DEFINE_PATCH_FUNCTION ranger_swift_haste BEGIN
+    LPF get_sectype_id STR_VAR sectype = "k1#slow" RET slow = id END
+    LPF get_sectype_id STR_VAR sectype = "k1#haste" RET haste = id END
+
+    //Set sectype on spell.
+    PATCH_IF NOT (haste = 0 - 1) BEGIN
+        LPF set_spell_field STR_VAR field = "sectype" value = "%haste%" END
+    END ELSE BEGIN
+        PATCH_FAIL "ranger_swift_haste: sectype 'k1#haste' not found."
+    END
+
+    //Counteract slow.
+    PATCH_IF NOT (slow = 0 - 1) BEGIN
+        LPF ADD_SPELL_EFFECT INT_VAR
+            opcode = 221                    //Remove spell protections by sectype.
+            target = 2
+            power = 3
+            parameter1 = 9                  //Max level.
+            parameter2 = slow
+            timing = 1
+            insert_point = 0                //First.
+        END
+    END ELSE BEGIN
+        PATCH_FAIL "ranger_swift_haste: sectype 'k1#slow' not found."
+    END
+END

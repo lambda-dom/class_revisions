@@ -1,0 +1,4 @@
+2DA V1.0
+*
+                    install subspell    name    descr   arg1    arg2    arg3    school  sectype patch   override    destination
+purge_evil_blind    1       blind       *       *       1       *       *       *       *       *       0           #suf:a:PALADIN_PURGE_EVIL

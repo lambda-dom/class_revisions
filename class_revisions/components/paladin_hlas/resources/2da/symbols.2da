@@ -1,0 +1,9 @@
+2DA V1.0
+*
+                                install type    level   patch   override    destination
+PALADIN_EXTRA_SPELLS            1       class   7       *       0           *
+PALADIN_HOLY_PURGE              1       class   7       *       0           *
+PALADIN_PURGE_EVIL              1       class   7       *       0           *
+PALADIN_FORTRESS_AGAINST_EVIL   1       class   7       *       0           *
+PALADIN_HOLY_SHIELD             1       class   7       *       0           *
+INQUISITOR_SIGHT                1       class   7       *       0           *

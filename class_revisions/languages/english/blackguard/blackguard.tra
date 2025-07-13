@@ -1,0 +1,25 @@
+//Description strings.
+@1040 = ~BLACKGUARD: The Blackguard epitomizes evil and is nothing short of a mortal fiend. The quintessential black knight, this villain carries a reputation of the foulest sort that is very well deserved. Consorting with demons and devils and serving the dark deities, the Blackguard is hated and feared by all. Some people call these villains "anti-paladins" due to their evil nature.
+
+Advantages:
+- Is immune to fear and becomes immune to poison at level 5.
+- May use the Absorb Health ability once per day, starting at level 1. At level 10 gains a second use.
+- May use the Poison Weapon ability once per day. Gains one use at level 1, one use at level 5, and an additional use every 5 levels thereafter, for a maximum of 5 uses at level 20.
+- At level 5 gains the ability to cast divine spells as a cleric of the same level, but from a smaller spellbook with unique spells.
+- At level 11 gains Aura of Vengeance.
+
+Absorb Health:
+- Deals 2 points of damage per level to an enemy, to a maximum of 40 at level 20, healing the Blackguard the same number of Hit Points.
+
+Poison Weapon
+- Each successful hit within the next 5 rounds will inject poison into the target. Each target can only be affected once per round. The amount of poison damage depends on the character's level:
+
+Aura of Vengeance:
+Enemies within 15 feet of the paladin suffer -1 penalty to attack rolls. At level 14, the aura also imposes a -1 penalty to the enemies's armor class. At level 17, enemies within the aura get a penalty of -1 to all saves.
+
+Disadvantages:
+- Alignment restricted to evil.
+- May not cast Detect Evil.
+- May not use the Lay on Hands ability.
+- May not use Smite Evil.
+- Does not gain Aura of Protection.~

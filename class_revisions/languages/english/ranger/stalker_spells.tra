@@ -1,0 +1,57 @@
+//Changed abilities.
+@1000 = ~Stealth Bonus~
+@1001 = ~With this ability the Stalker gains a permanent bonus of +20 to stealth.~
+
+
+//Stalker spells.
+@1100 = ~Camouflage~
+@1101 = ~Camouflage
+Level: 1
+School: Alteration
+Range: Personal
+Duration: Special
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None
+
+This spell causes the caster to perfectly blend with the environment, and to effectively vanish from sight and be undetectable by normal vision or even infravision. Of course, the invisible creature is not magically silenced, and certain other conditions can render the creature detectable. The caster cannot perform any actions that manipulate the environment around him such as opening doors, disarming traps, or opening chests. An invisible creature can drink a potion, or cast non-attack spells centered on himself and remain invisible, but he cannot attack nor cast spells on other targets without ending the spell. The spell remains in effect until it is magically broken or dispelled, until the recipient attacks any creature, or until 5 rounds have passed.~
+
+@1110 = ~Non-detection~
+@1111 = ~Non-Detection
+Level: 2
+School: Abjuration
+Range: Personal
+Duration: 8 hours
+Casting Time: 3
+Area of Effect: Caster
+Saving Throw: None
+
+By casting this spell, the caster makes himself undetectable by divination spells such as Detect Invisibility, Oracle, and True Seeing, or by a thief's Detect Illusion ability, though an invisible person may still be audible when moving and his presence may still be sensed. Non-Detection wards the caster's gear as well.~
+
+@1120 = ~Improved Camouflage~
+@1121 = ~Improved Camouflage
+Level: 3
+School: Alteration
+Range: Personal
+Duration: Special
+Casting Time: 4
+Area of Effect: Caster
+Saving Throw: None
+
+This spell is similar to the Camouflage spell, but the recipient is able to attack, either by missile discharge, melee combat, or spellcasting, and remain unseen. Note, however, that there are sometimes telltale traces, a shimmering, that enable observant opponents to approximate the invisible character's whereabouts. These traces are only noticeable when specifically looked for, after the creature has made his presence known. Once the character has revealed himself, opponents can attempt to attack him with conventional weapons, though they do so with a -4 penalty to the attack roll, or they may cast area of effect spells near his position. Opponents remain unable to directly target the invisible creature with spells, scrolls, or abilities until the spell duration expires or the invisibility is dispelled.~
+
+@1130 = ~Shadow Step~
+@1131 = ~Shadow Step
+Level: 4
+School: Illusion
+Range: Personal
+Duration: 5 rounds
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None
+
+When the spell is cast, a dimensional portal opens up in front of the caster, which allows him to flee to any place within sight. Upon passing through the portal, the caster turns invisible and finds himself at his chosen destination. The caster always arrives at exactly the spot desired, and any spells about to be cast upon the caster will fail, and missiles about to hit him will instead hit thin air. The invisibility lasts for 5 rounds or until it is dispelled.~
+
+
+//Ability gain strings.
+@10000 = ~Gained +20 bonus to Stealth.~

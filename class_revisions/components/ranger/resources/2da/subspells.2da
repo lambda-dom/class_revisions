@@ -1,0 +1,5 @@
+2DA V1.0
+*
+                        install subspell        name    descr   arg1    arg2        arg3        school      sectype         patch   over    destination
+ranger_snare_entangle   1       entangle        *       *       2       *           *           abjurer     disabling       *       0       #suf:a:RANGER_SNARE
+archer_falcon_eye_sleep 1       unconsciousness *       *       1       *           *           abjurer     disabling       *       0       #suf:a:ARCHER_FALCON_EYE

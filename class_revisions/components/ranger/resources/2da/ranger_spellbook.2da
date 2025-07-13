@@ -1,0 +1,16 @@
+2DA V1.0
+****
+                                level   base
+CLERIC_MAGIC_STONE              1       1
+CLERIC_SUNSCORCH                1       1
+CLERIC_SHILLELAGH               1       1
+CLERIC_CHARM_PERSON             1       1
+CLERIC_KNOW_OPPONENT            2       1
+CLERIC_FLAME_BLADE              2       1
+CLERIC_FIRE_TRAP                2       1
+CLERIC_CALL_LIGHTNING           3       1
+CLERIC_CONTAGION                3       1
+CLERIC_ICELANCE                 3       1
+CLERIC_RIGID_THINKING           3       1
+CLERIC_ICE_STORM                4       1
+CLERIC_CALL_WOODLAND_BEINGS     4       1

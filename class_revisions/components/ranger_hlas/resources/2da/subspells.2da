@@ -1,0 +1,6 @@
+2DA V1.0
+*
+                                install subspell    name    descr   arg1    arg2    arg3    school  sectype patch   override    destination
+shambling_mound_fists_entangle  1       entangle    *       *       1       *       *       *       *       *       0           #suf:a:BEASTMASTER_MONSTER_SWARM
+greater_wyvern_bite_poisoning   1       poisoning   *       *       5       1       *       *       *       *       0           #suf:b:BEASTMASTER_MONSTER_SWARM
+black_spider_sting_web          1       web         *       *       3       *       *       *       *       *       0           #suf:c:BEASTMASTER_MONSTER_SWARM

@@ -1,0 +1,39 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/2da.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+
+
+//Functions.
+DEFINE_ACTION_FUNCTION patch_weapon_styles BEGIN
+    //Install tables.
+    LAF get_component_resources_dir RET resources = dir END
+    LAF install_resources STR_VAR
+        type = "table"
+        table = "%resources%/2da/tables.2da"
+    END
+
+    //Patch descriptions.
+    COPY_EXISTING "weapprof.2da" "override"
+        DEFINE_ASSOCIATIVE_ARRAY descrs BEGIN
+            "2HANDED"           => "1000"
+            "SWORDANDSHIELD"    => "1010"
+            "SINGLEWEAPON"      => "1020"
+            "2WEAPON"           => "1030"
+        END
+
+        COUNT_2DA_COLS cols
+        PHP_EACH descrs AS prof => descr BEGIN
+            LPF find_row_index STR_VAR key = "%prof%" RET row = index END
+            tlk_ref = RESOLVE_STR_REF ((AT descr))
+            PATCH_IF NOT (row = 0) BEGIN
+                SET_2DA_ENTRY row 3 cols tlk_ref
+            END ELSE BEGIN
+                PATCH_FAIL "patch_weapon_styles: proficiency '%prof%' not found in 'weapprof.2da'."
+            END
+        END
+    PRETTY_PRINT_2DA
+    BUT_ONLY
+END
+
+//Main loop.
+LAF patch_weapon_styles END

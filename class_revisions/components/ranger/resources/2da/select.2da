@@ -1,0 +1,7 @@
+2DA V1.0
+*
+                            install patch                   override    destination
+archer_called_shot          1       make_table_replacements 1           #spl:ARCHER_CALL_SHOT
+archer_fashion_arrows_1     1       make_table_replacements 1           #suf:1:ARCHER_FASHION_ARROWS
+archer_fashion_arrows_2     1       make_table_replacements 1           #suf:2:ARCHER_FASHION_ARROWS
+archer_fashion_arrows_3     1       make_table_replacements 1           #suf:3:ARCHER_FASHION_ARROWS

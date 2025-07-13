@@ -1,0 +1,46 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/hlas.tpa"
+
+
+//Deduplicate tables.
+DEFINE_ACTION_FUNCTION deduplicate_tables BEGIN
+    //Deduplicate tables.
+    ACTION_DEFINE_ASSOCIATIVE_ARRAY kits BEGIN
+        "feralan"     => "ra1"
+        "stalker"     => "ra2"
+        "beastmaster" => "ra3"
+    END
+
+    LAF get_hla_table STR_VAR kit = "ranger" RET ranger_table = table END
+    ACTION_PHP_EACH kits AS kit => table BEGIN
+        LAF get_hla_table STR_VAR kit = "%kit%" RET original = table END
+        ACTION_IF ("%ranger_table%" STRING_EQUAL_CASE "%original%") BEGIN
+            LAF replace_table STR_VAR
+                kit = "%kit%"
+                original = "%original%"
+                new = "%table%"
+            END
+        END
+    END
+END
+
+DEFINE_ACTION_FUNCTION patch_hla_tables BEGIN
+    ACTION_FOR_EACH kit IN
+        "ranger"
+        "feralan"
+        "stalker"
+        "beastmaster"
+    BEGIN
+        LAF get_component_resources_dir RET resources = dir END
+        LAF patch_hla_table STR_VAR
+            kit = "%kit%"
+            deletions = "%resources%/2da/%kit%_hlas_delete.2da"
+            additions = "%resources%/2da/%kit%_hlas_add.2da"
+        END
+    END
+END
+
+//Main loop.
+LAF deduplicate_tables END
+LAF patch_hla_tables END

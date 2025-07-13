@@ -1,0 +1,42 @@
+//Blackguard HLA's.
+@1200 = "Demonic Wrath"
+@1201 = "Demonic Wrath
+Level: 7
+School: Necromancy
+Range: Caster
+Duration: Instantaneous
+Casting Time: 1
+Area of Effect: 10' radius
+Saving Throw: Special
+
+With this HLA, the Blackguards invokes the demonic powers and unleashes a wave of dark energy. Every enemy within 10' suffers 20d4 fire damage and is pushed away from the Blackguard and knocked unconscious. A successful saving throw vs. breath at a penalty of -2 halves the damage and negates all the secondary effects. Large creatures like Dragons and Giants cannot be pushed away.
+
+This ability can be chosen once."
+
+@1210 = "Demonic Aura"
+@1211 = "Demonic Aura
+Level: 7
+School: Evocation
+Range: Caster
+Duration: 1 turn
+Casting Time: 5
+Area of Effect: Special
+Saving Throw: None
+
+By using this ability, the Black guard envelops himself with an aura of demonic flames that both injures opponents and protects him from damage. The aura not only grants the Blackguard 100% fire resistance and protects him from all magical weapons of enchantment level 2 and lower, but can also damage creatures within a 5 foot radius around him and enflame weapons held by the caster. Any opponent that hits the caster with a weapon or spell from within this radius suffers 2d8 + 4 fire damage, and whenever the caster strikes an opponent with a melee weapon, he deals an additional 2d6 points of fire damage.
+
+This ability can be chosen once."
+
+@1220 = "Abyssal Shield"
+@1221 = "Abyssal Shield
+Level: 7
+School: Abjuration
+Range: Personal
+Duration: 1 Turn
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None
+
+By using this high-level ability the Blackguard is able to protect himself against magical attacks. For one turn, he gains a bonus of +2 saving throws, and resistance to the elements and magic damage is set to 100%; furthermore, magic resistance to all spells is increased by 25%. This ability is not cumulative with itself or with other similar magic such as Magic Resistance, and its effects cannot be dispelled, but can be breached.
+
+This ability can be chosen once."

@@ -1,0 +1,38 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+
+
+//Initialization.
+LAF get_component_root RET root = dir END
+LAF get_component_resources_dir RET resources = dir END
+LAF get_component_tra_dir RET tra = dir END
+
+//Install spell symbols.
+LAF install_resources STR_VAR
+    type = "add_symbol"
+    table = "%resources%/2da/symbols.2da"
+END
+
+//Install icons.
+LAF install_resources STR_VAR
+    type = "icon"
+    table = "%resources%/2da/icons.2da"
+END
+
+//Install projectiles.
+LAF install_resources STR_VAR
+    type = "add_projectile"
+    table = "%resources%/2da/projectiles.2da"
+END
+
+//Install hla spells.
+//In its own component to force reloading of ids files.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/spells.tpa"
+END
+
+//Deduplicate tables and install hlas.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/hla_tables.tpa"
+END

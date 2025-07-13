@@ -1,0 +1,80 @@
+//HLA's
+@1000 = ~Extra Spells~
+@1001 = ~By choosing this ability, the Paladin permanently gains one more spell per level, from levels 1 to 5.
+
+This ability can be chosen once.~
+
+@1010 = ~Holy Purge~
+@1011 = ~Holy Purge
+Level: Epic
+School: Necromancy
+Range: Personal
+Duration: Instant
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None
+
+High-level paladins have the divine power to purge the essences of evil and corruption from their bodies. By the means of this ability the paladin cleanses himself, restores all lost health and banishes all the negative effects of Poison, Disease, Deafness, Blindness and Level Drain. The paladin will be freed from any curses as well.
+
+This ability can be chosen once.~
+
+@1020 = ~Purge Evil~
+@1021 = ~Purge Evil
+Level: Epic
+School: Necromancy
+Range: Personal
+Duration: Instant
+Casting Time: 1
+Area of Effect: 30' feet
+Saving Throw: Half
+
+This ability is a high-level version of the level 3 spell Holy Smite. All enemies of evil alignment within a 30' radius will suffer 20d4 magic damage. If they save vs. spell at a penalty of -2 they suffer only half damage and avoid being blinded for one round. This ability bypasses magic resistance.
+
+This ability can be chosen once.~
+
+@1040 = ~Fortress against Evil~
+@1041 = ~Fortress against Evil
+Level: Epic
+School: Abjuration
+Range: Personal
+Duration: 1 Turn
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None
+
+By using this powerful high-level ability the paladin turns into a bastion against the forces of evil and will have unassailable protections versus them. For one turn, the paladin will be protected against evil creatures and against some of its more devastating effects, such as Paralyze, Fear, Confusion, Charm, Feeblemindedness, Berserk, Maze and Imprisonment, as well as being immune to all Necromancy spells.
+
+This ability can be chosen once.~
+
+@1050 = ~Holy Shield~
+@1051 = ~Holy Shield
+Level: Epic
+School: Abjuration
+Range: Personal
+Duration: 1 Turn
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None
+
+By using this high-level ability the paladin envelops himself in a shield protecting him against magical attacks. For one turn, he gains a bonus of +2 to armor class (+4 vs. missiles) and saving throws, and resistance to the elements and magic damage is set to 100%; furthermore, magic resistance to all spells is increased by 25%. This ability is not cumulative with itself or with other similar magic such as Magic Resistance, and its effects cannot be dispelled, but can be breached.
+
+This ability can be chosen once.~
+
+//Inquisitor HLA's.
+@1100 = "Inquisitor's Sight"
+@1101 = "Inquisitor's Sight
+Level: Epic
+School: Divination
+Range: Personal
+Duration: 1 Turn
+Casting Time: 9
+Area of Effect: Caster
+Saving Throw: None
+
+This high-level ability grants the Inquisitor a powerful sixth sense about imminent events involving himself. Once the spell is cast, the Inquisitor receives instantaneous warnings of impending danger or harm. The Inquisitor will never be surprised and cannot be backstabbed. In addition, the spell gives him a general idea of what action he might take to best protect himself. For one turn, he receives an insight bonus of +5 to his armor class and a +2 bonus to all saves. Furthermore, for the duration of the spell, he is under True Seeing and cannot be blinded or fooled by invisibility and illusions. These effects cannot be dispelled. This ability is not cumulative with similar spells like Clairvoyance and True Sight.
+
+This ability can be chosen once."
+
+
+//Gain ability strings.
+@10000 = "Gained +1 spell at levels 1 to 5."

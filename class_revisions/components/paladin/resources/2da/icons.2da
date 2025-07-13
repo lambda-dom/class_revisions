@@ -1,0 +1,6 @@
+2DA V1.0
+*
+                            install patch   over    destination
+inquisitor_banish_evil_a    1       *       0       #suf:a:INQUISITOR_BANISH_EVIL
+inquisitor_banish_evil_b    1       *       0       #suf:b:INQUISITOR_BANISH_EVIL
+inquisitor_banish_evil_c    1       *       0       #suf:c:INQUISITOR_BANISH_EVIL

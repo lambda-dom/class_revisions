@@ -1,0 +1,4 @@
+//Descriptions strings.
+@1000 = "Fists"
+@1010 = "Bite"
+@1020 = "Sting"
