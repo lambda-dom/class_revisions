@@ -7,6 +7,7 @@ See:
 * [Blackguard kit](../components/blackguard/docs/readme.md).
 * [Blackguard HLA's](../components/blackguard_hlas/docs/readme.md).
 * [Ranger class and kits](../components/ranger/docs/readme.md).
+* [Ranger HLA's](../components/ranger_hlas/docs/readme.md).
 
 # Weapon styles.
 
