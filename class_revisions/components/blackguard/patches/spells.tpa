@@ -1,0 +1,412 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/internal/patchers.tpa"
+//Import compose spellbook from paladin component. TODO: refactor to avoid this.
+INCLUDE "%MOD_FOLDER%/components/paladin/patches/spells.tpa"
+
+
+//Get reference tables. Separately to avoid reference clashing.
+LAF get_table_references STR_VAR
+    tables = "effects"
+RET_ARRAY eff_references = references END
+
+LAF get_table_references STR_VAR
+    tables = "spells"
+RET_ARRAY spl_references = references END
+
+
+//Blackguard spellbook.
+DEFINE_PATCH_FUNCTION blackguard_spellbook STR_VAR destination = "*" BEGIN
+    LPF get_component_resources_dir RET resources = dir END
+    LPF compose_spellbook STR_VAR
+        table = "%resources%/2da/blackguard_spellbook.2da"
+    END
+END
+
+DEFINE_PATCH_FUNCTION blackguard_spell_initial_level STR_VAR destination = "*" BEGIN
+    LPF add_display_string INT_VAR tra_ref = 10015 END
+END
+
+DEFINE_PATCH_FUNCTION blackguard_spell_level_bonus STR_VAR destination = "*" BEGIN
+    LPF add_display_string INT_VAR tra_ref = 10005 END
+END
+
+DEFINE_PATCH_FUNCTION blackguard_spell_penalty STR_VAR destination = "*" BEGIN
+    LPF add_display_string INT_VAR tra_ref = 10010 END
+END
+
+//Blackguard poison immunity.
+DEFINE_PATCH_FUNCTION poison_immunity STR_VAR destination = "*" BEGIN
+    LPF add_display_string INT_VAR tra_ref = 10000 END
+END
+
+//Blackguard poison immunity.
+DEFINE_PATCH_FUNCTION fear_immunity STR_VAR destination = "*" BEGIN
+    LPF add_display_string INT_VAR tra_ref = 10001 END
+END
+
+//Absorb health.
+DEFINE_PATCH_FUNCTION absorb_health_a STR_VAR destination = "*" BEGIN
+    LPF get_spell_header_count RET headers_count = count END
+    FOR (i = 1; i <= headers_count; ++i) BEGIN
+        //Patch header min level.
+        LPF set_spell_header_field INT_VAR header = i - 1 STR_VAR field = "min_level" value = "%i%" END
+        //Patch damage.
+        LPF ALTER_SPELL_EFFECT INT_VAR
+            header = i
+            verbose = 1
+            match_opcode = 12               //Damage.
+            parameter1 = i * 2
+        END
+    END
+END
+
+DEFINE_PATCH_FUNCTION absorb_health STR_VAR destination = "*" BEGIN
+    LPF get_array_element STR_VAR
+        array = "spl_references"
+        key = "absorb_health_a"
+    RET res = value END
+
+    //Patch in resource.
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "absb#res"
+        resource = "%res%"
+    END
+END
+
+//Poison Weapon.
+DEFINE_PATCH_FUNCTION poison_weapon_a STR_VAR destination = "*" BEGIN
+    LPF get_spell_header_count RET headers_count = count END
+    FOR (i = 1; i <= headers_count; ++i) BEGIN
+        //Patch header min level.
+        LPF set_spell_header_field INT_VAR header = i - 1 STR_VAR field = "min_level" value = "%i%" END
+        //Patch poison-over-time damage.
+        LPF ALTER_SPELL_EFFECT INT_VAR
+            header = i
+            verbose = 1
+            match_opcode = 25               //Poison.
+            duration = i
+        END
+
+        //Patch save penalty.
+        PATCH_IF (8 <= i) AND (i < 16) BEGIN
+            LPF ALTER_EFFECT INT_VAR
+                header = i - 1
+                verbose = 1
+                match_savingthrow = 1 << 2  //Save vs. poison.
+                savebonus = 0 - 1
+            END
+        END
+
+        PATCH_IF i >= 16 BEGIN
+            LPF ALTER_EFFECT INT_VAR
+                header = i - 1
+                verbose = 1
+                match_savingthrow = 1 << 2  //Save vs. poison.
+                savebonus = 0 - 2
+            END
+        END
+    END
+END
+
+DEFINE_PATCH_FUNCTION poison_weapon STR_VAR destination = "*" BEGIN
+    LPF get_array_element STR_VAR
+        array = "eff_references"
+        key = "poison_weapon_a"
+    RET res = value END
+
+    //Patch resources.
+    PATCH_FOR_EACH opcode IN
+        248                                 //Melee hit effect.
+        249                                 //Ranged hit effect.
+    BEGIN
+        LPF ALTER_EFFECT INT_VAR
+            check_globals = 0
+            verbose = 1
+            match_opcode = opcode
+        STR_VAR
+            match_resource = ""
+            resource = "%res%"
+        END
+    END
+END
+
+//Aura of Vengeance.
+DEFINE_PATCH_FUNCTION aura_vengeance_a STR_VAR destination = "*" BEGIN
+    LPF get_array_element STR_VAR
+        array = "spl_references"
+        key = "aura_vengeance_a"
+    RET res = value END
+
+    //Patch in resource.
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 321                  //Remove effects by resource.
+    STR_VAR
+        match_resource = ""
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION aura_vengeance STR_VAR destination = "*" BEGIN
+    LPF get_array_element STR_VAR
+        array = "spl_references"
+        key = "aura_vengeance_a"
+    RET res = value END
+
+    //Patch in resource.
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 272                  //Use Eff on condition.
+    STR_VAR
+        match_resource = ""
+        resource = "%res%"
+    END
+
+    //User information.
+    LPF add_display_string INT_VAR tra_ref = 10100 END
+END
+
+//Aura of Hatred.
+DEFINE_PATCH_FUNCTION aura_hatred_a STR_VAR destination = "*" BEGIN
+    LPF get_array_element STR_VAR
+        array = "spl_references"
+        key = "aura_hatred_a"
+    RET res = value END
+
+    //Patch in resource.
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 321                  //Remove effects by resource.
+    STR_VAR
+        match_resource = ""
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION aura_hatred STR_VAR destination = "*" BEGIN
+    LPF get_array_element STR_VAR
+        array = "spl_references"
+        key = "aura_hatred_a"
+    RET res = value END
+
+    //Patch in resource.
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 272                  //Use Eff on condition.
+    STR_VAR
+        match_resource = ""
+        resource = "%res%"
+    END
+
+    //User information.
+    LPF add_display_string INT_VAR tra_ref = 10110 END
+END
+
+//Aura of Despair.
+DEFINE_PATCH_FUNCTION aura_despair_a STR_VAR destination = "*" BEGIN
+    LPF get_array_element STR_VAR
+        array = "spl_references"
+        key = "aura_despair_a"
+    RET res = value END
+
+    //Patch in resource.
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 321                  //Remove effects by resource.
+    STR_VAR
+        match_resource = ""
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION aura_despair STR_VAR destination = "*" BEGIN
+    LPF get_array_element STR_VAR
+        array = "spl_references"
+        key = "aura_despair_a"
+    RET res = value END
+
+    //Patch in resource.
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 272                  //Use Eff on condition.
+    STR_VAR
+        match_resource = ""
+        resource = "%res%"
+    END
+
+    //User information.
+    LPF add_display_string INT_VAR tra_ref = 10120 END
+END
+
+//Aid from Hell.
+DEFINE_PATCH_FUNCTION aid_hell STR_VAR destination = "*" BEGIN
+    LPF get_spell_header_count RET headers_count = count END
+    FOR (i = 1; i <= headers_count; ++i) BEGIN
+        //Patch header min level.
+        PATCH_IF NOT (i = 1) BEGIN
+            j = i + 3
+            LPF set_spell_header_field INT_VAR header = i - 1 STR_VAR field = "min_level" value = "%j%" END
+        END
+
+        LPF ALTER_SPELL_EFFECT INT_VAR
+            header = i
+            verbose = 1
+            duration_high = (i + 3) * 60
+        END
+
+        //Patch HP per level bonus.
+        PATCH_IF (i <= 7) BEGIN
+            LPF ALTER_SPELL_EFFECT INT_VAR
+                header = i
+                verbose = 1
+                match_opcode = 18           //Maximum HP Bonus.
+                parameter1 = i + 3
+            END
+        END ELSE BEGIN
+            LPF ALTER_SPELL_EFFECT INT_VAR
+                header = i
+                verbose = 1
+                match_opcode = 18           //Maximum HP Bonus.
+                parameter1 = 10
+            END
+        END
+    END
+END
+
+//Abyssal rage.
+DEFINE_PATCH_FUNCTION abyssal_rage STR_VAR destination = "*" BEGIN
+    LPF get_array_element STR_VAR
+        array = "spl_references"
+        key = "abyssal_rage_a"
+    RET res = value END
+
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+        match_timing = 4                    //Delayed.
+    STR_VAR
+        match_resource = ""
+        resource = "%res%"
+    END
+
+    //Correct maze and imprisonment immunities.
+    PATCH_WITH_SCOPE BEGIN
+        PATCH_FOR_EACH animation IN
+            "spmaze2"
+            "spmaze1"
+        BEGIN
+            LPF CLONE_EFFECT INT_VAR
+                check_globals = 0
+                check_headers = 1
+                verbose = 1
+                match_opcode = 101              //Immunity to effect.
+                match_parameter2 = 213          //Maze.
+                multi_match = 1
+                opcode = 296                    //Protection from animation.
+                parameter1 = 0                  //Cleaning.
+                parameter2 = 0
+            STR_VAR
+                resource = "%animation%"
+                insert = "below"
+            END
+        END
+
+        LPF CLONE_EFFECT INT_VAR
+            check_globals = 0
+            check_headers = 1
+            verbose = 1
+            match_opcode = 101              //Immunity to effect.
+            match_parameter2 = 213          //Maze.
+            multi_match = 1
+            opcode = 169                    //Prevent icon.
+            parameter1 = 0                  //Cleaning.
+            parameter2 = 78                 //Maze.
+        STR_VAR
+            insert = "below"
+        END
+    END
+
+    PATCH_WITH_SCOPE BEGIN
+        LPF get_spell_res STR_VAR spell = "WIZARD_IMPRISONMENT" RET res = resource END
+        PATCH_IF NOT ("%res%" STRING_EQUAL_CASE "*") BEGIN
+            LPF CLONE_EFFECT INT_VAR
+                check_globals = 0
+                check_headers = 1
+                verbose = 1
+                match_opcode = 101              //Immunity to effect.
+                match_parameter2 = 211          //Imprisonment.
+                multi_match = 1
+                opcode = 206                    //Protection from spell.
+                parameter1 = 0                  //Cleaning.
+                parameter2 = 0
+            STR_VAR
+                resource = "%res%"
+                insert = "below"
+            END
+
+            LPF CLONE_EFFECT INT_VAR
+                check_globals = 0
+                check_headers = 1
+                verbose = 1
+                match_opcode = 101              //Immunity to effect.
+                match_parameter2 = 211          //Imprisonment.
+                multi_match = 1
+                opcode = 169                    //Prevent icon.
+                parameter1 = 0                  //Cleaning.
+                parameter2 = 79                 //Imprisonment.
+            STR_VAR
+                insert = "below"
+            END
+        END ELSE BEGIN
+            PATCH_FAIL "abyssal_rage: id of '%res%' not found."
+        END
+    END
+END
+
+//Abyssal fury.
+DEFINE_PATCH_FUNCTION abyssal_fury STR_VAR destination = "*" BEGIN
+    LPF get_array_element STR_VAR
+        array = "eff_references"
+        key = "abyssal_fury_a"
+    RET res = value END
+
+
+    //Patch-in melee effect.
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        verbose = 1
+        match_opcode = 248                  //Melee effect.
+    STR_VAR
+        match_resource = ""
+        resource = "%res%"
+    END
+END
+
+//Flaming Shield.
+DEFINE_PATCH_FUNCTION flaming_shield STR_VAR destination = "*" BEGIN
+    LPF get_array_element STR_VAR
+        array = "spl_references"
+        key = "flaming_shield_a"
+    RET res = value END
+
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        verbose = 1
+        match_opcode = 232                  //Cast spell on condition.
+    STR_VAR
+        match_resource = ""
+        resource = "%res%"
+    END
+END
+
+//Protection from good.
+DEFINE_PATCH_FUNCTION protection_good BEGIN
+    //User information.
+    LPF add_display_string INT_VAR tra_ref = 11000 END
+END

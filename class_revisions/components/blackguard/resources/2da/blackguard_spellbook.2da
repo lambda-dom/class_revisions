@@ -1,0 +1,30 @@
+2DA V1.0
+****
+                                        level   base
+CLERIC_CURE_LIGHT_WOUNDS                1       1
+CLERIC_PROTECT_FROM_EVIL                1       1
+CLERIC_SANCTUARY                        1       1
+CLERIC_MAGIC_STONE                      1       1
+CLERIC_BLESS                            1       1
+CLERIC_ARMOR_OF_FAITH                   1       1
+CLERIC_CURE_MODERATE_WOUNDS             2       1
+CLERIC_FIND_TRAPS                       2       1
+CLERIC_SLOW_POISON                      2       1
+CLERIC_SPIRITUAL_HAMMER                 2       1
+CLERIC_CHANT                            2       1
+CLERIC_AID                              2       1
+CLERIC_DRAW_UPON_HOLY_MIGHT             2       1
+CLERIC_CURE_MEDIUM_WOUNDS               3       1
+CLERIC_CURE_DISEASE                     3       1
+CLERIC_BREAK_ENCHANTMENT                3       1
+CLERIC_REMOVE_PARALYSIS                 3       1
+CLERIC_HOLY_SMITE                       3       1
+CLERIC_CURE_SERIOUS_WOUNDS              4       1
+CLERIC_LESSER_RESTORATION               4       1
+CLERIC_PROTECTION_FROM_EVIL_10_FOOT     4       1
+CLERIC_DEFENSIVE_HARMONY                4       1
+CLERIC_HOLY_POWER                       4       1
+CLERIC_MASS_CURE                        5       1
+CLERIC_RAISE_DEAD                       5       1
+CLERIC_CHAMPIONS_STRENGTH               5       1
+CLERIC_RIGHTEOUS_MAGIC                  5       1

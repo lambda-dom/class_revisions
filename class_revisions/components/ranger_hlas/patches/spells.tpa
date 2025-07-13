@@ -1,0 +1,126 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/internal/patchers.tpa"
+
+
+//Get reference tables.
+LAF get_table_references STR_VAR
+    tables = "spells"
+RET_ARRAY spells = references END
+
+LAF get_table_references STR_VAR
+    tables = "effects"
+RET_ARRAY effects = references END
+
+
+//Patches.
+DEFINE_PATCH_FUNCTION ranger_ambidexterity STR_VAR destination = "*" BEGIN
+    LPF add_display_string INT_VAR tra_ref = 10000 END
+END
+
+DEFINE_PATCH_FUNCTION ranger_toughness STR_VAR destination = "*" BEGIN
+    LPF add_display_string INT_VAR tra_ref = 10010 END
+END
+
+DEFINE_PATCH_FUNCTION ranger_nature_endurance STR_VAR destination = "*" BEGIN
+    //Patch spel type protections.
+    LPF get_sectype_id STR_VAR sectype = "k1#slow" RET slow = id END
+
+    //Set sectype on spell.
+    PATCH_IF (slow = 0 - 1) BEGIN
+        PATCH_FAIL "ranger_nature_endurance: sectype 'k1#slow' not found."
+    END
+
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        verbose = 1
+        match_opcode = 221          //Remove spell protection by type.
+        parameter2 = slow
+    END
+
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        verbose = 1
+        match_opcode = 205          //Protection from sectype.
+        parameter2 = slow
+    END
+END
+
+DEFINE_PATCH_FUNCTION archer_ranged_criticals STR_VAR destination = "*" BEGIN
+    LPF add_display_string INT_VAR tra_ref = 10100 END
+END
+
+DEFINE_PATCH_FUNCTION stalker_improved_spellbook STR_VAR destination = "*" BEGIN
+    PATCH_FOR_EACH spell IN
+        "stalker_blur"
+        "stalker_mirror_image"
+        "stalker_mislead"
+        "stalker_detect_illusion"
+        "stalker_clairvoyance"
+        "stalker_oracle"
+    BEGIN
+        LPF get_table_ref STR_VAR
+            value = "%spell%"
+            array = "spells"
+            ext = "spl"
+        RET res = resource END
+
+        LPF ADD_SPELL_EFFECT INT_VAR
+            opcode = 171                //Give ability.
+            target = 2                  //Preset.
+            timing = 9                  //Permanent.
+            insert_point = 0 - 1        //Append.
+        STR_VAR
+            resource = "%res%"
+        END
+    END
+    LPF add_display_string INT_VAR tra_ref = 10200 END
+END
+
+DEFINE_PATCH_FUNCTION stalker_extra_spells STR_VAR destination = "*" BEGIN
+    LPF add_display_string INT_VAR tra_ref = 10210 END
+END
+
+DEFINE_PATCH_FUNCTION stalker_backstab_bonus STR_VAR destination = "*" BEGIN
+    LPF add_display_string INT_VAR tra_ref = 10220 END
+END
+
+DEFINE_PATCH_FUNCTION beastmaster_monster_swarm BEGIN
+    PATCH_FOR_EACH char IN "a" "b" "c" BEGIN
+        LPF get_table_ref STR_VAR
+            value = "beastmaster_monster_swarm_%char%"
+            array = "effects"
+            ext = "eff"
+        RET res = resource END
+
+        LPF ALTER_EFFECT INT_VAR
+            check_globals = 0
+            verbose = 1
+            match_opcode = 177          //Use eff.
+        STR_VAR
+            match_resource = "mon%char%#res"
+            resource = "%res%"
+        END
+    END
+END
+
+DEFINE_PATCH_FUNCTION beastmaster_nature_power_a BEGIN
+    LPF ranger_nature_endurance END
+END
+
+DEFINE_PATCH_FUNCTION beastmaster_nature_power BEGIN
+    LPF get_table_ref STR_VAR
+        value = "beastmaster_nature_power_a"
+        array = "effects"
+        ext = "eff"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        verbose = 1
+        match_opcode = 177              //Use eff.
+    STR_VAR
+        match_resource = "spl#res"
+        resource = "%res%"
+    END
+END

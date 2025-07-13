@@ -1,0 +1,75 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+
+
+//Initialization.
+LAF get_component_root RET root = dir END
+LAF get_component_resources_dir RET resources = dir END
+LAF get_component_tra_dir RET tra = dir END
+
+//Install spell symbols.
+LAF install_resources STR_VAR
+    type = "add_symbol"
+    table = "%resources%/2da/symbols.2da"
+END
+ 
+//Install items.
+LAF install_resources STR_VAR
+    type = "item"
+    table = "%resources%/2da/items.2da"
+    tra = "%tra%/items.tra"
+END
+
+//Install cres.
+LAF install_resources STR_VAR
+    type = "creature"
+    table = "%resources%/2da/creatures.2da"
+    tra = "%tra%/creatures.tra"
+    patches = "%root%/patches/creatures.tpa"
+END
+
+//Install subspells.
+LAF install_resources STR_VAR
+    type = "subspell"
+    table = "%resources%/2da/subspells.2da"
+END
+
+//Install effects.
+LAF install_resources STR_VAR
+    type = "create_effect"
+    table = "%resources%/2da/effects.2da"
+END
+
+//Install select tables for spells.
+LAF install_resources STR_VAR
+    type = "table"
+    table = "%resources%/2da/select.2da"
+    patches = "%root%/patches/select.tpa"
+END
+
+//Install spells.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/spells.tpa"
+END
+
+//Install tables.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/tables.tpa"
+END
+
+//Patch proficiencies.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/proficiencies.tpa"
+END
+
+//Patch stalker backstab table.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/backstab.tpa"
+END
+
+//Patch descriptions.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/descriptions.tpa"
+    tra = "%tra%/kits.tra"
+END

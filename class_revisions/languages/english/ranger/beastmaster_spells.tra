@@ -1,0 +1,64 @@
+//Beastmaster abilities.
+@1300 = "Beastmaster Spellbook"
+@1301 = "Trims down the Beastmaster spellbook."
+
+@1310 = ~Summon Animal Companion~
+@1311 = ~Summon Animal Companion
+Level: 1
+School: Conjuration
+Range: Long
+Duration: 8 hours
+Casting Time: 9
+Area of Effect: Special
+Saving Throw: None
+
+With this ability, the beastmaster can, once per day, summon a panther to aid him. The panther will aid the ranger by whatever means it possesses, staying by his side for 8 hours. This ability can only be used outdoors and outside of combat.~
+
+//Beastmaster spells.
+@1320 = ~Animal Harmony~
+@1321 = ~Animal Harmony
+Level: 1
+School: Enchantment
+Range: Personal
+Duration: 1 turn
+Casting Time: 1
+Area of Effect: 30' radius
+Saving Throw: None
+
+Animal Harmony grants all friendly animals and monsters a defensive bonus by enhancing the coordination of their attacks and defenses. This allows a group of creatures to act as a cohesive unit for a single battle or encounter. While the spell is in effect, each affected animal gains a +1 bonus to its armor class. This bonus raises by +1 up to a maximum of +3 at level 12. This spell is not cumulative with itself nor with similar spells like Animal Growth or Animal Fury.~
+
+@1330 = ~Animal Fang~
+@1331 = ~Animal Fang
+Level: 2
+School: Alteration
+Range: Personal
+Duration: 1 Turn
+Casting Time: 3
+Area of Effect: 30' radius
+Saving Throw: None
+
+This spell turns the natural weapons (such as teeth, claws, etc.) of friendly animals and monsters within range into magical weapons, granting a +1 enhancement bonus on what they can hit. This bonus raises by +1 every four levels up to a maximum of +3 at level 16. Multiple castings of this spell are not cumulative.~
+
+@1340 = ~Animal Growth~
+@1341 = ~Animal Growth
+Level: 3
+School: Alteration
+Range: Personal
+Duration: 1 turn
+Casting Time: 5
+Area of Effect: 30' radius
+Saving Throw: None
+
+When this spell is cast, the caster causes all friendly animals and monsters within range to become tougher, stronger and more tenacious. The alteration grants +2 bonus to attack rolls, damage rolls, armor class and saving throws. It also increases the recipient's hit points by 50%, and these bonus hit points are lost first when the recipient takes damage. This spell is not cumulative with itself nor with similar spells like Animal Harmony or Animal Fury.~
+
+@1350 = ~Animal Fury~
+@1351 = ~Animal Fury
+Level: 4
+School: Alteration
+Range: Personal
+Duration: 1 turn
+Casting Time: 3
+Area of Effect: 30' radius
+Saving Throw: None
+
+When this spell is cast, the caster causes all friendly animals and monsters within range to become possessed by a wild fury. While enraged they gain a +2 bonus to Strength and Constitution, and a penalty of -2 to ac. They also become immune to charm, sleep, fear, stun, confusion, feeblemind, hold, paralyze and level drain. This spell is not cumulative with itself nor with similar spells like Animal Harmony or Animal Growth.~

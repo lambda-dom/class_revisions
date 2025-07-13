@@ -1,0 +1,30 @@
+//Description strings.
+@1000 = ~Two-Handed: This fighting style allows the character to use a two-handed melee weapon and receive special bonuses.
+
+- Proficient: The wielder gets a +1 bonus to damage rolls, a -2 bonus to Speed Factor and the ability to score critical hits on a roll of 19 or 20, instead of just 20, when using a two-handed weapon.
+
+- Specialized: The wielder gets -4 bonus to Speed Factor, +2 bonus to damage and dvores critical hits on rolls between 18 and 20.
+
+Note: Magical two-handed weapons are more powerful than their single-handed counterparts. This counterbalances the fact that you can't use a second weapon or shield when using a two-handed weapon. The Holy Avenger and Vorpal Sword are examples of weapons that are two-handed.~
+
+@1010 = ~Sword and Shield: Anyone can pick up a shield and get its basic protection bonuses, but by spending slots on this fighting style, an adventurer can maximize the benefits received.
+
+- Proficient: The wielder gets a -1 bonus against all weapons and a -2 bonus to AC against missile weapons.
+
+- Specialized: The wielder gets a -2 bonus to AC against all weapons and a -4 bonus to AC against missile weapons.
+
+Note: Despite the name of this style, any one-handed melee weapon in combination with a shield will receive the aforementioned bonuses.~
+
+@1020 = ~Single Weapon: This fighting style is for characters who do not wish to use a shield but want some bonus when using a one-handed melee weapon.
+
+- Proficient: The wielder gets a -1 bonus to AC and thac0.
+
+- Specialized: The bonus to thac0 increases to -2 and the wielder inflicts critical damage on an attack roll of 19 or 20.~
+
+@1030 = ~Two-Weapons: This fighting style allows the character to use two melee weapons at the same time with fewer penalties. A character wielding two weapons without a slot in this fighting style would incur a -4 penalty to attack rolls with the main weapon and a -8 penalty with the off-hand weapon. 
+
+- Proficient: The wielder's penalties are reduced to -2 with the main weapon and -6 with the off-hand weapon.
+
+- Specialized: The wielder's penalties are reduced to 0 with the main weapon and -4 with the off-hand weapon.
+
+- Master: The wielder's penalties are reduced to 0 with the main weapon and -2 with the off-hand weapon.~

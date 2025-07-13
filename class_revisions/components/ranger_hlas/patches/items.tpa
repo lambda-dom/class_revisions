@@ -1,0 +1,62 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/internal/patchers.tpa"
+
+
+//Get reference tables.
+LAF get_table_references STR_VAR
+    tables = "subspells"
+RET_ARRAY subspells = references END
+
+
+//Patches.
+DEFINE_PATCH_FUNCTION shambling_mound_fists STR_VAR destination = "*" BEGIN
+    LPF get_table_ref STR_VAR
+        value = "shambling_mound_fists_entangle"
+        array = "subspells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        verbose = 1
+        match_opcode = 146              //Cast spell.
+    STR_VAR
+        match_resource = "spl#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION wyvern_bite STR_VAR destination = "*" BEGIN
+    LPF get_table_ref STR_VAR
+        value = "greater_wyvern_bite_poisoning"
+        array = "subspells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        verbose = 1
+        match_opcode = 146              //Cast spell.
+    STR_VAR
+        match_resource = "spl#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION black_spider_sting STR_VAR destination = "*" BEGIN
+    LPF get_table_ref STR_VAR
+        value = "black_spider_sting_web"
+        array = "subspells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        verbose = 1
+        match_opcode = 146              //Cast spell.
+    STR_VAR
+        match_resource = "spl#res"
+        resource = "%res%"
+    END
+END

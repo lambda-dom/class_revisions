@@ -1,0 +1,5 @@
+2DA V1.0
+*
+                    install     label               clearair    patch   override    destination
+paladin_aura_ally   1           paladin_aura_ally   0           *       0           #lit:grpauraa
+paladin_aura_enemy  1           paladin_aura_enemy  0           *       0           #lit:grpaurae

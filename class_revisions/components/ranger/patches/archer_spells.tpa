@@ -1,0 +1,126 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/spells.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/internal/patchers.tpa"
+
+//Reference tables.
+LAF get_table_references STR_VAR
+    tables = "effects"
+RET_ARRAY effects = references END
+
+LAF get_table_references STR_VAR
+    tables = "select"
+RET_ARRAY tables = references END
+
+LAF get_table_references STR_VAR
+    tables = "subspells"
+RET_ARRAY subspells = references END
+
+
+//Bow mastery.
+DEFINE_PATCH_FUNCTION archer_bow_mastery BEGIN
+    //Inform user.
+    LPF add_display_string INT_VAR tra_ref = 10000 END
+END
+
+//Evasive archer.
+DEFINE_PATCH_FUNCTION archer_evasive BEGIN
+    //Inform user.
+    LPF add_display_string INT_VAR tra_ref = 10010 END
+END
+
+
+//Called shot.
+//Disarm.
+DEFINE_PATCH_FUNCTION archer_called_shot_disarm BEGIN
+    LPF get_table_ref STR_VAR
+        value = "archer_called_shot_disarm_a"
+        array = "effects"
+        ext = "eff"
+    RET res = resource END
+
+    LPF CLONE_EFFECT INT_VAR
+        match_opcode = 54                   //Base thac0.
+        opcode = 249                        //Ranged effect.
+        parameter1 = 0                      //Clean fields.
+        parameter2 = 0
+    STR_VAR
+        resource = "%res%"
+        insert = "below"
+    END
+END
+
+//Trip.
+DEFINE_PATCH_FUNCTION archer_called_shot_trip BEGIN
+    LPF get_table_ref STR_VAR
+        value = "archer_called_shot_trip_c"
+        array = "effects"
+        ext = "eff"
+    RET res = resource END
+    
+    LPF CLONE_EFFECT INT_VAR
+        match_opcode = 54                   //Base thac0.
+        opcode = 249                        //Ranged effect.
+        parameter1 = 0                      //Clean fields.
+        parameter2 = 0
+    STR_VAR
+        resource = "%res%"
+        insert = "below"
+    END
+END
+
+DEFINE_PATCH_FUNCTION archer_called_shot BEGIN
+    LPF get_table_ref STR_VAR
+        value = "archer_called_shot"
+        array = "tables"
+        ext = "2da"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        match_opcode = 214              //Select spell.
+    STR_VAR
+        match_resource = ""
+        resource = "%res%"
+    END
+END
+
+//Fashion Arrows.
+DEFINE_PATCH_FUNCTION archer_fashion_arrows BEGIN
+    //Loop.
+    FOR (i = 1; i <= 3; ++i) BEGIN
+        LPF get_resource_ref STR_VAR
+            ref = "#suf:%i%:ARCHER_FASHION_ARROWS"
+        RET res = resource END
+
+        PATCH_IF NOT (FILE_EXISTS_IN_GAME "%res%.2da") BEGIN
+            PATCH_FAIL "archer_fashion_arrows: resource table '%res%.2da' not found."
+        END
+
+        //Patch in resources.
+        LPF ALTER_EFFECT INT_VAR
+            header = i - 1
+            match_opcode = 214          //Select spell.
+        STR_VAR
+            match_resource = ""
+            resource = "%res%"
+        END
+    END
+END
+
+//Falcon's Eye.
+DEFINE_PATCH_FUNCTION archer_falcon_eye BEGIN
+    LPF get_table_ref STR_VAR
+        value = "archer_falcon_eye_sleep"
+        array = "subspells"
+        ext = "spl"
+    RET res = resource END
+
+    //Patch -in subspell.
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        match_opcode = 341              //Critical hit spell.
+    STR_VAR
+        match_resource = ""
+        resource = "%res%"
+    END
+END

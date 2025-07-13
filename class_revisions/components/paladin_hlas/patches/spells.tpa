@@ -1,0 +1,176 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/arrays.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/spells.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/internal/patchers.tpa"
+
+
+//Get reference tables.
+LAF get_table_references STR_VAR
+    tables = "subspells"
+RET_ARRAY references END
+
+
+DEFINE_PATCH_FUNCTION paladin_extra_spells STR_VAR destination = "*" BEGIN
+    LPF add_display_string INT_VAR tra_ref = 10000 END
+END
+
+DEFINE_PATCH_FUNCTION paladin_purge_evil STR_VAR destination = "*" BEGIN
+    LPF get_array_element STR_VAR
+        array = "references"
+        key = "purge_evil_blind"
+    RET res = value END
+
+    //Sanitize.
+    PATCH_IF NOT (FILE_EXISTS_IN_GAME "%res%.spl") BEGIN
+        PATCH_FAIL "paladin_purge_evil: missing '%res%.spl' for subspell 'purge_evil_blind'."
+    END
+
+    //Patch-in spell.
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        match_opcode = 146                  //Cast spell.
+        verbose = 1
+    STR_VAR
+        match_resource = "blnd#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION paladin_fortress_against_evil STR_VAR destination = "*" BEGIN
+    //Power correction.
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        power = 7
+    END
+
+    //Correct maze and imprisonment immunities.
+    PATCH_WITH_SCOPE BEGIN
+        PATCH_FOR_EACH animation IN
+            "spmaze2"
+            "spmaze1"
+        BEGIN
+            LPF CLONE_EFFECT INT_VAR
+                check_globals = 0
+                check_headers = 1
+                verbose = 1
+                match_opcode = 101              //Immunity to effect.
+                match_parameter2 = 213          //Maze.
+                multi_match = 1
+                opcode = 296                    //Protection from animation.
+                parameter1 = 0                  //Cleaning.
+                parameter2 = 0
+            STR_VAR
+                resource = "%animation%"
+                insert = "below"
+            END
+        END
+
+        LPF CLONE_EFFECT INT_VAR
+            check_globals = 0
+            check_headers = 1
+            verbose = 1
+            match_opcode = 101              //Immunity to effect.
+            match_parameter2 = 213          //Maze.
+            multi_match = 1
+            opcode = 169                    //Prevent icon.
+            parameter1 = 0                  //Cleaning.
+            parameter2 = 78                 //Maze.
+        STR_VAR
+            resource = "%animation%"
+            insert = "below"
+        END
+    END
+
+    PATCH_WITH_SCOPE BEGIN
+        LPF get_spell_res STR_VAR spell = "WIZARD_IMPRISONMENT" RET res_name = resource END
+        PATCH_IF NOT ("%res_name%" STRING_EQUAL_CASE "*") BEGIN
+            LPF CLONE_EFFECT INT_VAR
+                check_globals = 0
+                check_headers = 1
+                verbose = 1
+                match_opcode = 101              //Immunity to effect.
+                match_parameter2 = 211          //Imprisonment.
+                multi_match = 1
+                opcode = 206                    //Protection from spell.
+                parameter1 = 0                  //Cleaning.
+                parameter2 = 0
+            STR_VAR
+                resource = "%res_name%"
+                insert = "below"
+            END
+
+            LPF CLONE_EFFECT INT_VAR
+                check_globals = 0
+                check_headers = 1
+                verbose = 1
+                match_opcode = 101              //Immunity to effect.
+                match_parameter2 = 211          //Imprisonment.
+                multi_match = 1
+                opcode = 169                    //Prevent icon.
+                parameter1 = 0                  //Cleaning.
+                parameter2 = 79                 //Imprisonment.
+            STR_VAR
+                resource = "%res_name%"
+                insert = "below"
+            END
+        END ELSE BEGIN
+            PATCH_FAIL "paladin_fortress_against_evil: id of '%res_name%' not found."
+        END
+    END
+END
+
+DEFINE_PATCH_FUNCTION paladin_holy_shield STR_VAR destination = "*" BEGIN
+    LPF get_spell_res STR_VAR spell = "CLERIC_MAGIC_RESISTANCE" RET res_name = resource END
+    PATCH_IF NOT ("%res_name%" STRING_EQUAL_CASE "*") BEGIN
+        LPF CLONE_EFFECT INT_VAR
+            check_globals = 0
+            verbose = 1
+            multi_match = 1
+            match_opcode = 321          //Remove effects by resource.
+        STR_VAR
+            insert = "first"
+            resource = "%res_name%"
+        END
+
+        LPF CLONE_EFFECT INT_VAR
+            check_globals = 0
+            verbose = 1
+            multi_match = 1
+            match_opcode = 27           //Acid resistance bonus.
+            opcode = 206                //Protection from spell.
+            parameter1 = 0              //Clean parameters.
+            parameter2 = 0
+        STR_VAR
+            insert = "last"
+            resource = "%res_name%"
+        END
+    END ELSE BEGIN
+        PATCH_FAIL "paladin_holy_shield: id of 'CLERIC_MAGIC_RESISTANCE' not found."
+    END
+END
+
+DEFINE_PATCH_FUNCTION inquisitor_sight STR_VAR destination = "*" BEGIN
+    //Protection from true sight.
+    LPF get_spell_res STR_VAR spell = "INQUIS_TRUE_SIGHT" RET res_name = resource END
+    PATCH_IF NOT ("%res_name%" STRING_EQUAL_CASE "*") BEGIN
+        LPF CLONE_EFFECT INT_VAR
+            check_globals = 0
+            verbose = 1
+            multi_match = 1
+            match_opcode = 206                  //Protection from spell.
+        STR_VAR
+            resource = "%res_name%"
+            insert = "last"
+        END
+    END ELSE BEGIN
+        PATCH_FAIL "inquisitor_sight: id of 'INQUIS_TRUE_SIGHT' not found."
+    END
+
+    //Correct power.
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_power = 9
+        power = 7
+    END
+END

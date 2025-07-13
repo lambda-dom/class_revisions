@@ -1,0 +1,9 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/internal/patchers.tpa"
+
+
+//Stealth bonus.
+DEFINE_PATCH_FUNCTION stalker_stealth_bonus BEGIN
+    //Inform user.
+    LPF add_display_string INT_VAR tra_ref = 10000 END
+END

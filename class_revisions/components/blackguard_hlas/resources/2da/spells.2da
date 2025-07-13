@@ -1,0 +1,7 @@
+2DA V1.0
+*
+                install name    descr   type    level   flags       school      sectype             book_icon       abil_icon       projectile      patch          over    destination
+demonic_wrath   1       1200    1201    innate  7       11000000    necromancer offensivedamage     #lit:sppr313c   #lit:sppr313b   #lit:inareanp   demonic_wrath  1       #spl:BLACKGUARD_DEMONIC_WRATH
+demonic_aura_a  1       *       *       special 1       00000000    *           *                   *               *               *               *              0       #suf:a:BLACKGUARD_DEMONIC_AURA
+demonic_aura    1       1210    1211    innate  7       11000000    invoker     *                   #lit:sppr730c   #lit:sppr730b   *               demonic_aura   1       #spl:BLACKGUARD_DEMONIC_AURA
+abyssal_shield  1       1220    1221    innate  7       00000000    abjurer     specificprotections #lit:sppr509c   #lit:sppr509b   *               abyssal_shield 1       #spl:BLACKGUARD_ABYSSAL_SHIELD

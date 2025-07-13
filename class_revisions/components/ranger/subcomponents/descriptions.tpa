@@ -1,0 +1,30 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/kits.tpa"
+
+
+DEFINE_ACTION_FUNCTION patch_descriptions BEGIN
+    ACTION_DEFINE_ASSOCIATIVE_ARRAY class_descriptions BEGIN
+        "ranger"       => 1000
+        "archer"       => 1010
+        "stalker"      => 1020
+        "beast_master" => 1030
+    END
+
+    ACTION_PHP_EACH class_descriptions AS cls => descr BEGIN
+        LAF set_class_description INT_VAR descr = descr STR_VAR class = "%cls%" END
+    END
+
+    ACTION_DEFINE_ASSOCIATIVE_ARRAY kit_descriptions BEGIN
+        //Feralan is Archer kit's name in base.
+        "feralan"     => 1010
+        "stalker"     => 1020
+        "beastmaster" => 1030
+    END
+
+    ACTION_PHP_EACH kit_descriptions AS kit => descr BEGIN
+        LAF set_kit_description INT_VAR descr = descr STR_VAR kit = "%kit%" END
+    END
+END
+
+//Main loop.
+LAF patch_descriptions END

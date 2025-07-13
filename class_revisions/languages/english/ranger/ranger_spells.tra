@@ -1,0 +1,108 @@
+//Existing abilities.
+@1000 = "Animal Empathy"
+@1001 = "With this ability, the ranger can charm a single animal for the duration of one turn. The animal is allowed a Saving Throw vs. Spell to negate the effect but at a penalty of -1 for every 6 levels of the ranger to a maximum of -2 at level 12. Being non-magical in nature, this ability ignores magic resistance of the target animal and can not be removed by Dispel Magic. This ability can only be used once per creature. Note the target will be hostile when the Charm expires, regardless of its original attitude, and that it cannot leave the area where it was charmed."
+
+//Ranger abilities.
+@1100 = "Spellcasting Initial Level Bonus"
+@1101 = "Gives a permanent bonus of 4 levels to divine spellcasting."
+
+@1105 = "Spellcasting per Level Bonus"
+@1106 = "Gives a permanent bonus of +1 to divine caster level."
+
+@1110 = "Ranger Spellbook"
+@1111 = "Trims down the Ranger spellbook."
+
+@1120 = "Woodland Stride"
+@1121 = "Gives permanent protection against spells like Entangle and Spike Growth."
+
+@1130 = ~Hunter's Quarry~
+@1131 = ~Hunter's Quarry
+Level: 1
+School: Divination
+Range: Long
+Duration: 1 turn
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: None
+
+When this ability is used, the ranger's eyes glow, enabling him to read the aura of a creature, and determine the creature's strengths and weaknesses. For the duration of the spell, the target's physical resistances are lowered by 10% and all attacks against the target creature are made with a +2 bonus to the attack rolls. This ability is not affected by magic resistance; it is not cumulative with itself or with similar magics like the Know Opponent spell.~
+
+@1140 = ~Summon Animal Companion~
+@1141 = ~Summon Animal Companion
+Level: 1
+School: Conjuration
+Range: Long
+Duration: 8 hours
+Casting Time: 9
+Area of Effect: Special
+Saving Throw: None
+
+With this ability, the ranger can, once per day, summon a wolf to his side to aid him. The ranger can summon progressively stronger wolves:
+
+Level 3: Wolf
+Level 6: Dire Wolf
+Level 9: Winter Wolf
+
+The wolf will aid the ranger by whatever means it possesses, staying by his side for 8 hours. This ability can only be used outdoors and outside of combat.
+
+Wolf (3 HD):
+STR 13, DEX 15, CON 15, INT 4, WIS 12, CHA 6;  AL Neutral
+HP 27, Effective AC 7, Base THAC0 17, Saving Throws 15/17/15/13/17
+1 Attack Per Round, 1d6 Piercing Damage (Bite)
+
+Dire Wolf (5 HD):
+STR 16, DEX 15, CON 16, INT 4, WIS 12, CHA 6;  AL Neutral
+HP 50, Effective AC 6, Base THAC0 14, Saving Throws 13/15/14/16/16
+1 Attack Per Round, 1d6 Piercing Damage (Bite)
+
+Winter Wolf (7 HD):
+STR 18, DEX 15, CON 17, INT 4, WIS 12, CHA 6;  AL Neutral
+HP 77, Effective AC 5, Base THAC0 12, Saving Throws 9/11/10/11/12
+FR 0%, CR 100%, ER 0%, AR 0%, MR 0%
+3/2 Attacks Per Round, 1d6 + 1 Piercing (Bite)
+
+Combat abilities:
+  Icy Bite: weapon is of enchantment level 1 doing extra 1d4 cold damage
+~
+
+//Ranger spells.
+@1200 = ~Blades of Fire~
+@1201 = ~Blades of Fire
+Level: 1
+School: Transmutation
+Range: Personal
+Duration: 5 rounds
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None
+
+For the duration of this spell, caster's melee weapons deal an extra 1d6 points of fire damage. Multiple castings of this spell are not cumulative.~
+
+@1210 = ~Snare~
+@1211 = ~Snare
+Level: 2
+School: Abjuration
+Range: Short
+Duration: Special
+Casting Time: 1 round
+Area of Effect: 20' radius
+Saving Throw: Breath half
+
+This powerful trap entangles those who enter or pass the selected area or object. Any enemy violating the selected area will trigger the trap. When a hostile creature comes within 15 feet of the trap, it is triggered and explodes, entangling every enemy within a 20 foot radius for 2 rounds. Those held receive a -2 penalty to attack rolls, a +2 penalty to AC and move at half the normal rate. Creatures that make a successful saving throw vs. breath at -2 penalty avoid entanglement and can freely move through the area. An entangled creature can attack, provided it does not have to move to reach an opponent. Incorporeal and flying creatures are unaffected by this spell, as are elementals and exceptionally large and strong creatures who suffer little to no distress from the entangling plants. This spell will not harm party members.~
+
+@1220 = ~Swift Haste~
+@1221 = ~Swift Haste
+Level: 3
+School: Alteration
+Range: Personal
+Duration: 5 rounds
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None
+
+When this spell is cast, the ranger functions at double his normal movement rate, gains a +1 bonus to attack rolls, armor class, and saving throws vs. breath, and can make an extra attack each round. Furthermore, the rate at which the creature is regenerating or suffering damage from poison is doubled. Spellcasting and spell effects are not affected. Swift Haste negates and counters the effects of a Slow spell. This spell is not cumulative with itself or with other similar magic like the Haste spell.~
+
+//Ability gain strings.
+@10000 = "Gained +4 caster level bonus."
+@10005 = "Gained +1 caster level bonus."
+@10010 = "Gained immunity to spells like Entangle and Spike Growth."

@@ -1,0 +1,326 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/spells.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/internal/patchers.tpa"
+
+//Mod libraries.
+INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
+
+
+//Reference tables.
+LAF get_table_references STR_VAR
+    tables = "beastmaster_spells"
+RET_ARRAY spells = references END
+
+LAF get_table_references STR_VAR
+    tables = "effects"
+RET_ARRAY effects = references END
+
+
+//Auxiliary functions.
+DEFINE_PATCH_FUNCTION write_spell_info STR_VAR spell = "" BEGIN
+    LPF get_spell_res STR_VAR
+        spell = "%spell%"
+    RET res = resource END
+
+    PATCH_IF ("%res%" STRING_EQUAL_CASE "*") BEGIN
+        PATCH_FAIL "get_spell_info: spell '%spell%' not found in 'spell.ids'."
+    END
+
+    //Get info
+    INNER_ACTION BEGIN
+        COPY_EXISTING - "%res%.spl" "override"
+            LPF get_spell_field STR_VAR field = "name" RET name = value END
+            LPF get_spell_field STR_VAR field = "description" RET description = value END
+            LPF get_spell_field STR_VAR field = "book_icon" RET book_icon = value END
+            LPF get_spell_header_field INT_VAR
+                header = 0
+            STR_VAR
+                field = "icon"
+            RET icon = value END
+    END
+
+    //Write out info.
+    LPF set_spell_field STR_VAR field = "name" value = "%name%" END
+    LPF set_spell_field STR_VAR field = "description" value = "%description%" END
+    LPF set_spell_field STR_VAR field = "book_icon" value = "%book_icon%" END
+    LPF get_spell_header_count RET count END
+    FOR (i = 0; i < count; ++i) BEGIN
+        LPF set_spell_header_field INT_VAR
+            header = i
+        STR_VAR
+            field = "icon"
+            value = "%icon%"
+        END
+    END
+
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        verbose = 1
+        match_opcode = 146              //Cast spell.
+    STR_VAR
+        match_resource = "spl#res"
+        resource = "%res%"
+    END
+END
+
+
+//Patches.
+DEFINE_PATCH_FUNCTION beastmaster_spellbook BEGIN
+    LPF get_component_resources_dir RET dir END
+    LPF compose_spellbook STR_VAR
+        table = "%dir%/2da/beastmaster_spellbook.2da"
+    END
+END
+
+DEFINE_PATCH_FUNCTION beastmaster_animal_companion BEGIN
+    PATCH_FOR_EACH char IN "a" "b" "c" "d" "e" "f" BEGIN
+        LPF get_table_ref STR_VAR
+            value = "beastmaster_summon_panther_%char%"
+            array = "effects"
+            ext = "eff"
+        RET res = resource END
+
+        LPF ALTER_EFFECT INT_VAR
+            check_globals = 0
+            verbose = 1
+            match_opcode = 177              //Use eff.
+        STR_VAR
+            match_resource = "pth%char%#res"
+            resource = "%res%"
+        END
+    END
+END
+
+DEFINE_PATCH_FUNCTION beastmaster_animal_harmony_a BEGIN
+    LPF get_table_ref STR_VAR
+        value = "beastmaster_animal_growth"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        verbose = 1
+        match_opcode = 321              //Remove effects by resource.
+    STR_VAR
+        match_resource = "angr#res"
+        resource = "%res%"
+    END
+
+    LPF get_spell_res STR_VAR
+        spell = "CLERIC_ANIMAL_GROWTH"
+    RET spl = resource END
+
+    PATCH_IF ("%spl%" STRING_EQUAL_CASE "*") BEGIN
+        PATCH_FAIL "beastmaster_animal_harmony: spell 'CLERIC_ANIMAL_GROWTH' not found in 'spell.ids'."
+    END
+
+    LPF CLONE_EFFECT INT_VAR
+        check_globals = 0
+        verbose = 1
+        match_opcode = 321              //Remove effects by resource.
+        opcode = 321
+    STR_VAR
+        match_resource = "%res%"
+        resource = "%spl%"
+    END
+
+    LPF get_table_ref STR_VAR
+        value = "beastmaster_animal_fury"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        verbose = 1
+        match_opcode = 321              //Remove effects by resource.
+    STR_VAR
+        match_resource = "anfu#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION beastmaster_animal_harmony BEGIN
+    LPF get_table_ref STR_VAR
+        value = "beastmaster_animal_harmony_a"
+        array = "effects"
+        ext = "eff"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        verbose = 1
+        match_opcode = 177              //Use eff.
+    STR_VAR
+        match_resource = "spl#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION beastmaster_animal_fang BEGIN
+    LPF get_table_ref STR_VAR
+        value = "beastmaster_animal_fang_a"
+        array = "effects"
+        ext = "eff"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        verbose = 1
+        match_opcode = 177              //Use eff.
+    STR_VAR
+        match_resource = "spl#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION beastmaster_animal_growth_a BEGIN
+    LPF get_table_ref STR_VAR
+        value = "beastmaster_animal_harmony"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        verbose = 1
+        match_opcode = 321              //Remove effects by resource.
+    STR_VAR
+        match_resource = "anha#res"
+        resource = "%res%"
+    END
+
+    LPF get_spell_res STR_VAR
+        spell = "CLERIC_ANIMAL_GROWTH"
+    RET spl = resource END
+
+    PATCH_IF ("%spl%" STRING_EQUAL_CASE "*") BEGIN
+        PATCH_FAIL "beastmaster_animal_growth_a: spell 'CLERIC_ANIMAL_GROWTH' not found in 'spell.ids'."
+    END
+
+    LPF CLONE_EFFECT INT_VAR
+        check_globals = 0
+        verbose = 1
+        match_opcode = 321              //Remove effects by resource.
+        opcode = 321
+    STR_VAR
+        match_resource = "%res%"
+        resource = "%spl%"
+    END
+
+    LPF get_table_ref STR_VAR
+        value = "beastmaster_animal_fury"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        verbose = 1
+        match_opcode = 321              //Remove effects by resource.
+    STR_VAR
+        match_resource = "anfu#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION beastmaster_animal_growth BEGIN
+    LPF get_table_ref STR_VAR
+        value = "beastmaster_animal_growth_a"
+        array = "effects"
+        ext = "eff"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        verbose = 1
+        match_opcode = 177              //Use eff.
+    STR_VAR
+        match_resource = "spl#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION beastmaster_animal_fury_a BEGIN
+    LPF get_table_ref STR_VAR
+        value = "beastmaster_animal_harmony"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        verbose = 1
+        match_opcode = 321              //Remove effects by resource.
+    STR_VAR
+        match_resource = "anha#res"
+        resource = "%res%"
+    END
+
+    LPF get_spell_res STR_VAR
+        spell = "CLERIC_ANIMAL_GROWTH"
+    RET spl = resource END
+
+    PATCH_IF ("%spl%" STRING_EQUAL_CASE "*") BEGIN
+        PATCH_FAIL "beastmaster_animal_fury: spell 'CLERIC_ANIMAL_GROWTH' not found in 'spell.ids'."
+    END
+
+    LPF CLONE_EFFECT INT_VAR
+        check_globals = 0
+        verbose = 1
+        match_opcode = 321              //Remove effects by resource.
+        opcode = 321
+    STR_VAR
+        match_resource = "%res%"
+        resource = "%spl%"
+    END
+
+    LPF get_table_ref STR_VAR
+        value = "beastmaster_animal_growth"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        verbose = 1
+        match_opcode = 321              //Remove effects by resource.
+    STR_VAR
+        match_resource = "angr#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION beastmaster_animal_fury BEGIN
+    LPF get_table_ref STR_VAR
+        value = "beastmaster_animal_fury_a"
+        array = "effects"
+        ext = "eff"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        verbose = 1
+        match_opcode = 177              //Use eff.
+    STR_VAR
+        match_resource = "spl#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION beastmaster_animal_summon1 STR_VAR destination = "*" BEGIN
+    LPF write_spell_info STR_VAR spell = "CLERIC_ANIMAL_SUMMONING_LEVEL_1" END
+END
+
+DEFINE_PATCH_FUNCTION beastmaster_animal_summon2 STR_VAR destination = "*" BEGIN
+    LPF write_spell_info STR_VAR spell = "CLERIC_ANIMAL_SUMMONING_LEVEL_2" END
+END
+
+DEFINE_PATCH_FUNCTION beastmaster_animal_summon3 STR_VAR destination = "*" BEGIN
+    LPF write_spell_info STR_VAR spell = "CLERIC_ANIMAL_SUMMONING_LEVEL_3" END
+END
+
+DEFINE_PATCH_FUNCTION beastmaster_animal_summon4 STR_VAR destination = "*" BEGIN
+    LPF write_spell_info STR_VAR spell = "CLERIC_ANIMAL_SUMMONING_LEVEL_4" END
+END

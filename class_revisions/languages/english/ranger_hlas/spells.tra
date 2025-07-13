@@ -1,0 +1,197 @@
+//HLA's.
+@1000 = ~Improved Ambidexterity~
+@1001 = ~Rangers are well-trained in the use of two weapons for melee fighting. This passive ability further increases their skills in dual-wielding weapons and negates the +2 THAC0 penalty to off-hand weapons.
+
+This ability can be chosen once.~
+
+@1010 = ~Toughness~
+@1011 = ~This passive ability increases the character's Maximum Hit Points by 6 permanently.
+
+Toughness can be chosen up to 5 times.~
+
+@1015 = ~Improved Criticals~
+@1016 = ~With this passive ability, the ranger permanently increases his critical hit score by one.
+
+This ability can be chosen once.~
+
+@1020 = ~Nature's Endurance~
+@1021 = ~With this ability, the ranger is blessed with Nature's endurance and indomitable will. Once a day, and for five turns, the ranger gains a +2 bonus to movement rate, a +2 bonus to saving throws, a 10% bonus to his maximum hit points and a boost to regeneration of 1 hp per round. For the duration of the ability, the ranger is immune to fatigue, unconsciousness and slow. Being non-magical in nature, the effects of this ability cannot be dispelled nor breached.
+
+This ability can be chosen once.~
+
+@1030 = ~Nature's Guardian~
+@1031 = ~Empowered by Nature itself, the ranger becomes its protector and guardian. When this ability is activated, for 1 turn the ranger gains a bonus of +2 to strength. He is enveloped by a crackling shield, that grants a +4 bonus to saves vs. breath and AC against missiles. Non-magical missile weapons are deflected away, while gases cannot penetrate the barrier. Tiny and small flying creatures cannot pass through. Furthermore, any creature hitting the target within 5 feet, suffers 1d8 + 5 electric damage. Nature's Guard is not cumulative with similar magics like Storm Shield. This ability cannot be dispelled but can be breached.
+
+This ability can be chosen once.~
+
+//Archer.
+@1100 = ~Improved Ranged Criticals~
+@1101 = ~With this passive ability, the Archer permanently increases his ranged critical hit score by one.
+
+This ability can be chosen once.~
+
+@1110 = ~Precision~
+@1111 = ~With proper concentration a skilled archer can render his attacks more precise and deadlier. When activating this ability, for 4 rounds the archer gains a bonus of +5 to his THAC0 with missile weapons, +8 bonus to damage and a 20% chance per hit to instantly killed the target on a failed save vs. death; the target must also make a save vs. breath at -2 to avoid the force of the hit and being knocked back.
+
+Precision has its drawbacks: it requires intense concentration, making defense and movement more difficult. Until the ability expires, his casting speed is increased by 4 and his AC is penalized by -5..
+
+This ability can be chosen more than once and requires Improved Range Criticals.~
+
+//Stalker.
+@1200 = ~Improved Spellbook~
+@1201 = ~With this passive ability, the Stalker permanently augments the spells available in his spellbook with Blur, Mirror Image, Mislead, Detect Illusions, Clairvoyance and Oracle.
+
+This ability can be chosen once.~
+
+@1210 = ~Extra Spells~
+@1211 = ~By choosing this ability, the Stalker permanently gains one more spell per level, from levels 1 to 4.
+
+This ability can be chosen once.~
+
+//New stalker spells.
+@1300 = "Blur"
+@1301 = "Blur
+Level: 2
+School: Illusion
+Range: Personal
+Duration: 1 turn
+Casting Time: 2
+Area of Effect: Caster
+Saving Throw: None
+
+A Blur spell causes the caster's form and spirit to become blurred, shifting and wavering. This distortion causes all melee and missile attacks against the caster to be made with -3 penalties, whereas all saves vs. spell are made by the caster with a +3 bonus. Multiple castings of this spell are not cumulative."
+
+@1310 = "Mirror Image"
+@1311 = "Mirror Image
+Level: 3
+School: Illusion
+Range: Personal
+Duration: 1 turn
+Casting Time: 2
+Area of Effect: Caster
+Saving Throw: None
+
+When a Mirror Image spell is invoked, the spellcaster causes eight illusory duplicates of himself to come into being around him. These images do exactly what the wizard does, and since the spell causes a blurring and slight distortion when it is cast, it is impossible for opponents to be certain which are the illusions and which is the actual wizard. When an image is directly struck by a melee or missile attack, magical or otherwise, it disappears, while other existing images remain intact. It is important to note that this will not protect the caster against all attacks, as it is possible for an enemy to choose the real caster amongst all the images. Multiple castings of this spell are not cumulative."
+
+@1320 = "Mislead"
+@1321 = "Mislead
+Level: 6
+School: Illusion
+Range: Personal
+Duration: 1 turn
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None
+
+When this spell is cast the stalker is affected with an Improved Invisibility spell and is teleported a few feet away from his original position. Meanwhile an exact image of the caster is created where he used to be with exactly the same hit points as the caster. The illusory double vanishes after 5 rounds and cannot perform any actions at all, like attacking or casting spells. It can, however, move around and act as a decoy for the invisible mage. As long as the image isn't destroyed, the caster can attack and cast spells while remaining completely hidden. The image will remain under the control of the caster until it is reduced to 0 hit points, or until it is affected by a dispel magic or a spell that destroys the illusion."
+
+@1330 = "Detect Illusion"
+@1331 = "Detect Illusion
+Level: 1
+School: Divination
+Range: Long
+Duration: Instant
+Casting Time: 3
+Area of Effect: 30' radius
+Saving Throw: None
+
+When this spell is cast at a point designated by the stalker, an area roughly 30 feet in radius will be affected. All hostile illusion spells of 4th level and lower in this area will be dispelled. Magic resistance does not affect this spell.
+
+The illusion spells dispelled by Detect Illusion are: Reflected Image, Blur, Invisibility, Mirror Image, Ghost Armor, Invisibility Sphere, and Improved Invisibility."
+
+@1340 = "Clairvoyance"
+@1341 = "Clairvoyance
+Level: 2
+School: Divination
+Range: Personal
+Duration: 1 turn
+Casting Time: 3
+Area of Effect: Caster
+Saving Throw: None
+
+This spell grants an unnatural perception of things to come. Once Clairvoyance is cast, the caster receives instantaneous warnings of impending danger or harm. He becomes impossible to surprise and cannot be backstabbed. In addition, the spell gives a general idea of what action might be taken to best protect oneself, granting a +2 insight bonus to AC and saves vs. breath. The effects last for the duration of the spell and cannot be dispelled."
+
+@1350 = "Oracle"
+@1351 = "Oracle
+Level: 3
+School: Divination
+Range: Personal
+Duration: Instant
+Casting Time: 5
+Area of Effect: 30' radius
+Saving Throw: None
+
+When this spell is cast, an area roughly 30 feet in radius around the caster will be affected. All hostile illusion/phantasm spells in this area will be dispelled. This spell only affects one's enemies.
+
+The spells that are affected by this are: Reflected Image, Invisibility, Blur, Mirror Image, Ghost Armor, Invisibility Sphere, Improved Invisibility, Shadow Door, Pixie Dust, Mislead, Project Image, and Mass Invisibility."
+
+//Beastmaster.
+@1400 = "Monster Swarm"
+@1401 = "Monster Swarm
+Level: 7
+School: Conjuration
+Range: Long
+Duration: 2 Turns
+Casting Time: 9
+Area of Effect: Special
+Saving Throw: None
+
+With this ability, the Beastmaster unleashes nature's wrath and summons a swarm of monstruous animals to fight his enemies. Three animal monsters, a Shambling Mound, a Greater Wyvern and a Black Spider, will come to the Beastmaster's aid.
+
+Shambling Mound (12 HD):
+STR 19, DEX 10, CON 16, INT 7, WIS 10, CHA 9; AL Neutral
+HP 108, AC 0, THAC0 4, Saving Throws 4/6/5/4/7
+2 Attacks Per Round, Fists +2 doing 2d6 + 5 crushing damage
+
+Combat Abilities:
+  Entangle: target must save vs. breath at a penalty of -2 or be entangled for 1 round
+
+Special Qualities:
+  Regeneration: 1hp/round
+  Immune to charm, sleep, fear, hold, entangle, web, poison, stun and instant death effects
+  Electrical Resistance 100%; Fire Resistance 50%; Cold Resistance 50%
+  Crushing Resistance 100%; Slashing, Piercing and Missile Resistance 50%
+
+Greater Wyvern (10 HD):
+STR 17, DEX 12, CON 15, INT 6, WIS 12, CHA 9; AL Neutral
+HP 88, AC 2, THAC0 6, Saving Throws 8/10/9/9/11
+3 Attacks Per Round, Bite +2 doing 1d8 + 3 slashing damage
+
+Combat Abilities:
+  Envenom: target must save vs. poison at a penalty of -2 or suffer 1 poison damage per second for 5 rounds
+
+Special Qualities:
+  Immune to charm, sleep, fear, grease, entangle, web, poison, stun and instant death effects
+
+Black Spider (8 HD):
+STR 16, DEX 19, CON 14, INT 6, WIS 11, CHA 3; AL Neutral
+HP 72, AC 4, THAC0 8, Saving Throws 10/12/11/12/13
+5 Attacks Per Round, Sting +1 doing 1d6 + 1 piercing damage
+
+Combat Abilities:
+  Webbing: target must save vs. breath at a penalty of -4 or be webbed for 3 rounds
+
+Special Qualities:
+  Fast: movement rate bonus +4
+  Immune to charm, sleep, fear, web, poison, stun and instant death effects
+"
+
+@1410 = "Nature's Power"
+@1411 = "Nature's Power
+Level: 7
+School: Alteration
+Range: Personal
+Duration: 1 Turn
+Casting Time: 5
+Area of Effect: 30' radius
+Saving Throw: None
+
+When this spell is cast, all friendly animals and monsters are empowered by nature itself. Every affected creature gains an extra attack and a bonus of +2 to the movement rate, a bonus of +2 to saves vs. breath and 50% resistance to all elemental damage. For the duration of the ability, the affected creatures are also immune to slow and paralyzation. Being non-magical in nature, the effects of this ability cannot be dispelled."
+
+//Ability gain strings.
+@10000 = "Gained +2 bonus to off-hand thac0."
+@10010 = "Gained +6 hit points."
+@10100 = "Gained +1 to ranged critical hit score."
+@10200 = "Augmented spellbook."
+@10210 = "Gained one spell slot from level 1 to 4."
+@10220 = "Gained +1 to the backstab multiplier."

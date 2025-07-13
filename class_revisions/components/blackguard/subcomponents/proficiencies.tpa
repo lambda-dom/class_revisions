@@ -1,0 +1,24 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/kits.tpa"
+
+
+//Patches.
+DEFINE_ACTION_FUNCTION patch_blackguard_proficiencies BEGIN
+    LAF get_component_resources_dir RET resources = dir END
+
+    COPY_EXISTING "weapprof.2da" "override"
+        LPF load_array STR_VAR
+            table = "%resources%/2da/blackguard_proficiencies.2da"
+        RET_ARRAY proficiencies = array END
+
+        LPF patch_proficiencies STR_VAR
+            kit = "blackguard"
+            array = "proficiencies"
+        END
+    PRETTY_PRINT_2DA
+    BUT_ONLY
+END
+
+//Main loop.
+LAF patch_blackguard_proficiencies END

@@ -1,0 +1,103 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/internal/patchers.tpa"
+
+
+//Load references.
+LAF get_component_resources_dir RET resources = dir END
+LAF get_table_references STR_VAR
+    tables = "items"
+RET_ARRAY items = references END
+
+
+//Patches.
+DEFINE_PATCH_FUNCTION panther_a BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "panther_claws_a"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "panther_ring_g"
+        slot = "rring"
+        array = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION panther_b BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "panther_claws_b"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "panther_ring_h"
+        slot = "rring"
+        array = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION panther_c BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "panther_claws_c"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "panther_ring_i"
+        slot = "rring"
+        array = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION panther_d BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "panther_claws_d"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "panther_ring_j"
+        slot = "rring"
+        array = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION panther_e BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "panther_claws_e"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "panther_ring_k"
+        slot = "rring"
+        array = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION panther_f BEGIN
+    //Equip items.
+    LPF creature_add_item STR_VAR
+        reference = "panther_claws_f"
+        slot = "weapon1"
+        array = "items"
+    END
+
+    LPF creature_add_item STR_VAR
+        reference = "panther_ring_l"
+        slot = "rring"
+        array = "items"
+    END
+END

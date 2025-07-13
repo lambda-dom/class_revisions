@@ -1,0 +1,344 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/arrays.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/spells.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/tables.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/internal/patchers.tpa"
+
+//Mod libraries.
+INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
+
+
+//Get reference tables. Separately to avoid reference clashing.
+LAF get_table_references STR_VAR
+    tables = "effects"
+RET_ARRAY eff_references = references END
+
+LAF get_table_references STR_VAR
+    tables = "spells"
+RET_ARRAY spl_references = references END
+
+
+//Patches.
+//Paladin casting level.
+DEFINE_PATCH_FUNCTION paladin_spell_initial_level STR_VAR destination = "*" BEGIN
+    LPF add_display_string INT_VAR tra_ref = 10000 END
+END
+
+//Paladin spellbook.
+DEFINE_PATCH_FUNCTION paladin_spellbook STR_VAR destination = "*" BEGIN
+    LPF get_component_resources_dir RET dir END
+    LPF compose_spellbook STR_VAR
+        table = "%dir%/2da/paladin_spellbook.2da"
+    END
+END
+
+//Paladin casting level bonus.
+DEFINE_PATCH_FUNCTION paladin_spell_level_bonus STR_VAR destination = "*" BEGIN
+    LPF add_display_string INT_VAR tra_ref = 10005 END
+END
+
+//Spell slot penalty.
+DEFINE_PATCH_FUNCTION paladin_spell_penalty STR_VAR destination = "*" BEGIN
+    LPF add_display_string INT_VAR tra_ref = 10010 END
+END
+
+//Disease immunity.
+DEFINE_PATCH_FUNCTION disease_immunity STR_VAR destination = "*" BEGIN
+    LPF add_display_string INT_VAR tra_ref = 10020 END
+END
+
+//Fear immunity.
+DEFINE_PATCH_FUNCTION fear_immunity STR_VAR destination = "*" BEGIN
+    LPF add_display_string INT_VAR tra_ref = 10030 END
+END
+
+//Charm immunity.
+DEFINE_PATCH_FUNCTION charm_immunity STR_VAR destination = "*" BEGIN
+    LPF add_display_string INT_VAR tra_ref = 10040 END
+END
+
+//Hold immunity.
+DEFINE_PATCH_FUNCTION hold_immunity STR_VAR destination = "*" BEGIN
+    LPF add_display_string INT_VAR tra_ref = 10050 END
+END
+
+//Confusion immunity.
+DEFINE_PATCH_FUNCTION confusion_immunity STR_VAR destination = "*" BEGIN
+    LPF add_display_string INT_VAR tra_ref = 10060 END
+END
+
+//Detect Evil.
+DEFINE_PATCH_FUNCTION paladin_detect_evil STR_VAR destination = "*" BEGIN
+    LPF get_table_ref STR_VAR
+        value = "paladin_detect_evil_a"
+        array = "spl_references"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        verbose = 1
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        match_resource = "cddetevl"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION paladin_smite_evil STR_VAR destination = "*" BEGIN
+    //Add melee effects.
+    LPF get_spell_header_count RET headers_count = count END
+    FOR (i = 1; i <= headers_count ; ++i) BEGIN
+        LPF get_table_ref STR_VAR
+            value = "damage_evil_%i%"
+            array = "eff_references"
+            ext = "eff"
+        RET res = resource END
+
+        //Patch-in melee effect.
+        LPF ALTER_EFFECT INT_VAR
+            header = i - 1
+            verbose = 1
+            match_opcode = 248              //Melee effect.
+        STR_VAR
+            match_resource = "mele#res"
+            resource = "%res%"
+        END
+     END
+END
+
+//Auras.
+DEFINE_PATCH_FUNCTION paladin_aura_protection STR_VAR destination = "*" BEGIN
+    LPF get_table_ref STR_VAR
+        value = "paladin_aura_protection_a"
+        array = "spl_references"
+        ext = "spl"
+    RET res = resource END
+
+    //Patch in resource.
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 272                  //Cast spell on condition.
+    STR_VAR
+        match_resource = ""
+        resource = "%res%"
+    END
+
+    //User information.
+    LPF add_display_string INT_VAR tra_ref = 10100 END
+END
+
+DEFINE_PATCH_FUNCTION paladin_aura_justice STR_VAR destination = "*" BEGIN
+    LPF get_table_ref STR_VAR
+        value = "paladin_aura_justice_a"
+        array = "spl_references"
+        ext = "spl"
+    RET res = resource END
+
+    //Patch in resource.
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 272                  //Cast spell on condition.
+    STR_VAR
+        match_resource = ""
+        resource = "%res%"
+    END
+
+    //User information.
+    LPF add_display_string INT_VAR tra_ref = 10110 END
+END
+
+DEFINE_PATCH_FUNCTION paladin_aura_faith STR_VAR destination = "*" BEGIN
+    LPF get_table_ref STR_VAR
+        value = "paladin_aura_faith_a"
+        array = "spl_references"
+        ext = "spl"
+    RET res = resource END
+
+    //Patch in resource.
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 272                  //Cast spell on condition.
+    STR_VAR
+        match_resource = ""
+        resource = "%res%"
+    END
+
+    //User information.
+    LPF add_display_string INT_VAR tra_ref = 10120 END
+END
+
+//Cavalier abilities and spells.
+//Cavalier spellbook.
+DEFINE_PATCH_FUNCTION cavalier_spellbook STR_VAR destination = "*" BEGIN
+    LPF get_component_resources_dir RET dir END
+    LPF compose_spellbook STR_VAR
+        table = "%dir%/2da/cavalier_spellbook.2da"
+    END
+END
+
+//Shield specialization.
+DEFINE_PATCH_FUNCTION cavalier_shield_specialization STR_VAR destination = "*" BEGIN
+    LPF add_display_string INT_VAR tra_ref = 11000 END
+END
+
+DEFINE_PATCH_FUNCTION cavalier_divine_retaliation STR_VAR destination = "*" BEGIN
+    LPF get_table_ref STR_VAR
+        value = "cavalier_divine_retaliation_a"
+        array = "spl_references"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        verbose = 1
+        match_opcode = 232      //Cast spell on condition.
+    STR_VAR
+        match_resource = "retl#res"
+        resource = "%res%"
+    END
+END
+
+//Inquisitor abilities and spells.
+//Disable spell casting.
+DEFINE_PATCH_FUNCTION inquisitor_disable_spellcasting STR_VAR destination = "*" BEGIN
+    LPF add_display_string INT_VAR tra_ref = 12000 END
+END
+
+//Disable turn undead.
+DEFINE_PATCH_FUNCTION inquisitor_disable_turn_undead STR_VAR destination = "*" BEGIN
+    LPF add_display_string INT_VAR tra_ref = 12001 END
+END
+
+//Iron will.
+DEFINE_PATCH_FUNCTION inquisitor_iron_will STR_VAR destination = "*" BEGIN
+    LPF add_display_string INT_VAR tra_ref = 12002 END
+END
+
+DEFINE_PATCH_FUNCTION inquisitor_true_sight STR_VAR destination = "*" BEGIN
+    LPF get_spell_res STR_VAR
+        spell = "CLERIC_TRUE_SIGHT"
+    RET res = resource END
+
+    //Sanitize.
+    PATCH_IF NOT (FILE_EXISTS_IN_GAME "%res%.spl") BEGIN
+        PATCH_FAIL "inquisitor_true_sight: spell '%res%.spl' does not exist in-game."
+    END
+
+    //Patch-in spell.
+    LPF ALTER_EFFECT INT_VAR
+        check_headers = 1
+        verbose = 1
+        match_opcode = 146                  //Cast spell
+    STR_VAR
+        match_resource = "trst#res"
+        resource = "%res%"
+    END
+END
+
+DEFINE_PATCH_FUNCTION inquisitor_dispel_evil STR_VAR destination = "*" BEGIN
+    //Get sectype and sanitize.
+    LPF get_sectype_id STR_VAR sectype = "k1#dispel" RET sectype_id = id END
+    PATCH_IF (sectype_id = 0 - 1) BEGIN
+        PATCH_FAIL "inquisitor_dispel_evil: sectype 'k1#dispel' not found."
+    END
+
+    PATCH_WITH_SCOPE BEGIN
+        LPF get_spell_header_count RET headers_count = count END
+        FOR (i = 0; i < headers_count; ++i) BEGIN
+            LPF get_spell_header_offset INT_VAR header = i RET header_offset = offset END
+
+            //Patch min level.
+            min_level = i + 1
+            LPF set_spell_header_field INT_VAR
+                header = i
+            STR_VAR
+                field = "min_level"
+                value = "%min_level%"
+            END
+            
+            //Patch dispel level.
+            level = i + 1 + ((i + 1)/ 2)
+            LPF ALTER_EFFECT INT_VAR
+                header = i
+                verbose = 1
+                match_opcode = 58           //Dispel effects.
+                parameter1 = level
+            END
+
+            //Clone Dispel [58] into Remove by Sectype [221].
+            LPF CLONE_EFFECT INT_VAR
+                header = i
+                verbose = 1
+                match_opcode = 58           //Dispel effects.
+                opcode = 221                //Remove by sectype.
+                parameter1 = 9              //Level.
+                parameter2 = sectype_id
+                timing = 3                  //Delayed/limited to guarantee ordering.
+            STR_VAR
+                insert = "below"
+            END
+        END
+    END
+END
+
+//Undead hunter abilities and spells.
+//Undead hunter spellbook.
+DEFINE_PATCH_FUNCTION undead_hunter_spellbook STR_VAR destination = "*" BEGIN
+    LPF get_component_resources_dir RET dir END
+    LPF compose_spellbook STR_VAR
+        table = "%dir%/2da/undead_hunter_spellbook.2da"
+    END
+END
+
+//Level Drain immunity.
+DEFINE_PATCH_FUNCTION undead_hunter_level_drain_immunity STR_VAR destination = "*" BEGIN
+    LPF add_display_string INT_VAR tra_ref = 13000 END
+END
+
+//Turn Undead bonus.
+DEFINE_PATCH_FUNCTION undead_hunter_turn_undead_bonus STR_VAR destination = "*" BEGIN
+    LPF add_display_string INT_VAR tra_ref = 13001 END
+END
+
+DEFINE_PATCH_FUNCTION undead_hunter_exorcism STR_VAR destination = "*" BEGIN
+    //Patch in melee effects.
+    LPF get_spell_header_count RET headers_count = count END
+    FOR (i = 1; i <= headers_count; ++i) BEGIN
+        LPF get_table_ref STR_VAR
+            value = "cast_spell_kill_undead_%i%"
+            array = "eff_references"
+            ext = "eff"
+        RET res = resource END
+
+        //Patch-in melee effect.
+        LPF ALTER_EFFECT INT_VAR
+            check_globals = 0
+            header = i - 1
+            match_opcode = 248                  //Melee effect.
+            verbose = 1
+        STR_VAR
+            match_resource = "mele#res"
+            resource = "%res%"
+        END
+    END
+END
+
+DEFINE_PATCH_FUNCTION undead_hunter_skeleton_warrior STR_VAR destination = "*" BEGIN
+    LPF get_table_ref STR_VAR
+        value = "summon_skeleton_warrior"
+        array = "eff_references"
+        ext = "eff"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        check_headers = 1
+        verbose = 1
+        match_opcode = 177              //Use Eff.
+    STR_VAR
+        match_resource = "summ#res"
+        resource = "%res%"
+    END
+END
