@@ -1,7 +1,8 @@
 //Libraries.
 INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
-INCLUDE "%WEIDU_LIBRARY_DIR%/internal/patchers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
+
 //Import compose spellbook from paladin component. TODO: refactor to avoid this.
 INCLUDE "%MOD_FOLDER%/components/paladin/patches/spells.tpa"
 

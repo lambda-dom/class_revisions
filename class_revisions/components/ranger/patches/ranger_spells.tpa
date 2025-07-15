@@ -1,6 +1,6 @@
 //Libraries.
 INCLUDE "%WEIDU_LIBRARY_DIR%/spells.tpa"
-INCLUDE "%WEIDU_LIBRARY_DIR%/internal/patchers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
 
 //Mod libraries.
 INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
