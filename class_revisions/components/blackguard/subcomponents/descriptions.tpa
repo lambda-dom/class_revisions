@@ -3,5 +3,4 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/kits.tpa"
 
 
 //Set kit description.
-LAF set_class_description INT_VAR descr = 1040 STR_VAR class = "blackguard" END
 LAF set_kit_description INT_VAR descr = 1040 STR_VAR kit = "blackguard" END

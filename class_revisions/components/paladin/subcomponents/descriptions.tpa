@@ -3,24 +3,16 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/kits.tpa"
 
 
 DEFINE_ACTION_FUNCTION patch_descriptions BEGIN
+    LAF set_class_description INT_VAR descr = 1000 STR_VAR class = "paladin" END
+
     ACTION_DEFINE_ASSOCIATIVE_ARRAY descriptions BEGIN
-        "paladin" => 1000
         "cavalier" => 1010
         "inquisitor" => 1020
         "undead_hunter" => 1030
     END
 
     ACTION_PHP_EACH descriptions AS kit => descr BEGIN
-        LAF set_class_description INT_VAR descr = descr STR_VAR class = "%kit%" END
-        ACTION_IF NOT ("%kit%" STRING_EQUAL_CASE "paladin") BEGIN
-            LAF set_kit_description INT_VAR descr = descr STR_VAR kit = "%kit%" END
-        END
-    END
-
-    //Extra EET descriptions for paladin at character generation.
-    //TODO: There must be a better way to this.
-    ACTION_IF (GAME_IS "eet") BEGIN
-        STRING_SET 209558 @1000
+        LAF set_kit_description INT_VAR descr = descr STR_VAR kit = "%kit%" END
     END
 END
 
