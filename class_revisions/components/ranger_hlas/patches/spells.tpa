@@ -86,6 +86,38 @@ DEFINE_PATCH_FUNCTION archer_precision STR_VAR destination = "*" BEGIN
         match_resource = "spl#res"
         resource = "%res%"
     END    
+
+    LPF get_table_ref STR_VAR
+        value = "archer_flurry_arrows"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        verbose = 1
+        match_opcode = 321          //Remove effects by resource.
+    STR_VAR
+        match_resource = "flra#res"
+        resource = "%res%"
+    END    
+END
+
+DEFINE_PATCH_FUNCTION archer_flurry_arrows STR_VAR destination = "*" BEGIN
+    LPF get_table_ref STR_VAR
+        value = "archer_precision"
+        array = "spells"
+        ext = "spl"
+    RET res = resource END
+
+    LPF ALTER_EFFECT INT_VAR
+        check_globals = 0
+        verbose = 1
+        match_opcode = 321          //Remove effects by resource.
+    STR_VAR
+        match_resource = "prec#res"
+        resource = "%res%"
+    END    
 END
 
 DEFINE_PATCH_FUNCTION stalker_improved_spellbook STR_VAR destination = "*" BEGIN

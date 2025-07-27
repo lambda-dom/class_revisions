@@ -29,7 +29,8 @@ note(s): still to do:
 Archers get the HLA's:
 
 1. Improved Ranged Critical instead of Improved Ambidexterity.
-2. Precision instead of Whirlwind: for 4 rounds, +5 ranged thac0 and +10 damage, insta-kill on a crit and failed save vs. death (thus stackable with Call Shot). Decreased ac and casting speed.
+2. Precision instead of Whirlwind: for 4 rounds, +5 ranged thac0 and +10 damage, insta-kill on a crit and failed save vs. death (thus stackable with Call Shot). Imobilized and decreased casting speed.
+3. Flurry of Arrows instead of Whirlwind: a version of Whirlwind with the added AC penalty of -4 to simulate a ranged-only version.
 
 ### C. 2. Stalker.
 

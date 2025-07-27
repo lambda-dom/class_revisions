@@ -7,6 +7,7 @@ RANGER_NATURE_ENDURANCE         1       class   7       *       0       *
 RANGER_NATURE_GUARDIAN          1       class   7       *       0       *
 ARCHER_IMPROVED_RANGED_CRITICAL 1       class   7       *       0       *
 ARCHER_PRECISION                1       class   7       *       0       *
+ARCHER_FLURRY_ARROWS            1       class   7       *       0       *
 STALKER_IMPROVED_SPELLBOOK      1       class   7       *       0       *
 STALKER_EXTRA_SPELLS            1       class   7       *       0       *
 BEASTMASTER_NATURE_POWER        1       class   7       *       0       *
