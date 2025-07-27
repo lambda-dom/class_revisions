@@ -1,5 +1,6 @@
 //Libraries.
-INCLUDE "%WEIDU_LIBRARY_DIR%/spells.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
 
 //Mod libraries.
@@ -240,7 +241,7 @@ END
 DEFINE_PATCH_FUNCTION ranger_dual_protection_level_bonus BEGIN
     LPF get_table_ref STR_VAR
         value = "ranger_spell_initial_level"
-        array = "ranger_spells"
+        array = "spells"
         ext = "spl"
     RET res = resource END
 
@@ -255,7 +256,7 @@ DEFINE_PATCH_FUNCTION ranger_dual_protection_level_bonus BEGIN
 
     LPF get_table_ref STR_VAR
         value = "ranger_spell_level_bonus"
-        array = "ranger_spells"
+        array = "spells"
         ext = "spl"
     RET res = resource END
 
@@ -272,7 +273,7 @@ END
 DEFINE_PATCH_FUNCTION ranger_dual_remove_level_bonus BEGIN
     LPF get_table_ref STR_VAR
         value = "ranger_spell_initial_level"
-        array = "ranger_spells"
+        array = "spells"
         ext = "spl"
     RET res = resource END
 
@@ -287,7 +288,7 @@ DEFINE_PATCH_FUNCTION ranger_dual_remove_level_bonus BEGIN
 
     LPF get_table_ref STR_VAR
         value = "ranger_spell_level_bonus"
-        array = "ranger_spells"
+        array = "spells"
         ext = "spl"
     RET res = resource END
 
