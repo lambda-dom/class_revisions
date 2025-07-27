@@ -3,7 +3,7 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/kits.tpa"
 
 
 DEFINE_ACTION_FUNCTION patch_descriptions BEGIN
-    LAF set_class_description INT_VAR descr = 1000 STR_VAR class = "%ranger%" END
+    LAF set_class_description INT_VAR descr = 1000 STR_VAR class = "ranger" END
 
     ACTION_DEFINE_ASSOCIATIVE_ARRAY kit_descriptions BEGIN
         //Feralan is Archer kit's name in base.
