@@ -102,3 +102,6 @@ Possible borrowings from IWD:
 
 TODO:
 * trimmings for the iwd spellbook *not* implemented yet.
+
+note(s):
+* At the moment these spells appear in spell selection screens; and I do not know how, or if it is even possible, to hide them.

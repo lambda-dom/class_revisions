@@ -50,6 +50,9 @@ Level 5:
 
 In comparison with KR, Gust of Wind, Glyph of Warding, Free Action and Farsight are added back to the spellbook. Removed the full line of cause wounds (lower level entries were missing in KR) and Find Traps. This left Animate Dead and Miscast Magic, so we took the course of action of taking the KR blurb from the Undead Hunter's description and drop Miscast Magic from their spellbook, while other paladins loose Animate Dead. For the level 5 spells, we dropped the obvious candidates.
 
+note(s):
+* At the moment these spells appear in spell selection screens; and I do not know how, or if it is even possible, to hide them.
+
 ### B. 1. 1. From IWD.
 
 From iwd (installed via SCS or iwidification):

@@ -1,4 +1,4 @@
-//Descriptions for arrows created by the Fashion Arrows.
+//Descriptions for items created by the Fashion Arrows.
 @1000 = "Frost Arrows +1"
 @1001 = "These Frost Arrows were created by the Archer's ability Fashion Arrows.
 
@@ -33,7 +33,7 @@ Launcher: Bow"
 STATISTICS:
 
 Combat Abilities:
-  Flaming: creatures struck suffer 1d6 fire damaged
+  Flaming: creatures struck suffer 1d6 fire damage
 
 THAC0: +2 bonus
 Damage: 1d6 + 2
@@ -54,6 +54,90 @@ Damage: 1d6 + 3
 Damage type: missile
 Weight: 0
 Launcher: Bow"
+
+@1200 = "Frost Bullets +1"
+@1201 = "These Frost Bullets were created by the Archer's ability Fashion Arrows.
+
+STATISTICS:
+
+Combat Abilities:
+  Frost: creatures struck suffer 1d4 cold damage
+
+THAC0: +1 bonus
+Damage: 1d4 + 1
+Damage type: missile
+Weight: 0
+Launcher: Sling"
+
+@1220 = "Flaming Bullets +2"
+@1221 = "These Flaming Bullets were created by the Archer's ability Fashion Arrows.
+
+STATISTICS:
+
+Combat Abilities:
+  Flaming: creatures struck suffer 1d6 fire damage
+
+THAC0: +2 bonus
+Damage: 1d4 + 2
+Damage type: missile
+Weight: 0
+Launcher: Sling"
+
+@1220 = "Crushing Bullets +3"
+@1221 = "These Crushing Bullets were created by the Archer's ability Fashion Arrows.
+
+STATISTICS:
+
+Combat Abilities:
+  Crushing: creatures struck suffer 2d4 crushing damage
+
+THAC0: +3 bonus
+Damage: 1d4 + 3
+Damage type: missile
+Weight: 0
+Launcher: Sling"
+
+@1300 = "Frost Bolts +1"
+@1301 = "These Frost Bolts were created by the Archer's ability Fashion Arrows.
+
+STATISTICS:
+
+Combat Abilities:
+  Frost: creatures struck suffer 1d4 cold damage
+
+THAC0: +1 bonus
+Damage: 1d8 + 1
+Damage type: missile
+Weight: 0
+Launcher: Crossbow"
+
+@1320 = "Flaming Bolts +2"
+@1321 = "These Flaming Bolts were created by the Archer's ability Fashion Arrows.
+
+STATISTICS:
+
+Combat Abilities:
+  Flaming: creatures struck suffer 1d6 fire damage
+
+THAC0: +2 bonus
+Damage: 1d8 + 2
+Damage type: missile
+Weight: 0
+Launcher: Crossbow"
+
+@1330 = "Lightning Bolts +3"
+@1331 = "These Lightning Bolts were created by the Archer's ability Fashion Arrows.
+
+STATISTICS:
+
+Combat Abilities:
+  Lightning: creatures struck suffer 2d6 electricity damage with a save vs. breath for half
+
+THAC0: +3 bonus
+Damage: 1d8 + 3
+Damage type: missile
+Weight: 0
+Launcher: Crossbow"
 
 //Summon items.
 @1100 = "Panther Claws"
