@@ -5,4 +5,5 @@ AP_RANGER_TOUGHNESS                 1       1       *
 GA_RANGER_NATURE_ENDURANCE          1       1       *
 GA_RANGER_NATURE_GUARDIAN           1       1       *
 AP_ARCHER_IMPROVED_RANGED_CRITICAL  1       1       *
+GA_ARCHER_FLURRY_ARROWS             1       5       AP_ARCHER_IMPROVED_RANGED_CRITICAL
 GA_ARCHER_PRECISION                 1       5       AP_ARCHER_IMPROVED_RANGED_CRITICAL
