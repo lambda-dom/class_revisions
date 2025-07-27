@@ -14,12 +14,6 @@ LAF install_resources STR_VAR
     table = "%resources%/2da/symbols.2da"
 END
 
-//Install icons.
-LAF install_resources STR_VAR
-    type = "icon"
-    table = "%resources%/2da/icons.2da"
-END
-
 //Install projectiles.
 LAF install_resources STR_VAR
     type = "add_projectile"

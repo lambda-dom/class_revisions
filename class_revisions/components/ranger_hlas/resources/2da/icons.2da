@@ -1,9 +1,0 @@
-2DA V1.0
-*
-                                install patch   over    destination
-ranger_nature_endurance_b       1       *       0       #suf:b:RANGER_NATURE_ENDURANCE
-ranger_nature_endurance_c       1       *       0       #suf:c:RANGER_NATURE_ENDURANCE
-archer_ranged_improved_critical 1       *       0       #suf:b:ARCHER_IMPROVED_RANGED_CRITICAL
-archer_ranged_improved_critical 1       *       0       #suf:c:ARCHER_IMPROVED_RANGED_CRITICAL
-archer_precision                1       *       0       #suf:b:ARCHER_PRECISION
-archer_precision                1       *       0       #suf:c:ARCHER_PRECISION

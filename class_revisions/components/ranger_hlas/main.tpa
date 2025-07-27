@@ -15,11 +15,6 @@ LAF install_resources STR_VAR
 END
 
 LAF install_resources STR_VAR
-    type = "icon"
-    table = "%resources%/2da/icons.2da"
-END
-
-LAF install_resources STR_VAR
     type = "create_effect"
     table = "%resources%/2da/effects.2da"
 END
