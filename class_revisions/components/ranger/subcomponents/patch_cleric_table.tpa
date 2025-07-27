@@ -1,0 +1,53 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/2da.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+
+
+//Load tables.
+LAF get_table_references STR_VAR
+    tables = "ranger_spells"
+RET_ARRAY spells = references END
+
+
+//Patches.
+DEFINE_ACTION_FUNCTION patch_cleric_clab BEGIN
+    COPY_EXISTING "clabpr01.2da" "override"
+        COUNT_2DA_COLS cols
+        COUNT_2DA_ROWS cols row_count
+
+        //Add three rows.
+        FOR (i = 1; i <= 3; ++i) BEGIN
+            row_index = row_count + i
+            LPF append_row STR_VAR key = "ABILITY%row_index%" default = "****" END
+        END
+
+        //Add abilities to handle dual classes.
+        LPF get_table_ref STR_VAR
+            value = "ranger_dual_protection_level_bonus"
+            array = "spells"
+            ext = "spl"
+        RET res = resource END
+        SET_2DA_ENTRY row_count 1 cols "AP_%res%"
+
+        LPF get_table_ref STR_VAR
+            value = "ranger_dual_remove_level_bonus"
+            array = "spells"
+            ext = "spl"
+        RET res = resource END
+        SET_2DA_ENTRY (row_count + 1) 1 cols "AP_%res%"
+
+        //Add abilities to handle multi classes.
+        LPF get_table_ref STR_VAR
+            value = "ranger_spellbook"
+            array = "spells"
+            ext = "spl"
+        RET res = resource END
+        FOR (i = 1; i < cols; ++i) BEGIN
+            SET_2DA_ENTRY (row_count + 2) i cols "AP_%res%"
+        END
+    PRETTY_PRINT_2DA
+    BUT_ONLY
+END
+
+//Main loop.
+LAF patch_cleric_clab END

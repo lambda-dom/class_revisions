@@ -17,12 +17,6 @@ Level 2:
 * Fire Trap
 * Charm Person or Animal
 
-note(s):
-* the function of Know Oponent is played by Hunter's Quarry.
-* the function of Flame Blade is now played by Blades of Fire.
-* the function of Fire Trap is now played by Snare.
-* Rangers have access to Animal Empathy, so Charm Person or Animal is dropped.
-
 Level 3:
 * Call Lightning
 * Icelance
@@ -34,6 +28,10 @@ Level 4:
 * Call Woodland Beings
 
 note(s):
+* the function of Know Oponent is played by Hunter's Quarry.
+* the function of Flame Blade is now played by Blades of Fire.
+* the function of Fire Trap is now played by Snare.
+* Rangers have access to Animal Empathy, so Charm Person or Animal is dropped.
 * Call Woodland Beings is a powerful summon, so I prefer to leave it to druids and beastmasters.
 
 Rangers gain:
@@ -53,8 +51,16 @@ note(s): all tables can be edited *before* installing the mod:
 note(s):
 * KR Tracking not implemented yet; for now, the HLA will have to do.
 
-TODO(s):
-* the implementation of casting level bonus is complicated for dual classes. This case is not handled yet, but it is in principle doable: an ability must be added to cleric class and kits to remove effects (case Ranger -> Cleric) and protection from spells (case Cleric -> Ranger).
+## A. 1. Dual and multiclasses.
+
+The changes to spellcasting imply that some care is needed to handle dual and multi rangers. Specifically:
+
+* A row must be added to the cleric ability table (`clabpr01.2da`) to trim the Cleric + Ranger spellbook on cleric level ups. The trimming must take into account the gained ranger spells.
+
+note(s):
+* for this to take full effect (namely for Cleric + Rangers to get their level 4 spells), the gameplay option to limit Cleric + Rangers to level 3 spells *must* be disabled.
+
+* Abilities must be added to the cleric ability table (`clabpr01.2da`) to (1) remove ranger casting level bonus (this handles the case Ranger -> Cleric) and (2) add protection from spells (this handles the case Cleric -> Ranger)
 
 # B. Kits.
 
@@ -109,4 +115,3 @@ For Cleric + Ranger multiclasses, some changes have to be made to accomodate the
 note(s): implementation note:
 * we crawl through `spell.ids` and grab the references of non-deprecated priest spells, druid-exclusive and between levels 5 and 7. Tested against SR, this seems to work, although there are a few spurious entries.
 
-Note that for Cleric + Rangers to access level 4 druidic spells the gameplay option to limit Cleric + Rangers to level 3 spells *must* be disabled.

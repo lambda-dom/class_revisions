@@ -68,8 +68,13 @@ LAF install_subcomponent STR_VAR
     subcomponent = "%root%/subcomponents/backstab.tpa"
 END
 
+//Patch cleric ability table.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/patch_cleric_table.tpa"
+END
+
 //Patch descriptions.
 LAF install_subcomponent STR_VAR
     subcomponent = "%root%/subcomponents/descriptions.tpa"
-    tra = "%tra%/kits.tra"
+    tra = "%tra%/descriptions.tra"
 END
