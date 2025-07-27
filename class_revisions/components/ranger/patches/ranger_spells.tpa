@@ -2,6 +2,7 @@
 INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/spells.tpa"
 
 //Mod libraries.
 INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
@@ -40,24 +41,47 @@ DEFINE_PATCH_FUNCTION ranger_spellbook_ranger BEGIN
 END
 
 DEFINE_PATCH_FUNCTION ranger_spellbook_cleric_ranger BEGIN
+    //Ranger-specific removals.
     LPF ranger_spellbook_ranger END
 
-    //Removal of druidic spells of level >= 5.
-    LPF gather_druid_spells RET_ARRAY exclusions = array END
-    PHP_EACH exclusions AS spell => level BEGIN
-        PATCH_IF level >= 5 BEGIN
-            LPF get_spell_res STR_VAR
-                spell = "%spell%"
-            RET res = resource END
+    INNER_ACTION BEGIN
+        LAF gather_ranger_spell_levels RET_ARRAY spell_levels = array END
+        LAF gather_druid_spells RET_ARRAY exclusions = array END
+    END
 
-            LPF ADD_SPELL_EFFECT INT_VAR
-                opcode = 172            //Remove spell.
-                target = 2
-                timing = 4              //Delayed as in KR; with instant, sometimes it did not apply.
-                duration = 1
-                insert_point = 0 - 1    //Append.
-            STR_VAR
-                resource = "%res%"
+    LPF get_spell_header_count RET header_count = count END
+
+    //Add druid level-specific removals from Cleric-Ranger.
+    //Loop through headers.
+    PHP_EACH spell_levels AS spell_level => min_level BEGIN
+        //Set min level.
+        LPF set_spell_header_field INT_VAR
+            header = spell_level
+        STR_VAR
+            field = "min_level"
+            value = "%min_level%"
+        END
+
+        PHP_EACH exclusions AS spell => level BEGIN
+            PATCH_IF spell_level < level BEGIN
+                LPF get_spell_res STR_VAR
+                    spell = "%spell%"
+                RET res = resource END
+
+                PATCH_IF NOT (FILE_EXISTS_IN_GAME "%res%.spl") BEGIN
+                    PATCH_FAIL "ranger_spellbook_cleric_ranger: resource '%res%' for '%spell%' does not exist in-game."
+                END
+
+                LPF ADD_SPELL_EFFECT INT_VAR
+                    header = spell_level + 1
+                    opcode = 172            //Remove spell.
+                    target = 2
+                    timing = 4              //Delayed as in KR; with instant, sometimes it did not apply.
+                    duration = 1
+                    insert_point = 0 - 1    //Append.
+                STR_VAR
+                    resource = "%res%"
+                END
             END
         END
     END

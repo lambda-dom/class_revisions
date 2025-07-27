@@ -52,41 +52,66 @@ DEFINE_PATCH_FUNCTION compose_spellbook STR_VAR table = "" BEGIN
 END
 
 //Utilities.
-DEFINE_PATCH_FUNCTION gather_druid_spells INT_VAR min_level = 1 RET_ARRAY array BEGIN
-    //Initialize array.
-    PATCH_DEFINE_ARRAY array BEGIN END
-    INNER_ACTION BEGIN
-        COPY_EXISTING - "spell.ids" "weidu_external/%MOD_FOLDER%/%COMPONENT%"
-            COUNT_2DA_ROWS 2 rows
-            //Loop.
-            FOR (i = 0; i < rows; ++i) BEGIN
-                READ_2DA_ENTRY i 0 2 nbr
-                READ_2DA_ENTRY i 1 2 spell
+DEFINE_ACTION_FUNCTION gather_ranger_spell_levels RET_ARRAY array BEGIN
+    ACTION_DEFINE_ASSOCIATIVE_ARRAY array BEGIN END
 
-                //Filter spurious signature entry.
-                PATCH_IF NOT ("%spell%" STRING_EQUAL_CASE "v1.0") BEGIN
-                    //Filter out non-priest spellbook spells.
-                    PATCH_IF (1000 <= nbr) AND (nbr < 2000) BEGIN
-                        //Filter out deprecated spells.
-                        PATCH_IF NOT (("%spell%" STRING_MATCHES_REGEXP ".+_DEPRECATED") = 0) BEGIN
-                            LPF get_spell_res STR_VAR spell = "%spell%" RET resource END
-                            //Filter out non_existent spells.
-                            PATCH_IF FILE_EXISTS_IN_GAME "%resource%.spl" BEGIN
-                                //Gather info.
-                                INNER_ACTION BEGIN
-                                    COPY_EXISTING - "%resource%.spl" "override"
-                                        LPF get_spell_field STR_VAR field = "level" RET level = value END
-                                        LPF get_spell_field STR_VAR field = "exclusion" RET exclusion = value END
-                                END
+    COPY - "%MOD_FOLDER%/components/%COMPONENT%/resources/2da/ranger_spell_progression.2da" "weidu_external/%MOD_FOLDER%"
+        COUNT_2DA_COLS cols
+        COUNT_2DA_ROWS cols row_count
+
+        //In each column find first non-zero entrance.
+        FOR (col = 1; col < cols; ++col) BEGIN
+            found = 0
+            FOR (row = 0; (row < row_count) AND (found = 0); ++row) BEGIN
+                READ_2DA_ENTRY row 0 cols level
+                READ_2DA_ENTRY row col cols first
+                PATCH_IF (first != 0) BEGIN
+                    TEXT_SPRINT $array("%col%") "%level%"
+                    found = 1
+                END
+            END
+        END
+    
+    //Add zeroth entry.
+    TEXT_SPRINT $array("0") "1"
+END
+
+DEFINE_ACTION_FUNCTION gather_druid_spells RET_ARRAY array BEGIN
+    //Initialize array.
+    ACTION_DEFINE_ASSOCIATIVE_ARRAY array BEGIN END
+
+    COPY_EXISTING - "spell.ids" "weidu_external/%MOD_FOLDER%/%COMPONENT%"
+        COUNT_2DA_ROWS 2 rows
+        //Loop.
+        FOR (i = 0; i < rows; ++i) BEGIN
+            READ_2DA_ENTRY i 0 2 nbr
+            READ_2DA_ENTRY i 1 2 spell
+
+            //Filter spurious signature entry.
+            PATCH_IF NOT ("%spell%" STRING_EQUAL_CASE "v1.0") BEGIN
+                //Filter out non-priest spellbook spells.
+                PATCH_IF (1000 <= nbr) AND (nbr < 2000) BEGIN
+                    //Filter out deprecated spells.
+                    PATCH_IF NOT (("%spell%" STRING_MATCHES_REGEXP ".+_DEPRECATED") = 0) BEGIN
+                        LPF get_spell_res STR_VAR spell = "%spell%" RET resource END
+
+                        //Filter out non_existent spells.
+                        PATCH_IF FILE_EXISTS_IN_GAME "%resource%.spl" BEGIN
+                            //Gather info.
+                            INNER_ACTION BEGIN
+                                COPY_EXISTING - "%resource%.spl" "override"
+                                    LPF get_spell_field STR_VAR field = "level" RET level = value END
+                                    LPF get_spell_field STR_VAR field = "exclusion" RET exclusion = value END
                             END
-                            //Filter by level and exclusion.
-                            is_druid = exclusion BAND (1 << 30)
-                            PATCH_IF (min_level <= level) AND (level <= 7) AND (is_druid != 0) BEGIN
-                                TEXT_SPRINT $array("%spell%") "%level%"
-                            END
+                        END
+
+                        //Filter by level and exclusion.
+                        is_druid = exclusion BAND (1 << 30)
+                        PATCH_IF (1 <= level) AND (level <= 7) AND (is_druid != 0) BEGIN
+                            TEXT_SPRINT $array("%spell%") "%level%"
                         END
                     END
                 END
             END
-    END
+        END
 END
