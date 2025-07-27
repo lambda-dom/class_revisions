@@ -55,12 +55,14 @@ note(s):
 
 The changes to spellcasting imply that some care is needed to handle dual and multi rangers. Specifically:
 
+* Abilities must be added to the cleric ability table (`clabpr01.2da`) to (1) remove ranger casting level bonus (this handles the case Ranger -> Cleric) and (2) add protection from spells (this handles the case Cleric -> Ranger)
+
 * A row must be added to the cleric ability table (`clabpr01.2da`) to trim the Cleric + Ranger spellbook on cleric level ups. The trimming must take into account the gained ranger spells.
 
-note(s):
-* for this to take full effect (namely for Cleric + Rangers to get their level 4 spells), the gameplay option to limit Cleric + Rangers to level 3 spells *must* be disabled.
+For this to take full effect (namely for Cleric + Rangers to get their level 4 spells), the gameplay option to limit Cleric + Rangers to level 3 spells *must* be disabled.
 
-* Abilities must be added to the cleric ability table (`clabpr01.2da`) to (1) remove ranger casting level bonus (this handles the case Ranger -> Cleric) and (2) add protection from spells (this handles the case Cleric -> Ranger)
+note(s): implementation note:
+* we crawl through `spell.ids` and grab the references of non-deprecated, priest, druid-exclusive spells. Tested against SR, this seems to work, although there are a few spurious entries (but this is harmless).
 
 # B. Kits.
 
@@ -107,11 +109,3 @@ note(s):
 * the list of deleted spells can be found in `beastmaster_spellbook.2da`.
 * the proficiencies can be found in `beastmaster_proficiencies.2da`.
 * the abilities can be found in `beastmaster_abilities.2da`.
-
-## C. Cleric + Ranger multiclass.
-
-For Cleric + Ranger multiclasses, some changes have to be made to accomodate the spellcasting changes, including the removal of every druid spell from level 5 and above.
-
-note(s): implementation note:
-* we crawl through `spell.ids` and grab the references of non-deprecated priest spells, druid-exclusive and between levels 5 and 7. Tested against SR, this seems to work, although there are a few spurious entries.
-
