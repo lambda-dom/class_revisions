@@ -110,7 +110,7 @@ DEFINE_PATCH_FUNCTION ranger_spellbook BEGIN
 
     LPF ALTER_EFFECT INT_VAR
         check_globals = 0
-        match_opcode = 177              //Use eff.
+        match_opcode = 177                  //Use eff.
     STR_VAR
         match_resource = "bkcr#res"
         resource = "%res%"
@@ -126,10 +126,9 @@ DEFINE_PATCH_FUNCTION ranger_woodland_stride BEGIN
         LPF get_spell_res STR_VAR spell = "%spell%" RET resource END
         PATCH_IF NOT ("%resource%" STRING_EQUAL_CASE "*") BEGIN
             LPF ADD_SPELL_EFFECT INT_VAR
-                opcode = 206                    //Protection from spell.
+                opcode = 206                //Protection from spell.
                 target = 2
-                timing = 4                      //KR implementation detail.
-                duration = 1
+                timing = 9                  //Permanent.
             STR_VAR
                 resource = "%resource%"
             END
