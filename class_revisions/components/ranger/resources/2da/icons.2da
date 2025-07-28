@@ -1,0 +1,7 @@
+2DA V1.0
+*
+                install patch   over    destination
+ice_bullets     1       *       0       #suf:e:ARCHER_FASHION_ARROWS
+burning_bullets 1       *       0       #suf:f:ARCHER_FASHION_ARROWS
+cold_bolts      1       *       0       #suf:h:ARCHER_FASHION_ARROWS
+fire_bolts      1       *       0       #suf:i:ARCHER_FASHION_ARROWS

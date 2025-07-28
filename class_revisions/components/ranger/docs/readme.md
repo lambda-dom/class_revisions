@@ -34,6 +34,9 @@ note(s):
 * Rangers have access to Animal Empathy, so Charm Person or Animal is dropped.
 * Call Woodland Beings is a powerful summon, so I prefer to leave it to druids and beastmasters.
 
+note(s):
+* At the moment these spells appear in spell selection screens; and I do not know how, or if it is even possible, to hide them.
+
 Rangers gain:
 
 1. Animal Empathy at will at level 1.

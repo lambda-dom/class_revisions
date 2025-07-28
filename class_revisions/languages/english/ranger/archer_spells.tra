@@ -37,7 +37,7 @@ Casting Time: 9
 Area of Effect: Caster
 Saving Throw: None
 
-With this spell, the Archer conjures a full stack of magically enchanted arrows. The magic lasts for 8 hours, after which the arrows become unusable. At level 8, the Archer can conjure Frost +1 and Poison +1 arrows. At level 12, he can also conjure Flaming +2 arrows and at level 16, he can conjure Acidic +3 arrows. This spell can only be cast outdoors and outside of combat.~
+With this spell, the Archer conjures a full stack of magically enchanted arrows, bullets or bolts. The magic lasts for 8 hours, after which the arrows become unusable. This spell can only be cast outdoors and outside of combat.~
 
 //Auxiliary spells.
 @1212 = ~Frost Arrows +1~
@@ -63,6 +63,23 @@ Saving Throw: None
 
 When this ability is used, the ranger's eyes gain the magical acuity of a falcon, enhancing his vision and allow him to accurately read the weaknesses of creatures. For 1 turn, the Archer gain a bonus of +2 to ranged thac0 and damage, and +1 to the ranged critical range. Furthermore, any critical ranged hit knocks down the victim unconscious for 1 round. The intense concentration required leaves the Archer more vulnerable to attacks, suffering a penalty of +4 to ac.~
 
+@1300 = ~Frost Bullets +1~
+@1301 = ~Create a stack of magical Frost Bullets +1.~
+
+@1310 = ~Flaming Bullets +2~
+@1311 = ~Create a stack of magical Flaming Bullets +2.~
+
+@1320 = ~Crushing Bullets +3~
+@1321 = ~Create a stack of magical Crushing Bullets +3.~
+
+@1330 = ~Frost Bolts +1~
+@1331 = ~Create a stack of magical Frost Bolts +1.~
+
+@1340 = ~Flaming Bolts +2~
+@1341 = ~Create a stack of magical Flaming Bolts +2.~
+
+@1350 = ~Lightning Bolt +3~
+@1351 = ~Create a stack of magical Lightning Bolts +3.~
 
 //Ability gain strings.
 @10000 = ~Gained +1 bonus to missile thac0 and damage.~
