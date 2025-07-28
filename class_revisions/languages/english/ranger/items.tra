@@ -83,13 +83,13 @@ Damage type: missile
 Weight: 0
 Launcher: Sling"
 
-@1300 = "Frost Bolts +1"
-@1301 = "These Frost Bolts were created by the Archer's ability Fashion Arrows.
+@1300 = "Cold Bolts +1"
+@1301 = "These Cold Bolts were created by the Archer's ability Fashion Arrows.
 
 STATISTICS:
 
 Combat Abilities:
-  Frost: creatures struck suffer 1d4 cold damage
+  Cold: creatures struck suffer 1d4 cold damage
 
 THAC0: +1 bonus
 Damage: 1d8 + 1
@@ -97,13 +97,13 @@ Damage type: missile
 Weight: 0
 Launcher: Crossbow"
 
-@1320 = "Flaming Bolts +2"
-@1321 = "These Flaming Bolts were created by the Archer's ability Fashion Arrows.
+@1320 = "Fire Bolts +2"
+@1321 = "These Fire Bolts were created by the Archer's ability Fashion Arrows.
 
 STATISTICS:
 
 Combat Abilities:
-  Flaming: creatures struck suffer 1d6 fire damage
+  Fiery: creatures struck suffer 1d6 fire damage
 
 THAC0: +2 bonus
 Damage: 1d8 + 2

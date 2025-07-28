@@ -2,11 +2,11 @@
 ****
             ResRef 		                    Type
 Poison      archer_fashion_arrows_poison    3
-Ice         archer_fashion_bullets_frost    3
-Frost       archer_fashion_bolts_frost      3
+Ice         archer_fashion_bullets_ice      3
+Cold        archer_fashion_bolts_cold       3
 Flaming     archer_fashion_arrows_flaming   3
-Burn        archer_fashion_bullets_flaming  3
-Fire        archer_fashion_bolts_flaming    3
+Burn        archer_fashion_bullets_burning  3
+Fire        archer_fashion_bolts_fire       3
 Acid        archer_fashion_arrows_acidic    3
 Crush       archer_fashion_bullets_crushing 3
 Lightning   archer_fashion_bolts_lightning  3
