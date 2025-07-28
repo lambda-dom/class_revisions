@@ -1,6 +1,6 @@
 # Blackguard HLA's.
 
-This components installs a set of HLA's specific to blackguards. Like the base kit changes, this is something of an experiment in what can be done.
+This components installs a set of HLA's specific to Blackguards. Like the base kit changes, this is something of an experiment in what can be done.
 
 ## A. HLA's.
 
@@ -14,14 +14,15 @@ First, the Blackguard loses some of the Fighter HLA's:
 
 Furthermore:
 
-* Summon Fallen Deva restricted to one choice to match clerics in SCS and it is standardized to fixed 5 turn duration.
+* Summon Fallen Deva restricted to one choice to match clerics in SCS.
 
 They gain:
 
 1. Demonic Wrath: a souped-up version of Unholy Smite.
 2. Demonic Aura: a version of Aura of Flaming Death.
-3. Abyssal Shield: blackguard version of Holy Shield.
+3. Abyssal Shield: Blackguard version of Holy Shield.
 4. Extra Spells: can gain +1 spell from levels 1 to 5.
 
 TODO:
-* *maybe* add a Death Knight summon?
+* *Maybe* add a Death Knight summon?
+* Restore Deathbow?

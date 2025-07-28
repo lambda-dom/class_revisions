@@ -41,12 +41,12 @@ Rangers gain:
 3. Gains Woodland Stride at level 5.
 4. Gains new spells to complement the spellbook: Blades of Fire (level 1), Snare (level 2) and Swift Haste (level 3).
 
-note(s): all tables can be edited *before* installing the mod:
-* the spell progression table is `ranger_spell_progression.2da`.
-* the list of deleted spells can be found in `ranger_spellbook.2da`.
-* the stealth progression table is `ranger_skills.2da`.
-* the proficiencies can be found in `ranger_proficiencies.2da`.
-* the abilities can be found in `ranger_abilities.2da`.
+note(s): all tables can be edited *before* installing the mod, but do not complain if you mess things up:
+* the spell progression table is [Ranger spell progression](../resources/2da/ranger_spell_progression.2da).
+* the list of deleted spells can be found in [Ranger spellbook](../resources/2da/ranger_spellbook.2da).
+* the stealth progression table is [Ranger skills](../resources/2da/ranger_skills.2da).
+* the proficiencies can be found in [Ranger proficiencies](../resources/2da/ranger_proficiencies.2da).
+* the abilities can be found in [Ranger abilities table](../resources/2da/ranger_abilities.2da).
 
 note(s):
 * KR Tracking not implemented yet; for now, the HLA will have to do.
@@ -76,17 +76,17 @@ Trades melee for superior ranged fighting. An archer gains:
 4. Ranger spells replaced by Feather Step, Fashion Arrows and Falcon's Eye.
 
 note(s):
-* the proficiencies can be found in `archer_proficiencies.2da`.
-* the abilities can be found in `archer_abilities.2da`.
+* the proficiencies can be found in [Archer proficiencies](../resources/2da/feralan_proficiencies.2da).
+* the abilities can be found in [Archer abilities](../resources/2da/archer_abilities.2da).
 
 ## B. 2. Stalker.
 
 Vanilla stealth bonus and backstab ability retained. Ranger spells replaced by Invisible, Non-Detection, Improved Invisible and Shadow Door, suitably renamed.
 
 note(s):
-* the backstab bonus can be found in `stalker_backstab.2da`.
-* the proficiencies can be found in `stalker_proficiencies.2da`.
-* the abilities can be found in `stalker_abilities.2da`.
+* the backstab bonus can be found in [Stalker backstab progression](../resources/2da/stalker_backstab.2da).
+* the proficiencies can be found in [Stalker proficiencies](../resources/2da/stalker_proficiencies.2da).
+* the abilities can be found in [Stalker abilities](../resources/2da/stalker_abilities.2da).
 
 ## B. 3. Beastmaster.
 
@@ -106,6 +106,6 @@ Cumulative bonuses:
 * Level 18: 13 HD, claws crit on a 19, 3 apr, immunity normal weapons, regeneration 1 hp round
 
 note(s):
-* the list of deleted spells can be found in `beastmaster_spellbook.2da`.
-* the proficiencies can be found in `beastmaster_proficiencies.2da`.
-* the abilities can be found in `beastmaster_abilities.2da`.
+* the list of deleted spells can be found in [Beastmaster spellbook](../resources/2da/beastmaster_spellbook.2da).
+* the proficiencies can be found in [Beastmaster proficiencies](../resources/2da/beastmaster_proficiencies.2da).
+* the abilities can be found in [Beastmaster abilities](../resources/2da/beastmaster_abilities.2da).
