@@ -36,7 +36,7 @@ While it technically does not require it, [Item Revisions](https://github.com/Gi
 
 # B. Issues.
 
-The mod is in alpha stage, because while the basic design is set there are some details to be hashed out, especially around the Blackguard (which is why it is installed as a separate component from the Paladin component) and the Beastmaster kits (e. g. creature stats).
+The mod is in alpha stage, because while the basic design is set there are some details to be hashed out, especially around the Blackguard (which is why it is installed as a separate component from the Paladin component) and the Beastmaster kits (e. g. creature stats). There is room to add a couple of more specialized spells to each kit, and Inquisitors could make get a few more bennies -- if you have any good idea submit an issue, but be prepared to be rejected, seemingly on flimsy grounds like "vibes" and "personal taste".
 
 There are also some unresolved, or potentially problematic, issues. The ones I am aware of:
 
