@@ -1,6 +1,6 @@
 BACKUP "weidu_external/backup/class_revisions"
 AUTHOR "lambda_dom"
-VERSION "1.0"
+VERSION "1.0alpha1"
 
 //Flags.
 AUTO_EVAL_STRINGS
@@ -64,7 +64,3 @@ BEGIN @11 DESIGNATED 11
 LABEL "lambda_dom-class_revisions-weapon_styles"
 REQUIRE_PREDICATE (GAME_IS "bg2ee eet") @100
 LAF install_component STR_VAR COMPONENT = "weapon_styles" END
-
-
-//TODO(s):
-//- Edit enginest.2da instead of the hard-coded strings.
