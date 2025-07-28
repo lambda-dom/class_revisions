@@ -4,7 +4,7 @@ This component tweaks the Ranger base class as well as its kits. The general cla
 
 # A. Class changes.
 
-The base class's spellcasting is changed: spellcasting is gained at level 4 and on par with druids as far as casting level. The progression table changed to gain spells between levels 4 and 18 and the available spellbook is trimmed down. More precisely, the ranger's spellbook is trimmed of weapon, debuffs and elemental damage spells. In detail, the following spells from base SR are removed:
+The base class's spellcasting is changed: spellcasting is gained at level 4 and on par with druids as far as casting level. The progression table changed to gain spells between levels 4 and 18 and the available spellbook is trimmed down. More precisely, the ranger's spellbook is trimmed of weapon, debuffs and elemental damage spells. The following spells from base SR are removed:
 
 Level 1:
 * Magical Stone
@@ -34,9 +34,6 @@ note(s):
 * Rangers have access to Animal Empathy, so Charm Person or Animal is dropped.
 * Call Woodland Beings is a powerful summon, so I prefer to leave it to druids and beastmasters.
 
-note(s):
-* At the moment these spells appear in spell selection screens; and I do not know how, or if it is even possible, to hide them.
-
 Rangers gain:
 
 1. Animal Empathy at will at level 1.
@@ -58,9 +55,9 @@ note(s):
 
 The changes to spellcasting imply that some care is needed to handle dual and multi rangers. Specifically:
 
-* Abilities must be added to the cleric ability table (`clabpr01.2da`) to (1) remove ranger casting level bonus (this handles the case Ranger -> Cleric) and (2) add protection from spells (this handles the case Cleric -> Ranger)
+* Abilities must be added to the cleric ability table (`clabpr01.2da`) to (1) remove ranger casting level bonus (this handles the case Ranger -> Cleric) and (2) add protection from spells (this handles the case Cleric -> Ranger and also the multi Cleric + Ranger, although the latter was already handled in the way the abilities are doled out)
 
-* A row must be added to the cleric ability table (`clabpr01.2da`) to trim the Cleric + Ranger spellbook on cleric level ups. The trimming must take into account the gained ranger spells.
+* A row must be added to the cleric ability table (`clabpr01.2da`) to trim the Cleric + Ranger spellbook on cleric level ups. The trimming must take into account the per level gains.
 
 For this to take full effect (namely for Cleric + Rangers to get their level 4 spells), the gameplay option to limit Cleric + Rangers to level 3 spells *must* be disabled.
 
@@ -74,7 +71,7 @@ note(s): implementation note:
 Trades melee for superior ranged fighting. An archer gains:
 
 1. Called Shot: gained new effects, Disarm and Trip.
-2. Bow Mastery: +1 to ranged thac0 and damage at level and then every 4 levels, to a maximum of +5 at level 16.
+2. Bow Mastery: +1 to ranged thac0 and damage at level 1 and then every 4 levels, to a maximum of +5 at level 16.
 3. Evasion Archer: +1 ac vs. missiles every 4 levels to a maximum of +4 at level 16.
 4. Ranger spells replaced by Feather Step, Fashion Arrows and Falcon's Eye.
 

@@ -3,8 +3,7 @@
 This component tweaks the Paladin base class as well as its kits. The general class and kit changes were for the most part borrowed from [Kit Revisions](https://www.gibberlings3.net/forums/forum/168-kit-revisions) (KR from now on), so all credit to the authors.
 
 note(s):
-* Spell Revisions is a requirement. This is a technical requirement (we rely on some features of SR; this can, and probably will, be lifted in some future version) and a conceptual one, balanced around it.
-* Compatibility with other spell adding mods (like iwdification) will be added in a future version.
+* Spell Revisions is a requirement. This is both a technical requirement (we rely on some features of SR) and a conceptual one, as the mod is balanced (or what in my head passes for balance -- the reader must make his judgment) around it.
 
 # B. Class changes.
 
@@ -14,7 +13,7 @@ The changes are divided in groups.
 
 As with KR, spellcasting is gained at level 4 and on par with clerics as far as casting level[^1]. However, the progression table is changed in several ways. First and foremost, paladins now gain spells up to priest level 5. The progression is also different, basically, two spells per two levels -- see [mxsplpal.2da](../resources/2da/mxsplpal.2da).
 
-In terms of total number of spell slots, this means +1 spell at levels 1 and 2, and +3 spells at level 5 in comparison with Kit Revisions, for a total of 21 spell slots. Versus KR, the real gains are the level 5 spells. These are gained through levels 18 - 24, already in HLA territory, at or post-Underdark depending on party composition and xp gains. Level 5 contains some powerful spells: Chaotic Commands, True Seeing, Mass Cure, Magic Resistance, Righteous Fury and Champion's Strength, all worthy additions to the spellbook, but nothing game-breaking.
+In terms of total number of spell slots, this means +1 spell at levels 1 and 2, and +3 spells at level 5 in comparison with KR, for a total of 21 spell slots. Versus KR, the real gains are the level 5 spells. These are gained through levels 18 - 24, already in HLA territory, at or post-Underdark depending on party composition and xp gains. Level 5 contains some powerful spells: Chaotic Commands, True Seeing, Mass Cure, Magic Resistance, Righteous Fury and Champion's Strength, all worthy additions to the spellbook, but nothing game-breaking.
 
 The available Paladin's spellbook is trimmed down. Spells removed from the Paladin's spellbook [^2]:
 
@@ -50,12 +49,9 @@ Level 5:
 
 In comparison with KR, Gust of Wind, Glyph of Warding, Free Action and Farsight are added back to the spellbook. Removed the full line of cause wounds (lower level entries were missing in KR) and Find Traps. This left Animate Dead and Miscast Magic, so we took the course of action of taking the KR blurb from the Undead Hunter's description and drop Miscast Magic from their spellbook, while other paladins loose Animate Dead. For the level 5 spells, we dropped the obvious candidates.
 
-note(s):
-* At the moment these spells appear in spell selection screens; and I do not know how, or if it is even possible, to hide them.
-
 ### B. 1. 1. From IWD.
 
-From iwd (installed via SCS or iwidification):
+From iwd (installed via SCS or iwidification), the following spells are removed:
 
 Level 1:
 * Curse
@@ -99,13 +95,13 @@ Two options for scaling Smite Evil present themselves. Scale damage and keep the
 
 ### B. 3. 3. Lay on Hands.
 
-In KR, Lay on Hands has different effects per kit gained at levels 6 and 9. This is not yet implemented; the true paladin version is used throughout and it cures poison and disease. This seems to me to be the best option, as with SR, paladins gain at spell level 3 (character level 10), Cure Disease, Remove Paralysis and Break Enchantment.
+In KR, Lay on Hands has different effects per kit gained at levels 6 and 9. In this mod, the true paladin version is used throughout and it cures poison and disease. This seems to me to be the best option, as with SR, paladins gain at spell level 3, Cure Disease, Remove Paralysis and Break Enchantment. This is subject to revision and I may end up implementing it, if only I can gather enough willpower to do it.
 
 ### B. 3. 4. Auras.
 
 At level 11, paladins gain Aura of Protection, imposing a -1 penalty on enemies' attack rolls. At level 14, it imposes a -1 penalty to enemies' damage rolls and at level 17, allies gain a +1 to all saves.
 
-Same-type auras do not stack, fire once a round, and require no concentration to activate. Comparing with Songs: the latter require concentration, have more powerful effects and are available right from the starting level 1.
+Same-type auras do not stack, fire once a round, and require no concentration to activate. Comparing with Bard's songs: the latter require concentration, have more powerful effects and are available right from the start at level 1.
 
 [^1]: conceptually incompatible with [Tweaks Anthology](https://github.com/Gibberlings3/Tweaks-Anthology) component "Alter Paladin Spell Progression Table".
 
@@ -142,7 +138,7 @@ Cavaliers gain all the paladin abilities, except Lay on Hands. Cavaliers can als
 Not many differences versus vanilla and KR.
 
 note(s):
-* *still* not happy. Casting spells is very useful, even more so with more spell slots and access to level 5 spells, so one more ability to compensate would be good, but what?
+* *still* not happy. Casting spells is *very* useful, even more so with more spell slots and access to level 5 spells, so one more ability to compensate would be good, but what?
 
 ## D. 1. Immunities.
 
@@ -160,7 +156,7 @@ Keeps the vanilla Paralysis and Level Drain immunities but looses the extra thac
 
 ## E. 1. Spellcasting.
 
-In comparison with paladins, undead hunters gain Animate Dead, but lose Miscast Magic and Holy Smite. The latter has now a version, Smite Undead, gained at spell level 4 (character level 17), that bypasses magic resistance. They also get the new spells Halt Undead, Undead Bane, Exorcism and, at level 5, Animate Skeleton Warrior. The latter (as well as keeping Animate Dead) is to lean on the duality expressed in KR's kit description of using the undead to fight the undead.
+In comparison with paladins, undead hunters gain Animate Dead, but lose Miscast Magic and Holy Smite. The latter has now a version, Smite Undead, gained at spell level 4, that bypasses magic resistance. They also get the new spells Halt Undead, Undead Bane, Exorcism and, at level 5, Animate Skeleton Warrior. The latter (as well as keeping Animate Dead) is to lean on the duality expressed in KR's kit description of using the undead to fight the undead.
 
 ## E. 2. Immunities.
 

@@ -1,4 +1,4 @@
-As with the Paladin class, we borrow heavily from Refinements.
+As with the Paladin class, we borrow heavily from Refinements, and the motivation is pretty much the same: give them some lore-appropriate oomph to compete with likes of Fighter + Mage and Bard.
 
 ### B. 1. HLA's.
 
@@ -21,6 +21,7 @@ Refinements adds:
 
 note(s): still to do:
 * patch Tracking for detect invis?
+* both Nature's Endurance and Nature's Guardian strike me as underpowered, but what to do?
 
 ## C. Kits.
 
@@ -29,8 +30,8 @@ note(s): still to do:
 Archers get the HLA's:
 
 1. Improved Ranged Critical instead of Improved Ambidexterity.
-2. Precision instead of Whirlwind: for 4 rounds, +5 ranged thac0 and +10 damage, insta-kill on a crit and failed save vs. death (thus stackable with Call Shot). Imobilized and decreased casting speed.
-3. Flurry of Arrows instead of Whirlwind: a version of Whirlwind with the added AC penalty of -4 to simulate a ranged-only version.
+2. Precision: for 4 rounds, +5 ranged thac0 and +10 damage, insta-kill on a crit and failed save vs. death (thus stackable with Call Shot). Imobilized and decreased casting speed.
+3. Flurry of Arrows instead of Whirlwind: a version of Whirlwind with the added AC penalty of -4 to simulate a ranged-only version. Not cumulative with Precision.
 
 ### C. 2. Stalker.
 
