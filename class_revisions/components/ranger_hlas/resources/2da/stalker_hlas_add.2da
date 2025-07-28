@@ -4,5 +4,6 @@
 AP_RANGER_AMBIDEXTERITY         1       1       *
 AP_RANGER_TOUGHNESS             1       1       *
 GA_RANGER_NATURE_ENDURANCE      1       1       *
+AP_STALKER_BACKSTAB_BONUS       1       1       *
 AP_STALKER_IMPROVED_SPELLBOOK   1       1       *
 AP_STALKER_EXTRA_SPELLS         1       1       AP_STALKER_IMPROVED_SPELLBOOK
