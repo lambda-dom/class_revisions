@@ -1,12 +1,12 @@
-# F. Blackguard.
+# A. Blackguard.
 
 KR does not do anything to Blackguards. This is something of an experimental component, as I have gone way way beyond the lore, especially in the unique spellbook -- see below for details. He is now a frontline fighter with debuffs and a few specialized self buffs, concentrating on the necromancy and conjuration schools, in the fire and poison elements.
 
-## F. 1. Immunities.
+## A. 1. Immunities.
 
 Gain immunity to fear at level 3 and immunity to poison at level 7, the latter replacing level drain.
 
-## F. 2. Abilities.
+## A. 2. Abilities.
 
 As for Aura of Despair, it is replaced by 3 auras, similarly to how Aura of Protection works for paladins, but entirely offensive and working on enemies. The rest of the debuffs is moved to specific Blackguard spells. Both Absorb Health and Poison Weapon, receive appropriate versions.
 
@@ -14,7 +14,7 @@ note(s):
 * for parity, add detect non-evil at will?
 * add smite non-evil? Or just leave absorb health as the smite evil counterpart?
 
-## F. 3. Spellcasting.
+## A. 3. Spellcasting.
 
 This is where the most dramatic changes are made. About 20 spells are dropped from the spellbook, including all healings and party buffs. Five single-target buffs receive remakes, from minor to complete overhauls. On top of this, new spells are added, that concentrate on debuffs that complement the auras -- see below. It is probably easier to just list what is left from SR's divine spellbook.
 
@@ -102,6 +102,3 @@ Possible borrowings from IWD:
 
 TODO:
 * trimmings for the iwd spellbook *not* implemented yet.
-
-note(s):
-* At the moment these spells appear in spell selection screens; and I do not know how, or if it is even possible, to hide them.
