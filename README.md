@@ -54,6 +54,8 @@ There are also some unresolved, or potentially problematic, issues. The ones I a
 
 * Modding compatibility: my BG installs tend to be rather slim by megamod standards, so compatibility with other mods has not been extensively tested. Starting with the obvious: it is conceptually, if not technically, incompatible with any other mods that aim to do the same thing; install only the one you want or be prepared to suffer in purgatory and suffer alone. Unless there is some very cogent reason not to, I try to be as accomodating of other mods as possible, the only problem being determining who exactly is in the best place to ensure compatibility. The answer is, can only be: to be determined on a case by case basis.
 
+* I am a linux user and I do not have a Windows or Mac available and do not intend to get one; so proper testing on those OS'es will have to rely on the lab ra -- uhh, the mod users. I do not foresee any problems but one never knows; at any rate, you know the drill -- submit patches.
+
 # C. Future Plans.
 
 In comparison with KR, for global components, the weapon styles component is in, but nothing else: no thac0, saves, xp, etc. changes. Some of these are taken care of by other mods, e.g. [Tweaks Anthology](https://github.com/Gibberlings3/Tweaks-Anthology), so *probably* they will not be covered.
