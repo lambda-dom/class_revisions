@@ -9,9 +9,15 @@ note(s):
 
 The changes are divided in groups.
 
+note(s): all tables can be edited *before* installing the mod, but do not complain if you mess things up:
+* the spell progression table is [Paladin spell progression](../resources/2da/paladin_spell_progression.2da).
+* the list of deleted spells can be found in [Paladin spellbook](../resources/2da/paladin_spellbook.2da).
+* the proficiencies can be found in [Paladin proficiencies](../resources/2da/paladin_proficiencies.2da).
+* the abilities can be found in [Paladin abilities table](../resources/2da/paladin_abilities.2da).
+
 ## B. 1. Spellcasting.
 
-As with KR, spellcasting is gained at level 4 and on par with clerics as far as casting level[^1]. However, the progression table is changed in several ways. First and foremost, paladins now gain spells up to priest level 5. The progression is also different, basically, two spells per two levels -- see [mxsplpal.2da](../resources/2da/mxsplpal.2da).
+As with KR, spellcasting is gained at level 4 and on par with clerics as far as casting level[^1]. However, the progression table is changed in several ways. First and foremost, paladins now gain spells up to priest level 5. The progression is also different, basically, two spells per two levels -- see [Paladin spell progression](../resources/2da/paladin_spell_progression.2da).
 
 In terms of total number of spell slots, this means +1 spell at levels 1 and 2, and +3 spells at level 5 in comparison with KR, for a total of 21 spell slots. Versus KR, the real gains are the level 5 spells. These are gained through levels 18 - 24, already in HLA territory, at or post-Underdark depending on party composition and xp gains. Level 5 contains some powerful spells: Chaotic Commands, True Seeing, Mass Cure, Magic Resistance, Righteous Fury and Champion's Strength, all worthy additions to the spellbook, but nothing game-breaking.
 
@@ -103,18 +109,17 @@ At level 11, paladins gain Aura of Protection, imposing a -1 penalty on enemies'
 
 Same-type auras do not stack, fire once a round, and require no concentration to activate. Comparing with Bard's songs: the latter require concentration, have more powerful effects and are available right from the start at level 1.
 
-[^1]: conceptually incompatible with [Tweaks Anthology](https://github.com/Gibberlings3/Tweaks-Anthology) component "Alter Paladin Spell Progression Table".
-
-[^2]: the spellbook is based on the divine spells made available by [Spell Revisions](https://github.com/Gibberlings3/SpellRevisions).
-
-[^3]: makes a similar [atweaks](http://www.shsforums.net/files/file/949-atweaks-platform-independent/) component redundant.
-
 # C. Cavalier.
 
 Considerable changes from vanilla. The Cavalier now acts more like a general with fighting prowess (e.g. can attain mastery in some weapon proficiencies) and immunities to fear and charm, in exchange for one less spell per level and no access to Lay on Hands. The spellbook is also made by more unique, by both tailoring the deleted divine spells and the spells added.
 
 note(s):
 * KR adds Challenge Evil abilitty, which I do not like and will *not* add. A version of Shield Other is added as a new spell.
+
+note(s): all tables can be edited *before* installing the mod, but do not complain if you mess things up:
+* the list of deleted spells can be found in [Cavalier spellbook](../resources/2da/cavalier_spellbook.2da).
+* the proficiencies can be found in [Cavalier proficiencies](../resources/2da/cavalier_proficiencies.2da).
+* the abilities can be found in [Cavalier abilities table](../resources/2da/cavalier_abilities.2da).
 
 ## C. 1. Spellcasting.
 
@@ -148,20 +153,31 @@ Inquisitors gain immunity to fear and charm.
 
 Dispel Magic is now Dispel Evil, an aoe Dispel Magic against evil enemies at 1.5 times the level of the caster, as in a similar SCS component [^4]. In addition they gain Banish Evil, a version of SR's banishment against evil enemies and Iron Will, a permanent bonus to save vs. spells. True Sight is also made undispellable.
 
-[^4]: The [SCS](https://www.gibberlings3.net/mods/tweaks/scs/) component "Reduce the power of Inquisitors' Dispel Magic" is, quite obviously, incompatible.
-
 # E. Undead Hunter.
 
 Keeps the vanilla Paralysis and Level Drain immunities but looses the extra thac0 and damage against undead, function now played by a new spell. In exchange, looses one spell per level, Lay on Hands and Auras.
 
+note(s): all tables can be edited *before* installing the mod, but do not complain if you mess things up:
+* the list of deleted spells can be found in [Undead Hunter spellbook](../resources/2da/undead_hunter_spellbook.2da).
+* the proficiencies can be found in [Undead Hunter proficiencies](../resources/2da/undead_hunter_proficiencies.2da).
+* the abilities can be found in [Undead Hunter abilities table](../resources/2da/undead_hunter_abilities.2da).
+
 ## E. 1. Spellcasting.
 
-In comparison with paladins, undead hunters gain Animate Dead, but lose Miscast Magic and Holy Smite. The latter has now a version, Smite Undead, gained at spell level 4, that bypasses magic resistance. They also get the new spells Halt Undead, Undead Bane, Exorcism and, at level 5, Animate Skeleton Warrior. The latter (as well as keeping Animate Dead) is to lean on the duality expressed in KR's kit description of using the undead to fight the undead.
+In comparison with Paladins, Undead Hunters gain Animate Dead, but lose Miscast Magic and Holy Smite. The latter has now a version, Smite Undead, gained at spell level 4, that bypasses magic resistance. They also get the new spells Halt Undead, Undead Bane, Exorcism and, at level 5, Animate Skeleton Warrior. The latter (as well as keeping Animate Dead) is to lean on the duality expressed in KR's kit description of using the undead to fight the undead.
 
 ## E. 2. Immunities.
 
-As with KR, undead hunters gain immunity to paralysis and level drain.
+As with KR, Undead Hunters gain immunity to paralysis and level drain.
 
 ## E. 3. Abilities.
 
 Undead Hunters lose access to the paladin auras. Beyond KR, we give a bonus of +2 to Turn Undead level, gained at level 3.
+
+[^1]: conceptually incompatible with [Tweaks Anthology](https://github.com/Gibberlings3/Tweaks-Anthology) component "Alter Paladin Spell Progression Table".
+
+[^2]: the spellbook is based on the divine spells made available by [Spell Revisions](https://github.com/Gibberlings3/SpellRevisions).
+
+[^3]: makes a similar [atweaks](http://www.shsforums.net/files/file/949-atweaks-platform-independent/) component redundant.
+
+[^4]: The [SCS](https://www.gibberlings3.net/mods/tweaks/scs/) component "Reduce the power of Inquisitors' Dispel Magic" is, quite obviously, incompatible.

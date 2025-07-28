@@ -2,6 +2,11 @@
 
 KR does not do anything to Blackguards. This is something of an experimental component, as I have gone way way beyond the lore, especially in the unique spellbook -- see below for details. He is now a frontline fighter with debuffs and a few specialized self buffs, concentrating on the necromancy and conjuration schools, in the fire and poison elements.
 
+note(s): all tables can be edited *before* installing the mod, but do not complain if you mess things up:
+* the list of deleted spells can be found in [Blackguard spellbook](../resources/2da/blackguard_spellbook.2da).
+* the proficiencies can be found in [Blackguard proficiencies](../resources/2da/blackguard_proficiencies.2da).
+* the abilities can be found in [Blackguard abilities table](../resources/2da/blackguard_abilities.2da).
+
 ## A. 1. Immunities.
 
 Gain immunity to fear at level 3 and immunity to poison at level 7, the latter replacing level drain.
