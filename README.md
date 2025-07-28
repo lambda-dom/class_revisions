@@ -32,8 +32,18 @@ This mod requires [Spell Revisions](https://github.com/Gibberlings3/SpellRevisio
 
 # B. Current State and Future Plans.
 
+The mod is in alpha stage, because while the basic design is set there are some details to be hashed out, especially around the Blackguard kit (which is why it is installed as a separate component).
+
 In comparison with KR, for global components, the weapon styles component is in, but nothing else: no thac0, saves, xp, etc. changes. Some of these are taken care of by other mods, e.g. [Tweaks Anthology](https://github.com/Gibberlings3/Tweaks-Anthology), so *probably* they will not covered.
 
-Currently, I prefer to leave thieves and bards to [Rogue Rebalancing](https://www.shsforums.net/files/category/62-rogue-rebalancing), as I think the mod has done a stellar job with them. Plus, it also has a bunch of other content. There are some changes planned to Mages, Sorcerers, Clerics and Druids, but these are relatively low-key, as changes to these core classes have the potential to muck up [SCS](https://github.com/Gibberlings3/SwordCoastStratagems), which is a no-no for me. I like only one half of [Refinements](https://github.com/UnearthedArcana/refinements) changes to Sorcerer HLAs, so have to think what to do about the other half, at any rate SCS compatibility is a must.
+Currently, I prefer to leave thieves and bards to [Rogue Rebalancing](https://www.shsforums.net/files/category/62-rogue-rebalancing), as I think the mod has done a stellar job with them. Plus, it also has a bunch of other content. There are some changes planned to Fighters, Mages, Sorcerers, Clerics and Druids, but these are relatively low-key, as changes to these core classes have the potential to muck up [SCS](https://github.com/Gibberlings3/SwordCoastStratagems), which is a no-no for me. I like only one half of [Refinements](https://github.com/UnearthedArcana/refinements) changes to Sorcerer HLAs, so have to think what to do about the other half, at any rate SCS compatibility is a must.
 
 This leaves Monks; I like both what KR and [Monk Overhaul](https://forums.beamdog.com/discussion/33618/mod-monk-overhaul) have done with monks but have no firm design yet.
+
+## B. 1. Issues.
+
+There are some unresolved issues. The ones I am aware of:
+
+* Paladins and Rangers get trimmed down spellbooks with some unique additions, but these differences are not reflected in the character creation screens. I do not know how to do this, or even if it can be done, so for now have to suffer the jank.
+
+* The way the spellbooks are updated at level up is by applying an ability with a spell removal opcode. The implementation was copied from KR and uses *delayed* timing; some early testing showed that with *instant* timing sometimes did not work. So should wait a couple of seconds after level up to get the updated spellbook.
