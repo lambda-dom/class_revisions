@@ -14,9 +14,9 @@ First, the Paladin loses some of the Fighter HLA's:
 
 Furthermore:
 
-* Summon Deva restricted to one choice to match clerics in SCS and it is standardized to fixed 5 turn duration.
+* Summon Deva restricted to one choice to match clerics in SCS.
 
-A Paladin at level 13 with weapon specialization gets 2.5 attacks per round. With (Improved) Haste that is 3.5 attacks per round, 4 if using something like the Gauntlets of Weapon Expertise. At the HLA level, Whirlwind no longer sets apr to 10, and the Greater version is not even available to Paladins, so the Paladin can still double his apr, but at a -4 penalty to thac0 and damage which is substantial. Since Improved Haste in SR is only +1 attack, Critical Strike is no longer the clear winner, even though with IR's critical aversion component immunity to criticals is rare. Note also that Paladins level up slowly, so there are not many HLA choices available and Critical Strike requires Power Attack, which is not very useful. So there is a real choice between:
+A Paladin at level 13 with weapon specialization gets 2.5 attacks per round. With (Improved) Haste that is 3.5 attacks per round, 4 if using something like the Gauntlets of Weapon Expertise. At the HLA level, SR's Whirlwind no longer sets apr to 10, and the Greater version is not even available to Paladins, so the Paladin can still double his apr, but at a -4 penalty to thac0 and damage which is not insubstantial. Since Improved Haste in SR is only +1 attack, Critical Strike is no longer the clear winner, even though with IR's critical aversion component, immunity to criticals is rare. Note also that Paladins level up slowly, so there are not many HLA choices available and Critical Strike requires Power Attack, which is not very useful. So there is a real choice between:
 
 * Double APR but at less thac0 and damage.
 * Critical Strike at base APR for guaranteed hits and more damage.
@@ -53,5 +53,8 @@ But the real problem with frontline fighters is that they cannot compete with Ma
 
 Inquisitors gain an anti-illusions protection HLA as a replacement for Extra spells.
 
-[^1] Necromancy includes healing spells and many abilities and spells, like Exorcism, so this is a double edge sword. Spells cast by self are *not* blocked, so you can still throw Holy Purge.
+note(s):
+* still not happy, as with the spellcasting changes it seems to me Inquisitors got the short end of the stick. But what to do?
+
+[^1] Necromancy includes healing spells and many abilities and spells, so this is a double edge sword. Spells cast by self are *not* blocked, so you can still throw Holy Purge.
 [^2] Except Inquisitors.
