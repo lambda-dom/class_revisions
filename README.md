@@ -52,7 +52,7 @@ There are also some unresolved, or potentially problematic, issues. The ones I a
 
 * Modder issues: currently, to make use of `spell.ids` to manage resource references, we dump all spells in the `spcl` namespace via `ADD_SPELL`, crowding it out. If this proves to be problematic (especially relevant for megamod installs), we might consider switching to some other scheme like the extended naming scheme of SCS.
 
-* Modding compatibility: my BG installs tend to be rather slim by megamod standards, so compatibility with other mods has not been extensively tested. Starting with the obvious: it is conceptually, if not technically, incompatible with any other mods that aim to do the same thing; install only the one you want or be prepared to suffer in purgatory and suffer alone. Unless there is some very cogent reason not to, I try to be as accomodating as compatible of other mods, the only problem being determining who exactly is in the best place to ensure compatibility. The answer is, can only be: to be determined on a case by case basis.
+* Modding compatibility: my BG installs tend to be rather slim by megamod standards, so compatibility with other mods has not been extensively tested. Starting with the obvious: it is conceptually, if not technically, incompatible with any other mods that aim to do the same thing; install only the one you want or be prepared to suffer in purgatory and suffer alone. Unless there is some very cogent reason not to, I try to be as accomodating of other mods as possible, the only problem being determining who exactly is in the best place to ensure compatibility. The answer is, can only be: to be determined on a case by case basis.
 
 # C. Future Plans.
 
@@ -60,4 +60,4 @@ In comparison with KR, for global components, the weapon styles component is in,
 
 Currently, I prefer to leave thieves and bards to [Rogue Rebalancing](https://www.shsforums.net/files/category/62-rogue-rebalancing), as I think the mod has done a stellar job with them. Plus, it also has a bunch of other content. There are some changes planned to Fighters, Mages, Sorcerers, Clerics and Druids, but these are relatively low-key, as changes to these core classes have the potential to muck up [SCS](https://github.com/Gibberlings3/SwordCoastStratagems), which is a no-no for me. I like only one half of [Refinements](https://github.com/UnearthedArcana/refinements) changes to Sorcerer HLAs, so have to think what to do about the other half; at any rate, SCS compatibility is a must.
 
-This leaves Monks; I like both what KR and [Monk Overhaul](https://forums.beamdog.com/discussion/33618/mod-monk-overhaul) have done with monks but have no firm design yet.
+This leaves Monks; I like both what KR and [Monk Overhaul](https://forums.beamdog.com/discussion/33618/mod-monk-overhaul) have done with monks but have no firm design in mind yet.
