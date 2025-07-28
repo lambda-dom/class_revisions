@@ -10,5 +10,6 @@ ARCHER_PRECISION                1       class   7       *       0       *
 ARCHER_FLURRY_ARROWS            1       class   7       *       0       *
 STALKER_IMPROVED_SPELLBOOK      1       class   7       *       0       *
 STALKER_EXTRA_SPELLS            1       class   7       *       0       *
+STALKER_BACKSTAB_BONUS          1       class   7       *       0       *
 BEASTMASTER_NATURE_POWER        1       class   7       *       0       *
 BEASTMASTER_MONSTER_SWARM       1       class   7       *       0       *

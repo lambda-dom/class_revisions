@@ -36,11 +36,9 @@ Archers get the HLA's:
 
 Stalkers get the HLA's:
 
-1. Extra Illusion and Divination spells in the spellbook: Blur, Mirror Image, Mislead, Detect Illusions, Clairvoyance, Oracle.
+1. Extra Illusion and Divination spells in the spellbook (SR versions): Blur, Mirror Image, Mislead, Detect Illusions, Clairvoyance, Oracle.
 2. +1 spell levels 1-4.
-
-note(s):
-* an initial version also doled a backstab bonus, but it was dropped.
+3. A +1 backstab multiplier bonus.
 
 ### C. 3. Beastmaster.
 
