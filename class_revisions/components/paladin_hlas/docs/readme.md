@@ -56,6 +56,6 @@ Inquisitors gain an anti-illusions protection HLA as a replacement for Extra spe
 note(s):
 * still not happy, as with the spellcasting changes it seems to me Inquisitors got the short end of the stick. But what to do?
 
-[^1] Necromancy includes healing spells and many abilities and spells, so this is a double edge sword. Spells cast by self are *not* blocked, so you can still throw Holy Purge.
+[^1]: Necromancy includes healing spells and many abilities and spells, so this is a double edge sword. Spells cast by self are *not* blocked, so you can still throw Holy Purge.
 
-[^2] Except Inquisitors.
+[^2]: Except Inquisitors.
