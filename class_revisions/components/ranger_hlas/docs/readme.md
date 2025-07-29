@@ -11,8 +11,8 @@ In exchange for these losses it gains new ranger-appropriate HLA's.
 
 1. Improved Ambidexterity: +2 thac0 to off-hand.
 2. Toughness: +6 hps. Can be chosen 5 times.
-3. Nature's Endurance: buff combining a speed-like effect with regeneration and immunity to fatigue, unconsciousness and slow.
-4. Nature's Guardian: +2 strength and a storm shield with a retaliation aura doing electric damage. Not cumulative with storm shield.
+3. Nature's Endurance: buff combining a speed-like effect with regeneration and immunity to fatigue, unconsciousness, paralyzation and slow. Non-dispellable.
+4. Nature's Guardian: +2 Draw upon Holy Might effect (non-cumulative) and a storm shield with a retaliation aura doing electric damage. Not cumulative with storm shield.
 
 Cleric + Rangers get Toughness and Nature Endurance added to their HLA pool.
 
