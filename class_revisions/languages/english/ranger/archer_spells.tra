@@ -26,7 +26,7 @@ Casting Time: 1
 Area of Effect: Caster
 Saving Throw: None
 
-When the archer casts this spell, for a brief moment he gains extraordinary speed, usually to escape the enemies' reach and relocate to a more convenient spot in the battlefield. For two rounds, his movement speed is doubled and as a consequence, he gains a bonus of +2 to ranged ac and saves vs. breath. During this period he cannot cast any spells, has less an attack per round and suffers a penalty of -4 to thac0 and damage rolls. This spell is not cumulative with Haste or Improved Haste.~
+When the archer casts this spell, for a brief moment he gains extraordinary speed, usually to escape the enemies' reach and relocate to a more convenient spot in the battlefield. For two rounds, his movement speed is doubled and as a consequence, he gains a bonus of +2 to ranged ac and saves vs. breath. During this period he cannot cast any spells, has less an attack per round and suffers a penalty of -4 to thac0 and damage rolls. This spell is not cumulative with Haste, Improved Haste and similar magics.~
 
 @1210 = ~Fashion Arrows~
 @1211 = ~Level: 2
