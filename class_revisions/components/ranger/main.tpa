@@ -14,17 +14,19 @@ LAF install_resources STR_VAR
     table = "%resources%/2da/symbols.2da"
 END
 
-//Install bams.
-LAF install_resources STR_VAR
-    type = "icon"
-    table = "%resources%/2da/icons.2da"
-END
-
 //Install items.
-LAF install_resources STR_VAR
-    type = "item"
-    table = "%resources%/2da/items.2da"
-    tra = "%tra%/items.tra"
+ACTION_IF (GAME_IS "eet") BEGIN
+    LAF install_resources STR_VAR
+        type = "item"
+        table = "%resources%/2da/items_eet.2da"
+        tra = "%tra%/items.tra"
+    END
+END ELSE BEGIN
+    LAF install_resources STR_VAR
+        type = "item"
+        table = "%resources%/2da/items_bg2ee.2da"
+        tra = "%tra%/items.tra"
+    END
 END
 
 //Install cres.

@@ -6,10 +6,15 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
 
 //Load references.
 LAF get_component_resources_dir RET resources = dir END
-LAF get_table_references STR_VAR
-    tables = "items"
-RET_ARRAY items = references END
-
+ACTION_IF (GAME_IS "eet") BEGIN
+    LAF get_table_references STR_VAR
+        tables = "items_eet"
+    RET_ARRAY items = references END
+END ELSE BEGIN
+    LAF get_table_references STR_VAR
+        tables = "items_bg2ee"
+    RET_ARRAY items = references END
+END
 
 //Patches.
 DEFINE_PATCH_FUNCTION panther_a BEGIN
