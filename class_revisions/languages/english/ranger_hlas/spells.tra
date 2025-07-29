@@ -15,12 +15,12 @@ Toughness can be chosen up to 5 times.~
 This ability can be chosen once.~
 
 @1020 = ~Nature's Endurance~
-@1021 = ~With this ability, the ranger is blessed with Nature's endurance and indomitable will. Once a day, and for five turns, the ranger gains a +2 bonus to movement rate, a +2 bonus to saving throws, a 10% bonus to his maximum hit points and a boost to regeneration of 1 hp per round. For the duration of the ability, the ranger is immune to fatigue, unconsciousness and slow. Being non-magical in nature, the effects of this ability cannot be dispelled nor breached.
+@1021 = ~With this ability, the ranger is blessed with Nature's endurance and indomitable will. Once a day, and for five turns, the ranger gains a +2 bonus to movement rate, a +2 bonus to saving throws, a 10% bonus to his maximum hit points and a boost to regeneration of 1 hp per round. For the duration of the ability, the ranger is immune to fatigue, unconsciousness, paralysis and slow. Being non-magical in nature, the effects of this ability cannot be dispelled nor breached.
 
 This ability can be chosen once.~
 
 @1030 = ~Nature's Guardian~
-@1031 = ~Empowered by Nature itself, the ranger becomes its protector and guardian. When this ability is activated, for 1 turn the ranger gains a bonus of +2 to strength. He is enveloped by a crackling shield, that grants a +4 bonus to saves vs. breath and AC against missiles. Non-magical missile weapons are deflected away, while gases cannot penetrate the barrier. Tiny and small flying creatures cannot pass through. Furthermore, any creature hitting the target within 5 feet, suffers 1d8 + 5 electric damage. Nature's Guard is not cumulative with similar magics like Storm Shield. This ability cannot be dispelled but can be breached.
+@1031 = ~Empowered by Nature itself, the ranger becomes its protector and guardian. When this ability is activated, for 1 turn the ranger gains a bonus of +2 to strength, dexterity and constitution. He is enveloped by a crackling shield, that grants a +4 bonus to saves vs. breath and AC against missiles as well as an increase in electrical resistance of 50%. Non-magical missile weapons are deflected away, while gases cannot penetrate the barrier. Tiny and small flying creatures cannot pass through. Furthermore, any creature hitting the target within 5 feet, suffers 1d8 + 5 electric damage. Nature's Guard is not cumulative with similar magics like Storm Shield.
 
 This ability can be chosen once.~
 
