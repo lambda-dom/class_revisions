@@ -196,7 +196,7 @@ Casting Time: 5
 Area of Effect: 30' radius
 Saving Throw: None
 
-When this spell is cast, all friendly animals and monsters are empowered by nature itself. Every affected creature gains an extra attack and a bonus of +2 to the movement rate, a bonus of +2 to saves vs. breath and 50% resistance to all elemental damage. For the duration of the ability, the affected creatures are also immune to slow and paralyzation. Being non-magical in nature, the effects of this ability cannot be dispelled."
+When this ability is used, all friendly animals and monsters are empowered by nature itself. Every affected creature gains an extra attack and a bonus of +2 to the movement rate, a bonus of +2 to saves vs. breath and 50% resistance to all elemental damage. For the duration of the ability, the affected creatures are also immune to slow and paralyzation. This ability is not cumulative with Haste and similar spells. Being non-magical in nature, the effects of this ability cannot be dispelled."
 
 //Ability gain strings.
 @10000 = "Gained +2 bonus to off-hand thac0."
