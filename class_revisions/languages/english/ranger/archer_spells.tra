@@ -26,7 +26,7 @@ Casting Time: 1
 Area of Effect: Caster
 Saving Throw: None
 
-When the archer casts this spell, for a brief moment he gains extraordinary speed, usually to escape the enemies' reach and relocate to a more convenient spot in the battlefield. For two rounds, his movement speed is doubled and as a consequence, he gains a bonus of +2 to ranged ac and saves vs. breath. During this period he cannot cast any spells, has less an attack per round and suffers a penalty of -4 to thac0 and damage rolls.~
+When the archer casts this spell, for a brief moment he gains extraordinary speed, usually to escape the enemies' reach and relocate to a more convenient spot in the battlefield. For two rounds, his movement speed is doubled and as a consequence, he gains a bonus of +2 to ranged ac and saves vs. breath. During this period he cannot cast any spells, has less an attack per round and suffers a penalty of -4 to thac0 and damage rolls. This spell is not cumulative with Haste or Improved Haste.~
 
 @1210 = ~Fashion Arrows~
 @1211 = ~Level: 2
@@ -40,9 +40,6 @@ Saving Throw: None
 With this spell, the Archer conjures a full stack of magically enchanted arrows, bullets or bolts. The magic lasts for 8 hours, after which the arrows become unusable. This spell can only be cast outdoors and outside of combat.~
 
 //Auxiliary spells.
-@1212 = ~Frost Arrows +1~
-@1213 = ~Create a stack of magical Frost Arrows +1.~
-
 @1214 = ~Poison Arrows +1~
 @1215 = ~Create a stack of magical Poison Arrows +1.~
 
@@ -78,7 +75,7 @@ When this ability is used, the ranger's eyes gain the magical acuity of a falcon
 @1340 = ~Flaming Bolts +2~
 @1341 = ~Create a stack of magical Flaming Bolts +2.~
 
-@1350 = ~Lightning Bolt +3~
+@1350 = ~Lightning Bolts +3~
 @1351 = ~Create a stack of magical Lightning Bolts +3.~
 
 //Ability gain strings.
