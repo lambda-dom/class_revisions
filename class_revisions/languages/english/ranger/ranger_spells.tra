@@ -27,44 +27,6 @@ Saving Throw: None
 
 When this ability is used, the ranger's eyes glow, enabling him to read the aura of a creature, and determine the creature's strengths and weaknesses. For the duration of the spell, the target's physical resistances are lowered by 10% and all attacks against the target creature are made with a +2 bonus to the attack rolls. This ability is not affected by magic resistance; it is not cumulative with itself or with similar magics like the Know Opponent spell.~
 
-@1140 = ~Summon Animal Companion~
-@1141 = ~Summon Animal Companion
-Level: 1
-School: Conjuration
-Range: Long
-Duration: 8 hours
-Casting Time: 9
-Area of Effect: Special
-Saving Throw: None
-
-With this ability, the ranger can, once per day, summon a wolf to his side to aid him. The ranger can summon progressively stronger wolves:
-
-Level 3: Wolf
-Level 6: Dire Wolf
-Level 9: Winter Wolf
-
-The wolf will aid the ranger by whatever means it possesses, staying by his side for 8 hours. This ability can only be used outdoors and outside of combat.
-
-Wolf (3 HD):
-STR 13, DEX 15, CON 15, INT 4, WIS 12, CHA 6;  AL Neutral
-HP 27, Effective AC 7, Base THAC0 17, Saving Throws 15/17/15/13/17
-1 Attack Per Round, 1d6 Piercing Damage (Bite)
-
-Dire Wolf (5 HD):
-STR 16, DEX 15, CON 16, INT 4, WIS 12, CHA 6;  AL Neutral
-HP 50, Effective AC 6, Base THAC0 14, Saving Throws 13/15/14/16/16
-1 Attack Per Round, 1d6 Piercing Damage (Bite)
-
-Winter Wolf (7 HD):
-STR 18, DEX 15, CON 17, INT 4, WIS 12, CHA 6;  AL Neutral
-HP 77, Effective AC 5, Base THAC0 12, Saving Throws 9/11/10/11/12
-FR 0%, CR 100%, ER 0%, AR 0%, MR 0%
-3/2 Attacks Per Round, 1d6 + 1 Piercing (Bite)
-
-Combat abilities:
-  Icy Bite: weapon is of enchantment level 1 doing extra 1d4 cold damage
-~
-
 //Ranger spells.
 @1200 = ~Blades of Fire~
 @1201 = ~Blades of Fire
