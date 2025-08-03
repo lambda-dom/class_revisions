@@ -103,7 +103,7 @@ Level: 2
 School: Abjuration
 Range: Personal
 Duration: 1 turn
-Casting Time: 1
+Casting Time: 3
 Area of Effect: Caster
 Saving Throw: None
 
@@ -139,7 +139,7 @@ Level: 1
 School: Abjuration
 Range: Long
 Duration: 5 rounds
-Casting Time: 1
+Casting Time: 3
 Area of Effect: Target
 Saving Throw: None
 
@@ -184,7 +184,7 @@ Note: True Seeing does not dispel illusionary clones such as those conjured by M
 @3111 = ~Dispel Evil
 Level: 1
 School: Abjuration
-Range: 30'
+Range: Long
 Duration: Instant
 Casting Time: 1
 Area of Effect: 15' radius
@@ -228,7 +228,7 @@ Level: 1
 School: Necromancy
 Range: Long
 Duration: 1 turn
-Casting Time: 2
+Casting Time: 3
 Area of Effect: Target, and enemies within 5'
 Saving Throw: Spell negates
 
@@ -264,7 +264,7 @@ Level: 4
 School: Necromancy
 Range: Long
 Duration: Special
-Casting Time: 3
+Casting Time: 5
 Area of Effect: 20' radius
 Saving Throw: Special
 
@@ -274,7 +274,7 @@ With this spell the Undead Hunter draws down holy power to smite the undead. Und
 @4241 = ~Animate Skeleton Warrior
 Level: 5
 School: Necromancy
-Range: Long
+Range: Medium
 Duration: 5 turns
 Casting Time: 1 round
 Area of Effect: Special
