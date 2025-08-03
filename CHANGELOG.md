@@ -2,7 +2,8 @@
 
 ## version v1.0alpha3 -- unreleased.
 
-* [#28](https://github.com/lambda-dom/class_revisions/pull/26): Fix targetting in spells: Animal Fang, Animal Summoning I-IV.
+* [#28](https://github.com/lambda-dom/class_revisions/pull/28): Fix targetting in spells: Animal Fang, Animal Summoning I-IV.
+* [#30](https://github.com/lambda-dom/class_revisions/pull/30): Improve implementation of Woodland Stride. TODO.
 
 ## version v1.0alpha2.
 
@@ -11,7 +12,7 @@
 * [#22](https://github.com/lambda-dom/class_revisions/pull/22): Fix missing retaliation spell in Nature's Guardian. Improvements to it and Nature's Endurance.
 * [#23](https://github.com/lambda-dom/class_revisions/pull/23): Feather Step not cumulative with Haste or Improved Haste.
 * [#24](https://github.com/lambda-dom/class_revisions/pull/24): Improve non-cumulativeness with Haste using SR sectypes.
-* [#26](https://github.com/lambda-dom/class_revisions/pull/25): Upgrade to new weidu_library version; spell tables now require the range and (casting) speed fields. Along the way, fix the range of Beastmaster's Animal Summoning I-IV.
+* [#26](https://github.com/lambda-dom/class_revisions/pull/26): Upgrade to new weidu_library version; spell tables now require the range and (casting) speed fields. Along the way, fix the range of Beastmaster's Animal Summoning I-IV.
 
 ## version v1.0alpha1.
 
