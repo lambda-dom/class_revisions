@@ -3,7 +3,7 @@
 @1201 = "Demonic Wrath
 Level: 7
 School: Necromancy
-Range: Caster
+Range: Personal
 Duration: Instantaneous
 Casting Time: 1
 Area of Effect: 10' radius
@@ -17,7 +17,7 @@ This ability can be chosen once."
 @1211 = "Demonic Aura
 Level: 7
 School: Evocation
-Range: Caster
+Range: Personal
 Duration: 1 turn
 Casting Time: 5
 Area of Effect: Special
