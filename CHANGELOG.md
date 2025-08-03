@@ -3,7 +3,7 @@
 ## version v1.0alpha3 -- unreleased.
 
 * [#28](https://github.com/lambda-dom/class_revisions/pull/28): Fix targetting in spells: Animal Fang, Animal Summoning I-IV.
-* [#30](https://github.com/lambda-dom/class_revisions/pull/30): Improve implementation of Woodland Stride. TODO.
+* [#31](https://github.com/lambda-dom/class_revisions/pull/31): Improve implementation of Woodland Stride.
 
 ## version v1.0alpha2.
 
