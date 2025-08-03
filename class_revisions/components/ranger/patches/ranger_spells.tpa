@@ -119,8 +119,22 @@ END
 
 //Woodland Stride.
 DEFINE_PATCH_FUNCTION ranger_woodland_stride BEGIN
+    PATCH_FOR_EACH block IN
+        "entangle"
+    BEGIN
+        LPF patch_block INT_VAR
+            match_opcode = 0                //AC Bonus.
+        STR_VAR
+            block = "%block%"
+        END
+    END
+
+    //Hack-y implementation.
+    LPF DELETE_EFFECT INT_VAR
+        match_opcode = 0                    //AC bonus. Opcode present merely to anchor patch_block.
+    END
+
     PATCH_FOR_EACH spell IN
-        "CLERIC_ENTANGLE"
         "CLERIC_SPIKE_GROWTH"
     BEGIN
         LPF get_spell_res STR_VAR spell = "%spell%" RET resource END
