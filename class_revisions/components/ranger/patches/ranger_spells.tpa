@@ -132,6 +132,7 @@ DEFINE_PATCH_FUNCTION ranger_woodland_stride BEGIN
 
     //Hack-y implementation.
     LPF DELETE_EFFECT INT_VAR
+        verbose = 1
         match_opcode = 0                    //AC bonus. Opcode present merely to anchor patch_block.
     END
 
