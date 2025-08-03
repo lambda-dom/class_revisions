@@ -7,7 +7,7 @@
 * [#22](https://github.com/lambda-dom/class_revisions/pull/22): Fix missing retaliation spell in Nature's Guardian. Improvements to it and Nature's Endurance.
 * [#23](https://github.com/lambda-dom/class_revisions/pull/23): Feather Step not cumulative with Haste or Improved Haste.
 * [#24](https://github.com/lambda-dom/class_revisions/pull/24): Improve non-cumulativeness with Haste using SR sectypes.
-* [#25](https://github.com/lambda-dom/class_revisions/pull/25): Upgrade to new weidu_library version; spell tables now require the range and casting speed.
+* [#25](https://github.com/lambda-dom/class_revisions/pull/25): Upgrade to new weidu_library version; spell tables now require the range and casting speed. Along the way fixed the range of Beastmaster's Animal Summoning I-IV.
 
 ## version v1.0alpha1.
 
