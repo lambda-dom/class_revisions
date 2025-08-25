@@ -1,77 +1,53 @@
 //Libraries.
 INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/spells.tpa"
 
 
 //Get reference tables. Separately to avoid reference clashing.
 LAF get_table_references STR_VAR
     tables = "effects"
-RET_ARRAY eff_references = references END
+RET_ARRAY effects = references END
 
 LAF get_table_references STR_VAR
     tables = "subspells"
-RET_ARRAY subspl_references = references END
+RET_ARRAY subspells = references END
 
 LAF get_table_references STR_VAR
     tables = "spells"
-RET_ARRAY spl_references = references END
+RET_ARRAY spells = references END
 
 
 //Patches.
 //Demonic Wrath.
 DEFINE_PATCH_FUNCTION demonic_wrath BEGIN
-    LPF get_array_element STR_VAR
-        array = "subspl_references"
-        key = "demonic_wrath_knockback"
-    RET res = value END
-
-    PATCH_IF ("%res%" STRING_EQUAL_CASE "*") BEGIN
-        PATCH_FAIL "demonic_wrath: subspell 'demonic_wrath_knockback' not found"
-    END
-
-    LPF ALTER_EFFECT INT_VAR
-        check_globals = 0
-        verbose = 1
+    LPF patch_resource_reference INT_VAR
         match_opcode = 146                  //Cast spell.
     STR_VAR
+        resource = "demonic_wrath_knockback"
         match_resource = "knck#res"
-        resource = "%res%"
+        references = "subspells"
     END
 END
 
 //Demonic Aura.
 DEFINE_PATCH_FUNCTION demonic_aura BEGIN
-    LPF get_array_element STR_VAR
-        array = "eff_references"
-        key = "fire_damage_2d6"
-    RET res = value END
-
-    //Patch-in melee effect.
-    LPF ALTER_EFFECT INT_VAR
-        check_globals = 0
-        verbose = 1
-        match_opcode = 248          //Melee effect.
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 248                  //Melee effect.
     STR_VAR
+        resource = "fire_damage_2d6"
+        eff = "eff"
         match_resource = ""
-        resource = "%res%"
+        references = "effects"
     END
 
-    LPF get_array_element STR_VAR
-        array = "spl_references"
-        key = "demonic_aura_a"
-    RET res = value END
-
-    //Retaliation.
-    PATCH_WITH_SCOPE BEGIN
-        LPF ALTER_EFFECT INT_VAR
-            check_globals = 0
-            verbose = 1
-            match_opcode = 232      //Cast spell on condition.
-        STR_VAR
-            match_resource = ""
-            resource = "%res%"
-        END
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 232                  //Cast spell on condition.
+    STR_VAR
+        resource = "demonic_aura_a"
+        match_resource = ""
+        references = "spells"
     END
 END
 

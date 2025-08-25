@@ -51,20 +51,13 @@ DEFINE_PATCH_FUNCTION ranger_nature_endurance STR_VAR destination = "*" BEGIN
 END
 
 DEFINE_PATCH_FUNCTION ranger_nature_guardian STR_VAR destination = "*" BEGIN
-    LPF get_table_ref STR_VAR
-        value = "ranger_nature_guardian_a"
-        array = "spells"
-        ext = "spl"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        check_globals = 0
-        verbose = 1
-        match_opcode = 232          //Cast spell on condition.
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 232                  //Cast spell on condition.
     STR_VAR
+        resource = "ranger_nature_guardian_a"
         match_resource = "retl#res"
-        resource = "%res%"
-    END    
+        references = "spells"
+    END
 END
 
 DEFINE_PATCH_FUNCTION archer_ranged_criticals STR_VAR destination = "*" BEGIN
@@ -72,69 +65,41 @@ DEFINE_PATCH_FUNCTION archer_ranged_criticals STR_VAR destination = "*" BEGIN
 END
 
 DEFINE_PATCH_FUNCTION archer_precision_a STR_VAR destination = "*" BEGIN
-    LPF get_table_ref STR_VAR
-        value = "archer_precision_kill"
-        array = "subspells"
-        ext = "spl"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        check_globals = 0
-        verbose = 1
-        match_opcode = 146          //Cast spell.
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
     STR_VAR
+        resource = "archer_precision_kill"
         match_resource = "spl#res"
-        resource = "%res%"
-    END    
+        references = "subspells"
+    END
 END
 
 DEFINE_PATCH_FUNCTION archer_precision STR_VAR destination = "*" BEGIN
-    LPF get_table_ref STR_VAR
-        value = "archer_precision_a"
-        array = "spells"
-        ext = "spl"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        check_globals = 0
-        verbose = 1
-        match_opcode = 341          //Critical hit effect.
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 341                  //Critical hit effect.
     STR_VAR
+        resource = "archer_precision_a"
         match_resource = "spl#res"
-        resource = "%res%"
-    END    
+        references = "spells"
+    END
 
-    LPF get_table_ref STR_VAR
-        value = "archer_flurry_arrows"
-        array = "spells"
-        ext = "spl"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        check_globals = 0
-        verbose = 1
-        match_opcode = 321          //Remove effects by resource.
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 321                  //Remove effects by resource.
     STR_VAR
+        resource = "archer_flurry_arrows"
         match_resource = "flra#res"
-        resource = "%res%"
-    END    
+        references = "spells"
+    END
 END
 
 DEFINE_PATCH_FUNCTION archer_flurry_arrows STR_VAR destination = "*" BEGIN
-    LPF get_table_ref STR_VAR
-        value = "archer_precision"
-        array = "spells"
-        ext = "spl"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        check_globals = 0
-        verbose = 1
-        match_opcode = 321          //Remove effects by resource.
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 321                  //Remove effects by resource.
     STR_VAR
+        resource = "archer_precision"
         match_resource = "prec#res"
-        resource = "%res%"
-    END    
+        references = "spells"
+    END
 END
 
 DEFINE_PATCH_FUNCTION stalker_improved_spellbook STR_VAR destination = "*" BEGIN
@@ -174,19 +139,13 @@ END
 
 DEFINE_PATCH_FUNCTION beastmaster_monster_swarm BEGIN
     PATCH_FOR_EACH char IN "a" "b" "c" BEGIN
-        LPF get_table_ref STR_VAR
-            value = "beastmaster_monster_swarm_%char%"
-            array = "effects"
-            ext = "eff"
-        RET res = resource END
-
-        LPF ALTER_EFFECT INT_VAR
-            check_globals = 0
-            verbose = 1
-            match_opcode = 177          //Use eff.
+        LPF patch_resource_reference INT_VAR
+            match_opcode = 177              //Use eff.
         STR_VAR
+            resource = "beastmaster_monster_swarm_%char%"
+            ext = "eff"
             match_resource = "mon%char%#res"
-            resource = "%res%"
+            references = "effects"
         END
     END
 END
@@ -196,18 +155,12 @@ DEFINE_PATCH_FUNCTION beastmaster_nature_power_a BEGIN
 END
 
 DEFINE_PATCH_FUNCTION beastmaster_nature_power BEGIN
-    LPF get_table_ref STR_VAR
-        value = "beastmaster_nature_power_a"
-        array = "effects"
-        ext = "eff"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        check_globals = 0
-        verbose = 1
-        match_opcode = 177              //Use eff.
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
     STR_VAR
+        resource = "beastmaster_nature_power_a"
+        ext = "eff"
         match_resource = "spl#res"
-        resource = "%res%"
+        references = "effects"
     END
 END

@@ -10,11 +10,11 @@ INCLUDE "%MOD_FOLDER%/components/paladin/patches/spells.tpa"
 //Get reference tables. Separately to avoid reference clashing.
 LAF get_table_references STR_VAR
     tables = "effects"
-RET_ARRAY eff_references = references END
+RET_ARRAY effects = references END
 
 LAF get_table_references STR_VAR
     tables = "spells"
-RET_ARRAY spl_references = references END
+RET_ARRAY spells = references END
 
 
 //Blackguard spellbook.
@@ -64,18 +64,12 @@ DEFINE_PATCH_FUNCTION absorb_health_a STR_VAR destination = "*" BEGIN
 END
 
 DEFINE_PATCH_FUNCTION absorb_health STR_VAR destination = "*" BEGIN
-    LPF get_array_element STR_VAR
-        array = "spl_references"
-        key = "absorb_health_a"
-    RET res = value END
-
-    //Patch in resource.
-    LPF ALTER_EFFECT INT_VAR
-        verbose = 1
+    LPF patch_resource_reference INT_VAR
         match_opcode = 146                  //Cast spell.
     STR_VAR
+        resource = "absorb_health_a"
         match_resource = "absb#res"
-        resource = "%res%"
+        references = "spells"
     END
 END
 
@@ -116,7 +110,7 @@ END
 
 DEFINE_PATCH_FUNCTION poison_weapon STR_VAR destination = "*" BEGIN
     LPF get_array_element STR_VAR
-        array = "eff_references"
+        array = "effects"
         key = "poison_weapon_a"
     RET res = value END
 
@@ -137,35 +131,13 @@ DEFINE_PATCH_FUNCTION poison_weapon STR_VAR destination = "*" BEGIN
 END
 
 //Aura of Vengeance.
-DEFINE_PATCH_FUNCTION aura_vengeance_a STR_VAR destination = "*" BEGIN
-    LPF get_array_element STR_VAR
-        array = "spl_references"
-        key = "aura_vengeance_a"
-    RET res = value END
-
-    //Patch in resource.
-    LPF ALTER_EFFECT INT_VAR
-        verbose = 1
-        match_opcode = 321                  //Remove effects by resource.
-    STR_VAR
-        match_resource = ""
-        resource = "%res%"
-    END
-END
-
 DEFINE_PATCH_FUNCTION aura_vengeance STR_VAR destination = "*" BEGIN
-    LPF get_array_element STR_VAR
-        array = "spl_references"
-        key = "aura_vengeance_a"
-    RET res = value END
-
-    //Patch in resource.
-    LPF ALTER_EFFECT INT_VAR
-        verbose = 1
+    LPF patch_resource_reference INT_VAR
         match_opcode = 272                  //Use Eff on condition.
     STR_VAR
+        resource = "aura_vengeance_a"
         match_resource = ""
-        resource = "%res%"
+        references = "spells"
     END
 
     //User information.
@@ -173,35 +145,13 @@ DEFINE_PATCH_FUNCTION aura_vengeance STR_VAR destination = "*" BEGIN
 END
 
 //Aura of Hatred.
-DEFINE_PATCH_FUNCTION aura_hatred_a STR_VAR destination = "*" BEGIN
-    LPF get_array_element STR_VAR
-        array = "spl_references"
-        key = "aura_hatred_a"
-    RET res = value END
-
-    //Patch in resource.
-    LPF ALTER_EFFECT INT_VAR
-        verbose = 1
-        match_opcode = 321                  //Remove effects by resource.
-    STR_VAR
-        match_resource = ""
-        resource = "%res%"
-    END
-END
-
 DEFINE_PATCH_FUNCTION aura_hatred STR_VAR destination = "*" BEGIN
-    LPF get_array_element STR_VAR
-        array = "spl_references"
-        key = "aura_hatred_a"
-    RET res = value END
-
-    //Patch in resource.
-    LPF ALTER_EFFECT INT_VAR
-        verbose = 1
+    LPF patch_resource_reference INT_VAR
         match_opcode = 272                  //Use Eff on condition.
     STR_VAR
+        resource = "aura_hatred_a"
         match_resource = ""
-        resource = "%res%"
+        references = "spells"
     END
 
     //User information.
@@ -209,35 +159,13 @@ DEFINE_PATCH_FUNCTION aura_hatred STR_VAR destination = "*" BEGIN
 END
 
 //Aura of Despair.
-DEFINE_PATCH_FUNCTION aura_despair_a STR_VAR destination = "*" BEGIN
-    LPF get_array_element STR_VAR
-        array = "spl_references"
-        key = "aura_despair_a"
-    RET res = value END
-
-    //Patch in resource.
-    LPF ALTER_EFFECT INT_VAR
-        verbose = 1
-        match_opcode = 321                  //Remove effects by resource.
-    STR_VAR
-        match_resource = ""
-        resource = "%res%"
-    END
-END
-
 DEFINE_PATCH_FUNCTION aura_despair STR_VAR destination = "*" BEGIN
-    LPF get_array_element STR_VAR
-        array = "spl_references"
-        key = "aura_despair_a"
-    RET res = value END
-
-    //Patch in resource.
-    LPF ALTER_EFFECT INT_VAR
-        verbose = 1
+    LPF patch_resource_reference INT_VAR
         match_opcode = 272                  //Use Eff on condition.
     STR_VAR
+        resource = "aura_despair_a"
         match_resource = ""
-        resource = "%res%"
+        references = "spells"
     END
 
     //User information.
@@ -281,19 +209,12 @@ END
 
 //Abyssal rage.
 DEFINE_PATCH_FUNCTION abyssal_rage STR_VAR destination = "*" BEGIN
-    LPF get_array_element STR_VAR
-        array = "spl_references"
-        key = "abyssal_rage_a"
-    RET res = value END
-
-    LPF ALTER_EFFECT INT_VAR
-        check_globals = 0
-        verbose = 1
+    LPF patch_resource_reference INT_VAR
         match_opcode = 146                  //Cast spell.
-        match_timing = 4                    //Delayed.
     STR_VAR
+        resource = "abyssal_rage_a"
         match_resource = ""
-        resource = "%res%"
+        references = "spells"
     END
 
     //Correct maze and imprisonment immunities.
@@ -372,37 +293,24 @@ END
 
 //Abyssal fury.
 DEFINE_PATCH_FUNCTION abyssal_fury STR_VAR destination = "*" BEGIN
-    LPF get_array_element STR_VAR
-        array = "eff_references"
-        key = "abyssal_fury_a"
-    RET res = value END
-
-
-    //Patch-in melee effect.
-    LPF ALTER_EFFECT INT_VAR
-        check_globals = 0
-        verbose = 1
+    LPF patch_resource_reference INT_VAR
         match_opcode = 248                  //Melee effect.
     STR_VAR
+        resource = "abyssal_fury_a"
+        ext = "eff"
         match_resource = ""
-        resource = "%res%"
+        references = "effects"
     END
 END
 
 //Flaming Shield.
 DEFINE_PATCH_FUNCTION flaming_shield STR_VAR destination = "*" BEGIN
-    LPF get_array_element STR_VAR
-        array = "spl_references"
-        key = "flaming_shield_a"
-    RET res = value END
-
-    LPF ALTER_EFFECT INT_VAR
-        check_globals = 0
-        verbose = 1
+    LPF patch_resource_reference INT_VAR
         match_opcode = 232                  //Cast spell on condition.
     STR_VAR
+        resource = "flaming_shield_a"
         match_resource = ""
-        resource = "%res%"
+        references = "spells"
     END
 END
 

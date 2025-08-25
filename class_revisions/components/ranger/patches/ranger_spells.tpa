@@ -89,32 +89,22 @@ DEFINE_PATCH_FUNCTION ranger_spellbook_cleric_ranger BEGIN
 END
 
 DEFINE_PATCH_FUNCTION ranger_spellbook BEGIN
-    LPF get_table_ref STR_VAR
-        value = "ranger_spellbook_ranger"
-        array = "effects"
-        ext = "eff"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        check_globals = 0
-        match_opcode = 177              //Use eff.
-    STR_VAR
-        match_resource = "bkrn#res"
-        resource = "%res%"
-    END
-
-    LPF get_table_ref STR_VAR
-        value = "ranger_spellbook_cleric_ranger"
-        array = "effects"
-        ext = "eff"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        check_globals = 0
+    LPF patch_resource_reference INT_VAR
         match_opcode = 177                  //Use eff.
     STR_VAR
+        resource = "ranger_spellbook_ranger"
+        ext = "eff"
+        match_resource = "bkrn#res"
+        references = "effects"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use eff.
+    STR_VAR
+        resource = "ranger_spellbook_cleric_ranger"
+        ext = "eff"
         match_resource = "bkcr#res"
-        resource = "%res%"
+        references = "effects"
     END
 END
 
@@ -157,40 +147,27 @@ DEFINE_PATCH_FUNCTION ranger_woodland_stride BEGIN
     LPF add_display_string INT_VAR tra_ref = 10010 END
 END
 
-//Quary.
+//Quarry.
 DEFINE_PATCH_FUNCTION ranger_quarry BEGIN
-    LPF get_table_ref STR_VAR
-        value = "ranger_quarry_a"
-        array = "spells"
-        ext = "spl"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        check_globals = 0
-        verbose = 1
-        match_opcode = 146              //Cast spell.
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
     STR_VAR
+        resource = "ranger_quarry_a"
         match_resource = "quar#res"
-        resource = "%res%"
+        references = "spells"
     END
 END
 
 //Blades of Fire.
 DEFINE_PATCH_FUNCTION ranger_blades_fire BEGIN
     //Patch melee effect.
-    LPF get_table_ref STR_VAR
-        value = "ranger_fire_blade_damage"
-        array = "effects"
-        ext = "eff"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        check_globals = 0
-        verbose = 1
-        match_opcode = 248              //Melee effect.
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 248                  //Melee effect.
     STR_VAR
+        resource = "ranger_fire_blade_damage"
+        ext = "eff"
         match_resource = "fire#res"
-        resource = "%res%"
+        references = "effects"
     END
 
     //Protection against spells.
@@ -278,65 +255,37 @@ END
 
 //Handle dual-ing.
 DEFINE_PATCH_FUNCTION ranger_dual_protection_level_bonus BEGIN
-    LPF get_table_ref STR_VAR
-        value = "ranger_spell_initial_level"
-        array = "spells"
-        ext = "spl"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        check_globals = 0
-        verbose = 1
+    LPF patch_resource_reference INT_VAR
         match_opcode = 206                  //Protection from spell.
     STR_VAR
+        resource = "ranger_spell_initial_level"
         match_resource = "spl1#res"
-        resource = "%res%"
+        references = "spells"
     END
 
-    LPF get_table_ref STR_VAR
-        value = "ranger_spell_level_bonus"
-        array = "spells"
-        ext = "spl"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        check_globals = 0
-        verbose = 1
+    LPF patch_resource_reference INT_VAR
         match_opcode = 206                  //Protection from spell.
     STR_VAR
+        resource = "ranger_spell_level_bonus"
         match_resource = "spl2#res"
-        resource = "%res%"
+        references = "spells"
     END
 END
 
 DEFINE_PATCH_FUNCTION ranger_dual_remove_level_bonus BEGIN
-    LPF get_table_ref STR_VAR
-        value = "ranger_spell_initial_level"
-        array = "spells"
-        ext = "spl"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        check_globals = 0
-        verbose = 1
+    LPF patch_resource_reference INT_VAR
         match_opcode = 321                  //Remove effects by resource.
     STR_VAR
+        resource = "ranger_spell_initial_level"
         match_resource = "spl1#res"
-        resource = "%res%"
+        references = "spells"
     END
 
-    LPF get_table_ref STR_VAR
-        value = "ranger_spell_level_bonus"
-        array = "spells"
-        ext = "spl"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        check_globals = 0
-        verbose = 1
+    LPF patch_resource_reference INT_VAR
         match_opcode = 321                  //Remove effects by resource.
     STR_VAR
+        resource = "ranger_spell_level_bonus"
         match_resource = "spl2#res"
-        resource = "%res%"
+        references = "spells"
     END
 END

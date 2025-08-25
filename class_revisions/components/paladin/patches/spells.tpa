@@ -12,11 +12,11 @@ INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
 //Get reference tables. Separately to avoid reference clashing.
 LAF get_table_references STR_VAR
     tables = "effects"
-RET_ARRAY eff_references = references END
+RET_ARRAY effects = references END
 
 LAF get_table_references STR_VAR
     tables = "spells"
-RET_ARRAY spl_references = references END
+RET_ARRAY spells = references END
 
 
 //Patches.
@@ -70,19 +70,12 @@ END
 
 //Detect Evil.
 DEFINE_PATCH_FUNCTION paladin_detect_evil STR_VAR destination = "*" BEGIN
-    LPF get_table_ref STR_VAR
-        value = "paladin_detect_evil_a"
-        array = "spl_references"
-        ext = "spl"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        check_globals = 0
-        verbose = 1
+    LPF patch_resource_reference INT_VAR
         match_opcode = 146                  //Cast spell.
     STR_VAR
+        resource = "paladin_detect_evil_a"
         match_resource = "cddetevl"
-        resource = "%res%"
+        references = "spells"
     END
 END
 
@@ -90,39 +83,26 @@ DEFINE_PATCH_FUNCTION paladin_smite_evil STR_VAR destination = "*" BEGIN
     //Add melee effects.
     LPF get_spell_header_count RET headers_count = count END
     FOR (i = 1; i <= headers_count ; ++i) BEGIN
-        LPF get_table_ref STR_VAR
-            value = "damage_evil_%i%"
-            array = "eff_references"
-            ext = "eff"
-        RET res = resource END
-
-        //Patch-in melee effect.
-        LPF ALTER_EFFECT INT_VAR
+        LPF patch_resource_reference INT_VAR
             header = i - 1
-            verbose = 1
             match_opcode = 248              //Melee effect.
         STR_VAR
+            resource = "damage_evil_%i%"
+            ext = "eff"
             match_resource = "mele#res"
-            resource = "%res%"
+            references = "effects"
         END
      END
 END
 
 //Auras.
 DEFINE_PATCH_FUNCTION paladin_aura_protection STR_VAR destination = "*" BEGIN
-    LPF get_table_ref STR_VAR
-        value = "paladin_aura_protection_a"
-        array = "spl_references"
-        ext = "spl"
-    RET res = resource END
-
-    //Patch in resource.
-    LPF ALTER_EFFECT INT_VAR
-        verbose = 1
+    LPF patch_resource_reference INT_VAR
         match_opcode = 272                  //Cast spell on condition.
     STR_VAR
+        resource = "paladin_aura_protection_a"
         match_resource = ""
-        resource = "%res%"
+        references = "spells"
     END
 
     //User information.
@@ -130,19 +110,12 @@ DEFINE_PATCH_FUNCTION paladin_aura_protection STR_VAR destination = "*" BEGIN
 END
 
 DEFINE_PATCH_FUNCTION paladin_aura_justice STR_VAR destination = "*" BEGIN
-    LPF get_table_ref STR_VAR
-        value = "paladin_aura_justice_a"
-        array = "spl_references"
-        ext = "spl"
-    RET res = resource END
-
-    //Patch in resource.
-    LPF ALTER_EFFECT INT_VAR
-        verbose = 1
+    LPF patch_resource_reference INT_VAR
         match_opcode = 272                  //Cast spell on condition.
     STR_VAR
+        resource = "paladin_aura_justice_a"
         match_resource = ""
-        resource = "%res%"
+        references = "spells"
     END
 
     //User information.
@@ -150,19 +123,12 @@ DEFINE_PATCH_FUNCTION paladin_aura_justice STR_VAR destination = "*" BEGIN
 END
 
 DEFINE_PATCH_FUNCTION paladin_aura_faith STR_VAR destination = "*" BEGIN
-    LPF get_table_ref STR_VAR
-        value = "paladin_aura_faith_a"
-        array = "spl_references"
-        ext = "spl"
-    RET res = resource END
-
-    //Patch in resource.
-    LPF ALTER_EFFECT INT_VAR
-        verbose = 1
+    LPF patch_resource_reference INT_VAR
         match_opcode = 272                  //Cast spell on condition.
     STR_VAR
+        resource = "paladin_aura_faith_a"
         match_resource = ""
-        resource = "%res%"
+        references = "spells"
     END
 
     //User information.
@@ -184,19 +150,12 @@ DEFINE_PATCH_FUNCTION cavalier_shield_specialization STR_VAR destination = "*" B
 END
 
 DEFINE_PATCH_FUNCTION cavalier_divine_retaliation STR_VAR destination = "*" BEGIN
-    LPF get_table_ref STR_VAR
-        value = "cavalier_divine_retaliation_a"
-        array = "spl_references"
-        ext = "spl"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        check_globals = 0
-        verbose = 1
-        match_opcode = 232      //Cast spell on condition.
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 232                  //Cast spell on condition.
     STR_VAR
+        resource = "cavalier_divine_retaliation_a"
         match_resource = "retl#res"
-        resource = "%res%"
+        references = "spells"
     END
 END
 
@@ -306,39 +265,25 @@ DEFINE_PATCH_FUNCTION undead_hunter_exorcism STR_VAR destination = "*" BEGIN
     //Patch in melee effects.
     LPF get_spell_header_count RET headers_count = count END
     FOR (i = 1; i <= headers_count; ++i) BEGIN
-        LPF get_table_ref STR_VAR
-            value = "cast_spell_kill_undead_%i%"
-            array = "eff_references"
-            ext = "eff"
-        RET res = resource END
-
-        //Patch-in melee effect.
-        LPF ALTER_EFFECT INT_VAR
-            check_globals = 0
+        LPF patch_resource_reference INT_VAR
             header = i - 1
-            match_opcode = 248                  //Melee effect.
-            verbose = 1
+            match_opcode = 248              //Melee effect.
         STR_VAR
+            resource = "cast_spell_kill_undead_%i%"
+            ext = "eff"
             match_resource = "mele#res"
-            resource = "%res%"
+            references = "effects"
         END
     END
 END
 
 DEFINE_PATCH_FUNCTION undead_hunter_skeleton_warrior STR_VAR destination = "*" BEGIN
-    LPF get_table_ref STR_VAR
-        value = "summon_skeleton_warrior"
-        array = "eff_references"
-        ext = "eff"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        check_globals = 0
-        check_headers = 1
-        verbose = 1
-        match_opcode = 177              //Use Eff.
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 177                  //Use Eff.
     STR_VAR
+        resource = "summon_skeleton_warrior"
+        ext = "eff"
         match_resource = "summ#res"
-        resource = "%res%"
+        references = "effects"
     END
 END

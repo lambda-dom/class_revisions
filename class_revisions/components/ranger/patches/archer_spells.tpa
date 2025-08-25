@@ -70,18 +70,13 @@ DEFINE_PATCH_FUNCTION archer_called_shot_trip BEGIN
 END
 
 DEFINE_PATCH_FUNCTION archer_called_shot BEGIN
-    LPF get_table_ref STR_VAR
-        value = "archer_called_shot"
-        array = "tables"
-        ext = "2da"
-    RET res = resource END
-
-    LPF ALTER_EFFECT INT_VAR
-        check_globals = 0
-        match_opcode = 214              //Select spell.
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 214                  //Select spell.
     STR_VAR
+        resource = "archer_called_shot"
+        ext = "2da"
         match_resource = ""
-        resource = "%res%"
+        references = "tables"
     END
 END
 
@@ -100,7 +95,7 @@ DEFINE_PATCH_FUNCTION archer_fashion_arrows BEGIN
         //Patch in resources.
         LPF ALTER_EFFECT INT_VAR
             header = i - 1
-            match_opcode = 214          //Select spell.
+            match_opcode = 214              //Select spell.
         STR_VAR
             match_resource = ""
             resource = "%res%"
@@ -110,18 +105,11 @@ END
 
 //Falcon's Eye.
 DEFINE_PATCH_FUNCTION archer_falcon_eye BEGIN
-    LPF get_table_ref STR_VAR
-        value = "archer_falcon_eye_sleep"
-        array = "subspells"
-        ext = "spl"
-    RET res = resource END
-
-    //Patch -in subspell.
-    LPF ALTER_EFFECT INT_VAR
-        check_globals = 0
-        match_opcode = 341              //Critical hit spell.
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 341                  //Critical hit spell.
     STR_VAR
+        resource = "archer_falcon_eye_sleep"
         match_resource = ""
-        resource = "%res%"
+        references = "subspells"
     END
 END
