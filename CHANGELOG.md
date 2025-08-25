@@ -4,6 +4,7 @@
 
 * [#28](https://github.com/lambda-dom/class_revisions/pull/28): Fix targetting in spells: Animal Fang, Animal Summoning I-IV.
 * [#31](https://github.com/lambda-dom/class_revisions/pull/31): Improve implementation of Woodland Stride.
+* [#32](https://github.com/lambda-dom/class_revisions/pull/32): Update to weidu_library new standards.
 
 ## version v1.0alpha2.
 
