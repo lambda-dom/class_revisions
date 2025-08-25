@@ -87,7 +87,7 @@ DEFINE_PATCH_FUNCTION paladin_smite_evil STR_VAR destination = "*" BEGIN
             header = i - 1
             match_opcode = 248              //Melee effect.
         STR_VAR
-            resource = "paladin_detect_evil_a"
+            resource = "damage_evil_%i%"
             ext = "eff"
             match_resource = "mele#res"
             references = "effects"

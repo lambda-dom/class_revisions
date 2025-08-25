@@ -67,7 +67,7 @@ DEFINE_PATCH_FUNCTION absorb_health STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 146                  //Cast spell.
     STR_VAR
-        resource = "summon_skeleton_warrior"
+        resource = "absorb_health_a"
         match_resource = "absb#res"
         references = "spells"
     END
@@ -131,16 +131,6 @@ DEFINE_PATCH_FUNCTION poison_weapon STR_VAR destination = "*" BEGIN
 END
 
 //Aura of Vengeance.
-DEFINE_PATCH_FUNCTION aura_vengeance_a STR_VAR destination = "*" BEGIN
-    LPF patch_resource_reference INT_VAR
-        match_opcode = 321                  //Remove effects by resource.
-    STR_VAR
-        resource = "aura_vengeance_a"
-        match_resource = ""
-        references = "spells"
-    END
-END
-
 DEFINE_PATCH_FUNCTION aura_vengeance STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 272                  //Use Eff on condition.
@@ -155,16 +145,6 @@ DEFINE_PATCH_FUNCTION aura_vengeance STR_VAR destination = "*" BEGIN
 END
 
 //Aura of Hatred.
-DEFINE_PATCH_FUNCTION aura_hatred_a STR_VAR destination = "*" BEGIN
-    LPF patch_resource_reference INT_VAR
-        match_opcode = 321                  //Remove effects by resource.
-    STR_VAR
-        resource = "aura_hatred_a"
-        match_resource = ""
-        references = "spells"
-    END
-END
-
 DEFINE_PATCH_FUNCTION aura_hatred STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 272                  //Use Eff on condition.
@@ -179,16 +159,6 @@ DEFINE_PATCH_FUNCTION aura_hatred STR_VAR destination = "*" BEGIN
 END
 
 //Aura of Despair.
-DEFINE_PATCH_FUNCTION aura_despair_a STR_VAR destination = "*" BEGIN
-    LPF patch_resource_reference INT_VAR
-        match_opcode = 321                  //Remove effects by resource.
-    STR_VAR
-        resource = "aura_despair_a"
-        match_resource = ""
-        references = "spells"
-    END
-END
-
 DEFINE_PATCH_FUNCTION aura_despair STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 272                  //Use Eff on condition.
