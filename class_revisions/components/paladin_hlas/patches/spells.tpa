@@ -8,7 +8,7 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
 //Get reference tables.
 LAF get_table_references STR_VAR
     tables = "subspells"
-RET_ARRAY references END
+RET_ARRAY subspells = references END
 
 
 DEFINE_PATCH_FUNCTION paladin_extra_spells STR_VAR destination = "*" BEGIN
@@ -16,24 +16,12 @@ DEFINE_PATCH_FUNCTION paladin_extra_spells STR_VAR destination = "*" BEGIN
 END
 
 DEFINE_PATCH_FUNCTION paladin_purge_evil STR_VAR destination = "*" BEGIN
-    LPF get_array_element STR_VAR
-        array = "references"
-        key = "purge_evil_blind"
-    RET res = value END
-
-    //Sanitize.
-    PATCH_IF NOT (FILE_EXISTS_IN_GAME "%res%.spl") BEGIN
-        PATCH_FAIL "paladin_purge_evil: missing '%res%.spl' for subspell 'purge_evil_blind'."
-    END
-
-    //Patch-in spell.
-    LPF ALTER_EFFECT INT_VAR
-        check_globals = 0
+    LPF patch_resource_reference INT_VAR
         match_opcode = 146                  //Cast spell.
-        verbose = 1
     STR_VAR
+        resource = "purge_evil_blind"
         match_resource = "blnd#res"
-        resource = "%res%"
+        references = "subspells"
     END
 END
 
