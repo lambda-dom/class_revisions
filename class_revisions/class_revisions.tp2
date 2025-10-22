@@ -30,7 +30,6 @@ REQUIRE_PREDICATE (GAME_IS "bg2ee eet") @100
 REQUIRE_PREDICATE (MOD_IS_INSTALLED "spell_rev.tp2" 0) @151
 REQUIRE_PREDICATE (MOD_IS_INSTALLED "spell_rev.tp2" 65) @155
 REQUIRE_PREDICATE (MOD_IS_INSTALLED "class_revisions.tp2" (ID_OF_LABEL "class_revisions.tp2" "lambda_dom-class_revisions-paladin")) @150
-DEPRECATED "Deprecated for ease of testing."
 LAF install_component STR_VAR COMPONENT = "paladin_hlas" END
 
 BEGIN @3 DESIGNATED 3
