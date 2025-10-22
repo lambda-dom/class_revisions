@@ -1,6 +1,7 @@
 //Libraries.
 INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/spell_symbols.tpa"
 
 
 //Initialization.
@@ -8,22 +9,22 @@ LAF get_component_root RET root = dir END
 LAF get_component_resources_dir RET resources = dir END
 LAF get_component_tra_dir RET tra = dir END
 
+
 //Install spell symbols.
-LAF install_resources STR_VAR
-    type = "add_symbol"
+LAF add_spell_symbols STR_VAR
     table = "%resources%/2da/symbols.2da"
 END
 
 //Install items.
 ACTION_IF (GAME_IS "eet") BEGIN
     LAF install_resources STR_VAR
-        type = "item"
+        type = "copy_item_simplified"
         table = "%resources%/2da/items_eet.2da"
         tra = "%tra%/items.tra"
     END
 END ELSE BEGIN
     LAF install_resources STR_VAR
-        type = "item"
+        type = "copy_item_simplified"
         table = "%resources%/2da/items_bg2ee.2da"
         tra = "%tra%/items.tra"
     END

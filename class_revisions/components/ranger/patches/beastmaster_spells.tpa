@@ -8,11 +8,11 @@ INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
 
 
 //Reference tables.
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "beastmaster_spells"
 RET_ARRAY spells = references END
 
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "effects"
 RET_ARRAY effects = references END
 
@@ -111,7 +111,7 @@ DEFINE_PATCH_FUNCTION beastmaster_animal_harmony_a BEGIN
         PATCH_FAIL "beastmaster_animal_harmony: spell 'CLERIC_ANIMAL_GROWTH' not found in 'spell.ids'."
     END
 
-    LPF get_table_ref STR_VAR
+    LPF get_table_reference STR_VAR
         value = "beastmaster_animal_fury"
         array = "spells"
         ext = "spl"
@@ -175,7 +175,7 @@ DEFINE_PATCH_FUNCTION beastmaster_animal_growth_a BEGIN
         PATCH_FAIL "beastmaster_animal_growth_a: spell 'CLERIC_ANIMAL_GROWTH' not found in 'spell.ids'."
     END
 
-    LPF get_table_ref STR_VAR
+    LPF get_table_reference STR_VAR
         value = "beastmaster_animal_fury"
         array = "spells"
         ext = "spl"
@@ -229,7 +229,7 @@ DEFINE_PATCH_FUNCTION beastmaster_animal_fury_a BEGIN
         PATCH_FAIL "beastmaster_animal_fury: spell 'CLERIC_ANIMAL_GROWTH' not found in 'spell.ids'."
     END
 
-    LPF get_table_ref STR_VAR
+    LPF get_table_reference STR_VAR
         value = "beastmaster_animal_growth"
         array = "spells"
         ext = "spl"

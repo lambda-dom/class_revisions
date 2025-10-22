@@ -4,7 +4,7 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
 
 
 //Get reference tables.
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "subspells"
 RET_ARRAY subspells = references END
 

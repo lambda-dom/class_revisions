@@ -7,11 +7,11 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
 //Load references.
 LAF get_component_resources_dir RET resources = dir END
 ACTION_IF (GAME_IS "eet") BEGIN
-    LAF get_table_references STR_VAR
+    LAF load_table_references STR_VAR
         tables = "items_eet"
     RET_ARRAY items = references END
 END ELSE BEGIN
-    LAF get_table_references STR_VAR
+    LAF load_table_references STR_VAR
         tables = "items_bg2ee"
     RET_ARRAY items = references END
 END

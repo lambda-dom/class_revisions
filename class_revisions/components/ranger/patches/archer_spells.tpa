@@ -4,36 +4,34 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
 
 
 //Reference tables.
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "effects"
 RET_ARRAY effects = references END
 
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "select"
 RET_ARRAY tables = references END
 
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "subspells"
 RET_ARRAY subspells = references END
 
 
-//Bow mastery.
+//Patches.
 DEFINE_PATCH_FUNCTION archer_bow_mastery BEGIN
     //Inform user.
     LPF add_display_string INT_VAR tra_ref = 10000 END
 END
 
-//Evasive archer.
 DEFINE_PATCH_FUNCTION archer_evasive BEGIN
     //Inform user.
     LPF add_display_string INT_VAR tra_ref = 10010 END
 END
 
 
-//Called shot.
-//Disarm.
+//Called shot: disarm.
 DEFINE_PATCH_FUNCTION archer_called_shot_disarm BEGIN
-    LPF get_table_ref STR_VAR
+    LPF get_table_reference STR_VAR
         value = "archer_called_shot_disarm_a"
         array = "effects"
         ext = "eff"
@@ -50,9 +48,9 @@ DEFINE_PATCH_FUNCTION archer_called_shot_disarm BEGIN
     END
 END
 
-//Trip.
+//Called shot: trip.
 DEFINE_PATCH_FUNCTION archer_called_shot_trip BEGIN
-    LPF get_table_ref STR_VAR
+    LPF get_table_reference STR_VAR
         value = "archer_called_shot_trip_c"
         array = "effects"
         ext = "eff"
@@ -80,13 +78,12 @@ DEFINE_PATCH_FUNCTION archer_called_shot BEGIN
     END
 END
 
-//Fashion Arrows.
 DEFINE_PATCH_FUNCTION archer_fashion_arrows BEGIN
     //Loop.
     FOR (i = 1; i <= 3; ++i) BEGIN
-        LPF get_resource_ref STR_VAR
-            ref = "#suf:%i%:ARCHER_FASHION_ARROWS"
-        RET res = resource END
+        LPF encode_table_reference STR_VAR
+            value = "#suf:%i%:ARCHER_FASHION_ARROWS"
+        RET res = return END
 
         PATCH_IF NOT (FILE_EXISTS_IN_GAME "%res%.2da") BEGIN
             PATCH_FAIL "archer_fashion_arrows: resource table '%res%.2da' not found."
@@ -103,7 +100,6 @@ DEFINE_PATCH_FUNCTION archer_fashion_arrows BEGIN
     END
 END
 
-//Falcon's Eye.
 DEFINE_PATCH_FUNCTION archer_falcon_eye BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 341                  //Critical hit spell.
