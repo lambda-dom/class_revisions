@@ -6,11 +6,12 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
 
 
 //Get reference tables.
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "subspells"
 RET_ARRAY subspells = references END
 
 
+//Patches.
 DEFINE_PATCH_FUNCTION paladin_extra_spells STR_VAR destination = "*" BEGIN
     LPF add_display_string INT_VAR tra_ref = 10000 END
 END
