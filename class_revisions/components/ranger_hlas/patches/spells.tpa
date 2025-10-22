@@ -4,15 +4,15 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
 
 
 //Get reference tables.
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "spells"
 RET_ARRAY spells = references END
 
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "subspells"
 RET_ARRAY subspells = references END
 
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "effects"
 RET_ARRAY effects = references END
 
@@ -111,7 +111,7 @@ DEFINE_PATCH_FUNCTION stalker_improved_spellbook STR_VAR destination = "*" BEGIN
         "stalker_clairvoyance"
         "stalker_oracle"
     BEGIN
-        LPF get_table_ref STR_VAR
+        LPF get_table_reference STR_VAR
             value = "%spell%"
             array = "spells"
             ext = "spl"

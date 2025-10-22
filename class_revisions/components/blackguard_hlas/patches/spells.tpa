@@ -5,22 +5,21 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/spells.tpa"
 
 
-//Get reference tables. Separately to avoid reference clashing.
-LAF get_table_references STR_VAR
+//Get reference tables.
+LAF load_table_references STR_VAR
     tables = "effects"
 RET_ARRAY effects = references END
 
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "subspells"
 RET_ARRAY subspells = references END
 
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "spells"
 RET_ARRAY spells = references END
 
 
 //Patches.
-//Demonic Wrath.
 DEFINE_PATCH_FUNCTION demonic_wrath BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 146                  //Cast spell.
@@ -31,7 +30,6 @@ DEFINE_PATCH_FUNCTION demonic_wrath BEGIN
     END
 END
 
-//Demonic Aura.
 DEFINE_PATCH_FUNCTION demonic_aura BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 248                  //Melee effect.
@@ -51,7 +49,6 @@ DEFINE_PATCH_FUNCTION demonic_aura BEGIN
     END
 END
 
-//Abyssal Shield.
 DEFINE_PATCH_FUNCTION abyssal_shield BEGIN
     LPF get_spell_res STR_VAR spell = "CLERIC_MAGIC_RESISTANCE" RET res = resource END
     PATCH_IF NOT ("%res%" STRING_EQUAL_CASE "*") BEGIN

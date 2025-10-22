@@ -3,16 +3,17 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
 
-//Import compose spellbook from paladin component. TODO: refactor to avoid this.
+//Import compose spellbook from paladin component.
+//TODO: refactor to avoid this.
 INCLUDE "%MOD_FOLDER%/components/paladin/patches/spells.tpa"
 
 
-//Get reference tables. Separately to avoid reference clashing.
-LAF get_table_references STR_VAR
+//Get reference tables.
+LAF load_table_references STR_VAR
     tables = "effects"
 RET_ARRAY effects = references END
 
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "spells"
 RET_ARRAY spells = references END
 

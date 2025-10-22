@@ -9,12 +9,12 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
 INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
 
 
-//Get reference tables. Separately to avoid reference clashing.
-LAF get_table_references STR_VAR
+//Get reference tables.
+LAF load_table_references STR_VAR
     tables = "effects"
 RET_ARRAY effects = references END
 
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "spells"
 RET_ARRAY spells = references END
 

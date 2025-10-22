@@ -5,7 +5,7 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/kits.tpa"
 
 
 //Get reference tables.
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "ranger_spells:archer_spells:stalker_spells:beastmaster_spells"
 RET_ARRAY spl_references = references END
 

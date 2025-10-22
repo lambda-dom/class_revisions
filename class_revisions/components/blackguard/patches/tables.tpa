@@ -5,11 +5,11 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/kits.tpa"
 
 
 //Get reference tables.
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "spells"
 RET_ARRAY blackguard_references = references END
 
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "spells"
     dir = "%MOD_FOLDER%/components/paladin/resources/2da"
 RET_ARRAY paladin_references = references END

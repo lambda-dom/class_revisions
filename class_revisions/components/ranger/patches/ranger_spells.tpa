@@ -10,15 +10,15 @@ INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
 
 
 //Reference tables.
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "effects"
 RET_ARRAY effects = references END
 
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "ranger_spells"
 RET_ARRAY spells = references END
 
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "subspells"
 RET_ARRAY subspells = references END
 
@@ -205,7 +205,7 @@ END
 
 //Snare.
 DEFINE_PATCH_FUNCTION ranger_snare BEGIN
-    LPF get_table_ref STR_VAR
+    LPF get_table_reference STR_VAR
         value = "ranger_snare_entangle"
         array = "subspells"
         ext = "spl"

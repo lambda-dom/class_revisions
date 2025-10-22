@@ -4,7 +4,7 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
 
 
 //Load tables.
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "ranger_spells"
 RET_ARRAY spells = references END
 
@@ -22,14 +22,14 @@ DEFINE_ACTION_FUNCTION patch_cleric_clab BEGIN
         END
 
         //Add abilities to handle dual classes.
-        LPF get_table_ref STR_VAR
+        LPF get_table_reference STR_VAR
             value = "ranger_dual_protection_level_bonus"
             array = "spells"
             ext = "spl"
         RET res = resource END
         SET_2DA_ENTRY row_count 1 cols "AP_%res%"
 
-        LPF get_table_ref STR_VAR
+        LPF get_table_reference STR_VAR
             value = "ranger_dual_remove_level_bonus"
             array = "spells"
             ext = "spl"
@@ -37,7 +37,7 @@ DEFINE_ACTION_FUNCTION patch_cleric_clab BEGIN
         SET_2DA_ENTRY (row_count + 1) 1 cols "AP_%res%"
 
         //Add abilities to handle multi classes.
-        LPF get_table_ref STR_VAR
+        LPF get_table_reference STR_VAR
             value = "ranger_spellbook"
             array = "spells"
             ext = "spl"
