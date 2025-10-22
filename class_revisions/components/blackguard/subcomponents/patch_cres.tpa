@@ -6,7 +6,6 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/spells.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/internal/binary.tpa"
 
 
-
 //Patches.
 DEFINE_PATCH_FUNCTION patch_known_spells STR_VAR old = "" new = "" BEGIN
     GET_OFFSET_ARRAY known_spells CRE_V10_KNOWN_SPELLS
@@ -14,6 +13,19 @@ DEFINE_PATCH_FUNCTION patch_known_spells STR_VAR old = "" new = "" BEGIN
         LPF read_resource INT_VAR offset = known_spell_offset RET spell = value END
         PATCH_IF ("%old%" STRING_EQUAL_CASE "%spell%") BEGIN
             LPF write_resource INT_VAR offset = known_spell_offset STR_VAR value = "%new%" END
+        END
+    END
+END
+
+DEFINE_PATCH_FUNCTION patch_memorized_spells STR_VAR old = "" new = "" BEGIN
+    GET_OFFSET_ARRAY memorized_spells CRE_V10_SPELL_MEM_INFO
+    PHP_EACH memorized_spells AS index1 => memorized_spell_offset BEGIN
+        GET_OFFSET_ARRAY2 memorized_resources memorized_spell_offset CRE_V10_SPELL_MEM
+        PHP_EACH memorized_resources AS index2 => memorized_resource_offset BEGIN
+            LPF read_resource INT_VAR offset = memorized_resource_offset RET spell = value END
+            PATCH_IF ("%old%" STRING_EQUAL_CASE "%spell%") BEGIN
+                LPF write_resource INT_VAR offset = memorized_resource_offset STR_VAR value = "%new%" END
+            END
         END
     END
 END
@@ -43,6 +55,7 @@ DEFINE_ACTION_FUNCTION patch_cre_files BEGIN
 
             //Patches.
             LPF patch_known_spells STR_VAR old = "%old_poison_weapon%" new = "%new_poison_weapon%" END
+            LPF patch_memorized_spells STR_VAR old = "%old_poison_weapon%" new = "%new_poison_weapon%" END
         END
         BUT_ONLY
 END

@@ -15,39 +15,39 @@ LAF add_spell_symbols STR_VAR
     table = "%resources%/2da/symbols.2da"
 END
 
-// //Install effects.
-// LAF install_resources STR_VAR
-//     type = "create_effect"
-//     table = "%resources%/2da/effects.2da"
-// END
-// 
-// //Install spells.
-// LAF install_resources STR_VAR
-//     type = "spell"
-//     table = "%resources%/2da/spells.2da"
-//     tra = "%tra%/spells.tra"
-//     patches = "%root%/patches/spells.tpa"
-// END
-// 
-// //Install tables.
-// LAF install_resources STR_VAR
-//     type = "table"
-//     table = "%resources%/2da/tables.2da"
-//     patches = "%root%/patches/tables.tpa"
-// END
-// 
-// //Patch proficiencies.
-// LAF install_subcomponent STR_VAR
-//     subcomponent = "%root%/subcomponents/proficiencies.tpa"
-// END
-// 
-// //Patch descriptions.
-// LAF install_subcomponent STR_VAR
-//     subcomponent = "%root%/subcomponents/descriptions.tpa"
-//     tra = "%tra%/blackguard.tra"
-// END
+//Install effects.
+LAF install_resources STR_VAR
+    type = "create_effect"
+    table = "%resources%/2da/effects.2da"
+END
 
-//Patch cres.
+//Install spells.
+LAF install_resources STR_VAR
+    type = "spell"
+    table = "%resources%/2da/spells.2da"
+    tra = "%tra%/spells.tra"
+    patches = "%root%/patches/spells.tpa"
+END
+
+//Install tables.
+LAF install_resources STR_VAR
+    type = "table"
+    table = "%resources%/2da/tables.2da"
+    patches = "%root%/patches/tables.tpa"
+END
+
+//Patch proficiencies.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/proficiencies.tpa"
+END
+
+//Patch descriptions.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/descriptions.tpa"
+    tra = "%tra%/blackguard.tra"
+END
+
+//Patch cres for Poison Weapon replacement.
 LAF install_subcomponent STR_VAR
     subcomponent = "%root%/subcomponents/patch_cres.tpa"
 END
