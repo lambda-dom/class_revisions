@@ -46,3 +46,8 @@ LAF install_subcomponent STR_VAR
     subcomponent = "%root%/subcomponents/descriptions.tpa"
     tra = "%tra%/blackguard.tra"
 END
+
+//Patch cres for Poison Weapon replacement.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/patch_cres.tpa"
+END
