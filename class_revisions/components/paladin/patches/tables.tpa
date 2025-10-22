@@ -5,7 +5,7 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/kits.tpa"
 
 
 //Get reference tables.
-LAF get_table_references STR_VAR
+LAF load_table_references STR_VAR
     tables = "spells"
 RET_ARRAY references = references END
 
