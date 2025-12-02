@@ -4,7 +4,9 @@
 
 * [#28](https://github.com/lambda-dom/class_revisions/pull/28): Fix targetting in spells: Animal Fang, Animal Summoning I-IV.
 * [#31](https://github.com/lambda-dom/class_revisions/pull/31): Improve implementation of Woodland Stride.
-* [#32](https://github.com/lambda-dom/class_revisions/pull/32): Update to weidu_library new standards.
+* [#33](https://github.com/lambda-dom/class_revisions/pull/33): Update to weidu_library new standards.
+* [#34](https://github.com/lambda-dom/class_revisions/pull/34): Blackguard updates.
+* [#35](https://github.com/lambda-dom/class_revisions/pull/35): Allow installation of class components in iwd. Needs SR >= 4.19.1.
 
 ## version v1.0alpha2.
 
