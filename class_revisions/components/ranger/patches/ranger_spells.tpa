@@ -110,13 +110,25 @@ END
 
 //Woodland Stride.
 DEFINE_PATCH_FUNCTION ranger_woodland_stride BEGIN
-    PATCH_FOR_EACH block IN
-        "entangle"
-    BEGIN
-        LPF patch_block INT_VAR
-            match_opcode = 0                //AC Bonus.
-        STR_VAR
-            block = "%block%"
+    PATCH_IF (GAME_IS "iwdee") BEGIN
+        PATCH_FOR_EACH block IN
+            "entangle-iwd"
+        BEGIN
+            LPF patch_block INT_VAR
+                match_opcode = 0                //AC Bonus.
+            STR_VAR
+                block = "%block%"
+            END
+        END
+    END ELSE BEGIN
+        PATCH_FOR_EACH block IN
+            "entangle"
+        BEGIN
+            LPF patch_block INT_VAR
+                match_opcode = 0                //AC Bonus.
+            STR_VAR
+                block = "%block%"
+            END
         END
     END
 
