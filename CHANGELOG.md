@@ -7,6 +7,7 @@
 * [#33](https://github.com/lambda-dom/class_revisions/pull/33): Update to weidu_library new standards.
 * [#34](https://github.com/lambda-dom/class_revisions/pull/34): Blackguard updates.
 * [#35](https://github.com/lambda-dom/class_revisions/pull/35): Allow installation of class components in iwd. Needs SR >= 4.19.1. Then improved in [#37](https://github.com/lambda-dom/class_revisions/pull/37).
+* [#38](https://github.com/lambda-dom/class_revisions/pull/38): Use item icons for fashion arrow subspells.
 
 ## version v1.0alpha2.
 
