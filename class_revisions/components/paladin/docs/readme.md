@@ -109,6 +109,9 @@ At level 11, paladins gain Aura of Protection, imposing a -1 penalty on enemies'
 
 Same-type auras do not stack, fire once a round, and require no concentration to activate. Comparing with Bard's songs: the latter require concentration, have more powerful effects and are available right from the start at level 1.
 
+TODO:
+* specialize auras; borrow from Artisan's pack.
+
 # C. Cavalier.
 
 Considerable changes from vanilla. The Cavalier now acts more like a general with fighting prowess (e.g. can attain mastery in some weapon proficiencies) and immunities to fear and charm, in exchange for one less spell per level and no access to Lay on Hands. The spellbook is also made by more unique, by both tailoring the deleted divine spells and the spells added.
@@ -151,11 +154,19 @@ Inquisitors gain immunity to fear and charm.
 
 ## D. 2. Abilities.
 
+TODO:
+* Add a Shield of the Archons innate ability scaling with level.
+* Add immunity to confusion? Instead of fear or along with charm?
+
 Dispel Magic is now Dispel Evil, an aoe Dispel Magic against evil enemies at 1.5 times the level of the caster, as in a similar SCS component [^4]. In addition they gain Banish Evil, a version of SR's banishment against evil enemies and Iron Will, a permanent bonus to save vs. spells. True Sight is also made undispellable.
 
 # E. Undead Hunter.
 
 Keeps the vanilla Paralysis and Level Drain immunities but looses the extra thac0 and damage against undead, function now played by a new spell. In exchange, looses one spell per level, Lay on Hands and Auras.
+
+TODO:
+* Smite Evil -> Smite Undead.
+* Add Aura of Holiness as a spell (following exorcism) adding protection from undead effects.
 
 note(s): all tables can be edited *before* installing the mod, but do not complain if you mess things up:
 * the list of deleted spells can be found in [Undead Hunter spellbook](../resources/2da/undead_hunter_spellbook.2da).
