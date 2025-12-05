@@ -148,10 +148,7 @@ Inquisitors gain immunity to fear and charm.
 
 ## D. 2. Abilities.
 
-TODO:
-* Change Iron Will to an ability giving immunty to chaotic mind effects, a personal version of Exaltation. 
-
-Dispel Magic is now Dispel Evil, an aoe Dispel Magic against evil enemies at 1.5 times the level of the caster, as in a similar SCS component [^4]. In addition they gain Banish Evil, a version of SR's banishment against evil enemies and Iron Will, a permanent bonus to save vs. spells. True Sight is also made undispellable. At level 10 gains Inquisitor's Shield, a version of Shield of the Archons.
+Dispel Magic is now Dispel Evil, an aoe Dispel Magic against evil enemies at 1.5 times the level of the caster, as in a similar SCS component [^4]. In addition they gain Banish Evil, a version of SR's banishment against evil enemies and Iron Will, a permanent bonus to save vs. spells. True Sight is also made undispellable. At level 12 gains Inquisitor's Shield, a version of Shield of the Archons.
 
 # E. Undead Hunter.
 
