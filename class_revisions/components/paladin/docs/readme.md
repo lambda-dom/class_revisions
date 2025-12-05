@@ -162,7 +162,7 @@ Dispel Magic is now Dispel Evil, an aoe Dispel Magic against evil enemies at 1.5
 
 # E. Undead Hunter.
 
-Keeps the vanilla Paralysis and Level Drain immunities but looses the extra thac0 and damage against undead, function now played by the new Undead Bane ability. Protection from Evil and Smite Evil become anti-undead dedicated abilities, with the latter now becoming an aoe magic damage bypassing mr. In comparison to vanilla (and KR) regains Lay on Hands. In exchange, looses one spell per level, Lay on Hands and Auras.
+Keeps the vanilla Paralysis and Level Drain immunities but looses the extra thac0 and damage against undead, function now played by the new Undead Bane ability. Protection from Evil and Smite Evil become anti-undead dedicated abilities, with the latter now becoming an aoe magic damage bypassing mr. Differently from vanilla and KR, the Undead Hunter regains Lay on Hands. In exchange, looses one spell per level, Lay on Hands and Auras.
 
 note(s): all tables can be edited *before* installing the mod (do not complain if you mess things up):
 * the list of deleted spells can be found in [Undead Hunter spellbook](../resources/2da/undead_hunter_spellbook.2da).
