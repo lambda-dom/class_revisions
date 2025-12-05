@@ -170,7 +170,32 @@ DEFINE_PATCH_FUNCTION inquisitor_disable_turn_undead STR_VAR destination = "*" B
     LPF add_display_string INT_VAR tra_ref = 12001 END
 END
 
-//Iron will.
+DEFINE_PATCH_FUNCTION inquisitor_spell_shield_a STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 321                  //Remove effects by resource.
+    STR_VAR
+        //Spell already exists in symbol form at this point.
+        resource = "inquisitor_spell_shield"
+        match_resource = "spl#res"
+        references = "spells"
+    END
+END
+
+DEFINE_PATCH_FUNCTION inquisitor_spell_shield STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 201                  //Spell deflection.
+    STR_VAR
+        resource = "inquisitor_spell_shield_a"
+        match_resource = "remv#res"
+        references = "spells"
+    END
+
+    LPF clone_to_display_string INT_VAR
+        match_opcode = 142                  //Display string.
+        tra_ref = 14001
+    END
+END
+
 DEFINE_PATCH_FUNCTION inquisitor_iron_will STR_VAR destination = "*" BEGIN
     LPF add_display_string INT_VAR tra_ref = 12002 END
 END
