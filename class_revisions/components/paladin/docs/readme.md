@@ -111,10 +111,7 @@ Same-type auras do not stack, fire once a round, and require no concentration to
 
 # C. Cavalier.
 
-TODO:
-* move spells to be on range spell 1 - 4.
-
-Considerable changes from vanilla. The Cavalier now acts more like a general with fighting prowess (e.g. can attain mastery in some weapon proficiencies) and immunities to fear and charm, in exchange for one less spell per level and no access to Lay on Hands. The spellbook is also made by more unique, by both tailoring the deleted divine spells and the spells added.
+Considerable changes from vanilla. The Cavalier now acts more like a general with fighting prowess (e.g. can attain mastery in some weapon proficiencies) and immunities to fear and charm, in exchange for one less spell per level and no access to Lay on Hands. The spellbook is also made more unique, by both tailoring the deleted divine spells and the spells added.
 
 note(s):
 * KR adds Challenge Evil abilitty, which I do not like and will *not* add. A version of Shield Other is added as a new spell.
@@ -126,9 +123,9 @@ note(s): all tables can be edited *before* installing the mod, but do not compla
 
 ## C. 1. Spellcasting.
 
-In comparison with (true) paladins, cavaliers gain Command, Cloak of Fear and Greater Command, but lose Miscast Magic, Holy Smite and Raise Dead. For new spells, they gain Shield of Faith, Shield Other, Divine Retaliation, Heroism and Hold the Line.
+In comparison with (true) paladins, cavaliers gain Command, Cloak of Fear and Greater Command, but lose Miscast Magic, Holy Smite and Raise Dead. For new spells, they gain Shield of Faith at spell level 1, Shield Other and Divine Retaliation at spell level 2 and Heroism and Hold the Line at spell level 3.
 
-Shield of Faith is a fighting self-buff and Shield Other is essentially Sanctuary Other. Heroism is a party buff inspired by similar named spells and Hold the Line continues the theme of physical mobility and anti-dragon fighting by giving immunity to wing buffet.
+Shield of Faith is a fighting self-buff and Shield Other is essentially Sanctuary Other. Heroism is a party buff inspired by similar named spells and Hold the Line continues the theme of physical mobility and anti-dragon fighting by giving immunity to knockback.
 
 ## C. 2. Immunities.
 
@@ -137,7 +134,7 @@ Cavaliers gain immunity to fear and paralysis.
 note(s):
 * The idea is Cavaliers are physical (paralysis) and Inquisitors are mental (Charm).
 
-## C. 3. Abilities.
+## C. 3. Other abilities.
 
 Cavaliers gain all the paladin abilities, except Lay on Hands. Cavaliers can also attain mastery in long swords, bastard swords, flails and maces, and gain Sword and Shield Style specialization at level 1.
 
