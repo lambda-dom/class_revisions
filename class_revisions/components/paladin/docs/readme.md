@@ -111,7 +111,7 @@ Same-type auras do not stack, fire once a round, and require no concentration to
 
 # C. Cavalier.
 
-Considerable changes from vanilla. The Cavalier now acts more like a general with fighting prowess (e.g. can attain mastery in some weapon proficiencies) and immunities to fear and charm, in exchange for one less spell per level and no access to Lay on Hands. The spellbook is also made by more unique, by both tailoring the deleted divine spells and the spells added.
+Considerable changes from vanilla. The Cavalier now acts more like a general with fighting prowess (e.g. can attain mastery in some weapon proficiencies) and immunities to fear and charm, in exchange for one less spell per level and no access to Lay on Hands. The spellbook is also made more unique, by both tailoring the deleted divine spells and the spells added.
 
 note(s):
 * KR adds Challenge Evil abilitty, which I do not like and will *not* add. A version of Shield Other is added as a new spell.
