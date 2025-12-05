@@ -170,7 +170,7 @@ DEFINE_PATCH_FUNCTION inquisitor_disable_turn_undead STR_VAR destination = "*" B
     LPF add_display_string INT_VAR tra_ref = 12001 END
 END
 
-DEFINE_PATCH_FUNCTION inquisitor_spell_shield_a STR_VAR destination = "*" BEGIN
+DEFINE_PATCH_FUNCTION inquisitor_spell_shield_b STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 321                  //Remove effects by resource.
     STR_VAR
@@ -185,7 +185,7 @@ DEFINE_PATCH_FUNCTION inquisitor_spell_shield STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 201                  //Spell deflection.
     STR_VAR
-        resource = "inquisitor_spell_shield_a"
+        resource = "inquisitor_spell_shield_b"
         match_resource = "remv#res"
         references = "spells"
     END

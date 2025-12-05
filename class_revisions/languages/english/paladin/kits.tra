@@ -59,6 +59,7 @@ Advantages:
 - At level 1 gains a bonus of +1 to Saves vs. spells. This bonus increases to +2 at level 10.
 - At level 5 can use True Seeing once per day. For every 3 levels, the ability can be used one additional time per day, to a maximum of 5 uses at level 17.
 - At level 8 can use Banish Evil once per day. At level 16 gains a second use of this ability.
+- At level 12 can use Inquisitor's Shield once per day.
 
 Disadvantages:
 - Cannot cast spells.
@@ -71,7 +72,11 @@ True Seeing:
 For 1 turn, the Inquisitor gains the ability to see the exact locations of creatures or objects under displacement or invisibility effects, and see through illusions. This effectively neutralize spells such as Blur and Mirror Image, allow the caster to see and target invisible creatures normally, and make him unaffected by hostile illusion spells. The caster is also cured from any form of blindness and is immune to it for the duration of the spell.
 
 Banish Evil:
-With this ability, the Inquisitor can banish evil, enemy summoned creatures back to their plane of existence."
+With this ability, the Inquisitor can banish evil, enemy summoned creatures back to their plane of existence.
+
+Inquisitor's Shield:
+With this powerful abjuration, the Inquisitor can protect himself with a shield deflecting all spells cast directly at him.
+"
 
 @1030 = "UNDEAD HUNTER: Undead are an abomination in the eyes of the just and righteous. It is no surprise then that there are some paladins that dedicate themselves to wiping these unholy terrors from the world. These undead hunters believe undead are a scourge upon the living that must be eradicated, and the worst of the undead are the ones with unnatural appetites for flesh and blood - things that should persist without feeding, but consume anyway. Creatures such as vampires and ghouls are especially dangerous because they turn their victims into more of their kind, and just one reckless night-feeder can turn an entire city into a den of undead. Rare even in the most grim realms, and looked with awe by most, undead hunters lead lonely existences under the constant threat of becoming that which they live to destroy.
 
