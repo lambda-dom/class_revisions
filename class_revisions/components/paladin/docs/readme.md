@@ -134,7 +134,7 @@ Cavaliers gain immunity to fear and paralysis.
 note(s):
 * The idea is Cavaliers are physical (paralysis) and Inquisitors are mental (Charm).
 
-## C. 3. Abilities.
+## C. 3. Other abilities.
 
 Cavaliers gain all the paladin abilities, except Lay on Hands. Cavaliers can also attain mastery in long swords, bastard swords, flails and maces, and gain Sword and Shield Style specialization at level 1.
 
