@@ -123,7 +123,7 @@ This spell grants the Paladin a +2 bonus to armor class and saves vs. breath for
 
 @2220 = "Divine Retaliation"
 @2221 = "Divine Retaliation
-Level: 3
+Level: 2
 School: Evocation
 Range: Personal
 Duration: 1 turn
@@ -135,19 +135,19 @@ This spell protects the Cavalier from attacks made within a 5' radius of the cas
 
 @2230 = "Heroism"
 @2231 = "Heroism
-Level: 4
+Level: 3
 School: Enchantment
 Range: Long
 Duration: 1 turn
-Casting Time: 4
+Casting Time: 5
 Area of Effect: 30' radius
 Saving Throw: None
 
-Upon uttering this spell, the Paladin and his allies' morale is raised by 2, as well as attack and damage rolls. Furthermore, affected creatures hit points are raised by 10%, and these bonus hit points are lost first when the recipient takes damage. The caster determines at what range he will cast the spell. At the instant the spell is completed, it affects all creatures in a 30 feet radius centered on the point selected by the caster."
+Upon uttering this spell, the Paladin and his allies' morale are raised by 2, as well as attack and damage rolls. Furthermore, affected creatures hit points are raised by 10%, and these bonus hit points are lost first when the recipient takes damage. The caster determines at what range he will cast the spell. At the instant the spell is completed, it affects all creatures in a 30 feet radius centered on the point selected by the caster."
 
 @2240 = "Hold the Line"
 @2241 = "Hold the Line
-Level: 5
+Level: 3
 School: Alteration
 Range: Personal
 Duration: 1 turn
