@@ -1,26 +1,26 @@
 2DA V1.0
 *
                                             install type    level   patch
-PALADIN_CASTING_INITIAL_LEVEL               1       class   1       *
-PALADIN_SPELLBOOK                           1       class   1       *
-PALADIN_SPELL_PENALTY                       1       class   1       *
-PALADIN_CASTING_LEVEL_BONUS                 1       class   1       *
 PALADIN_DISEASE_IMMUNITY                    1       class   1       *
 PALADIN_FEAR_IMMUNITY                       1       class   1       *
 PALADIN_CHARM_IMMUNITY                      1       class   1       *
 PALADIN_HOLD_IMMUNITY                       1       class   1       *
 PALADIN_CONFUSION_IMMUNITY                  1       class   1       *
-PALADIN_SMITE_EVIL                          1       class   1       *
+PALADIN_CASTING_INITIAL_LEVEL               1       class   1       *
+PALADIN_CASTING_LEVEL_BONUS                 1       class   1       *
+PALADIN_SPELL_PENALTY                       1       class   1       *
+PALADIN_SPELLBOOK                           1       class   1       *
 PALADIN_AURA_PROTECTION                     1       class   1       *
 PALADIN_AURA_JUSTICE                        1       class   1       *
 PALADIN_AURA_FAITH                          1       class   1       *
+PALADIN_SMITE_EVIL                          1       class   1       *
 CAVALIER_SPELLBOOK                          1       class   1       *
 CAVALIER_SHIELD_SPECIALIZATION              1       class   1       *
 CAVALIER_SHIELD_OTHER                       1       class   1       *
 CAVALIER_SHIELD_FAITH                       1       class   2       *
-CAVALIER_DIVINE_RETALIATION                 1       class   3       *
-CAVALIER_HEROISM                            1       class   4       *
-CAVALIER_HOLD_THE_LINE                      1       class   5       *
+CAVALIER_DIVINE_RETALIATION                 1       class   2       *
+CAVALIER_HEROISM                            1       class   3       *
+CAVALIER_HOLD_THE_LINE                      1       class   3       *
 INQUISITOR_DISABLE_SPELLCASTING             1       class   1       *
 INQUISITOR_DISABLE_TURN_UNDEAD              1       class   1       *
 INQUISITOR_BANISH_EVIL                      1       class   1       *
@@ -31,7 +31,7 @@ UNDEAD_HUNTER_LEVEL_DRAIN_IMMUNITY          1       class   1       *
 UNDEAD_HUNTER_TURN_UNDEAD_BONUS             1       class   1       *
 UNDEAD_HUNTER_UNDEAD_BANE                   1       class   1       *
 UNDEAD_HUNTER_PROTECTION_FROM_UNDEAD        1       class   1       *
-UNDEAD_HUNTER_SMITE_UNDEAD                  1       class   4       *
+UNDEAD_HUNTER_SMITE_UNDEAD                  1       class   1       *
 UNDEAD_HUNTER_HALT_UNDEAD                   1       class   1       *
 UNDEAD_HUNTER_MAGIC_CIRCLE_AGAINST_UNDEAD   1       class   2       *
 UNDEAD_HUNTER_EXORCISM                      1       class   3       *
