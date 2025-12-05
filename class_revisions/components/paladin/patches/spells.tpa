@@ -287,3 +287,10 @@ DEFINE_PATCH_FUNCTION undead_hunter_skeleton_warrior STR_VAR destination = "*" B
         references = "effects"
     END
 END
+
+DEFINE_PATCH_FUNCTION undead_hunter_protection_from_undead STR_VAR destination = "*" BEGIN
+    LPF clone_to_display_string INT_VAR
+        match_opcode = 142                  //Display string.
+        tra_ref = 14000
+    END
+END
