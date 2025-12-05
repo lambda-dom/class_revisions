@@ -109,10 +109,10 @@ At level 11, paladins gain Aura of Protection, imposing a -1 penalty on enemies'
 
 Same-type auras do not stack, fire once a round, and require no concentration to activate. Comparing with Bard's songs: the latter require concentration, have more powerful effects and are available right from the start at level 1.
 
-TODO:
-* specialize auras; borrow from Artisan's pack.
-
 # C. Cavalier.
+
+TODO:
+* move spells to be on range spell 1 - 4.
 
 Considerable changes from vanilla. The Cavalier now acts more like a general with fighting prowess (e.g. can attain mastery in some weapon proficiencies) and immunities to fear and charm, in exchange for one less spell per level and no access to Lay on Hands. The spellbook is also made by more unique, by both tailoring the deleted divine spells and the spells added.
 
@@ -162,28 +162,26 @@ Dispel Magic is now Dispel Evil, an aoe Dispel Magic against evil enemies at 1.5
 
 # E. Undead Hunter.
 
-Keeps the vanilla Paralysis and Level Drain immunities but looses the extra thac0 and damage against undead, function now played by a new spell. In exchange, looses one spell per level, Lay on Hands and Auras.
+Keeps the vanilla Paralysis and Level Drain immunities but looses the extra thac0 and damage against undead, function now played by the new Undead Bane ability. Protection from Evil and Smite Evil become anti-undead dedicated abilities, with the latter now becoming an aoe magic damage bypassing mr. Differently from vanilla and KR, the Undead Hunter regains Lay on Hands. In exchange, looses one spell per level, Lay on Hands and Auras.
 
-TODO:
-* Smite Evil -> Smite Undead.
-* Add Aura of Holiness as a spell (following exorcism) adding protection from undead effects.
-
-note(s): all tables can be edited *before* installing the mod, but do not complain if you mess things up:
+note(s): all tables can be edited *before* installing the mod (do not complain if you mess things up):
 * the list of deleted spells can be found in [Undead Hunter spellbook](../resources/2da/undead_hunter_spellbook.2da).
 * the proficiencies can be found in [Undead Hunter proficiencies](../resources/2da/undead_hunter_proficiencies.2da).
 * the abilities can be found in [Undead Hunter abilities table](../resources/2da/undead_hunter_abilities.2da).
 
 ## E. 1. Spellcasting.
 
-In comparison with Paladins, Undead Hunters gain Animate Dead, but lose Miscast Magic and Holy Smite. The latter has now a version, Smite Undead, gained at spell level 4, that bypasses magic resistance. They also get the new spells Halt Undead, Undead Bane, Exorcism and, at level 5, Animate Skeleton Warrior. The latter (as well as keeping Animate Dead) is to lean on the duality expressed in KR's kit description of using the undead to fight the undead.
+In comparison with Paladins, Undead Hunters gain Animate Dead, but lose Miscast Magic and Holy Smite. Holy Smite has its counterpart in the Smite Undead ability -- see above.
+
+For new spells, they get Halt Undead at spell level 1 (bypasses mr), Magic Circle against Undead at spell level 2, Exorcism at spell level 3 and Animate Skeleton Warrior at spell level 4. The latter (as well as keeping Animate Dead) to lean on the duality expressed in KR's kit description of using the undead to fight the undead.
 
 ## E. 2. Immunities.
 
 As with KR, Undead Hunters gain immunity to paralysis and level drain.
 
-## E. 3. Abilities.
+## E. 3. Other abilities.
 
-Undead Hunters lose access to the paladin auras. Beyond KR, we give a bonus of +2 to Turn Undead level, gained at level 3.
+Beyond KR, we give a bonus of +2 to Turn Undead level, gained at level 3.
 
 [^1]: conceptually incompatible with [Tweaks Anthology](https://github.com/Gibberlings3/Tweaks-Anthology) component "Alter Paladin Spell Progression Table".
 

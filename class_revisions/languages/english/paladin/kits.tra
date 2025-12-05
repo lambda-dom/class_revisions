@@ -1,5 +1,5 @@
 //Class descriptions.
-@1000 = ~PALADIN: Through a select, worthy few shines the power of the divine. Called paladins, these noble souls dedicate their swords and lives to the battle against evil. Knights, crusaders, and law-bringers, paladins seek not just to spread divine justice but to embody the teachings of the virtuous deities they serve. In pursuit of their lofty goals, they adhere to ironclad laws of morality and discipline. As reward for their righteousness, these holy champions are blessed with boons to aid them in their quests: powers to smite evil, heal the innocent, and inspire the faithful.
+@1000 = "PALADIN: Through a select, worthy few shines the power of the divine. Called paladins, these noble souls dedicate their swords and lives to the battle against evil. Knights, crusaders, and law-bringers, paladins seek not just to spread divine justice but to embody the teachings of the virtuous deities they serve. In pursuit of their lofty goals, they adhere to ironclad laws of morality and discipline. As reward for their righteousness, these holy champions are blessed with boons to aid them in their quests: powers to smite evil, heal the innocent, and inspire the faithful.
 
 Paladins are almost exclusively human, whose sense of ambition and purpose makes excellent champions of an ideal or the divine. Among other races, paladins are extremely rare. Though paladins are typically devoted followers of law and good, there are infamous examples of fallen paladins.
 
@@ -28,9 +28,9 @@ Lay on Hands:
 Heals a target for 2 hit points per level of the paladin, up to 40 hit points per use at 20th level. At 6th level, it also cures the target from any disease. At 9th level, it also neutralizes poison effects.
 
 Aura of Protection:
-Evil creatures within 15 feet of the paladin suffer -1 penalty to attack rolls. At level 14, the aura also imposes a -1 penalty to evil creature's damage rolls. At level 17, allies within the aura get +1 to all saves.~
+Evil creatures within 15 feet of the paladin suffer -1 penalty to attack rolls. At level 14, the aura also imposes a -1 penalty to evil creature's damage rolls. At level 17, allies within the aura get +1 to all saves."
 
-@1010 = ~CAVALIER: While many warriors strive to perfect their art, spending all of their time honing their skill at martial arms, others spend as much effort dedicating themselves to a cause. These warriors, known as cavaliers, swear themselves to a purpose, serving it above all else. The cavalier represents the most common picture of the knight; the gentleman warrior who epitomises honour, courage and loyalty. The cavalier's true power comes from the conviction of his ideals, the oaths that he swears, and the challenges he makes. When all seems lost, the cavalier is a beacon of hope who continues to fight on despite the odds. No cause is yet lost when a cavalier still battles on its name.
+@1010 = "CAVALIER: While many warriors strive to perfect their art, spending all of their time honing their skill at martial arms, others spend as much effort dedicating themselves to a cause. These warriors, known as cavaliers, swear themselves to a purpose, serving it above all else. The cavalier represents the most common picture of the knight; the gentleman warrior who epitomises honour, courage and loyalty. The cavalier's true power comes from the conviction of his ideals, the oaths that he swears, and the challenges he makes. When all seems lost, the cavalier is a beacon of hope who continues to fight on despite the odds. No cause is yet lost when a cavalier still battles on its name.
 
 Charismatic and inspiring figures, cavaliers maintain not only the military security of the land, but also its moral strength. A cavalier might drive off a marauding troll, but he could also mediate a dispute between two farmers, break the power of a corrupt noble, or free a wrongly accused prisoner.
 
@@ -45,9 +45,9 @@ Advantages:
 Disadvantages:
 - Can cast one less spell per level.
 - Cannot use Lay on Hands.
-- Cannot use ranged weapons.~
+- Cannot use ranged weapons."
 
-@1020 = ~INQUISITOR: While many champions of good are dedicated to fighting forces of evil that are clear threats to their country, their ideals or their church - as cavaliers and paladins are devoted to destroying evil armies and powerful demons - the inquisitor is at least as concerned about evil and corruption that conceal or disguise itself. When greed eats away at a church hierarchy, when devils infiltrate a knightly order or seduce its leaders to evil, when admirable governors succumb to evil enchantments and fall from the path of righteousness, it is usually an inquisitor who uncovers the evil and cuts it away.
+@1020 = "INQUISITOR: While many champions of good are dedicated to fighting forces of evil that are clear threats to their country, their ideals or their church - as cavaliers and paladins are devoted to destroying evil armies and powerful demons - the inquisitor is at least as concerned about evil and corruption that conceal or disguise itself. When greed eats away at a church hierarchy, when devils infiltrate a knightly order or seduce its leaders to evil, when admirable governors succumb to evil enchantments and fall from the path of righteousness, it is usually an inquisitor who uncovers the evil and cuts it away.
 
 Inquisitors tend to move from place to place, chasing down enemies and researching emerging threats. As a result, they often travel with others, and work with members of their faith whenever possible, though even such allies are not above suspicion.
 
@@ -71,18 +71,31 @@ True Seeing:
 For 1 turn, the Inquisitor gains the ability to see the exact locations of creatures or objects under displacement or invisibility effects, and see through illusions. This effectively neutralize spells such as Blur and Mirror Image, allow the caster to see and target invisible creatures normally, and make him unaffected by hostile illusion spells. The caster is also cured from any form of blindness and is immune to it for the duration of the spell.
 
 Banish Evil:
-With this ability, the Inquisitor can banish evil, enemy summoned creatures back to their plane of existence.~
+With this ability, the Inquisitor can banish evil, enemy summoned creatures back to their plane of existence."
 
-@1030 = ~UNDEAD HUNTER: Undead are an abomination in the eyes of the just and righteous. It is no surprise then that there are some paladins that dedicate themselves to wiping these unholy terrors from the world. These undead hunters believe undead are a scourge upon the living that must be eradicated, and the worst of the undead are the ones with unnatural appetites for flesh and blood - things that should persist without feeding, but consume anyway. Creatures such as vampires and ghouls are especially dangerous because they turn their victims into more of their kind, and just one reckless night-feeder can turn an entire city into a den of undead. Rare even in the most grim realms, and looked with awe by most, undead hunters lead lonely existences under the constant threat of becoming that which they live to destroy.
+@1030 = "UNDEAD HUNTER: Undead are an abomination in the eyes of the just and righteous. It is no surprise then that there are some paladins that dedicate themselves to wiping these unholy terrors from the world. These undead hunters believe undead are a scourge upon the living that must be eradicated, and the worst of the undead are the ones with unnatural appetites for flesh and blood - things that should persist without feeding, but consume anyway. Creatures such as vampires and ghouls are especially dangerous because they turn their victims into more of their kind, and just one reckless night-feeder can turn an entire city into a den of undead. Rare even in the most grim realms, and looked with awe by most, undead hunters lead lonely existences under the constant threat of becoming that which they live to destroy.
 
 The Undead Hunters use their skills and magic to single-mindedly track and slay the undead, walking a fine line between the purity of good magic and the tempting evil of turning dark necromancy against the unliving.
 
 Advantages:
 - Becomes immune to paralysis at level 3 and at level 7 becomes immune to level drain.
+- At level 1 can use Protection from Undead once per day.
+- At level 1 can use Undead Bane once per day. Gains one use at level 1 and an additional use every 5 levels thereafter to a maximum of 4 uses at level 16.
 - At level 3 can use the Turn Undead ability as a cleric of the same level.
 - At level 6 gains the ability to cast divine spells as a cleric of the same level, but from a smaller spellbook with unique spells.
+- At level 8 can use Smite Undead once per day. Gains one use at level 8 and an additional use at level 16.
 
 Disadvantages:
 - Can cast one less spell per level.
-- Cannot use Lay on Hands.
-- Cannot use Paladin auras.~
+- Cannot use the abilities Protection from Evil and Smite Evil.
+- Cannot use Paladin auras.
+
+Protection from Undead:
+When the Undead Hunter uses this ability, he becomes protected from a magical barrier raised at a distance of one foot. The barrier moves with him and has two major effects: first, all attacks made by undead creatures against him receive a -2 penalty to their attack roll, and second, any saving throws caused by such attacks are made with a +2 bonus.
+
+Undead Bane:
+With this ability, the Undead Hunter gains a bonus of +2 to damage and attack rolls against the Undead. This bonus raises to +3 at level 8 and to +4 at level 16.
+
+Smite Undead:
+With this ability the Undead Hunter draws down holy power to smite the undead. Undead creatures within the area of effect take 12d4 points of magic damage, with a successful saving throw vs. spell for half at a penalty of -2. Magic resistance does not affect this ability.
+"
