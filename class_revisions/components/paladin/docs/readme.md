@@ -181,7 +181,7 @@ As with KR, Undead Hunters gain immunity to paralysis and level drain.
 
 ## E. 3. Other abilities.
 
-Undead Hunters lose access to the paladin auras. Beyond KR, we give a bonus of +2 to Turn Undead level, gained at level 3.
+Beyond KR, we give a bonus of +2 to Turn Undead level, gained at level 3.
 
 [^1]: conceptually incompatible with [Tweaks Anthology](https://github.com/Gibberlings3/Tweaks-Anthology) component "Alter Paladin Spell Progression Table".
 
