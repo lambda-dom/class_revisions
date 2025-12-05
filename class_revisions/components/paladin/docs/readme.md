@@ -142,9 +142,6 @@ Cavaliers gain all the paladin abilities, except Lay on Hands. Cavaliers can als
 
 Not many differences versus vanilla and KR.
 
-note(s):
-* *still* not happy. Casting spells is *very* useful, even more so with more spell slots and access to level 5 spells, so one more ability to compensate would be good, but what?
-
 ## D. 1. Immunities.
 
 Inquisitors gain immunity to fear and charm.
@@ -152,10 +149,9 @@ Inquisitors gain immunity to fear and charm.
 ## D. 2. Abilities.
 
 TODO:
-* Add a Shield of the Archons innate ability scaling with level.
-* Add immunity to confusion? Instead of fear or along with charm?
+* Change Iron Will to an ability giving immunty to chaotic mind effects, a personal version of Exaltation. 
 
-Dispel Magic is now Dispel Evil, an aoe Dispel Magic against evil enemies at 1.5 times the level of the caster, as in a similar SCS component [^4]. In addition they gain Banish Evil, a version of SR's banishment against evil enemies and Iron Will, a permanent bonus to save vs. spells. True Sight is also made undispellable.
+Dispel Magic is now Dispel Evil, an aoe Dispel Magic against evil enemies at 1.5 times the level of the caster, as in a similar SCS component [^4]. In addition they gain Banish Evil, a version of SR's banishment against evil enemies and Iron Will, a permanent bonus to save vs. spells. True Sight is also made undispellable. At level 10 gains Inquisitor's Shield, a version of Shield of the Archons.
 
 # E. Undead Hunter.
 
