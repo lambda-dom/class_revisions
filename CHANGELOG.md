@@ -10,6 +10,7 @@
 * [#38](https://github.com/lambda-dom/class_revisions/pull/38): Use item icons for fashion arrow subspells.
 * [#39](https://github.com/lambda-dom/class_revisions/pull/39): Undead Hunter improvements.
 * [#40](https://github.com/lambda-dom/class_revisions/pull/40): Cavalier spells moved to spell range 1-3.
+* [#41](https://github.com/lambda-dom/class_revisions/pull/41): Inquisitor additions.
 
 ## version v1.0alpha2.
 

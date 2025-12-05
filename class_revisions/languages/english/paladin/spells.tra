@@ -207,6 +207,20 @@ Saving Throw: None
 
 With this ability, the Inquisitor banishes evil, enemy summoned creatures in the area back to their proper plane. Magic resistance does not affect this spell."
 
+@3210 = "Inquisitor's Shield"
+@3211 = "Inquisitor's Shield
+Level: 1
+School: Abjuration
+Range: Personal
+Duration: 1 turn
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None
+
+With this powerful abjuration, the Inquisitor can protect himself with a shield deflecting all spells cast directly at him. This ability will not protect the caster from dispel magic, but it will not be affected by dispel magic, either.
+
+This ability also grants protection from spells cast from scrolls and innate spell-like abilities, but will not protect against area effects not centered directly upon the caster (such as Fireball), or stationary area effects (such as those from Cloudkill and Stinking Cloud)."
+
 @3300 = "Iron Will"
 @3301 = "Gives a permanent bonus of +1 to Save vs. spells."
 
@@ -334,3 +348,4 @@ High-level Undead Hunters can use their necromantic powers to seek out and destr
 
 //Spell strings.
 @14000 = "Protected from Undead"
+@14001 = "Protected by Inquisitor's Shield"
