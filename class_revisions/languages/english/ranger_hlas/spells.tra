@@ -1,62 +1,62 @@
 //HLA's.
-@1000 = ~Improved Ambidexterity~
-@1001 = ~Rangers are well-trained in the use of two weapons for melee fighting. This passive ability further increases their skills in dual-wielding weapons and negates the +2 THAC0 penalty to off-hand weapons.
+@1000 = "Improved Ambidexterity"
+@1001 = "Rangers are well-trained in the use of two weapons for melee fighting. This passive ability further increases their skills in dual-wielding weapons and negates the +2 THAC0 penalty to off-hand weapons.
 
-This ability can be chosen once.~
+This ability can be chosen once."
 
-@1010 = ~Toughness~
-@1011 = ~This passive ability increases the character's Maximum Hit Points by 6 permanently.
+@1010 = "Toughness"
+@1011 = "This passive ability increases the character's Maximum Hit Points by 6 permanently.
 
-Toughness can be chosen up to 5 times.~
+Toughness can be chosen up to 5 times."
 
-@1015 = ~Improved Criticals~
-@1016 = ~With this passive ability, the ranger permanently increases his critical hit score by one.
+@1015 = "Improved Criticals"
+@1016 = "With this passive ability, the ranger permanently increases his critical hit score by one.
 
-This ability can be chosen once.~
+This ability can be chosen once."
 
-@1020 = ~Nature's Endurance~
-@1021 = ~With this ability, the ranger is blessed with Nature's endurance and indomitable will. Once a day, and for five turns, the ranger gains a +2 bonus to movement rate, a +2 bonus to saving throws, a 10% bonus to his maximum hit points and a boost to regeneration of 1 hp per round. For the duration of the ability, the ranger is immune to fatigue, unconsciousness, paralysis and slow. Being non-magical in nature, the effects of this ability cannot be dispelled nor breached.
+@1020 = "Nature's Endurance"
+@1021 = "With this ability, the ranger is blessed with Nature's endurance and indomitable will. Once a day, and for five turns, the ranger gains a +2 bonus to movement rate, a +2 bonus to saving throws, a 10% bonus to his maximum hit points and a boost to regeneration of 1 hp per round. For the duration of the ability, the ranger is immune to fatigue, unconsciousness, paralysis and slow. Being non-magical in nature, the effects of this ability cannot be dispelled nor breached.
 
-This ability can be chosen once.~
+This ability can be chosen once."
 
-@1030 = ~Nature's Guardian~
-@1031 = ~Empowered by Nature itself, the ranger becomes its protector and guardian. When this ability is activated, for 1 turn the ranger gains a bonus of +2 to strength, dexterity and constitution. He is enveloped by a crackling shield, that grants a +4 bonus to saves vs. breath and AC against missiles as well as an increase in electrical resistance of 50%. Non-magical missile weapons are deflected away, while gases cannot penetrate the barrier. Tiny and small flying creatures cannot pass through. Furthermore, any creature hitting the target within 5 feet, suffers 1d8 + 5 electric damage. Nature's Guard is not cumulative with similar magics like Storm Shield.
+@1030 = "Nature's Guardian"
+@1031 = "Empowered by Nature itself, the ranger becomes its protector and guardian. When this ability is activated, for 1 turn the ranger gains a bonus of +2 to strength, dexterity and constitution. He is enveloped by a crackling shield, that grants a +4 bonus to saves vs. breath and AC against missiles as well as an increase in electrical resistance of 50%. Non-magical missile weapons are deflected away, while gases cannot penetrate the barrier. Tiny and small flying creatures cannot pass through. Furthermore, any creature hitting the target within 5 feet, suffers 1d8 + 5 electric damage. Nature's Guard is not cumulative with similar magics like Storm Shield.
 
-This ability can be chosen once.~
+This ability can be chosen once."
 
 //Archer.
-@1100 = ~Improved Ranged Criticals~
-@1101 = ~With this passive ability, the Archer permanently increases his ranged critical hit score by one.
+@1100 = "Improved Ranged Criticals"
+@1101 = "With this passive ability, the Archer permanently increases his ranged critical hit score by one.
 
-This ability can be chosen once.~
+This ability can be chosen once."
 
-@1110 = ~Precision~
-@1111 = ~With proper concentration a skilled archer can render his attacks more precise and deadlier. When activating this ability, for 4 rounds the archer gains a bonus of +5 to his THAC0 with missile weapons and +10 bonus to damage. Any critical hit will instantly kill the target on a failed save vs. death at a penalty of -2.
+@1110 = "Precision"
+@1111 = "With proper concentration a skilled archer can render his attacks more precise and deadlier. When activating this ability, for 4 rounds the archer gains a bonus of +5 to his THAC0 with missile weapons and +10 bonus to damage. Any critical hit will instantly kill the target on a failed save vs. death at a penalty of -2.
 
 Precision has its drawbacks: it requires intense concentration, making movement impossible and casting spells more difficult. Until the ability expires, the archer is rooted to the spot and his casting speed is increased by 4.
 
-This ability can be chosen up to five times and requires Improved Ranged Criticals.~
+This ability can be chosen up to five times and requires Improved Ranged Criticals."
 
-@1120 = ~Flurry of Arrows~
-@1121 = ~With proper concentration a skilled archer can unleash a flurry of attacks with his ranged weapon. When activating this ability, for 2 rounds the number of attacks per round and the movement rate are doubled. Due to the intense concentration required, the archer's THAC0, damage rolls and AC suffers a penalty of -4.
+@1120 = "Flurry of Arrows"
+@1121 = "With proper concentration a skilled archer can unleash a flurry of attacks with his ranged weapon. When activating this ability, for 2 rounds the number of attacks per round and the movement rate are doubled. Due to the intense concentration required, the archer's THAC0, damage rolls and AC suffers a penalty of -4.
 
-This ability can be chosen up to five times and requires Improved Ranged Criticals.~
+This ability can be chosen up to five times and requires Improved Ranged Criticals."
 
 //Stalker.
-@1200 = ~Improved Spellbook~
-@1201 = ~With this passive ability, the Stalker permanently augments the spells available in his spellbook with Blur, Mirror Image, Mislead, Detect Illusions, Clairvoyance and Oracle.
+@1200 = "Improved Spellbook"
+@1201 = "With this passive ability, the Stalker permanently augments the spells available in his spellbook with Blur, Mirror Image, Mislead, Detect Illusions, Clairvoyance and Oracle.
 
-This ability can be chosen once.~
+This ability can be chosen once."
 
-@1210 = ~Extra Spells~
-@1211 = ~By choosing this ability, the Stalker permanently gains one more spell per level, from levels 1 to 4.
+@1210 = "Extra Spells"
+@1211 = "By choosing this ability, the Stalker permanently gains one more spell per level, from levels 1 to 4.
 
-This ability can be chosen once.~
+This ability can be chosen once."
 
-@1220 = ~Backstab Bonus~
-@1221 = ~With this passive ability, the Stalker gains a permanent bonus of +1 to his backstab multiplier.
+@1220 = "Backstab Bonus"
+@1221 = "With this passive ability, the Stalker gains a permanent bonus of +1 to his backstab multiplier.
 
-This ability can be chosen once.~
+This ability can be chosen once."
 
 //New stalker spells.
 @1300 = "Blur"

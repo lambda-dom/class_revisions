@@ -1,24 +1,25 @@
 //Existing abilities.
-@1000 = ~Called Shot~
-@1001 = ~When making a Called Shot, an archer attempts to hamper fighting ability or mobility. For one round, the archer takes a -4 penalty to attack rolls, but his first successful ranged attack carries dire consequences for his opponent. Targets struck are allowed a save at +2 bonus to reduce the effects. At 8th level and every other 4 levels the saving throw difficulty class improves by 1, up to -2 penalty at 20th level.~
+@1000 = "Called Shot"
+@1001 = "When making a Called Shot, an archer attempts to hamper fighting ability or mobility. For one round, the archer takes a -4 penalty to attack rolls, but his first successful ranged attack carries dire consequences for his opponent. Targets struck are allowed a save at +2 bonus to reduce the effects. At 8th level and every other 4 levels the saving throw difficulty class improves by 1, up to -2 penalty at 20th level."
 
-@1010 = ~Disarm~
-@1011 = ~With this attack, the archer chooses to impede fighting ability. When hit, the target will suffer a -4 penalty to hit rolls for 6 rounds. If a save vs. breath is made the duration is halved. At 10th level, any target who fails the save is also unable to attack for 1 round. At 20th level, any target who fails the save will also have his strength reduced by 50% for 1 turn.~
+@1010 = "Disarm"
+@1011 = "With this attack, the archer chooses to impede fighting ability. When hit, the target will suffer a -4 penalty to hit rolls for 6 rounds. If a save vs. breath is made the duration is halved. At 10th level, any target who fails the save is also unable to attack for 1 round. At 20th level, any target who fails the save will also have his strength reduced by 50% for 1 turn."
 
-@1020 = ~Trip~
-@1021 = ~With this attack, the archer chooses to impede mobility. When hit, the target will suffer a -50% penalty to movement speed for 6 rounds. If a save vs. death is made the duration is halved. At 10th level, any target who fails the save is also knocked down for 1 round. At 20th level, any target who fails the save will also have his dexterity reduced by 50% for 1 turn.~
+@1020 = "Trip"
+@1021 = "With this attack, the archer chooses to impede mobility. When hit, the target will suffer a -50% penalty to movement speed for 6 rounds. If a save vs. death is made the duration is halved. At 10th level, any target who fails the save is also knocked down for 1 round. At 20th level, any target who fails the save will also have his dexterity reduced by 50% for 1 turn."
 
 //Changed abilities.
-@1100 = ~Bow Mastery~
-@1101 = ~With this ability the Archer gains a permanent bonus of +1 to missile thac0 and damage.~
+@1100 = "Bow Mastery"
+@1101 = "With this ability the Archer gains a permanent bonus of +1 to missile thac0 and damage."
 
-@1110 = ~Evasive Archer~
-@1111 = ~With this ability the Archer gains a permanent bonus of +1 to missile armor class.~
+@1110 = "Evasive Archer"
+@1111 = "With this ability the Archer gains a permanent bonus of +1 to missile armor class."
 
 
 //Spells.
-@1200 = ~Feather Step~
-@1201 = ~Level: 1
+@1200 = "Feather Step"
+@1201 = "Feather Step
+Level: 1
 School: Alteration
 Range: Personal
 Duration: 3 rounds
@@ -26,10 +27,11 @@ Casting Time: 1
 Area of Effect: Caster
 Saving Throw: None
 
-When the archer casts this spell, for a brief moment he gains extraordinary speed, usually to escape the enemies' reach and relocate to a more convenient spot in the battlefield. For two rounds, his movement speed is doubled and as a consequence, he gains a bonus of +2 to ranged ac and saves vs. breath. During this period he cannot cast any spells, has less an attack per round and suffers a penalty of -4 to thac0 and damage rolls. This spell is not cumulative with Haste, Improved Haste and similar magics.~
+When the archer casts this spell, for a brief moment he gains extraordinary speed, usually to escape the enemies' reach and relocate to a more convenient spot in the battlefield. For two rounds, his movement speed is doubled and as a consequence, he gains a bonus of +2 to ranged ac and saves vs. breath. During this period he cannot cast any spells, has less an attack per round and suffers a penalty of -4 to thac0 and damage rolls. This spell is not cumulative with Haste, Improved Haste and similar magics."
 
-@1210 = ~Fashion Arrows~
-@1211 = ~Level: 2
+@1210 = "Fashion Arrows"
+@1211 = "Fashion Arrows
+Level: 2
 School: Conjuration
 Range: Personal
 Duration: Special
@@ -37,20 +39,11 @@ Casting Time: 9
 Area of Effect: Caster
 Saving Throw: None
 
-With this spell, the Archer conjures a full stack of magically enchanted arrows, bullets or bolts. The magic lasts for 8 hours, after which the arrows become unusable. This spell can only be cast outdoors and outside of combat.~
+With this spell, the Archer conjures a full stack of magically enchanted arrows, bullets or bolts. The magic lasts for 8 hours, after which the arrows become unusable. This spell can only be cast outdoors and outside of combat."
 
-//Auxiliary spells.
-@1214 = ~Poison Arrows +1~
-@1215 = ~Create a stack of magical Poison Arrows +1.~
-
-@1216 = ~Flaming Arrows +2~
-@1217 = ~Create a stack of magical Flaming Arrows +2.~
-
-@1218 = ~Acidic Arrows +3~
-@1219 = ~Create a stack of magical Acidic Arrows +3.~
-
-@1220 = ~Falcon's Eye~
-@1221 = ~Level: 3
+@1220 = "Falcon's Eye"
+@1221 = "Falcon's Eye
+Level: 3
 School: Alteration
 Range: Personal
 Duration: 1 Turn
@@ -58,26 +51,37 @@ Casting Time: 5
 Area of Effect: Caster
 Saving Throw: None
 
-When this ability is used, the ranger's eyes gain the magical acuity of a falcon, enhancing his vision and allow him to accurately read the weaknesses of creatures. For 1 turn, the Archer gain a bonus of +2 to ranged thac0 and damage, and +1 to the ranged critical range. Furthermore, any critical ranged hit knocks down the victim unconscious for 1 round. The intense concentration required leaves the Archer more vulnerable to attacks, suffering a penalty of +4 to ac.~
+When this ability is used, the ranger's eyes gain the magical acuity of a falcon, enhancing his vision and allow him to accurately read the weaknesses of creatures. For 1 turn, the Archer gain a bonus of +2 to ranged thac0 and damage, and +1 to the ranged critical range. Furthermore, any critical ranged hit knocks down the victim unconscious for 1 round. The intense concentration required leaves the Archer more vulnerable to attacks, suffering a penalty of +4 to ac."
 
-@1300 = ~Frost Bullets +1~
-@1301 = ~Create a stack of magical Frost Bullets +1.~
+//Auxiliary subspells.
+@1300 = "Frost Bullets +1"
+@1301 = "Create a stack of magical Frost Bullets +1."
 
-@1310 = ~Flaming Bullets +2~
-@1311 = ~Create a stack of magical Flaming Bullets +2.~
+@1310 = "Flaming Bullets +2"
+@1311 = "Create a stack of magical Flaming Bullets +2."
 
-@1320 = ~Crushing Bullets +3~
-@1321 = ~Create a stack of magical Crushing Bullets +3.~
+@1320 = "Crushing Bullets +3"
+@1321 = "Create a stack of magical Crushing Bullets +3."
 
-@1330 = ~Frost Bolts +1~
-@1331 = ~Create a stack of magical Frost Bolts +1.~
+@1330 = "Frost Bolts +1"
+@1331 = "Create a stack of magical Frost Bolts +1."
 
-@1340 = ~Flaming Bolts +2~
-@1341 = ~Create a stack of magical Flaming Bolts +2.~
+@1340 = "Flaming Bolts +2"
+@1341 = "Create a stack of magical Flaming Bolts +2."
 
-@1350 = ~Lightning Bolts +3~
-@1351 = ~Create a stack of magical Lightning Bolts +3.~
+@1350 = "Lightning Bolts +3"
+@1351 = "Create a stack of magical Lightning Bolts +3."
+
+@1360 = "Poison Arrows +1"
+@1361 = "Create a stack of magical Poison Arrows +1."
+
+@1370 = "Flaming Arrows +2"
+@1371 = "Create a stack of magical Flaming Arrows +2."
+
+@1380 = "Acidic Arrows +3"
+@1381 = "Create a stack of magical Acidic Arrows +3."
+
 
 //Ability gain strings.
-@10000 = ~Gained +1 bonus to missile thac0 and damage.~
-@10010 = ~Gained +1 bonus to missile armor class.~
+@10000 = "Gained +1 bonus to missile thac0 and damage."
+@10010 = "Gained +1 bonus to missile armor class."

@@ -1,38 +1,26 @@
 //Spellcasting.
-@1000 = ~Blackguard Spellbook~
-@1001 = ~Trims down the Blackguard spellbook.~
+@1000 = "Blackguard Spellbook"
+@1001 = "Trims down the Blackguard spellbook."
 
-@1010 = ~Spellcasting Initial Level Bonus~
-@1011 = ~Gives a permanent bonus of 4 levels to divine spellcasting.~
+@1010 = "Spellcasting Initial Level Bonus"
+@1011 = "Gives a permanent bonus of 4 levels to divine spellcasting."
 
-@1020 = ~Spell Slot Penalty~
-@1021 = ~Gives a penalty of 1 spell slot for divine spells in levels 1 through 5.~
+@1020 = "Spell Slot Penalty"
+@1021 = "Gives a penalty of 1 spell slot for divine spells in levels 1 through 5."
 
-@1030 = ~Spellcasting per Level Bonus~
-@1031 = ~Gives a permanent bonus of +1 to divine caster level.~
-
-@1040 = ~Protection from Good~
-@1041 = ~Protection from Good
-Level: 1
-School: Abjuration
-Range: Personal
-Duration: 5 turns
-Casting Time: 9
-Area of Effect: Caster
-Saving Throw: None
-
-When this spell is cast, the Blackguard erects a magical barrier around himself; all attacks made by creatures of neutral and good alignment receive a -2 penalty to their attack rolls, and any saving throws caused by such attacks are made by the Blackguard with a +2 bonus.~
+@1030 = "Spellcasting per Level Bonus"
+@1031 = "Gives a permanent bonus of +1 to divine caster level."
 
 //Immunities.
-@1100 = ~Immunity to Poison~
-@1101 = ~Gives permanent immunity to poison. Note it does not protect against the ancillary effects of certain spells like the kill effect of Cloudkill.~
+@1100 = "Immunity to Poison"
+@1101 = "Gives permanent immunity to poison. Note it does not protect against the ancillary effects of certain spells like the kill effect of Cloudkill."
 
-@1110 = ~Immunity to Fear~
-@1111 = ~Gives permanent immunity to fear.~
+@1110 = "Immunity to Fear"
+@1111 = "Gives permanent immunity to fear."
 
 //Existing abilities.
-@1200 = ~Absorb Health~
-@1201 = ~Absorb Health
+@1200 = "Absorb Health"
+@1201 = "Absorb Health
 Level: 1
 School: Necromancy
 Range: Long
@@ -41,10 +29,10 @@ Casting Time: 1
 Area of Effect: 1 Creature
 Saving Throw: None
 
-With this ability, the Blackguard deals 2 hit points of magic damage to an enemy, up to a maximum of 40 at level 20, healing <HIMHER>self by the same number of hit points. Undead creatures, constructs and incorporeal creatures like elementals and slimes are immune to this ability; magic resistance is not affected by it.~
+With this ability, the Blackguard deals 2 hit points of magic damage to an enemy, up to a maximum of 40 at level 20, healing <HIMHER>self by the same number of hit points. Undead creatures, constructs and incorporeal creatures like elementals and slimes are immune to this ability; magic resistance is not affected by it."
 
-@1210 = ~Poison Weapon~
-@1211 = ~Poison Weapon
+@1210 = "Poison Weapon"
+@1211 = "Poison Weapon
 Level: 1
 School: Necromancy
 Range: Personal
@@ -53,23 +41,37 @@ Casting Time: 1
 Area of Effect: Caster
 Saving Throw: None
 
-With this ability a Blackguard can coat <PRO_HISHER> weapons in poison. Any weapon prepared in this manner will deal an extra 1d6 points of poison damage upon contact. Furthermore, unless a saving throw vs. poison is made, the poison will be injected into the bloodstream of the victim, dealing one point of damage per second per level of the Blackguard, up to a maximum of 20 damage points dealt in 20 seconds at level 20. The saving throw is made at a penalty of -1 at level 8 and higher, and at a penalty of -2 at level 16 and higher. Each target can only be affected by the poisoned weapon once per round, and the weapon coating evaporates after 5 rounds. Constructs, Elementals, Slimes and Undead creatures cannot be poisoned.~
+With this ability a Blackguard can coat <PRO_HISHER> weapons in poison. Any weapon prepared in this manner will deal an extra 1d6 points of poison damage upon contact. Furthermore, unless a saving throw vs. poison is made, the poison will be injected into the bloodstream of the victim, dealing one point of damage per second per level of the Blackguard, up to a maximum of 20 damage points dealt in 20 seconds at level 20. The saving throw is made at a penalty of -1 at level 8 and higher, and at a penalty of -2 at level 16 and higher. Each target can only be affected by the poisoned weapon once per round, and the weapon coating evaporates after 5 rounds. Constructs, Elementals, Slimes and Undead creatures cannot be poisoned."
 
 
 //Auras.
-@1300 = ~Aura of Vengeance~
-@1301 = ~Permanent aura inflicting -1 thac0 penalty to every enemy within range.~
+@1300 = "Aura of Vengeance"
+@1301 = "Permanent aura inflicting -1 thac0 penalty to every enemy within range."
 
-@1310 = ~Aura of Hatred~
-@1311 = ~Permanent aura inflicting -1 penalty to armor class to every enemy within range.~
+@1310 = "Aura of Hatred"
+@1311 = "Permanent aura inflicting -1 penalty to armor class to every enemy within range."
 
-@1320 = ~Aura of Despair~
-@1321 = ~Permanent aura giving -1 penalty to all saves of every enemy within range.~
+@1320 = "Aura of Despair"
+@1321 = "Permanent aura giving -1 penalty to all saves of every enemy within range."
+
+
+//New abilities.
+@1040 = "Protection from Good"
+@1041 = "Protection from Good
+Level: 1
+School: Abjuration
+Range: Personal
+Duration: 5 turns
+Casting Time: 9
+Area of Effect: Caster
+Saving Throw: None
+
+When this spell is cast, the Blackguard erects a magical barrier around himself; all attacks made by creatures of neutral and good alignment receive a -2 penalty to their attack rolls, and any saving throws caused by such attacks are made by the Blackguard with a +2 bonus."
 
 
 //New spells.
-@1400 = ~Aura of Fear~
-@1401 = ~Aura of Fear
+@1400 = "Aura of Fear"
+@1401 = "Aura of Fear
 Level: 1
 School: Necromancy
 Range: Long
@@ -78,10 +80,10 @@ Casting Time: 2
 Area of Effect: 30' radius
 Saving Throw: Spell negates
 
-When the Blackguard casts this spell, every enemy within the area of effect must save vs. spell or flee in terror. Certain creatures are immune to the effects of fear, including all undead.~
+When the Blackguard casts this spell, every enemy within the area of effect must save vs. spell or flee in terror. Certain creatures are immune to the effects of fear, including all undead."
 
-@1410 = ~Evil Chant~
-@1411 = ~Evil Chant
+@1410 = "Evil Chant"
+@1411 = "Evil Chant
 Level: 2
 School: Conjuration
 Range: Long
@@ -90,10 +92,10 @@ Casting Time: 3
 Area of Effect: 30' radius
 Saving Throw: None
 
-By uttering this unholy chant, the Blackguard curses his enemies. For 1 turn every enemy within the area of effect suffers a penalty of -1 to armor class and damage rolls. Successive casts are not cumulative.~
+By uttering this unholy chant, the Blackguard curses his enemies. For 1 turn every enemy within the area of effect suffers a penalty of -1 to armor class and damage rolls. Successive casts are not cumulative."
 
-@1420 = ~Evil Prayer~
-@1421 = ~Evil Prayer
+@1420 = "Evil Prayer"
+@1421 = "Evil Prayer
 Level: 4
 School: Conjuration
 Range: Long
@@ -102,10 +104,10 @@ Casting Time: 4
 Area of Effect: 30' radius
 Saving Throw: None
 
-By reciting this unholy prayer, the Blackguard curses his enemies. For 1 turn every enemy within the area of effect suffers a penalty of -2 to armor class and damage rolls, and -1 to all saves. While successive casts of this spell are not cumulative, it can be used in tandem with similar spells like Evil Chant.~
+By reciting this unholy prayer, the Blackguard curses his enemies. For 1 turn every enemy within the area of effect suffers a penalty of -2 to armor class and damage rolls, and -1 to all saves. While successive casts of this spell are not cumulative, it can be used in tandem with similar spells like Evil Chant."
 
-@1430 = ~Abyssal Armor~
-@1431 = ~Abyssal Armor
+@1430 = "Abyssal Armor"
+@1431 = "Abyssal Armor
 Level: 1
 School: Conjuration
 Range: Personal
@@ -114,10 +116,10 @@ Casting Time: 1
 Area of Effect: Caster
 Saving Throw: None
 
-By casting this spell, the Blackguard conjures an abyssal armor giving protection against physical and fire damage. This demonic armor is a force of energy that absorbs a portion of the damage sustained, effectively reducing it by 10%. Multiple castings of this spell are not cumulative.~
+By casting this spell, the Blackguard conjures an abyssal armor giving protection against physical and fire damage. This demonic armor is a force of energy that absorbs a portion of the damage sustained, effectively reducing it by 10%. Multiple castings of this spell are not cumulative."
 
-@1440 = ~Dark Power~
-@1441 = ~Dark Power
+@1440 = "Dark Power"
+@1441 = "Dark Power
 Level: 2
 School: Evocation
 Range: Personal
@@ -126,10 +128,10 @@ Casting Time: 9
 Area of Effect: Caster
 Saving Throw: None
 
-When this spell is cast, the Blackguards's body shudders and glows as it becomes a vessel for the powers of his dark god. His strength, dexterity, and constitution scores are raised by 1 point for every 3 levels of the caster, to a maximum of 3 points at level 9. This spell is not cumulative with itself or with other similar spells.~
+When this spell is cast, the Blackguards's body shudders and glows as it becomes a vessel for the powers of his dark god. His strength, dexterity, and constitution scores are raised by 1 point for every 3 levels of the caster, to a maximum of 3 points at level 9. This spell is not cumulative with itself or with other similar spells."
 
-@1450 = ~Aid from Hell~
-@1451 = ~Aid from Hell
+@1450 = "Aid from Hell"
+@1451 = "Aid from Hell
 Level: 1
 School: Necromancy
 Range: Personal
@@ -138,10 +140,10 @@ Casting Time: 9
 Area of Effect: Caster
 Saving Throw: None
 
-When the Blackguard casts this spell, he will receive aid from his dark god. For the duration of this spell, he gains +1 bonus to attack rolls, damage rolls and saving throws, plus 1d8 additional hit points +1 per level of the caster, up to a maximum of 1d8 + 10 at level 10. The spell allows the caster to temporarily have more hit points than his full normal total, and the bonus hit points are lost first when he takes damage.~
+When the Blackguard casts this spell, he will receive aid from his dark god. For the duration of this spell, he gains +1 bonus to attack rolls, damage rolls and saving throws, plus 1d8 additional hit points +1 per level of the caster, up to a maximum of 1d8 + 10 at level 10. The spell allows the caster to temporarily have more hit points than his full normal total, and the bonus hit points are lost first when he takes damage."
 
-@1470 = ~Abyssal Rage~
-@1471 = ~Abyssal Rage
+@1470 = "Abyssal Rage"
+@1471 = "Abyssal Rage
 Level: 4
 School: Alteration
 Range: Personal
@@ -150,10 +152,10 @@ Casting Time: 5
 Area of Effect: Caster
 Saving Throw: None
 
-When the Blackguard casts this spell, he invokes the chaotic powers of the abyss and is infused with demonic rage. For the duration of this spell, he gains a +2 bonus to attack and damage rolls, a penalty of -2 to armor class, and a bonus of +15 temporary hit points. He also becomes immune to charm, confusion, fear, feeblemind, paralysis, sleep, imprisonment, maze and stun. While in this state, the Blackguard cannot perform any activities that require concentration like casting spells or turn undead. At the end of the berserking spree, the dark powers that were invoked exact their pay in blood. All the temporary hit points are taken away, possibly knocking the Blackguard unconscious, and he becomes winded, suffering a -2 penalty to armor class, attack and damage rolls for 1 round.~
+When the Blackguard casts this spell, he invokes the chaotic powers of the abyss and is infused with demonic rage. For the duration of this spell, he gains a +2 bonus to attack and damage rolls, a penalty of -2 to armor class, and a bonus of +15 temporary hit points. He also becomes immune to charm, confusion, fear, feeblemind, paralysis, sleep, imprisonment, maze and stun. While in this state, the Blackguard cannot perform any activities that require concentration like casting spells or turn undead. At the end of the berserking spree, the dark powers that were invoked exact their pay in blood. All the temporary hit points are taken away, possibly knocking the Blackguard unconscious, and he becomes winded, suffering a -2 penalty to armor class, attack and damage rolls for 1 round."
 
-@1480 = ~Abyssal Fury~
-@1481 = ~Abyssal Fury
+@1480 = "Abyssal Fury"
+@1481 = "Abyssal Fury
 Level: 5
 School: Alteration
 Range: Personal
@@ -162,10 +164,10 @@ Casting Time: 9
 Area of Effect: Caster
 Saving Throw: None
 
-Upon casting this spell, the Blackguard is filled with demonic fury, enhancing his combat prowess with the twisted energies from the abyss. During the duration of the spell, the Blackguard gains a bonus of +4 to strength and movement speed, and a bonus of +20 temporary hit points. Furthermore, every time the Blackguard strikes an opponent in melee he deals an additional 1d6 points of fire damage. The effects last for the duration of the spell or until dispelled. Multiple castings of this spell are not cumulative.~
+Upon casting this spell, the Blackguard is filled with demonic fury, enhancing his combat prowess with the twisted energies from the abyss. During the duration of the spell, the Blackguard gains a bonus of +4 to strength and movement speed, and a bonus of +20 temporary hit points. Furthermore, every time the Blackguard strikes an opponent in melee he deals an additional 1d6 points of fire damage. The effects last for the duration of the spell or until dispelled. Multiple castings of this spell are not cumulative."
 
-@1490 = ~Miasma Cloud~
-@1491 = ~Miasma Cloud
+@1490 = "Miasma Cloud"
+@1491 = "Miasma Cloud
 Level: 3
 School: Conjuration
 Range: Long
@@ -174,10 +176,10 @@ Casting Time: 5
 Area of Effect: 30' radius
 Saving Throw: Poison negates
 
-When Miasma Cloud is cast, a billowing mass of sickly, miasmatic vapors appears centered on a point selected by the Blackguard. Any creature caught within the cloud must roll a successful saving throw vs. poison or be poisoned and diseased. Poisoned characters suffer 2 points of poison damage per round; furthermore, they have their movement speed reduced to half and suffer a -2 penalty to strength and dexterity. Those who make a successful saving throw can leave the cloud without suffering any ill effects, although those remaining in the cloud must continue to save each round. A dispel magic will temporarily remove the effects from a particular character, but they will continue to be subjected to the spell's effects so long as they remain within the cloud. Certain creatures are immune to the effects of the cloud, including all undead, and creatures who don't need to breathe, such as elementals.~
+When Miasma Cloud is cast, a billowing mass of sickly, miasmatic vapors appears centered on a point selected by the Blackguard. Any creature caught within the cloud must roll a successful saving throw vs. poison or be poisoned and diseased. Poisoned characters suffer 2 points of poison damage per round; furthermore, they have their movement speed reduced to half and suffer a -2 penalty to strength and dexterity. Those who make a successful saving throw can leave the cloud without suffering any ill effects, although those remaining in the cloud must continue to save each round. A dispel magic will temporarily remove the effects from a particular character, but they will continue to be subjected to the spell's effects so long as they remain within the cloud. Certain creatures are immune to the effects of the cloud, including all undead, and creatures who don't need to breathe, such as elementals."
 
-@1500 = ~Flaming Shield~
-@1501 = ~Flaming Shield
+@1500 = "Flaming Shield"
+@1501 = "Flaming Shield
 Level: 4
 School: Evocation
 Range: Personal
@@ -186,17 +188,17 @@ Casting Time: 9
 Area of Effect: Special
 Saving Throw: None
 
-By casting this spell, the Blackguard envelops himself in a circular wall of flames. This shield not only grants 40% fire and cold resistance, but also protects the caster from attacks made within a 5' radius. Opponents that hit the caster with a weapon or spell from within this radius will suffer 1d8 + 4 points of fire damage. Multiple castings of this spell are not cumulative, but it can be used in conjunction with similar spells. Tiny and small flying creatures cannot pass through the flames.~
+By casting this spell, the Blackguard envelops himself in a circular wall of flames. This shield not only grants 40% fire and cold resistance, but also protects the caster from attacks made within a 5' radius. Opponents that hit the caster with a weapon or spell from within this radius will suffer 1d8 + 4 points of fire damage. Multiple castings of this spell are not cumulative, but it can be used in conjunction with similar spells. Tiny and small flying creatures cannot pass through the flames."
 
 //Kit ability gaining strings.
-@10000 = ~Gained immunity to poison.~
-@10001 = ~Gained immunity to fear.~
-@10005 = ~Gained +1 casting level bonus.~
-@10010 = ~Lost one spell per level.~
-@10015 = ~Gained +4 casting level bonus.~
-@10100 = ~Gained Aura of Vengeance.~
-@10110 = ~Gained Aura of Hatred.~
-@10120 = ~Gained Aura of Despair.~
+@10000 = "Gained immunity to poison."
+@10001 = "Gained immunity to fear."
+@10005 = "Gained +1 casting level bonus."
+@10010 = "Lost one spell per level."
+@10015 = "Gained +4 casting level bonus."
+@10100 = "Gained Aura of Vengeance."
+@10110 = "Gained Aura of Hatred."
+@10120 = "Gained Aura of Despair."
 
 //Spell strings.
-@11000 = ~Protected from Good~
+@11000 = "Protected from Good"

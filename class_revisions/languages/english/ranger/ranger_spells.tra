@@ -15,8 +15,8 @@
 @1120 = "Woodland Stride"
 @1121 = "Gives permanent protection against spells like Entangle and Spike Growth."
 
-@1130 = ~Hunter's Quarry~
-@1131 = ~Hunter's Quarry
+@1130 = "Hunter's Quarry"
+@1131 = "Hunter's Quarry
 Level: 1
 School: Divination
 Range: Long
@@ -25,11 +25,11 @@ Casting Time: 3
 Area of Effect: 1 creature
 Saving Throw: None
 
-When this ability is used, the ranger's eyes glow, enabling him to read the aura of a creature, and determine the creature's strengths and weaknesses. For the duration of the spell, the target's physical resistances are lowered by 10% and all attacks against the target creature are made with a +2 bonus to the attack rolls. This ability is not affected by magic resistance; it is not cumulative with itself or with similar magics like the Know Opponent spell.~
+When this ability is used, the ranger's eyes glow, enabling him to read the aura of a creature, and determine the creature's strengths and weaknesses. For the duration of the spell, the target's physical resistances are lowered by 10% and all attacks against the target creature are made with a +2 bonus to the attack rolls. This ability is not affected by magic resistance; it is not cumulative with itself or with similar magics like the Know Opponent spell."
 
 //Ranger spells.
-@1200 = ~Blades of Fire~
-@1201 = ~Blades of Fire
+@1200 = "Blades of Fire"
+@1201 = "Blades of Fire
 Level: 1
 School: Transmutation
 Range: Personal
@@ -38,10 +38,10 @@ Casting Time: 1
 Area of Effect: Caster
 Saving Throw: None
 
-For the duration of this spell, caster's melee weapons deal an extra 1d6 points of fire damage. Multiple castings of this spell are not cumulative.~
+For the duration of this spell, caster's melee weapons deal an extra 1d6 points of fire damage. Multiple castings of this spell are not cumulative."
 
-@1210 = ~Snare~
-@1211 = ~Snare
+@1210 = "Snare"
+@1211 = "Snare
 Level: 2
 School: Abjuration
 Range: Short
@@ -50,10 +50,10 @@ Casting Time: 1 round
 Area of Effect: 20' radius
 Saving Throw: Breath half
 
-This powerful trap entangles those who enter or pass the selected area or object. Any enemy violating the selected area will trigger the trap. When a hostile creature comes within 15 feet of the trap, it is triggered and explodes, entangling every enemy within a 20 foot radius for 2 rounds. Those held receive a -2 penalty to attack rolls, a +2 penalty to AC and move at half the normal rate. Creatures that make a successful saving throw vs. breath at -2 penalty avoid entanglement and can freely move through the area. An entangled creature can attack, provided it does not have to move to reach an opponent. Incorporeal and flying creatures are unaffected by this spell, as are elementals and exceptionally large and strong creatures who suffer little to no distress from the entangling plants. This spell will not harm party members.~
+This powerful trap entangles those who enter or pass the selected area or object. Any enemy violating the selected area will trigger the trap. When a hostile creature comes within 15 feet of the trap, it is triggered and explodes, entangling every enemy within a 20 foot radius for 2 rounds. Those held receive a -2 penalty to attack rolls, a +2 penalty to AC and move at half the normal rate. Creatures that make a successful saving throw vs. breath at -2 penalty avoid entanglement and can freely move through the area. An entangled creature can attack, provided it does not have to move to reach an opponent. Incorporeal and flying creatures are unaffected by this spell, as are elementals and exceptionally large and strong creatures who suffer little to no distress from the entangling plants. This spell will not harm party members."
 
-@1220 = ~Swift Haste~
-@1221 = ~Swift Haste
+@1220 = "Swift Haste"
+@1221 = "Swift Haste
 Level: 3
 School: Alteration
 Range: Personal
@@ -62,7 +62,7 @@ Casting Time: 1
 Area of Effect: Caster
 Saving Throw: None
 
-When this spell is cast, the ranger functions at double his normal movement rate, gains a +1 bonus to attack rolls, armor class, and saving throws vs. breath, and can make an extra attack each round. Furthermore, the rate at which the creature is regenerating or suffering damage from poison is doubled. Spellcasting and spell effects are not affected. Swift Haste negates and counters the effects of a Slow spell. This spell is not cumulative with itself or with other similar magic like the Haste spell.~
+When this spell is cast, the ranger functions at double his normal movement rate, gains a +1 bonus to attack rolls, armor class, and saving throws vs. breath, and can make an extra attack each round. Furthermore, the rate at which the creature is regenerating or suffering damage from poison is doubled. Spellcasting and spell effects are not affected. Swift Haste negates and counters the effects of a Slow spell. This spell is not cumulative with itself or with other similar magic like the Haste spell."
 
 //Ability gain strings.
 @10000 = "Gained +4 caster level bonus."
