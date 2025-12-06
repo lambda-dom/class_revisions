@@ -1,5 +1,5 @@
 //Description strings.
-@1040 = "BLACKGUARD: The Blackguard epitomizes evil and is nothing short of a mortal fiend. The quintessential black knight, this villain carries a reputation of the foulest sort that is very well deserved. Consorting with demons and devils and serving the dark deities, the Blackguard is hated and feared by all. Some people call these villains "anti-paladins" due to their evil nature.
+@1040 = ~BLACKGUARD: The Blackguard epitomizes evil and is nothing short of a mortal fiend. The quintessential black knight, this villain carries a reputation of the foulest sort that is very well deserved. Consorting with demons and devils and serving the dark deities, the Blackguard is hated and feared by all. Some people call these villains "anti-paladins" due to their evil nature.
 
 Advantages:
 - Is immune to fear and becomes immune to poison at level 5.
@@ -22,4 +22,4 @@ Disadvantages:
 - May not cast Detect Evil.
 - May not use the Lay on Hands ability.
 - May not use Smite Evil.
-- Does not gain Aura of Protection."
+- Does not gain Aura of Protection.~
