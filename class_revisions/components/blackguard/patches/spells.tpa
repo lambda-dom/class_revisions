@@ -68,7 +68,7 @@ DEFINE_PATCH_FUNCTION blackguard_absorb_health STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 146                  //Cast spell.
     STR_VAR
-        resource = "absorb_health_a"
+        resource = "blackguard_absorb_health_a"
         match_resource = "absb#res"
         references = "spells"
     END
@@ -136,7 +136,7 @@ DEFINE_PATCH_FUNCTION blackguard_aura_vengeance STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 272                  //Use Eff on condition.
     STR_VAR
-        resource = "aura_vengeance_a"
+        resource = "blackguard_aura_vengeance_a"
         match_resource = ""
         references = "spells"
     END
@@ -150,7 +150,7 @@ DEFINE_PATCH_FUNCTION blackguard_aura_hatred STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 272                  //Use Eff on condition.
     STR_VAR
-        resource = "aura_hatred_a"
+        resource = "blackguard_aura_hatred_a"
         match_resource = ""
         references = "spells"
     END
@@ -164,7 +164,7 @@ DEFINE_PATCH_FUNCTION blackguard_aura_despair STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 272                  //Use Eff on condition.
     STR_VAR
-        resource = "aura_despair_a"
+        resource = "blackguard_aura_despair_a"
         match_resource = ""
         references = "spells"
     END
@@ -213,7 +213,7 @@ DEFINE_PATCH_FUNCTION blackguard_abyssal_rage STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 146                  //Cast spell.
     STR_VAR
-        resource = "abyssal_rage_a"
+        resource = "blackguard_abyssal_rage_a"
         match_resource = ""
         references = "spells"
     END
@@ -287,7 +287,7 @@ DEFINE_PATCH_FUNCTION blackguard_abyssal_rage STR_VAR destination = "*" BEGIN
                 insert = "below"
             END
         END ELSE BEGIN
-            PATCH_FAIL "abyssal_rage: id of '%res%' not found."
+            PATCH_FAIL "blackguard_abyssal_rage: id of '%res%' not found."
         END
     END
 END
@@ -309,7 +309,7 @@ DEFINE_PATCH_FUNCTION blackguard_flaming_shield STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 232                  //Cast spell on condition.
     STR_VAR
-        resource = "flaming_shield_a"
+        resource = "blackguard_flaming_shield_a"
         match_resource = ""
         references = "spells"
     END
