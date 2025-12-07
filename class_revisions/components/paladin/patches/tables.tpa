@@ -7,10 +7,10 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/kits.tpa"
 //Get reference tables.
 LAF load_table_references STR_VAR
     tables = "spells"
-RET_ARRAY references = references END
+RET_ARRAY spells = references END
 
 
 //Patches.
 DEFINE_PATCH_FUNCTION make_table_replacements STR_VAR destination = "*" BEGIN
-    LPF make_clab_replacements STR_VAR array = "references" END
+    LPF make_clab_replacements STR_VAR table = "spells" END
 END
