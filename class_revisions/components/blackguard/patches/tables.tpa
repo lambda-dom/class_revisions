@@ -8,16 +8,17 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/kits.tpa"
 //Get reference tables.
 LAF load_table_references STR_VAR
     tables = "spells"
-RET_ARRAY blackguard_spells = references END
+    dir = "%MOD_FOLDER%/components/paladin/resources/2da"
+RET_ARRAY paladin_spells = references END
 
 LAF load_table_references STR_VAR
     tables = "spells"
-    dir = "%MOD_FOLDER%/components/paladin/resources/2da"
-RET_ARRAY paladin_spells = references END
+RET_ARRAY blackguard_spells = references END
 
 LAF merge_arrays STR_VAR
     arrays  = "paladin_spells|blackguard_spells"
 RET_ARRAY spells = array END
+
 
 //Patches.
 DEFINE_PATCH_FUNCTION make_table_replacements STR_VAR destination = "*" BEGIN

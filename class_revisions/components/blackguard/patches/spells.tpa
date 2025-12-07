@@ -39,17 +39,17 @@ DEFINE_PATCH_FUNCTION blackguard_spell_penalty STR_VAR destination = "*" BEGIN
 END
 
 //Blackguard poison immunity.
-DEFINE_PATCH_FUNCTION poison_immunity STR_VAR destination = "*" BEGIN
+DEFINE_PATCH_FUNCTION blackguard_poison_immunity STR_VAR destination = "*" BEGIN
     LPF add_display_string INT_VAR tra_ref = 10000 END
 END
 
 //Blackguard poison immunity.
-DEFINE_PATCH_FUNCTION fear_immunity STR_VAR destination = "*" BEGIN
+DEFINE_PATCH_FUNCTION blackguard_fear_immunity STR_VAR destination = "*" BEGIN
     LPF add_display_string INT_VAR tra_ref = 10001 END
 END
 
 //Absorb health.
-DEFINE_PATCH_FUNCTION absorb_health_a STR_VAR destination = "*" BEGIN
+DEFINE_PATCH_FUNCTION blackguard_absorb_health_a STR_VAR destination = "*" BEGIN
     LPF get_spell_header_count RET headers_count = count END
     FOR (i = 1; i <= headers_count; ++i) BEGIN
         //Patch header min level.
@@ -64,18 +64,18 @@ DEFINE_PATCH_FUNCTION absorb_health_a STR_VAR destination = "*" BEGIN
     END
 END
 
-DEFINE_PATCH_FUNCTION absorb_health STR_VAR destination = "*" BEGIN
+DEFINE_PATCH_FUNCTION blackguard_absorb_health STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 146                  //Cast spell.
     STR_VAR
-        resource = "absorb_health_a"
+        resource = "blackguard_absorb_health_a"
         match_resource = "absb#res"
         references = "spells"
     END
 END
 
 //Poison Weapon.
-DEFINE_PATCH_FUNCTION poison_weapon_a STR_VAR destination = "*" BEGIN
+DEFINE_PATCH_FUNCTION blackguard_poison_weapon_a STR_VAR destination = "*" BEGIN
     LPF get_spell_header_count RET headers_count = count END
     FOR (i = 1; i <= headers_count; ++i) BEGIN
         //Patch header min level.
@@ -109,7 +109,7 @@ DEFINE_PATCH_FUNCTION poison_weapon_a STR_VAR destination = "*" BEGIN
     END
 END
 
-DEFINE_PATCH_FUNCTION poison_weapon STR_VAR destination = "*" BEGIN
+DEFINE_PATCH_FUNCTION blackguard_poison_weapon STR_VAR destination = "*" BEGIN
     LPF get_array_element STR_VAR
         array = "effects"
         key = "poison_weapon_a"
@@ -132,11 +132,11 @@ DEFINE_PATCH_FUNCTION poison_weapon STR_VAR destination = "*" BEGIN
 END
 
 //Aura of Vengeance.
-DEFINE_PATCH_FUNCTION aura_vengeance STR_VAR destination = "*" BEGIN
+DEFINE_PATCH_FUNCTION blackguard_aura_vengeance STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 272                  //Use Eff on condition.
     STR_VAR
-        resource = "aura_vengeance_a"
+        resource = "blackguard_aura_vengeance_a"
         match_resource = ""
         references = "spells"
     END
@@ -146,11 +146,11 @@ DEFINE_PATCH_FUNCTION aura_vengeance STR_VAR destination = "*" BEGIN
 END
 
 //Aura of Hatred.
-DEFINE_PATCH_FUNCTION aura_hatred STR_VAR destination = "*" BEGIN
+DEFINE_PATCH_FUNCTION blackguard_aura_hatred STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 272                  //Use Eff on condition.
     STR_VAR
-        resource = "aura_hatred_a"
+        resource = "blackguard_aura_hatred_a"
         match_resource = ""
         references = "spells"
     END
@@ -160,11 +160,11 @@ DEFINE_PATCH_FUNCTION aura_hatred STR_VAR destination = "*" BEGIN
 END
 
 //Aura of Despair.
-DEFINE_PATCH_FUNCTION aura_despair STR_VAR destination = "*" BEGIN
+DEFINE_PATCH_FUNCTION blackguard_aura_despair STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 272                  //Use Eff on condition.
     STR_VAR
-        resource = "aura_despair_a"
+        resource = "blackguard_aura_despair_a"
         match_resource = ""
         references = "spells"
     END
@@ -174,7 +174,7 @@ DEFINE_PATCH_FUNCTION aura_despair STR_VAR destination = "*" BEGIN
 END
 
 //Aid from Hell.
-DEFINE_PATCH_FUNCTION aid_hell STR_VAR destination = "*" BEGIN
+DEFINE_PATCH_FUNCTION blackguard_aid_hell STR_VAR destination = "*" BEGIN
     LPF get_spell_header_count RET headers_count = count END
     FOR (i = 1; i <= headers_count; ++i) BEGIN
         //Patch header min level.
@@ -209,11 +209,11 @@ DEFINE_PATCH_FUNCTION aid_hell STR_VAR destination = "*" BEGIN
 END
 
 //Abyssal rage.
-DEFINE_PATCH_FUNCTION abyssal_rage STR_VAR destination = "*" BEGIN
+DEFINE_PATCH_FUNCTION blackguard_abyssal_rage STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 146                  //Cast spell.
     STR_VAR
-        resource = "abyssal_rage_a"
+        resource = "blackguard_abyssal_rage_a"
         match_resource = ""
         references = "spells"
     END
@@ -287,13 +287,13 @@ DEFINE_PATCH_FUNCTION abyssal_rage STR_VAR destination = "*" BEGIN
                 insert = "below"
             END
         END ELSE BEGIN
-            PATCH_FAIL "abyssal_rage: id of '%res%' not found."
+            PATCH_FAIL "blackguard_abyssal_rage: id of '%res%' not found."
         END
     END
 END
 
 //Abyssal fury.
-DEFINE_PATCH_FUNCTION abyssal_fury STR_VAR destination = "*" BEGIN
+DEFINE_PATCH_FUNCTION blackguard_abyssal_fury STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 248                  //Melee effect.
     STR_VAR
@@ -305,18 +305,18 @@ DEFINE_PATCH_FUNCTION abyssal_fury STR_VAR destination = "*" BEGIN
 END
 
 //Flaming Shield.
-DEFINE_PATCH_FUNCTION flaming_shield STR_VAR destination = "*" BEGIN
+DEFINE_PATCH_FUNCTION blackguard_flaming_shield STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 232                  //Cast spell on condition.
     STR_VAR
-        resource = "flaming_shield_a"
+        resource = "blackguard_flaming_shield_a"
         match_resource = ""
         references = "spells"
     END
 END
 
 //Protection from good.
-DEFINE_PATCH_FUNCTION protection_good BEGIN
+DEFINE_PATCH_FUNCTION blackguard_protection_good BEGIN
     //User information.
     LPF add_display_string INT_VAR tra_ref = 11000 END
 END
