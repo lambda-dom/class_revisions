@@ -120,6 +120,7 @@ note(s): all tables can be edited *before* installing the mod, but do not compla
 * the list of deleted spells can be found in [Cavalier spellbook](../resources/2da/cavalier_spellbook.2da).
 * the proficiencies can be found in [Cavalier proficiencies](../resources/2da/cavalier_proficiencies.2da).
 * the abilities can be found in [Cavalier abilities table](../resources/2da/cavalier_abilities.2da).
+* the table of added spells is [Cavalier new spells](../resources/2da/cavalier_new_spells.2da).
 
 TODO(s): specialize auras:
 * Change paladin defensive penalties to a +1 bonus to thac0 and damage.
@@ -161,6 +162,7 @@ note(s): all tables can be edited *before* installing the mod (do not complain i
 * the list of deleted spells can be found in [Undead Hunter spellbook](../resources/2da/undead_hunter_spellbook.2da).
 * the proficiencies can be found in [Undead Hunter proficiencies](../resources/2da/undead_hunter_proficiencies.2da).
 * the abilities can be found in [Undead Hunter abilities table](../resources/2da/undead_hunter_abilities.2da).
+* the table of added spells is [Undead Hunter new spells](../resources/2da/undead_hunter_new_spells.2da).
 
 ## E. 1. Spellcasting.
 

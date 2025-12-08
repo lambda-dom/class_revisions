@@ -6,6 +6,7 @@ note(s): all tables can be edited *before* installing the mod, but do not compla
 * the list of deleted spells can be found in [Blackguard spellbook](../resources/2da/blackguard_spellbook.2da).
 * the proficiencies can be found in [Blackguard proficiencies](../resources/2da/blackguard_proficiencies.2da).
 * the abilities can be found in [Blackguard abilities table](../resources/2da/blackguard_abilities.2da).
+* the table of added spells is [Blackguard new spells](../resources/2da/blackguard_new_spells.2da).
 
 ## A. 1. Immunities.
 
