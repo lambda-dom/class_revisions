@@ -11,10 +11,13 @@ PALADIN_CASTING_LEVEL_BONUS                 1       class   1       *
 PALADIN_SPELL_PENALTY                       1       class   1       *
 PALADIN_SPELLBOOK                           1       class   1       *
 PALADIN_AURA_PROTECTION                     1       class   1       *
-PALADIN_AURA_JUSTICE                        1       class   1       *
+PALADIN_AURA_HOPE                           1       class   1       *
 PALADIN_AURA_FAITH                          1       class   1       *
 CAVALIER_SPELLBOOK                          1       class   1       *
 CAVALIER_SHIELD_SPECIALIZATION              1       class   1       *
+CAVALIER_AURA_RESILIENCE                    1       class   1       *
+CAVALIER_AURA_JUSTICE                       1       class   1       *
+CAVALIER_AURA_RIGHTEOUSNESS                 1       class   1       *
 CAVALIER_SHIELD_OTHER                       1       class   1       *
 CAVALIER_SHIELD_FAITH                       1       class   2       *
 CAVALIER_DIVINE_RETALIATION                 1       class   2       *
@@ -25,8 +28,10 @@ INQUISITOR_DISABLE_TURN_UNDEAD              1       class   1       *
 INQUISITOR_BANISH_EVIL                      1       class   1       *
 INQUISITOR_SPELL_SHIELD                     1       class   1       *
 INQUISITOR_IRON_WILL                        1       class   1       *
-UNDEAD_HUNTER_LEVEL_DRAIN_IMMUNITY          1       class   1       *
+INQUISITOR_AURA_RESISTANCE                  1       class   1       *
+INQUISITOR_AURA_SAINTLINESS                 1       class   1       *
 UNDEAD_HUNTER_SPELLBOOK                     1       class   1       *
+UNDEAD_HUNTER_LEVEL_DRAIN_IMMUNITY          1       class   1       *
 UNDEAD_HUNTER_TURN_UNDEAD_BONUS             1       class   1       *
 UNDEAD_HUNTER_UNDEAD_BANE                   1       class   1       *
 UNDEAD_HUNTER_PROTECTION_FROM_UNDEAD        1       class   1       *

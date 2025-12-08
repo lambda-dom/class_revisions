@@ -82,7 +82,7 @@ During the round when this ability is activated the Paladin gains +2 bonus to at
 @1400 = "Aura of Protection"
 @1401 = "Permanent aura inflicting -1 thac0 penalty to every enemy within range."
 
-@1410 = "Aura of Justice"
+@1410 = "Aura of Hope"
 @1411 = "Permanent aura inflicting -1 penalty to damage rolls to every enemy within range."
 
 @1420 = "Aura of Faith"
@@ -157,6 +157,17 @@ Saving Throw: None
 
 When the Cavalier casts this spell he becomes protected against any effects that would repel him, like knockback, Dragon's wing buffet, etc."
 
+//Auras.
+@2400 = "Aura of Resilience"
+@2401 = "Permanent aura granting a bonus of +1 to ac to every ally within range."
+
+@2410 = "Aura of Hope"
+@2411 = "Permanent aura granting a bonus of +1 to melee thac0 to every ally within range."
+
+@2420 = "Aura of Faith"
+@2421 = "Permanent aura granting a bonus of +1 to melee damage to every ally within range."
+
+
 //Inquisitor abilities.
 //Spellcasting.
 @3000 = "Disable Spellcasting"
@@ -223,6 +234,14 @@ This ability also grants protection from spells cast from scrolls and innate spe
 
 @3300 = "Iron Will"
 @3301 = "Gives a permanent bonus of +1 to Save vs. spells."
+
+//Auras.
+@3400 = "Aura of Resistance"
+@3401 = "Permanent aura granting a bonus of +5% to magic resistance to every ally within range."
+
+@3410 = "Aura of Saintliness"
+@3411 = "Permanent aura granting protection from evil to every ally within range."
+
 
 //Undead hunter spells abilities.
 @4000 = "Undead Hunter Spellbook"
@@ -331,20 +350,28 @@ High-level Undead Hunters can use their necromantic powers to seek out and destr
 @10050 = "Gained immunity to paralysis."
 @10060 = "Gained immunity to confusion."
 @10100 = "Gained Aura of Protection."
-@10110 = "Gained Aura of Justice."
+@10110 = "Gained Aura of Hope."
 @10120 = "Gained Aura of Faith."
 
 //Cavalier ability gaining strings.
 @11000 = "Gained specialization in Sword and Shield style."
+@11100 = "Gained Aura of Resilience."
+@11110 = "Gained Aura of Justice."
+@11120 = "Gained Aura of Righteousness."
 
 //Inquisitor ability gaining strings.
 @12000 = "Spellcasting Disabled."
 @12001 = "Turn Undead Disabled."
 @12002 = "Gained +1 to Saves vs. Spells."
 
-//Kit ability gaining strings.
+//Inquisitor ability gaining strings.
+@12100 = "Gained Aura of Resilience."
+@12110 = "Gained Aura of Justice."
+
+//Undead hunter ability gaining strings.
 @13000 = "Gained immunity to level drain."
 @13001 = "Gained a bonus of +2 to the Turn Undead level."
+
 
 //Spell strings.
 @14000 = "Protected from Undead"

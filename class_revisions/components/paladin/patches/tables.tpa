@@ -11,6 +11,34 @@ RET_ARRAY spells = references END
 
 
 //Patches.
-DEFINE_PATCH_FUNCTION make_table_replacements STR_VAR destination = "*" BEGIN
+DEFINE_PATCH_FUNCTION make_table_replacements_paladin STR_VAR destination = "*" BEGIN
+    LPF make_clab_replacements STR_VAR table = "spells" END
+END
+
+DEFINE_PATCH_FUNCTION make_table_replacements_cavalier STR_VAR destination = "*" BEGIN
+    //Initialization.
+    LPF get_component_resources_dir RET
+        resources_dir = dir
+    END
+
+    LPF add_new_spells_clab STR_VAR
+        kit = "cavalier"
+        table = "%resources_dir%/2da/cavalier_new_spells.2da"
+    END
+
+    LPF make_clab_replacements STR_VAR table = "spells" END
+END
+
+DEFINE_PATCH_FUNCTION make_table_replacements_undead_hunter STR_VAR destination = "*" BEGIN
+    //Initialization.
+    LPF get_component_resources_dir RET
+        resources_dir = dir
+    END
+
+    LPF add_new_spells_clab STR_VAR
+        kit = "undead_hunter"
+        table = "%resources_dir%/2da/undead_hunter_new_spells.2da"
+    END
+
     LPF make_clab_replacements STR_VAR table = "spells" END
 END

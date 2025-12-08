@@ -45,6 +45,7 @@ note(s): all tables can be edited *before* installing the mod, but do not compla
 * the spell progression table is [Ranger spell progression](../resources/2da/ranger_spell_progression.2da).
 * the list of deleted spells can be found in [Ranger spellbook](../resources/2da/ranger_spellbook.2da).
 * the stealth progression table is [Ranger skills](../resources/2da/ranger_skills.2da).
+* the table of added spells is [Ranger new spells](../resources/2da/ranger_new_spells.2da).
 * the proficiencies can be found in [Ranger proficiencies](../resources/2da/ranger_proficiencies.2da).
 * the abilities can be found in [Ranger abilities table](../resources/2da/ranger_abilities.2da).
 
@@ -78,6 +79,7 @@ Trades melee for superior ranged fighting. An archer gains:
 note(s):
 * the proficiencies can be found in [Archer proficiencies](../resources/2da/feralan_proficiencies.2da).
 * the abilities can be found in [Archer abilities](../resources/2da/archer_abilities.2da).
+* the table of added spells is [Archer new spells](../resources/2da/archer_new_spells.2da).
 
 ## B. 2. Stalker.
 
@@ -87,6 +89,7 @@ note(s):
 * the backstab bonus can be found in [Stalker backstab progression](../resources/2da/stalker_backstab.2da).
 * the proficiencies can be found in [Stalker proficiencies](../resources/2da/stalker_proficiencies.2da).
 * the abilities can be found in [Stalker abilities](../resources/2da/stalker_abilities.2da).
+* the table of added spells is [Stalker new spells](../resources/2da/stalker_new_spells.2da).
 
 ## B. 3. Beastmaster.
 
@@ -109,3 +112,4 @@ note(s):
 * the list of deleted spells can be found in [Beastmaster spellbook](../resources/2da/beastmaster_spellbook.2da).
 * the proficiencies can be found in [Beastmaster proficiencies](../resources/2da/beastmaster_proficiencies.2da).
 * the abilities can be found in [Beastmaster abilities](../resources/2da/beastmaster_abilities.2da).
+* the table of added spells is [Beastmaster new spells](../resources/2da/beastmaster_new_spells.2da).
