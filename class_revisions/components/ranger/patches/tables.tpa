@@ -22,7 +22,7 @@ DEFINE_PATCH_FUNCTION make_table_replacements_ranger STR_VAR destination = "*" B
         table = "%resources_dir%/2da/ranger_new_spells.2da"
     END
 
-    LPF make_clab_replacements STR_VAR table = "spells" END
+    LPF make_clab_replacements STR_VAR table = "ranger_spells" END
 END
 
 DEFINE_PATCH_FUNCTION make_table_replacements_archer STR_VAR destination = "*" BEGIN
