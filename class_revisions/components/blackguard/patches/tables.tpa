@@ -15,12 +15,17 @@ LAF load_table_references STR_VAR
     tables = "spells"
 RET_ARRAY blackguard_spells = references END
 
-LAF merge_arrays STR_VAR
-    arrays  = "paladin_spells|blackguard_spells"
-RET_ARRAY spells = array END
-
 
 //Patches.
 DEFINE_PATCH_FUNCTION make_table_replacements STR_VAR destination = "*" BEGIN
+    LPF add_new_spells_clab STR_VAR
+        kit = "blackguard"
+        table = "%resources_dir%/2da/blackguard_new_spells.2da"
+    END
+
+    LPF merge_arrays STR_VAR
+        arrays  = "paladin_spells|blackguard_spells"
+    RET_ARRAY spells = array END
+
     LPF make_clab_replacements STR_VAR table = "spells" END
 END

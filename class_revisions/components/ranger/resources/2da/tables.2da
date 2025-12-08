@@ -1,9 +1,9 @@
 2DA V1.0
 *
-                            install patch                   override    destination
-ranger_spell_progression    1       *                       1           #lit:mxsplran
-ranger_skills               1       *                       1           #lit:skillrng
-ranger_abilities            1       make_table_replacements 1           #lit:clabrn01
-archer_abilities            1       make_table_replacements 1           #lit:clabrn02
-stalker_abilities           1       make_table_replacements 1           #lit:clabrn03
-beastmaster_abilities       1       make_table_replacements 1           #lit:clabrn04
+                            install patch                               override    destination
+ranger_spell_progression    1       *                                   1           #lit:mxsplran
+ranger_skills               1       *                                   1           #lit:skillrng
+ranger_abilities            1       make_table_replacements_ranger      1           #lit:clabrn01
+archer_abilities            1       make_table_replacements_archer      1           #lit:clabrn02
+stalker_abilities           1       make_table_replacements_stalker     1           #lit:clabrn03
+beastmaster_abilities       1       make_table_replacements_beastmaster 1           #lit:clabrn04
