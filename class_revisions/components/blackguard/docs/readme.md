@@ -80,17 +80,18 @@ Changed self-buffs:
 
 * Abyssal Armor, level 1: changes Armor of Faith; magic damage resistance is turned into fire resistance.
 * Aid from Hell, level 1: replaces Aid. Moved to level 1 since Blackguards loose Bless. Long duration, long casting time.
-* Dark Powers, level 2: replaces Draw upon Holy Might. Long casting time.
-* Abyssal Rage, level 4: essentially, a spell version of berserk, replacing Champion's Strength.
+* Dark Power, level 2: replaces Draw upon Holy Might. Long casting time.
 * Abyssal Fury, level 4: replaces Righteous Fury; +4 strength, +4 movement speed, +20 hps and a fire damage melee effect.
+* Abyssal Rage, level 5: essentially, a spell version of berserk, replacing Champion's Strength.
 
 New spells:
 
+* Hellscorch, a version of sunscorch at level 1.
 * Aura of Fear, level 1: a spell version of wizard's Horror.
 * Evil Chant, level 2: a debuff on enemies. Fast casting time.
-* Miasma Cloud, level 3: a version of wizard's Stinking Cloud, doing poison damage, disease attribute damage and half movement speed.
-* Evil Prayer, level 3: an improved Evil Chant, it is cumulative with it. Fast casting time.
-* Flaming Shield, level 3: a version of wizard's Fire Shield.
+* Evil Prayer, level 4: an improved Evil Chant, it is cumulative with it. Fast casting time.
+* Miasma Cloud, level 4: a version of wizard's Stinking Cloud, doing poison damage, disease attribute damage and half movement speed.
+* Flaming Shield, level 4: a version of wizard's Fire Shield.
 
 
 Possible Additions:
@@ -104,4 +105,3 @@ Possible borrowings from IWD into EE:
 
 TODO:
 * Instead of another fire resist spell, scale Abyssal Armor to higher fire reistance.
-* Hellscorch, a version of sunscorch at level 1.

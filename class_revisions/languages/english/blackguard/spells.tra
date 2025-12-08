@@ -76,7 +76,7 @@ Level: 1
 School: Necromancy
 Range: Long
 Duration: 5 rounds
-Casting Time: 2
+Casting Time: 9
 Area of Effect: 30' radius
 Saving Throw: Spell negates
 
@@ -88,7 +88,7 @@ Level: 2
 School: Conjuration
 Range: Long
 Duration: 1 turn
-Casting Time: 3
+Casting Time: 5
 Area of Effect: 30' radius
 Saving Throw: None
 
@@ -100,7 +100,7 @@ Level: 4
 School: Conjuration
 Range: Long
 Duration: 1 turn
-Casting Time: 4
+Casting Time: 5
 Area of Effect: 30' radius
 Saving Throw: None
 
@@ -144,19 +144,19 @@ When the Blackguard casts this spell, he will receive aid from his dark god. For
 
 @1470 = "Abyssal Rage"
 @1471 = "Abyssal Rage
-Level: 4
+Level: 5
 School: Alteration
 Range: Personal
 Duration: 5 rounds
-Casting Time: 5
+Casting Time: 9
 Area of Effect: Caster
 Saving Throw: None
 
-When the Blackguard casts this spell, he invokes the chaotic powers of the abyss and is infused with demonic rage. For the duration of this spell, he gains a +2 bonus to attack and damage rolls, a penalty of -2 to armor class, and a bonus of +15 temporary hit points. He also becomes immune to charm, confusion, fear, feeblemind, paralysis, sleep, imprisonment, maze and stun. While in this state, the Blackguard cannot perform any activities that require concentration like casting spells or turn undead. At the end of the berserking spree, the dark powers that were invoked exact their pay in blood. All the temporary hit points are taken away, possibly knocking the Blackguard unconscious, and he becomes winded, suffering a -2 penalty to armor class, attack and damage rolls for 1 round."
+When the Blackguard casts this spell, he invokes the chaotic powers of the abyss and is infused with demonic rage. For the duration of this spell, he gains a +2 bonus to attack and damage rolls, a penalty of -2 to armor class, and a bonus of +15 temporary hit points. He also becomes immune to charm, confusion, fear, feeblemind, paralysis, sleep, imprisonment, maze and stun. While in this state, the Blackguard cannot perform any activities that require concentration like casting spells, using innate abilities or turn undead. At the end of the berserking spree, the dark powers that were invoked exact their pay in blood. All the temporary hit points are taken away, possibly knocking the Blackguard unconscious, and he becomes winded, suffering a -2 penalty to armor class, attack and damage rolls for 1 round."
 
 @1480 = "Abyssal Fury"
 @1481 = "Abyssal Fury
-Level: 5
+Level: 4
 School: Alteration
 Range: Personal
 Duration: 1 turn
@@ -189,6 +189,19 @@ Area of Effect: Special
 Saving Throw: None
 
 By casting this spell, the Blackguard envelops himself in a circular wall of flames. This shield not only grants 40% fire and cold resistance, but also protects the caster from attacks made within a 5' radius. Opponents that hit the caster with a weapon or spell from within this radius will suffer 1d8 + 4 points of fire damage. Multiple castings of this spell are not cumulative, but it can be used in conjunction with similar spells. Tiny and small flying creatures cannot pass through the flames."
+
+@1510 = "Hellscorch"
+@1511 = "Hellscorch
+Level: 1
+School: Evocation
+Range: Long
+Duration: Instant
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: Breath partial
+
+When this spell is cast, a ray of hellish fire slants down from the sky and strikes one target of the caster's choice. The creature struck by the ray sustains 2d4 points of fire damage plus 1d6 every two extra levels of experience, up to a maximum of 6d4 at level 9. If the target successfully rolls a saving throw vs. breath he will receive only half damage."
+
 
 //Kit ability gaining strings.
 @10000 = "Gained immunity to poison."
