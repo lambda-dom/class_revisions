@@ -50,6 +50,11 @@ Advantages:
 - At level 6 gains the ability to cast divine spells as a cleric of the same level, but from a smaller spellbook with unique spells.
 - At level 11 gains Aura of Resilience, at level 14 gains Aura of Justice and at level 17 gains Aura of Righteousness.
 
+Disadvantages:
+- Can cast one less spell per level.
+- Cannot use the Lay on Hands ability.
+- Cannot use ranged weapons.
+
 Aura of Resilience:
 All allies within 15 feet of the cavalier gain a +1 bonus to armor class.
 
@@ -58,11 +63,7 @@ All allies within 15 feet of the cavalier gain a +1 bonus to attack rolls of mel
 
 Aura of Righteousness:
 All allies within 15 feet of the cavalier gain a +1 bonus to damage rolls of melee weapons.
-
-Disadvantages:
-- Can cast one less spell per level.
-- Cannot use the Lay on Hands ability.
-- Cannot use ranged weapons."
+"
 
 @1020 = "INQUISITOR: While many champions of good are dedicated to fighting forces of evil that are clear threats to their country, their ideals or their church - as cavaliers and paladins are devoted to destroying evil armies and powerful demons - the inquisitor is at least as concerned about evil and corruption that conceal or disguise itself. When greed eats away at a church hierarchy, when devils infiltrate a knightly order or seduce its leaders to evil, when admirable governors succumb to evil enchantments and fall from the path of righteousness, it is usually an inquisitor who uncovers the evil and cuts it away.
 
@@ -76,6 +77,7 @@ Advantages:
 - At level 1 gains a bonus of +1 to Saves vs. spells. This bonus increases to +2 at level 10.
 - At level 5 can use True Seeing once per day. For every 3 levels, the ability can be used one additional time per day, to a maximum of 5 uses at level 17.
 - At level 8 can use Banish Evil once per day. At level 16 gains a second use of this ability.
+- At level 11 gains Aura of Resistance, at level 14 gains Aura of Saintliness and at level 17 gains Aura of Faith.
 - At level 12 can use Inquisitor's Shield once per day.
 
 Disadvantages:
@@ -93,6 +95,15 @@ With this ability, the Inquisitor can banish evil, enemy summoned creatures back
 
 Inquisitor's Shield:
 With this powerful abjuration, the Inquisitor can protect himself with a shield deflecting all spells cast directly at him.
+
+Aura of Resistance:
+All allies within 15 feet of the inquisitor gain a +5% to magic resistance.
+
+Aura of Sainliness:
+All allies within 15 feet of the inquisitor gain protection from evil.
+
+Aura of Faith:
+All allies within 15 feet of the inquisitor gain a +1 bonus to all saves.
 "
 
 @1030 = "UNDEAD HUNTER: Undead are an abomination in the eyes of the just and righteous. It is no surprise then that there are some paladins that dedicate themselves to wiping these unholy terrors from the world. These undead hunters believe undead are a scourge upon the living that must be eradicated, and the worst of the undead are the ones with unnatural appetites for flesh and blood - things that should persist without feeding, but consume anyway. Creatures such as vampires and ghouls are especially dangerous because they turn their victims into more of their kind, and just one reckless night-feeder can turn an entire city into a den of undead. Rare even in the most grim realms, and looked with awe by most, undead hunters lead lonely existences under the constant threat of becoming that which they live to destroy.

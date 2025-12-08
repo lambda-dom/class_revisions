@@ -8,6 +8,10 @@ Advantages:
 - At level 5 gains the ability to cast divine spells as a cleric of the same level, but from a smaller spellbook with unique spells.
 - At level 11 gains Aura of Vengeance, at level 14 gains Aura of Hatred and at level 17 gains Aura of Despair.
 
+Disadvantages:
+- Alignment restricted to evil.
+- May not use the Detect Evil, Lay on Hands and Smite Evil abilities.
+
 Absorb Health:
 Deals 2 points of damage per level to an enemy, to a maximum of 40 at level 20, healing the Blackguard the same number of Hit Points.
 
@@ -15,14 +19,11 @@ Poison Weapon
 Each successful hit within the next 5 rounds will inject poison into the target. Each target can only be affected once per round. The amount of poison damage depends on the character's level.
 
 Aura of Vengeance:
-Enemies within 15 feet of the paladin suffer -1 penalty to attack rolls.
+Enemies within 15 feet of the blackguard suffer -1 penalty to attack rolls.
 
 Aura of Hatred:
-Enemies within 15 feet of the paladin suffer a -1 penalty to armor class.
+Enemies within 15 feet of the blackguard suffer a -1 penalty to armor class.
 
 Aura of Despair:
-Enemies within 15 feet of the paladin suffer a -1 penalty to all saves.
-
-Disadvantages:
-- Alignment restricted to evil.
-- May not use the Detect Evil, Lay on Hands and Smite Evil abilities."
+Enemies within 15 feet of the blackguard suffer a -1 penalty to all saves.
+"

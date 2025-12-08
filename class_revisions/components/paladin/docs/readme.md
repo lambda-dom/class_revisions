@@ -143,16 +143,13 @@ Cavaliers gain all the paladin abilities, except Lay on Hands. Cavaliers can als
 
 Not many differences versus vanilla and KR.
 
-TODO(s):
-* keep aura of faith but change one aura to give +5% mr. What else? Protection from Evil? Immunity to fear? Since they do not cast spells these are not bad ideas.
-
 ## D. 1. Immunities.
 
 Inquisitors gain immunity to fear and charm.
 
 ## D. 2. Abilities.
 
-Dispel Magic is now Dispel Evil, an aoe Dispel Magic against evil enemies at 1.5 times the level of the caster, as in a similar SCS component [^4]. In addition they gain Banish Evil, a version of SR's banishment against evil enemies and Iron Will, a permanent bonus to save vs. spells. True Sight is also made undispellable. At level 12 gains Inquisitor's Shield, a version of Shield of the Archons.
+Dispel Magic is now Dispel Evil, an aoe Dispel Magic against evil enemies at 1.5 times the level of the caster, as in a similar SCS component [^4]. In addition they gain Banish Evil, a version of SR's banishment against evil enemies and Iron Will, a permanent bonus to save vs. spells. True Sight is also made undispellable. At level 12 gains Inquisitor's Shield, a version of Shield of the Archons. Like cavaliers, they also get their specialized auras.
 
 # E. Undead Hunter.
 

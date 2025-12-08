@@ -235,6 +235,14 @@ This ability also grants protection from spells cast from scrolls and innate spe
 @3300 = "Iron Will"
 @3301 = "Gives a permanent bonus of +1 to Save vs. spells."
 
+//Auras.
+@3400 = "Aura of Resistance"
+@3401 = "Permanent aura granting a bonus of +5% to magic resistance to every ally within range."
+
+@3410 = "Aura of Saintliness"
+@3411 = "Permanent aura granting protection from evil to every ally within range."
+
+
 //Undead hunter spells abilities.
 @4000 = "Undead Hunter Spellbook"
 @4001 = "Trims down the Unded Hunter spellbook."
@@ -356,9 +364,14 @@ High-level Undead Hunters can use their necromantic powers to seek out and destr
 @12001 = "Turn Undead Disabled."
 @12002 = "Gained +1 to Saves vs. Spells."
 
-//Kit ability gaining strings.
+//Inquisitor ability gaining strings.
+@12100 = "Gained Aura of Resilience."
+@12110 = "Gained Aura of Justice."
+
+//Undead hunter ability gaining strings.
 @13000 = "Gained immunity to level drain."
 @13001 = "Gained a bonus of +2 to the Turn Undead level."
+
 
 //Spell strings.
 @14000 = "Protected from Undead"
