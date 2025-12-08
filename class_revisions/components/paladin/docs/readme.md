@@ -109,24 +109,18 @@ At level 11, paladins gain Aura of Protection, imposing a -1 penalty on enemies'
 
 Same-type auras do not stack, fire once a round, and require no concentration to activate. Comparing with Bard's songs: the latter require concentration, have more powerful effects and are available right from the start at level 1.
 
-TODO(s):
-* Currently, there are three different auras. Stack them in a single ability instead.
-
 # C. Cavalier.
 
-Considerable changes from vanilla. The Cavalier now acts more like a general with fighting prowess (e.g. can attain mastery in some weapon proficiencies) and immunities to fear and charm, in exchange for one less spell per level and no access to Lay on Hands. The spellbook is also made more unique, by both tailoring the deleted divine spells and the spells added.
+Considerable changes from vanilla. The Cavalier now acts more like a general with fighting prowess (e.g. can attain mastery in some weapon proficiencies) and immunities to fear and charm, in exchange for one less spell per level and no access to Lay on Hands. Cavaliers get their own auras and the spellbook is made more unique, by both tailoring the deleted divine spells and the spells added.
 
 note(s):
-* KR adds Challenge Evil abilitty, which I do not like and will *not* add. A version of Shield Other is added as a new spell.
+* KR adds Challenge Evil ability, which I do not like and will *not* add. A version of Shield Other is added as a new spell.
 
 note(s): all tables can be edited *before* installing the mod, but do not complain if you mess things up:
 * the list of deleted spells can be found in [Cavalier spellbook](../resources/2da/cavalier_spellbook.2da).
 * the proficiencies can be found in [Cavalier proficiencies](../resources/2da/cavalier_proficiencies.2da).
 * the abilities can be found in [Cavalier abilities table](../resources/2da/cavalier_abilities.2da).
 * the table of added spells is [Cavalier new spells](../resources/2da/cavalier_new_spells.2da).
-
-TODO(s): specialize auras:
-* Change paladin defensive penalties to a +1 bonus to thac0 and damage.
 
 ## C. 1. Spellcasting.
 

@@ -109,11 +109,11 @@ DEFINE_PATCH_FUNCTION paladin_aura_protection STR_VAR destination = "*" BEGIN
     LPF add_display_string INT_VAR tra_ref = 10100 END
 END
 
-DEFINE_PATCH_FUNCTION paladin_aura_justice STR_VAR destination = "*" BEGIN
+DEFINE_PATCH_FUNCTION paladin_aura_hope STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
         match_opcode = 272                  //Cast spell on condition.
     STR_VAR
-        resource = "paladin_aura_justice_a"
+        resource = "paladin_aura_hope_a"
         match_resource = ""
         references = "spells"
     END
@@ -147,6 +147,46 @@ END
 //Shield specialization.
 DEFINE_PATCH_FUNCTION cavalier_shield_specialization STR_VAR destination = "*" BEGIN
     LPF add_display_string INT_VAR tra_ref = 11000 END
+END
+
+//Cavalier auras.
+DEFINE_PATCH_FUNCTION cavalier_aura_resilience STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 272                  //Cast spell on condition.
+    STR_VAR
+        resource = "cavalier_aura_resilience_a"
+        match_resource = ""
+        references = "spells"
+    END
+
+    //User information.
+    LPF add_display_string INT_VAR tra_ref = 11100 END
+END
+
+DEFINE_PATCH_FUNCTION cavalier_aura_justice STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 272                  //Cast spell on condition.
+    STR_VAR
+        resource = "cavalier_aura_resilience_a"
+        match_resource = ""
+        references = "spells"
+    END
+
+    //User information.
+    LPF add_display_string INT_VAR tra_ref = 11110 END
+END
+
+DEFINE_PATCH_FUNCTION cavalier_aura_righteousness STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 272                  //Cast spell on condition.
+    STR_VAR
+        resource = "cavalier_aura_righteousness_a"
+        match_resource = ""
+        references = "spells"
+    END
+
+    //User information.
+    LPF add_display_string INT_VAR tra_ref = 11120 END
 END
 
 DEFINE_PATCH_FUNCTION cavalier_divine_retaliation STR_VAR destination = "*" BEGIN

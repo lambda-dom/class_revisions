@@ -82,7 +82,7 @@ During the round when this ability is activated the Paladin gains +2 bonus to at
 @1400 = "Aura of Protection"
 @1401 = "Permanent aura inflicting -1 thac0 penalty to every enemy within range."
 
-@1410 = "Aura of Justice"
+@1410 = "Aura of Hope"
 @1411 = "Permanent aura inflicting -1 penalty to damage rolls to every enemy within range."
 
 @1420 = "Aura of Faith"
@@ -156,6 +156,17 @@ Area of Effect: Caster
 Saving Throw: None
 
 When the Cavalier casts this spell he becomes protected against any effects that would repel him, like knockback, Dragon's wing buffet, etc."
+
+//Auras.
+@2400 = "Aura of Resilience"
+@2401 = "Permanent aura granting a bonus of +1 to ac to every ally within range."
+
+@2410 = "Aura of Hope"
+@2411 = "Permanent aura granting a bonus of +1 to melee thac0 to every ally within range."
+
+@2420 = "Aura of Faith"
+@2421 = "Permanent aura granting a bonus of +1 to melee damage to every ally within range."
+
 
 //Inquisitor abilities.
 //Spellcasting.
@@ -331,11 +342,14 @@ High-level Undead Hunters can use their necromantic powers to seek out and destr
 @10050 = "Gained immunity to paralysis."
 @10060 = "Gained immunity to confusion."
 @10100 = "Gained Aura of Protection."
-@10110 = "Gained Aura of Justice."
+@10110 = "Gained Aura of Hope."
 @10120 = "Gained Aura of Faith."
 
 //Cavalier ability gaining strings.
 @11000 = "Gained specialization in Sword and Shield style."
+@11100 = "Gained Aura of Resilience."
+@11110 = "Gained Aura of Justice."
+@11120 = "Gained Aura of Righteousness."
 
 //Inquisitor ability gaining strings.
 @12000 = "Spellcasting Disabled."
