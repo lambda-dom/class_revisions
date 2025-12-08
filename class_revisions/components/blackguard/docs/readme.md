@@ -104,4 +104,3 @@ Possible borrowings from IWD into EE:
 TODO:
 * Instead of another fire resist spell, scale Abyssal Armor to higher fire reistance.
 * Hellscorch, a version of sunscorch at level 1.
-* refactor the spell addition code using tables.
