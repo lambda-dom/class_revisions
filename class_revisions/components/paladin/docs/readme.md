@@ -57,7 +57,7 @@ In comparison with KR, Gust of Wind, Glyph of Warding, Free Action and Farsight 
 
 ### B. 1. 1. From IWD.
 
-From iwd (installed via SCS or iwidification), the following spells are removed:
+From iwd (in iwd ee, or installed in ee via SCS or iwidification), the following spells are removed:
 
 Level 1:
 * Curse
