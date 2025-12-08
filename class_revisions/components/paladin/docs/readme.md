@@ -143,6 +143,9 @@ Cavaliers gain all the paladin abilities, except Lay on Hands. Cavaliers can als
 
 Not many differences versus vanilla and KR.
 
+TODO(s):
+* keep aura of faith but change one aura to give +5% mr. What else? Protection from Evil? Immunity to fear? Since they do not cast spells these are not bad ideas.
+
 ## D. 1. Immunities.
 
 Inquisitors gain immunity to fear and charm.
