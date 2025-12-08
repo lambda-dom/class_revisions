@@ -28,3 +28,11 @@ CLERIC_MASS_CURE                        5       1
 CLERIC_RAISE_DEAD                       5       1
 CLERIC_CHAMPIONS_STRENGTH               5       1
 CLERIC_RIGHTEOUS_MAGIC                  5       1
+CLERIC_EXALTATION                       3       0
+CLERIC_FAVOR_OF_ILMATER                 3       0
+CLERIC_PRAYER                           3       0
+CLERIC_BLOOD_RAGE                       4       0
+CLERIC_RECITATION                       4       0
+CLERIC_UNFAILING_ENDURANCE              4       0
+CLERIC_RIGHTEOUS_WRATH_OF_THE_FAITHFUL  5       0
+CLERIC_SHIELD_OF_LATHANDER              5       0

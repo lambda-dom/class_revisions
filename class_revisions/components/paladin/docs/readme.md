@@ -121,6 +121,9 @@ note(s): all tables can be edited *before* installing the mod, but do not compla
 * the proficiencies can be found in [Cavalier proficiencies](../resources/2da/cavalier_proficiencies.2da).
 * the abilities can be found in [Cavalier abilities table](../resources/2da/cavalier_abilities.2da).
 
+TODO(s): specialize auras:
+* Change paladin defensive penalties to a +1 bonus to thac0 and damage.
+
 ## C. 1. Spellcasting.
 
 In comparison with (true) paladins, cavaliers gain Command, Cloak of Fear and Greater Command, but lose Miscast Magic, Holy Smite and Raise Dead. For new spells, they gain Shield of Faith at spell level 1, Shield Other and Divine Retaliation at spell level 2 and Heroism and Hold the Line at spell level 3.

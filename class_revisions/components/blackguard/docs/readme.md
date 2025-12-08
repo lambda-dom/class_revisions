@@ -13,11 +13,10 @@ Gain immunity to fear at level 3 and immunity to poison at level 7, the latter r
 
 ## A. 2. Abilities.
 
-As for Aura of Despair, it is replaced by 3 auras, similarly to how Aura of Protection works for paladins, but entirely offensive and working on enemies. The rest of the debuffs is moved to specific Blackguard spells. Both Absorb Health and Poison Weapon, receive appropriate versions.
+As for Aura of Despair, it is replaced by 3 auras, similarly to how Aura of Protection works for paladins, but entirely offensive and working on enemies. The rest of the debuffs is moved to specific Blackguard spells. Both Absorb Health and Poison Weapon, receive appropriate versions and Protection from Evil becomes Protection from Good.
 
 note(s):
 * for parity, add detect non-evil at will?
-* add smite non-evil? Or just leave absorb health as the smite evil counterpart?
 
 ## A. 3. Spellcasting.
 
@@ -78,32 +77,31 @@ Level 5:
 
 Changed self-buffs:
 
-* Protection from Good, level 1: changes Protection from Evil to be against good and neutral alignments. Long casting time, lasts 24h.
 * Abyssal Armor, level 1: changes Armor of Faith; magic damage resistance is turned into fire resistance.
-* Dark Powers, level 2: replaces Draw upon Holy Might. Long casting time.
 * Aid from Hell, level 1: replaces Aid. Moved to level 1 since Blackguards loose Bless. Long duration, long casting time.
+* Dark Powers, level 2: replaces Draw upon Holy Might. Long casting time.
 * Abyssal Rage, level 4: essentially, a spell version of berserk, replacing Champion's Strength.
-* Abyssal Fury, level 5: replaces Righteous Fury; +4 strength, +4 movement speed, +20 hps and a fire damage melee effect.
+* Abyssal Fury, level 4: replaces Righteous Fury; +4 strength, +4 movement speed, +20 hps and a fire damage melee effect.
 
 New spells:
 
 * Aura of Fear, level 1: a spell version of wizard's Horror.
 * Evil Chant, level 2: a debuff on enemies. Fast casting time.
 * Miasma Cloud, level 3: a version of wizard's Stinking Cloud, doing poison damage, disease attribute damage and half movement speed.
-* Evil Prayer, level 4: an improved Evil Chant, it is cumulative with it. Fast casting time.
-* Flaming Shield, level 4: a version of wizard's Fire Shield.
+* Evil Prayer, level 3: an improved Evil Chant, it is cumulative with it. Fast casting time.
+* Flaming Shield, level 3: a version of wizard's Fire Shield.
 
 
 Possible Additions:
 * Abyssal Pact: add Death Knight (or something similar) at level 5? Better as an HLA?
-* A fire resist spell at level 2 setting resists, scaling all the way up to immunity at high character levels. Or drop protection from the elements for this?
 
-Possible borrowings from IWD:
-
+Possible borrowings from IWD into EE:
 * Curse: Evil Chant already exists.
 * Cause Disease: Contagion already exists.
 * Cloud of Pestilence: Miasma Cloud already exists, but could borrow projectile and animations?
-* Blood Rage: Abyssal Rage already exists?
+* Blood Rage: Abyssal Rage already exists.
 
 TODO:
-* trimmings for the iwd spellbook *not* implemented yet.
+* Instead of another fire resist spell, scale Abyssal Armor to higher fire reistance.
+* Hellscorch, a version of sunscorch at level 1.
+* refactor the spell addition code using tables.
