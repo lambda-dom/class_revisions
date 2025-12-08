@@ -9,21 +9,14 @@ LAF load_table_references STR_VAR
     tables = "ranger_spells"
 RET_ARRAY ranger_spells = references END
 
-LAF load_table_references STR_VAR
-    tables = "archer_spells"
-RET_ARRAY archer_spells = references END
-
-LAF load_table_references STR_VAR
-    tables = "stalker_spells"
-RET_ARRAY stalker_spells = references END
-
-LAF load_table_references STR_VAR
-    tables = "beastmaster_spells"
-RET_ARRAY beastmaster_spells = references END
-
 
 //Patches.
 DEFINE_PATCH_FUNCTION make_table_replacements_ranger STR_VAR destination = "*" BEGIN
+    //Initialization.
+    LPF get_component_resources_dir RET
+        resources_dir = dir
+    END
+
     LPF add_new_spells_clab STR_VAR
         kit = "ranger"
         table = "%resources_dir%/2da/ranger_new_spells.2da"
@@ -33,10 +26,19 @@ DEFINE_PATCH_FUNCTION make_table_replacements_ranger STR_VAR destination = "*" B
 END
 
 DEFINE_PATCH_FUNCTION make_table_replacements_archer STR_VAR destination = "*" BEGIN
+    //Initialization.
+    LPF get_component_resources_dir RET
+        resources_dir = dir
+    END
+
     LPF add_new_spells_clab STR_VAR
         kit = "archer"
         table = "%resources_dir%/2da/archer_new_spells.2da"
     END
+
+    LPF load_table_references STR_VAR
+        tables = "archer_spells"
+    RET_ARRAY archer_spells = references END
 
     LPF merge_arrays STR_VAR
         arrays  = "ranger_spells|archer_spells"
@@ -46,10 +48,19 @@ DEFINE_PATCH_FUNCTION make_table_replacements_archer STR_VAR destination = "*" B
 END
 
 DEFINE_PATCH_FUNCTION make_table_replacements_stalker STR_VAR destination = "*" BEGIN
+    //Initialization.
+    LPF get_component_resources_dir RET
+        resources_dir = dir
+    END
+
     LPF add_new_spells_clab STR_VAR
         kit = "stalker"
         table = "%resources_dir%/2da/stalker_new_spells.2da"
     END
+
+    LPF load_table_references STR_VAR
+        tables = "stalker_spells"
+    RET_ARRAY stalker_spells = references END
 
     LPF merge_arrays STR_VAR
         arrays  = "ranger_spells|stalker_spells"
@@ -59,10 +70,19 @@ DEFINE_PATCH_FUNCTION make_table_replacements_stalker STR_VAR destination = "*" 
 END
 
 DEFINE_PATCH_FUNCTION make_table_replacements_beastmaster STR_VAR destination = "*" BEGIN
+    //Initialization.
+    LPF get_component_resources_dir RET
+        resources_dir = dir
+    END
+
     LPF add_new_spells_clab STR_VAR
         kit = "beastmaster"
         table = "%resources_dir%/2da/beastmaster_new_spells.2da"
     END
+
+    LPF load_table_references STR_VAR
+        tables = "beastmaster_spells"
+    RET_ARRAY beastmaster_spells = references END
 
     LPF merge_arrays STR_VAR
         arrays  = "ranger_spells|beastmaster_spells"
