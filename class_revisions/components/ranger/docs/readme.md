@@ -43,7 +43,7 @@ Rangers gain:
 
 note(s): all tables can be edited *before* installing the mod, but do not complain if you mess things up:
 * the spell progression table is [Ranger spell progression](../resources/2da/ranger_spell_progression.2da).
-* the list of deleted spells can be found in [Ranger spellbook](../resources/2da/ranger_spellbook.2da).
+* the list of deleted spells can be found in [Ranger spellbook](../resources/2da/ranger_spellbook.2da). This is also used for archers and stalkers; beastmasters have a specialized table.
 * the stealth progression table is [Ranger skills](../resources/2da/ranger_skills.2da).
 * the table of added spells is [Ranger new spells](../resources/2da/ranger_new_spells.2da).
 * the proficiencies can be found in [Ranger proficiencies](../resources/2da/ranger_proficiencies.2da).
@@ -71,7 +71,7 @@ note(s): implementation note:
 
 Trades melee for superior ranged fighting. An archer gains:
 
-1. Called Shot: gained new effects, Disarm and Trip.
+1. Called Shot: gained new effects Disarm and Trip.
 2. Bow Mastery: +1 to ranged thac0 and damage at level 1 and then every 4 levels, to a maximum of +5 at level 16.
 3. Evasion Archer: +1 ac vs. missiles every 4 levels to a maximum of +4 at level 16.
 4. Ranger spells replaced by Feather Step, Fashion Arrows and Falcon's Eye.
@@ -83,7 +83,7 @@ note(s):
 
 ## B. 2. Stalker.
 
-Vanilla stealth bonus and backstab ability retained. Ranger spells replaced by Invisible, Non-Detection, Improved Invisible and Shadow Door, suitably renamed.
+Vanilla stealth bonus and backstab ability retained. Ranger spells replaced by wizard's Invisible, Non-Detection, Improved Invisible and Shadow Door, suitably renamed.
 
 note(s):
 * the backstab bonus can be found in [Stalker backstab progression](../resources/2da/stalker_backstab.2da).
@@ -95,7 +95,7 @@ note(s):
 
 Changed into a Conjurer with a special bond with his animal companion.
 
-1. Spellbook: Has access to Call Woodland Beings and single-target elemental damage (Sunscorch, Icelance).
+1. Spellbook: Has access to Call Woodland Beings and single-target elemental damage (Sunscorch, Icelance, etc.).
 2. Special animal buffs: Animal Harmony, Animal Fang, Animal Growth and Animal Fury.
 3. One innate casting of Animal Summoning I - IV.
 4. Animal Companion: summons an increasingly powerful panther, starting at level 3. Each panther is an 1d6 HP pather with the thac0 and saves of a ranger of the same level and an ac of 7 with a +1 bonus per 2 HD.
