@@ -11,4 +11,4 @@ See:
 
 # Weapon styles.
 
-Tweaks the weapon styles to give a little more power to styles other than Two Weapon.
+Tweaks the weapon styles to give a little more power to styles other than Two Weapon. Can check the changes by viewing the [tra file (English version)](../languages/english/weapon_styles/main.tra).

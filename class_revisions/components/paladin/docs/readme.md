@@ -55,9 +55,9 @@ Level 5:
 
 In comparison with KR, Gust of Wind, Glyph of Warding, Free Action and Farsight are added back to the spellbook. Removed the full line of cause wounds (lower level entries were missing in KR) and Find Traps. This left Animate Dead and Miscast Magic, so we took the course of action of taking the KR blurb from the Undead Hunter's description and drop Miscast Magic from their spellbook, while other paladins loose Animate Dead. For the level 5 spells, we dropped the obvious candidates.
 
-### B. 1. 1. From IWD.
+### B. 1. 1. IWD Spells.
 
-From iwd (in iwd ee, or installed in ee via SCS or iwidification), the following spells are removed:
+If iwd spells are installed (in iwd ee, or installed in ee via SCS or iwidification), the following spells are removed:
 
 Level 1:
 * Curse
@@ -89,11 +89,11 @@ Paladins gain the following abilities:
 * Lay on Hands at level 3.
 * Gains Aura of Protection at level 11.
 
-Detect Evil is self-explanatory.
+Detect Evil is self-explanatory. The difference with vanilla is that it is a use-at-will ability. 
 
 ### B. 3. 1. Protection from Evil.
 
-An innate version of the same-name spell, lasting 24 hours.
+A caster-targeted, innate version of the same-name spell, lasting 24 hours.
 
 ### B. 3. 2. Smite Evil.
 
@@ -101,7 +101,7 @@ Two options for scaling Smite Evil present themselves. Scale damage and keep the
 
 ### B. 3. 3. Lay on Hands.
 
-In KR, Lay on Hands has different effects per kit gained at levels 6 and 9. In this mod, the true paladin version is used throughout and it cures poison and disease. This seems to me to be the best option, as with SR, paladins gain at spell level 3, Cure Disease, Remove Paralysis and Break Enchantment. This is subject to revision and I may end up implementing it, if only I can gather enough willpower to do it.
+In KR, Lay on Hands has different effects per kit gained at levels 6 and 9. In this mod, the true paladin version is used throughout and it cures poison and disease. This seems to me to be the best option, as with SR, paladins gain at spell level 3 Cure Disease, Remove Paralysis and Break Enchantment. This is subject to revision and I may end up implementing it, if only I can gather enough willpower to do it.
 
 ### B. 3. 4. Auras.
 
@@ -111,7 +111,7 @@ Same-type auras do not stack, fire once a round, and require no concentration to
 
 # C. Cavalier.
 
-Considerable changes from vanilla. The Cavalier now acts more like a general with fighting prowess (e.g. can attain mastery in some weapon proficiencies) and immunities to fear and charm, in exchange for one less spell per level and no access to Lay on Hands. Cavaliers get their own auras and the spellbook is made more unique, by both tailoring the deleted divine spells and the spells added.
+Considerable changes from vanilla. The Cavalier now acts more like a general with fighting prowess (e.g. can attain mastery in some weapon proficiencies) and immunities to fear and charm, in exchange for one less spell per level and no access to Lay on Hands. Cavaliers get their own auras and the spellbook is made more unique, by tailoring the deleted divine spells and adding some unique.
 
 note(s):
 * KR adds Challenge Evil ability, which I do not like and will *not* add. A version of Shield Other is added as a new spell.
@@ -124,7 +124,7 @@ note(s): all tables can be edited *before* installing the mod, but do not compla
 
 ## C. 1. Spellcasting.
 
-In comparison with (true) paladins, cavaliers gain Command, Cloak of Fear and Greater Command, but lose Miscast Magic, Holy Smite and Raise Dead. For new spells, they gain Shield of Faith at spell level 1, Shield Other and Divine Retaliation at spell level 2 and Heroism and Hold the Line at spell level 3.
+In comparison with (true class) paladins, cavaliers gain Command, Cloak of Fear and Greater Command, but lose Miscast Magic, Holy Smite and Raise Dead. For new spells, they gain Shield of Faith at spell level 1, Shield Other and Divine Retaliation at spell level 2 and Heroism and Hold the Line at spell level 3.
 
 Shield of Faith is a fighting self-buff and Shield Other is essentially Sanctuary Other. Heroism is a party buff inspired by similar named spells and Hold the Line continues the theme of physical mobility and anti-dragon fighting by giving immunity to knockback.
 
@@ -149,7 +149,7 @@ Inquisitors gain immunity to fear and charm.
 
 ## D. 2. Abilities.
 
-Dispel Magic is now Dispel Evil, an aoe Dispel Magic against evil enemies at 1.5 times the level of the caster, as in a similar SCS component [^4]. In addition they gain Banish Evil, a version of SR's banishment against evil enemies and Iron Will, a permanent bonus to save vs. spells. True Sight is also made undispellable. At level 12 gains Inquisitor's Shield, a version of Shield of the Archons. Like cavaliers, they also get their specialized auras.
+Dispel Magic is now Dispel Evil, an aoe Dispel Magic against evil enemies at 1.5 times the level of the caster, as in a similar SCS component [^4]. In addition they gain Banish Evil, a version of SR's banishment against evil enemy summons and Iron Will, a permanent bonus to save vs. spells. True Sight is also made undispellable. At level 12 gains Inquisitor's Shield, a version of Shield of the Archons. Like cavaliers, they also get their specialized auras.
 
 # E. Undead Hunter.
 
@@ -165,7 +165,7 @@ note(s): all tables can be edited *before* installing the mod (do not complain i
 
 In comparison with Paladins, Undead Hunters gain Animate Dead, but lose Miscast Magic and Holy Smite. Holy Smite has its counterpart in the Smite Undead ability -- see above.
 
-For new spells, they get Halt Undead at spell level 1 (bypasses mr), Magic Circle against Undead at spell level 2, Exorcism at spell level 3 and Animate Skeleton Warrior at spell level 4. The latter (as well as keeping Animate Dead) to lean on the duality expressed in KR's kit description of using the undead to fight the undead.
+For new spells, they get Halt Undead at spell level 1 (this version bypasses mr), Magic Circle against Undead at spell level 2, Exorcism at spell level 3 and Animate Skeleton Warrior at spell level 4. The latter (as well as keeping Animate Dead) to lean on the duality expressed in KR's kit description of using the undead to fight the undead.
 
 ## E. 2. Immunities.
 
@@ -173,7 +173,7 @@ As with KR, Undead Hunters gain immunity to paralysis and level drain.
 
 ## E. 3. Other abilities.
 
-Beyond KR, we give a bonus of +2 to Turn Undead level, gained at level 3.
+Beyond KR, we give a bonus of +2 to Turn Undead level, gained at level 3, so that Undead Hunters can turn undead as a cleric of the same level.
 
 [^1]: conceptually incompatible with [Tweaks Anthology](https://github.com/Gibberlings3/Tweaks-Anthology) component "Alter Paladin Spell Progression Table".
 

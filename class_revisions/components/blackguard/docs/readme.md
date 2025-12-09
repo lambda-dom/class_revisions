@@ -14,10 +14,13 @@ Gain immunity to fear at level 3 and immunity to poison at level 7, the latter r
 
 ## A. 2. Abilities.
 
-As for Aura of Despair, it is replaced by 3 auras, similarly to how Aura of Protection works for paladins, but entirely offensive and working on enemies. The rest of the debuffs is moved to specific Blackguard spells. Both Absorb Health and Poison Weapon, receive appropriate versions and Protection from Evil becomes Protection from Good.
+Receives specialized auras, similarly to paladins, but entirely offensive and working on enemies. The rest of the debuffs is moved to specific Blackguard spells. Both Absorb Health and Poison Weapon receive appropriate versions and Protection from Evil becomes Protection from Good.
 
 note(s):
 * for parity, add detect non-evil at will?
+
+issue(s):
+* Poison Weapon is a *new* ability so cre files of Blackguards must be patched to make the swap, and their scripts must be patched as well. Currently this is done in the main component but it will be separated into a different component to be installed after all cre adding mods. Script patching is not done yet either.
 
 ## A. 3. Spellcasting.
 
@@ -86,11 +89,11 @@ Changed self-buffs:
 Entirely new spells:
 
 * Hellscorch, a version of Druid's sunscorch at level 1.
-* Aura of Fear, level 1: a spell version of wizard's Horror.
+* Aura of Fear, level 1: a spell version of Wizard's Horror.
 * Evil Chant, level 2: a debuff on enemies. Fast casting time.
 * Evil Prayer, level 4: an improved Evil Chant, it is cumulative with it. Fast casting time.
-* Miasma Cloud, level 4: a version of wizard's Stinking Cloud, doing poison damage, disease attribute damage and half movement speed.
-* Flaming Shield, level 4: a version of wizard's Fire Shield.
+* Miasma Cloud, level 4: a version of Wizard's Stinking Cloud, doing poison damage, disease attribute damage and half movement speed.
+* Flaming Shield, level 4: a version of Wizard's Fire Shield.
 * Abyssal Rage, level 5: essentially a spell version of berserk, replacing Champion's Strength.
 
 
