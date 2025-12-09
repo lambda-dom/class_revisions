@@ -30,17 +30,17 @@ note(s):
 
 ## A. 3. Requirements.
 
-This mod is only for BG2 EE and EET. *Maybe*, the non-HLA components can also be used on BG1 EE but I have not kept track of what is needed or not from base, and I have not even checked whether it installs on bare BG1 EE. It also has [Spell Revisions](https://github.com/Gibberlings3/SpellRevisions) as a hard requirement -- it will *not* install if SR's main component is not present.
+This mod is only for IWD EE, BG2 EE and EET. *Maybe*, the non-HLA components can also be used on BG1 EE but I have not kept track of what is needed or not from base, and I have not even checked whether it installs on bare BG1 EE. It also has [Spell Revisions](https://github.com/Gibberlings3/SpellRevisions) as a hard requirement -- it will *not* install if SR's main component is not present.
 
 While it technically does not require it, [Item Revisions](https://github.com/Gibberlings3/ItemRevisions) is recommended. Playing BG without [SCS](https://www.gibberlings3.net/mods/tweaks/scs/) installed is in my view, quite pointless, even though SCS is these days a massive mod with bugs that can take quite some time to iron out; the envisioned difficulty levels are core-hardcore. Insane *may* be doable but I have not tested it or have any intentions of testing it; even more so for Legacy of Bhaal.
 
 # B. Issues.
 
-The mod is in alpha stage, because while the basic design is set there are some details still to be hashed out, especially around the Blackguard (which is why it is installed as a component separate from the main Paladin component) and the Beastmaster kits (e. g. summon stats). There is still room to add a couple more specialized spells to each kit, and Inquisitors could maybe get a few more bennies -- if you have any good idea submit an issue, but be prepared to be rejected on flimsy grounds like "vibes" and "personal taste".
+The mod is in alpha stage, because while the basic design is set there are some details still to be hashed out, especially around the Blackguard (which is why it is installed as a component separate from the main Paladin component) and the Beastmaster kits (e. g. summon stats). There is still room to add a couple more specialized spells to each kit and Inquisitors could maybe get a few more bennies -- if you have any good idea submit an issue, but be prepared to be rejected on flimsy grounds like "vibes" and "personal taste".
 
 There are also some unresolved, or potentially problematic, issues. The ones I am aware of:
 
-* Paladins and Rangers get trimmed down spellbooks with some unique additions, but these differences are not reflected in the character creation screens. I do not know how to solve this, so for now the user will have to suffer the jank.
+* Paladins and Rangers get trimmed down spellbooks with some unique additions, but these differences are not reflected in the character creation screens. I do not know how to solve this; most likely, if there is a solution, it requires UI patching which I have never done, so for now the user will have to suffer the jank.
 
 * The way the spellbooks are updated at level up is by applying an ability with a spell removal opcode. The implementation was copied from KR and uses *delayed* timing by 1 second; some early testing showed that with *instant* timing sometimes it did not work correctly. So should wait a couple of seconds after level up to get the updated spellbook.
 
@@ -52,9 +52,13 @@ There are also some unresolved, or potentially problematic, issues. The ones I a
 
 * Modder issues: currently, to make use of `spell.ids` to manage resource references, we dump all spells in the `spcl` namespace via `ADD_SPELL`, crowding it out. If this proves to be problematic (especially relevant for megamod installs), we might consider switching to some other scheme like the extended naming scheme of SCS.
 
-* Modding compatibility: my BG installs tend to be rather slim by megamod standards, so compatibility with other mods has not been extensively tested. Starting with the obvious: it is conceptually, if not technically, incompatible with any other mods that aim to do the same thing; install only the one you want or be prepared to suffer in purgatory and suffer alone. Unless there is some very cogent reason not to, I try to be as accomodating of other mods as possible, the only problem being determining who exactly is in the best place to ensure compatibility. The answer is, can only be: to be determined on a case by case basis.
+* Modding compatibility: my BG installs tend to be rather slim by megamod standards, so compatibility with other mods has not been extensively tested. Starting with the obvious: it is conceptually, if not technically, incompatible with any other mods that aim to do the same thing; install only the one you want or be prepared to suffer in purgatory and suffer alone.
 
-* I am a linux user and I do not have a Windows or Mac available and do not intend to get one; so proper testing on those OS'es will have to rely on the lab ra -- uhh, the mod users. I do not foresee any problems but one never knows; at any rate, you know the drill -- submit patches.
+The mod also does straight override, so it should be installed relatively early. Some things could be modified for patching (e. g. clab tables; will get there, eventually), but in most cases patching is so extensive that would be functionally equivalent to a straight override.
+
+Unless there is some very cogent reason not to, I try to be as accomodating of other mods as possible, the only problem being determining who exactly is in the best place to ensure compatibility. The answer is, can only be: to be determined on a case by case basis.
+
+* I am a linux user and I do not have a Windows or Mac available and do not intend to get one, so proper testing on those OS'es will have to rely on the lab ra -- uhh, the mod users. I do not foresee any problems but one never knows; at any rate, you know the drill -- submit patches.
 
 # C. Future Plans.
 

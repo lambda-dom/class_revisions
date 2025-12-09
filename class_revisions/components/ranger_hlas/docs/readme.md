@@ -11,6 +11,10 @@ In exchange for these losses it gains new ranger-appropriate HLA's.
 
 1. Improved Ambidexterity: +2 thac0 to off-hand.
 2. Toughness: +6 hps. Can be chosen 5 times.
+
+note(s):
+* These should be added to fighters as well.
+
 3. Nature's Endurance: buff combining a speed-like effect with regeneration and immunity to fatigue, unconsciousness, paralyzation and slow. Non-dispellable.
 4. Nature's Guardian: +2 Draw upon Holy Might effect (non-cumulative) and a storm shield with a retaliation aura doing electric damage. Not cumulative with storm shield.
 
@@ -48,4 +52,4 @@ Refinements gives beastmasters Animal Affinity which I do not like. Rather:
 1. A version of Nature's Endurance (and instead of it) for friendly animals and monsters. Cumulative with the beastmaster line of spells.
 2. Monster swarm: a version of elemental swarm but with animal monsters. For now: Shambling Mound, Greater Wyvern and Black Spider.
 
-The monsters are all d8 melee fighters (dvmelee script for now) with the saves of a same level ranger, immune to charm, sleep, fear, poison, web and entangle, and death and a few other bonuses.
+The monsters are all d8 melee fighters (dvmelee script for now) with the saves of a same level ranger, immune to charm, sleep, fear, poison, web and entangle, death and a few other bonuses.
