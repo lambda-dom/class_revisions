@@ -40,7 +40,7 @@ The mod is in alpha stage, because while the basic design is set there are some 
 
 There are also some unresolved, or potentially problematic, issues. The ones I am aware of:
 
-* Paladins and Rangers get trimmed down spellbooks with some unique additions, but these differences are not reflected in the character creation screens. I do not know how to solve this, so for now the user will have to suffer the jank.
+* Paladins and Rangers get trimmed down spellbooks with some unique additions, but these differences are not reflected in the character creation screens. I do not know how to solve this; most likely if there is a solution, it requires UI patching which I have never done, so for now the user will have to suffer the jank.
 
 * The way the spellbooks are updated at level up is by applying an ability with a spell removal opcode. The implementation was copied from KR and uses *delayed* timing by 1 second; some early testing showed that with *instant* timing sometimes it did not work correctly. So should wait a couple of seconds after level up to get the updated spellbook.
 
@@ -52,9 +52,13 @@ There are also some unresolved, or potentially problematic, issues. The ones I a
 
 * Modder issues: currently, to make use of `spell.ids` to manage resource references, we dump all spells in the `spcl` namespace via `ADD_SPELL`, crowding it out. If this proves to be problematic (especially relevant for megamod installs), we might consider switching to some other scheme like the extended naming scheme of SCS.
 
-* Modding compatibility: my BG installs tend to be rather slim by megamod standards, so compatibility with other mods has not been extensively tested. Starting with the obvious: it is conceptually, if not technically, incompatible with any other mods that aim to do the same thing; install only the one you want or be prepared to suffer in purgatory and suffer alone. Unless there is some very cogent reason not to, I try to be as accomodating of other mods as possible, the only problem being determining who exactly is in the best place to ensure compatibility. The answer is, can only be: to be determined on a case by case basis.
+* Modding compatibility: my BG installs tend to be rather slim by megamod standards, so compatibility with other mods has not been extensively tested. Starting with the obvious: it is conceptually, if not technically, incompatible with any other mods that aim to do the same thing; install only the one you want or be prepared to suffer in purgatory and suffer alone.
 
-* I am a linux user and I do not have a Windows or Mac available and do not intend to get one; so proper testing on those OS'es will have to rely on the lab ra -- uhh, the mod users. I do not foresee any problems but one never knows; at any rate, you know the drill -- submit patches.
+The mod also does straight override, so it should be installed relatively early. Some things could be modified for patchinmg (e. g. clab ability tables), but in most cases patching is so extensive that would be functionally equivalent to a straight override.
+
+Unless there is some very cogent reason not to, I try to be as accomodating of other mods as possible, the only problem being determining who exactly is in the best place to ensure compatibility. The answer is, can only be: to be determined on a case by case basis.
+
+* I am a linux user and I do not have a Windows or Mac available and do not intend to get one, so proper testing on those OS'es will have to rely on the lab ra -- uhh, the mod users. I do not foresee any problems but one never knows; at any rate, you know the drill -- submit patches.
 
 # C. Future Plans.
 

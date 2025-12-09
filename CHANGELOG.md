@@ -1,6 +1,8 @@
 # Changelog for `Class Revisions`
 
-## version v1.0alpha3 -- unreleased.
+## version v1.0alpha4 -- unreleased.
+
+## version v1.0alpha3.
 
 * [#28](https://github.com/lambda-dom/class_revisions/pull/28): Fix targetting in spells: Animal Fang, Animal Summoning I-IV.
 * [#31](https://github.com/lambda-dom/class_revisions/pull/31): Improve implementation of Woodland Stride.
@@ -13,7 +15,7 @@
 * [#41](https://github.com/lambda-dom/class_revisions/pull/41): Inquisitor additions.
 * [#43](https://github.com/lambda-dom/class_revisions/pull/43): Clean up of table references.
 * [#47](https://github.com/lambda-dom/class_revisions/pull/47): More fixes and code improvements.
-* [#48](https://github.com/lambda-dom/class_revisions/pull/48): Various improvements to paladin class and kits -- check the PR.
+* [#48](https://github.com/lambda-dom/class_revisions/pull/48): Various improvements to paladin class and kits -- check the PR for full details.
 
 ## version v1.0alpha2.
 
