@@ -2,7 +2,7 @@
 
 ## version v1.0alpha4 -- unreleased.
 
-* [#50](https://github.com/lambda-dom/class_revisions/pull/50): Fix typo in Blackguard HLA spells table.
+* [#50](https://github.com/lambda-dom/class_revisions/pull/50): Fix typo in Blackguard HLA spells table and logic of item table choice.
 
 ## version v1.0alpha3.
 
