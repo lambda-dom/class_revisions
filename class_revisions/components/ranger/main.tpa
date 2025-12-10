@@ -22,19 +22,19 @@ ACTION_IF (GAME_IS "eet") BEGIN
         table = "%resources%/2da/items_eet.2da"
         tra = "%tra%/items.tra"
     END
-END
-
-ACTION_IF (GAME_INCLUDES "iwd") BEGIN
-    LAF install_resources STR_VAR
-        type = "copy_item_simplified"
-        table = "%resources%/2da/items_iwd.2da"
-        tra = "%tra%/items.tra"
-    END
 END ELSE BEGIN
-    LAF install_resources STR_VAR
-        type = "copy_item_simplified"
-        table = "%resources%/2da/items_bg2ee.2da"
-        tra = "%tra%/items.tra"
+    ACTION_IF (GAME_INCLUDES "iwd") BEGIN
+        LAF install_resources STR_VAR
+            type = "copy_item_simplified"
+            table = "%resources%/2da/items_iwd.2da"
+            tra = "%tra%/items.tra"
+        END
+    END ELSE BEGIN
+        LAF install_resources STR_VAR
+            type = "copy_item_simplified"
+            table = "%resources%/2da/items_bg2ee.2da"
+            tra = "%tra%/items.tra"
+        END
     END
 END
 
