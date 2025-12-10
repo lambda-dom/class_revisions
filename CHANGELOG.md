@@ -2,6 +2,8 @@
 
 ## version v1.0alpha4 -- unreleased.
 
+* [#50](https://github.com/lambda-dom/class_revisions/pull/50): Fix typo in Blackguard HLA spells table and logic of item table choice.
+
 ## version v1.0alpha3.
 
 * [#28](https://github.com/lambda-dom/class_revisions/pull/28): Fix targetting in spells: Animal Fang, Animal Summoning I-IV.
