@@ -7,7 +7,7 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/tables.tpa"
 DEFINE_PATCH_FUNCTION compose_spellbook STR_VAR table = "" BEGIN
     LPF load_table STR_VAR
         file = "%table%"
-        fields = "spell:level:base"
+        fields = "spell,level,base"
     RET_ARRAY spells_table = table END
 
     //Loop.
