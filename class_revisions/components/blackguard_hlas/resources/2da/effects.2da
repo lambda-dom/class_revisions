@@ -1,4 +1,4 @@
 2DA V1.0
 *
-                    install opcode  target      param1  param2      param3  param4  power   timing      dur prob1   prob2   dice    size    saveflags   bonus   res_dis             special resource    resource2   resource3   projectile  school  sectype patch   over    destination
-fire_damage_2d6     1       damage  projectile  0       0x400000    *       *       0       instant     *   100     0       2       6       *           *       dispel_not_ignore   *       *           *           *           *           *       *       *       0       #suf:a:BLACKGUARD_DEMONIC_AURA
+                    install opcode  target      param1  param2          param3  param4  power   timing      dur prob1   prob2   dice    size    saveflags   bonus   res_dis             special resource    resource2   resource3   projectile  school  sectype patch   over    destination
+fire_damage_2d6     1       damage  projectile  #num:0  #num:0x400000   *       *       0       instant     *   100     0       2       6       *           *       dispel_not_ignore   *       *           *           *           *           *       *       *       0       #suf:a:BLACKGUARD_DEMONIC_AURA

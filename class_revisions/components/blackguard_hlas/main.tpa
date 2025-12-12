@@ -1,7 +1,9 @@
 //Libraries.
 INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
-INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/spell_symbols.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers/effects.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers/spells.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers/subspells.tpa"
 
 
 //Initialization.
@@ -16,21 +18,19 @@ LAF add_spell_symbols STR_VAR
 END
 
 //Install effects.
-LAF install_resources STR_VAR
-    type = "create_effect"
+LAF create_effects STR_VAR
     table = "%resources%/2da/effects.2da"
 END
 
 //Install subspells.
-LAF install_resources STR_VAR
-    type = "subspell"
+LAF clone_subspells STR_VAR
     table = "%resources%/2da/subspells.2da"
 END
 
 //Install spells.
-LAF install_resources STR_VAR
-    type = "spell"
+LAF install_spells STR_VAR
     table = "%resources%/2da/spells.2da"
+    dir = "%resources%/spl"
     tra = "%tra%/spells.tra"
     patches = "%root%/patches/spells.tpa"
 END
