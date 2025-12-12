@@ -27,7 +27,12 @@ LAF install_subcomponent STR_VAR
     subcomponent = "%root%/subcomponents/spells.tpa"
 END
 
-// //Deduplicate tables and install hlas.
-// LAF install_subcomponent STR_VAR
-//     subcomponent = "%root%/subcomponents/hla_tables.tpa"
-// END
+//Deduplicate tables and install hlas.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/hla_tables.tpa"
+END
+
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/standardize_summon_deva.tpa"
+    tra = "%tra%/deva.tra"
+END
