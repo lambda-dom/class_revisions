@@ -34,8 +34,6 @@ END
 DEFINE_ACTION_FUNCTION patch_cre_files BEGIN
     //Initialize.
     LAF get_id_from_ids STR_VAR ids = "kit" value = "blackguard" RET blackguard_id = id END
-    OUTER_SET blackguard_id = blackguard_id << 16
-
     LAF get_spell_res STR_VAR spell = "ASSASSIN_POISON" RET old_poison_weapon = resource END
     ACTION_IF ("%old_poison_weapon%" STRING_EQUAL_CASE "*") OR (NOT (FILE_EXISTS_IN_GAME "%old_poison_weapon%.spl")) BEGIN
         FAIL "patch_cres: resource for 'ASSASSIN_POISON' not found."
