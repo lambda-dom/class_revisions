@@ -1,7 +1,7 @@
 //Libraries.
 INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
-INCLUDE "%WEIDU_LIBRARY_DIR%/spell_symbols.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/installers/projectiles.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers/symbols.tpa"
 
 
 //Initialization.
@@ -11,7 +11,7 @@ LAF get_component_tra_dir RET tra = dir END
 
 
 //Install spell symbols.
-LAF add_spell_symbols STR_VAR
+LAF install_symbols STR_VAR
     table = "%resources_dir%/2da/symbols.2da"
 END
 

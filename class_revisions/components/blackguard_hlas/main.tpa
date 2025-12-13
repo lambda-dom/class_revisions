@@ -1,9 +1,9 @@
 //Libraries.
 INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
-INCLUDE "%WEIDU_LIBRARY_DIR%/spell_symbols.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/installers/effects.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/installers/spells.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/installers/subspells.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers/symbols.tpa"
 
 
 //Initialization.
@@ -13,7 +13,7 @@ LAF get_component_tra_dir RET tra = dir END
 
 
 //Install spell symbols.
-LAF add_spell_symbols STR_VAR
+LAF install_symbols STR_VAR
     table = "%resources%/2da/symbols.2da"
 END
 
@@ -23,7 +23,7 @@ LAF create_effects STR_VAR
 END
 
 //Install subspells.
-LAF clone_subspells STR_VAR
+LAF install_subspells STR_VAR
     table = "%resources%/2da/subspells.2da"
 END
 

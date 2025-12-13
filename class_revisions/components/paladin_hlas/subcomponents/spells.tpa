@@ -11,7 +11,7 @@ LAF get_component_tra_dir RET tra = dir END
 
 
 //Install subspells.
-LAF clone_subspells STR_VAR
+LAF install_subspells STR_VAR
     table = "%resources_dir%/2da/subspells.2da"
 END
 
