@@ -45,14 +45,8 @@ With this ability a Blackguard can coat <PRO_HISHER> weapons in poison. Any weap
 
 
 //Auras.
-@1300 = "Aura of Vengeance"
-@1301 = "Permanent aura inflicting -1 thac0 penalty to every enemy within range."
-
-@1310 = "Aura of Hatred"
-@1311 = "Permanent aura inflicting -1 penalty to armor class to every enemy within range."
-
-@1320 = "Aura of Despair"
-@1321 = "Permanent aura giving -1 penalty to all saves of every enemy within range."
+@1300 = "Aura of Despair"
+@1301 = "Enemies within 15 feet of the blackguard suffer -1 penalty to attack rolls. At level 14 they also suffer a penalty of -1 to armor class and at level 17 a -1 penalty to all saves."
 
 
 //New abilities.
@@ -209,9 +203,7 @@ When this spell is cast, a ray of hellish fire slants down from the sky and stri
 @10005 = "Gained +1 casting level bonus."
 @10010 = "Lost one spell per level."
 @10015 = "Gained +4 casting level bonus."
-@10100 = "Gained Aura of Vengeance."
-@10110 = "Gained Aura of Hatred."
-@10120 = "Gained Aura of Despair."
+@10100 = "Gained Aura of Despair."
 
 //Spell strings.
 @11000 = "Protected from Good"

@@ -134,34 +134,6 @@ DEFINE_PATCH_FUNCTION blackguard_poison_weapon STR_VAR destination = "*" BEGIN
     END
 END
 
-//Aura of Vengeance.
-DEFINE_PATCH_FUNCTION blackguard_aura_vengeance STR_VAR destination = "*" BEGIN
-    LPF patch_resource_reference INT_VAR
-        match_opcode = 272                  //Use Eff on condition.
-    STR_VAR
-        resource = "blackguard_aura_vengeance_a"
-        match_resource = ""
-        references = "spells"
-    END
-
-    //User information.
-    LPF add_display_string INT_VAR tra_ref = 10100 END
-END
-
-//Aura of Hatred.
-DEFINE_PATCH_FUNCTION blackguard_aura_hatred STR_VAR destination = "*" BEGIN
-    LPF patch_resource_reference INT_VAR
-        match_opcode = 272                  //Use Eff on condition.
-    STR_VAR
-        resource = "blackguard_aura_hatred_a"
-        match_resource = ""
-        references = "spells"
-    END
-
-    //User information.
-    LPF add_display_string INT_VAR tra_ref = 10110 END
-END
-
 //Aura of Despair.
 DEFINE_PATCH_FUNCTION blackguard_aura_despair STR_VAR destination = "*" BEGIN
     LPF patch_resource_reference INT_VAR
@@ -173,7 +145,7 @@ DEFINE_PATCH_FUNCTION blackguard_aura_despair STR_VAR destination = "*" BEGIN
     END
 
     //User information.
-    LPF add_display_string INT_VAR tra_ref = 10120 END
+    LPF add_display_string INT_VAR tra_ref = 10100 END
 END
 
 //Aid from Hell.

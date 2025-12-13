@@ -6,7 +6,7 @@ Advantages:
 - May use the Absorb Health ability once per day, starting at level 1. At level 10 gains a second use.
 - May use the Poison Weapon ability once per day. Gains one use at level 1, one use at level 5, and an additional use every 5 levels thereafter, for a maximum of 5 uses at level 20.
 - At level 5 gains the ability to cast divine spells as a cleric of the same level, but from a smaller spellbook with unique spells.
-- At level 11 gains Aura of Vengeance, at level 14 gains Aura of Hatred and at level 17 gains Aura of Despair.
+- At level 11 gains Aura of Despair.
 
 Disadvantages:
 - Alignment restricted to evil.
@@ -18,12 +18,5 @@ Deals 2 points of damage per level to an enemy, to a maximum of 40 at level 20, 
 Poison Weapon
 Each successful hit within the next 5 rounds will inject poison into the target. Each target can only be affected once per round. The amount of poison damage depends on the character's level.
 
-Aura of Vengeance:
-Enemies within 15 feet of the blackguard suffer -1 penalty to attack rolls.
-
-Aura of Hatred:
-Enemies within 15 feet of the blackguard suffer a -1 penalty to armor class.
-
 Aura of Despair:
-Enemies within 15 feet of the blackguard suffer a -1 penalty to all saves.
-"
+Enemies within 15 feet of the blackguard suffer -1 penalty to attack rolls. At level 14 they also suffer a penalty of -1 to armor class and at level 17 a -1 penalty to all saves."
