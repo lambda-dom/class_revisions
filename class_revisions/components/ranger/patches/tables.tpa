@@ -4,9 +4,12 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/kits.tpa"
 
 
+//Initialize.
+LAF get_component_resources_dir RET resources = dir END
+
 //Get reference tables.
 LAF load_table_references STR_VAR
-    tables = "ranger_spells"
+    table = "%resources%/2da/ranger_spells.2da"
 RET_ARRAY ranger_spells = references END
 
 
@@ -37,11 +40,11 @@ DEFINE_PATCH_FUNCTION make_table_replacements_archer STR_VAR destination = "*" B
     END
 
     LPF load_table_references STR_VAR
-        tables = "archer_spells"
+        table = "%resources_dir%/2da/archer_spells.2da"
     RET_ARRAY archer_spells = references END
 
     LPF merge_arrays STR_VAR
-        arrays  = "ranger_spells|archer_spells"
+        arrays  = "ranger_spells,archer_spells"
     RET_ARRAY spells = array END
 
     LPF make_clab_replacements STR_VAR table = "spells" END
@@ -59,11 +62,11 @@ DEFINE_PATCH_FUNCTION make_table_replacements_stalker STR_VAR destination = "*" 
     END
 
     LPF load_table_references STR_VAR
-        tables = "stalker_spells"
+        table = "%resources_dir%/2da/stalker_spells.2da"
     RET_ARRAY stalker_spells = references END
 
     LPF merge_arrays STR_VAR
-        arrays  = "ranger_spells|stalker_spells"
+        arrays  = "ranger_spells,stalker_spells"
     RET_ARRAY spells = array END
 
     LPF make_clab_replacements STR_VAR table = "spells" END
@@ -81,11 +84,11 @@ DEFINE_PATCH_FUNCTION make_table_replacements_beastmaster STR_VAR destination = 
     END
 
     LPF load_table_references STR_VAR
-        tables = "beastmaster_spells"
+        table = "%resources_dir%/2da/beastmaster_spells.2da"
     RET_ARRAY beastmaster_spells = references END
 
     LPF merge_arrays STR_VAR
-        arrays  = "ranger_spells|beastmaster_spells"
+        arrays  = "ranger_spells,beastmaster_spells"
     RET_ARRAY spells = array END
 
     LPF make_clab_replacements STR_VAR table = "spells" END

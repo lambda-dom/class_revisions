@@ -1,7 +1,11 @@
 //Libraries.
 INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
-INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/spell_symbols.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers/creatures.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers/effects.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers/items.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers/subspells.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers/tables.tpa"
 
 
 //Initialization.
@@ -17,51 +21,41 @@ END
 
 //Install items.
 ACTION_IF (GAME_IS "eet") BEGIN
-    LAF install_resources STR_VAR
-        type = "copy_item_simplified"
+    LAF install_items STR_VAR
         table = "%resources%/2da/items_eet.2da"
+        dir = "%resources%/itm"
         tra = "%tra%/items.tra"
     END
 END ELSE BEGIN
-    ACTION_IF (GAME_INCLUDES "iwd") BEGIN
-        LAF install_resources STR_VAR
-            type = "copy_item_simplified"
-            table = "%resources%/2da/items_iwd.2da"
-            tra = "%tra%/items.tra"
-        END
-    END ELSE BEGIN
-        LAF install_resources STR_VAR
-            type = "copy_item_simplified"
-            table = "%resources%/2da/items_bg2ee.2da"
-            tra = "%tra%/items.tra"
-        END
+    LAF install_items STR_VAR
+        table = "%resources%/2da/items_bg2ee.2da"
+        dir = "%resources%/itm"
+        tra = "%tra%/items.tra"
     END
 END
 
 //Install cres.
-LAF install_resources STR_VAR
-    type = "creature"
+LAF install_creatures STR_VAR
     table = "%resources%/2da/creatures.2da"
+    dir = "%resources%/cre"
     tra = "%tra%/creatures.tra"
     patches = "%root%/patches/creatures.tpa"
 END
 
 //Install subspells.
-LAF install_resources STR_VAR
-    type = "subspell"
+LAF clone_subspells STR_VAR
     table = "%resources%/2da/subspells.2da"
 END
 
 //Install effects.
-LAF install_resources STR_VAR
-    type = "create_effect"
+LAF create_effects STR_VAR
     table = "%resources%/2da/effects.2da"
 END
 
 //Install select tables for spells.
-LAF install_resources STR_VAR
-    type = "table"
+LAF install_tables STR_VAR
     table = "%resources%/2da/select.2da"
+    dir = "%resources%/2da"
     patches = "%root%/patches/select.tpa"
 END
 

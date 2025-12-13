@@ -55,7 +55,7 @@ END
 DEFINE_ACTION_FUNCTION gather_ranger_spell_levels RET_ARRAY array BEGIN
     ACTION_DEFINE_ASSOCIATIVE_ARRAY array BEGIN END
 
-    COPY - "%MOD_FOLDER%/components/%COMPONENT%/resources/2da/ranger_spell_progression.2da" "weidu_external/%MOD_FOLDER%"
+    COPY - "%MOD_FOLDER%/components/%COMPONENT_NAME%/resources/2da/ranger_spell_progression.2da" "weidu_external/data/%MOD_FOLDER%"
         COUNT_2DA_COLS cols
         COUNT_2DA_ROWS cols row_count
 
@@ -80,7 +80,7 @@ DEFINE_ACTION_FUNCTION gather_druid_spells RET_ARRAY array BEGIN
     //Initialize array.
     ACTION_DEFINE_ASSOCIATIVE_ARRAY array BEGIN END
 
-    COPY_EXISTING - "spell.ids" "weidu_external/%MOD_FOLDER%/%COMPONENT%"
+    COPY_EXISTING - "spell.ids" "weidu_external/data/%MOD_FOLDER%/%COMPONENT_NAME%/"
         COUNT_2DA_ROWS 2 rows
         //Loop.
         FOR (i = 0; i < rows; ++i) BEGIN

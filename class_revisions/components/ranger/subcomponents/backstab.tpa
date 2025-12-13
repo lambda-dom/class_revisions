@@ -1,9 +1,12 @@
 //Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/arrays.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/kits.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/spells.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/tables.tpa"
 
+
+//Action functions.
 DEFINE_ACTION_FUNCTION patch_backstab_table STR_VAR kit = "" table = "" dir = "*" BEGIN
     ACTION_IF ("%dir%" STRING_EQUAL_CASE "*") BEGIN
         LAF get_component_resources_dir RET dir END
