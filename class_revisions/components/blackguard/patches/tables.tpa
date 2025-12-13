@@ -12,23 +12,22 @@ DEFINE_PATCH_FUNCTION make_table_replacements STR_VAR destination = "*" BEGIN
         resources_dir = dir
     END
 
-    //Get reference tables.
-    LPF load_table_references STR_VAR
-        tables = "spells"
-        dir = "%MOD_FOLDER%/components/paladin/resources/2da"
-    RET_ARRAY paladin_spells = references END
-
-    LPF load_table_references STR_VAR
-        tables = "spells"
-    RET_ARRAY blackguard_spells = references END
-
     LPF add_new_spells_clab STR_VAR
         kit = "blackguard"
         table = "%resources_dir%/2da/blackguard_new_spells.2da"
     END
 
+    //Get reference tables.
+    LPF load_table_references STR_VAR
+        table = "%MOD_FOLDER%/components/paladin/resources/2da/spells.2da"
+    RET_ARRAY paladin_spells = references END
+
+    LPF load_table_references STR_VAR
+        table = "%resources_dir%/2da/spells.2da"
+    RET_ARRAY blackguard_spells = references END
+
     LPF merge_arrays STR_VAR
-        arrays  = "paladin_spells|blackguard_spells"
+        arrays  = "paladin_spells,blackguard_spells"
     RET_ARRAY spells = array END
 
     LPF make_clab_replacements STR_VAR table = "spells" END

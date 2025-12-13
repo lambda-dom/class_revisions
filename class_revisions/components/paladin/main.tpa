@@ -1,7 +1,9 @@
 //Libraries.
 INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
-INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
-INCLUDE "%WEIDU_LIBRARY_DIR%/spell_symbols.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers/effects.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers/icons.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers/projectiles.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers/symbols.tpa"
 
 
 //Initialization.
@@ -12,30 +14,29 @@ LAF get_component_tra_dir RET tra = dir END
 
 //Install spell symbols.
 ACTION_IF (GAME_IS "iwdee") BEGIN
-    LAF add_spell_symbols STR_VAR
+    LAF install_symbols STR_VAR
         table = "%resources%/2da/symbols-ee.2da"
     END
 END ELSE BEGIN
-    LAF add_spell_symbols STR_VAR
+    LAF install_symbols STR_VAR
         table = "%resources%/2da/symbols.2da"
     END
 END
 
 //Install icons.
-LAF install_resources STR_VAR
-    type = "icon"
+LAF install_icons STR_VAR
     table = "%resources%/2da/icons.2da"
+    dir = "%resources%/bam"
 END
 
 //Install projectiles.
-LAF install_resources STR_VAR
-    type = "add_projectile"
+LAF add_projectiles STR_VAR
     table = "%resources%/2da/projectiles.2da"
+    dir = "%resources%/pro"
 END
 
 //Install effects.
-LAF install_resources STR_VAR
-    type = "create_effect"
+LAF create_effects STR_VAR
     table = "%resources%/2da/effects.2da"
 END
 

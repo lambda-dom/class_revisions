@@ -3,9 +3,12 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/2da.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
 
 
+//Initialize.
+LAF get_component_resources_dir RET resources = dir END
+
 //Load tables.
 LAF load_table_references STR_VAR
-    tables = "ranger_spells"
+    table = "%resources%/2da/ranger_spells.2da"
 RET_ARRAY spells = references END
 
 

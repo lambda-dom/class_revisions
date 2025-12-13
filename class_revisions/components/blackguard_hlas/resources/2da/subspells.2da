@@ -1,4 +1,4 @@
 2DA V1.0
 *
-                            install subspell    name    descr   arg1    arg2    arg3    school  sectype patch   override    destination
-demonic_wrath_knockback     1       knockback   *       *       1       10      *       *       *       *       0           #suf:a:BLACKGUARD_DEMONIC_WRATH
+                            install subspell    arg1    arg2    arg3    school  sectype patch   override    destination
+demonic_wrath_knockback     1       knockback   1       10      *       *       *       *       0           #suf:a:BLACKGUARD_DEMONIC_WRATH

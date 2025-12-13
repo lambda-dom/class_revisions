@@ -1,9 +1,10 @@
 2DA V1.0
 *
-                        install name    descr   type            proficiency flags       i_icon          g_icon          d_icon          stack   weight  enchant patch                   over    destination
-shambling_mound_fists   1       1000    *       misc            *           0010000000  *               *               *               1       0       2       shambling_mound_fists   0       #suf:a:BEASTMASTER_MONSTER_SWARM
-shambling_mound_ring    1       *       *       ring            *           0000000000  *               *               *               1       0       0       *                       0       #suf:d:BEASTMASTER_MONSTER_SWARM
-wyvern_bite             1       1010    *       misc            *           0010000000  *               *               *               1       0       2       wyvern_bite             0       #suf:b:BEASTMASTER_MONSTER_SWARM
-wyvern_head             1       *       *       helmet          *           0000000000  #lit:imisc52    #lit:gsack01    #lit:cmisc52    1       0       0       *                       0       #suf:e:BEASTMASTER_MONSTER_SWARM
-black_spider_sting      1       1020    *       misc            *           0010000000  *               *               *               1       0       1       black_spider_sting      0       #suf:c:BEASTMASTER_MONSTER_SWARM
-black_spider_ring       1       *       *       ring            *           0000000000  *               *               *               1       0       0       *                       0       #suf:f:BEASTMASTER_MONSTER_SWARM
+
+                        install name    descr   i_name  i_descr type    proficiency flags       i_icon          g_icon          d_icon          price   stack   lore    weight  enchant patch                   over    destination
+shambling_mound_fists   1       1000    *       *       *       misc    *           0010000000  *               *               *               0       1       0       0       2       shambling_mound_fists   0       #suf:a:BEASTMASTER_MONSTER_SWARM
+shambling_mound_ring    1       *       *       *       *       ring    *           0000000000  *               *               *               0       1       0       0       0       *                       0       #suf:d:BEASTMASTER_MONSTER_SWARM
+wyvern_bite             1       1010    *       *       *       misc    *           0010000000  *               *               *               0       1       0       0       2       wyvern_bite             0       #suf:b:BEASTMASTER_MONSTER_SWARM
+wyvern_head             1       *       *       *       *       helmet  *           0000000000  #lit:imisc52    #lit:gsack01    #lit:cmisc52    0       1       0       0       0       *                       0       #suf:e:BEASTMASTER_MONSTER_SWARM
+black_spider_sting      1       1020    *       *       *       misc    *           0010000000  *               *               *               0       1       0       0       1       black_spider_sting      0       #suf:c:BEASTMASTER_MONSTER_SWARM
+black_spider_ring       1       *       *       *       *       ring    *           0000000000  *               *               *               0       1       0       0       0       *                       0       #suf:f:BEASTMASTER_MONSTER_SWARM

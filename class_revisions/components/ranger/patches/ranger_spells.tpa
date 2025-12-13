@@ -9,17 +9,20 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/spells.tpa"
 INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
 
 
+//Initialize.
+LAF get_component_resources_dir RET resources = dir END
+
 //Reference tables.
 LAF load_table_references STR_VAR
-    tables = "effects"
+    table = "%resources%/2da/effects.2da"
 RET_ARRAY effects = references END
 
 LAF load_table_references STR_VAR
-    tables = "ranger_spells"
+    table = "%resources%/2da/ranger_spells.2da"
 RET_ARRAY spells = references END
 
 LAF load_table_references STR_VAR
-    tables = "subspells"
+    table = "%resources%/2da/subspells.2da"
 RET_ARRAY subspells = references END
 
 

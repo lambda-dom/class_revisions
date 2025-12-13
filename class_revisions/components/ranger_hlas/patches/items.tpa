@@ -1,11 +1,15 @@
 //Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
 
 
+//Initialize.
+LAF get_component_resources_dir RET resources = dir END
+
 //Get reference tables.
 LAF load_table_references STR_VAR
-    tables = "subspells"
+    table = "%resources%/2da/subspells.2da"
 RET_ARRAY subspells = references END
 
 

@@ -260,7 +260,7 @@ This ability also grants protection from spells cast from scrolls and innate spe
 Level: 1
 School: Necromancy
 Range: Personal
-Duration: 1 turn
+Duration: 5 turns
 Casting Time: 1
 Area of Effect: Caster
 Saving Throw: None
@@ -272,10 +272,10 @@ For the duration of the spell, the Undead Hunter has a bonus of +2 to thac0 and 
 Level: 1
 School: Necromancy
 Range: Long
-Duration: Special
+Duration: Instant
 Casting Time: 3
 Area of Effect: 20' radius
-Saving Throw: Special
+Saving Throw: Spell half
 
 With this spell the Undead Hunter draws down holy power to smite the undead. Undead creatures within the area of effect take 12d4 points of magic damage, with a successful saving throw vs. spell for half at a penalty of -2. Magic resistance does not affect this ability."
 

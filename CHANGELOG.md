@@ -1,10 +1,6 @@
 # Changelog for `Class Revisions`
 
-## version v1.0alpha4 -- unreleased.
-
-* [#50](https://github.com/lambda-dom/class_revisions/pull/50): Fix typo in Blackguard HLA spells table and logic of item table choice.
-
-## version v1.0alpha3.
+## version v1.0alpha3 -- unreleased.
 
 * [#28](https://github.com/lambda-dom/class_revisions/pull/28): Fix targetting in spells: Animal Fang, Animal Summoning I-IV.
 * [#31](https://github.com/lambda-dom/class_revisions/pull/31): Improve implementation of Woodland Stride.
@@ -18,6 +14,8 @@
 * [#43](https://github.com/lambda-dom/class_revisions/pull/43): Clean up of table references.
 * [#47](https://github.com/lambda-dom/class_revisions/pull/47): More fixes and code improvements.
 * [#48](https://github.com/lambda-dom/class_revisions/pull/48): Various improvements to paladin class and kits -- check the PR for full details.
+* [#50](https://github.com/lambda-dom/class_revisions/pull/50): Fix typo in Blackguard HLA spells table and logic of item table choice.
+* [#51](https://github.com/lambda-dom/class_revisions/pull/51): Update to weidu_library new standards.
 
 ## version v1.0alpha2.
 
