@@ -3,13 +3,13 @@
                                 install type    level   patch
 RANGER_AMBIDEXTERITY            1       class   7       *
 RANGER_TOUGHNESS                1       class   7       *
-RANGER_NATURE_ENDURANCE         1       innate  7       *
-RANGER_NATURE_GUARDIAN          1       innate  7       *
+RANGER_NATURE_ENDURANCE         1       class   7       *
+RANGER_NATURE_GUARDIAN          1       class   7       *
 ARCHER_IMPROVED_RANGED_CRITICAL 1       class   7       *
-ARCHER_PRECISION                1       innate  7       *
-ARCHER_FLURRY_ARROWS            1       innate  7       *
+ARCHER_PRECISION                1       class   7       *
+ARCHER_FLURRY_ARROWS            1       class   7       *
 STALKER_IMPROVED_SPELLBOOK      1       class   7       *
 STALKER_EXTRA_SPELLS            1       class   7       *
 STALKER_BACKSTAB_BONUS          1       class   7       *
-BEASTMASTER_NATURE_POWER        1       innate  7       *
-BEASTMASTER_MONSTER_SWARM       1       innate  7       *
+BEASTMASTER_NATURE_POWER        1       class   7       *
+BEASTMASTER_MONSTER_SWARM       1       class   7       *
