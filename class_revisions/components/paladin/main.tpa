@@ -4,8 +4,6 @@ INCLUDE "%WEIDU_LIBRARY_DIR%/installers/effects.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/installers/icons.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/installers/projectiles.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/installers/symbols.tpa"
-//Mod libraries.
-INCLUDE "%MOD_FOLDER%/lib/list_spcl.tpa"
 
 
 //Initialization.
@@ -15,57 +13,45 @@ LAF get_component_tra_dir RET tra = dir END
 
 
 //Install spell symbols.
-ACTION_IF (GAME_IS "iwdee") BEGIN
-    LAF install_symbols STR_VAR
-        table = "%resources%/2da/symbols-ee.2da"
-    END
-
-    //List spcl's.
-    LAF list_spcl RET_ARRAY spcl_holes = holes END
-    ACTION_PHP_EACH "spcl_holes" AS index => string BEGIN
-        PRINT "main: spcl hole at index '%index%' with assign symbol '%string%'."
-    END
-END ELSE BEGIN
-    LAF install_symbols STR_VAR
-        table = "%resources%/2da/symbols.2da"
-    END
+LAF install_symbols STR_VAR
+    table = "%resources%/2da/symbols.2da"
 END
 
-// //Install icons.
-// LAF install_icons STR_VAR
-//     table = "%resources%/2da/icons.2da"
-//     dir = "%resources%/bam"
-// END
-// 
-// //Install projectiles.
-// LAF add_projectiles STR_VAR
-//     table = "%resources%/2da/projectiles.2da"
-//     dir = "%resources%/pro"
-// END
-// 
-// //Install effects.
-// LAF create_effects STR_VAR
-//     table = "%resources%/2da/effects.2da"
-// END
-// 
-// //Install spells.
-// //In its own component to force reloading of ids files.
-// LAF install_subcomponent STR_VAR
-//     subcomponent = "%root%/subcomponents/spells.tpa"
-// END
-// 
-// //Install ability tables.
-// LAF install_subcomponent STR_VAR
-//     subcomponent = "%root%/subcomponents/tables.tpa"
-// END
-// 
-// //Patch proficiencies.
-// LAF install_subcomponent STR_VAR
-//     subcomponent = "%root%/subcomponents/proficiencies.tpa"
-// END
-// 
-// //Patch descriptions.
-// LAF install_subcomponent STR_VAR
-//     subcomponent = "%root%/subcomponents/descriptions.tpa"
-//     tra = "%tra%/kits.tra"
-// END
+//Install icons.
+LAF install_icons STR_VAR
+    table = "%resources%/2da/icons.2da"
+    dir = "%resources%/bam"
+END
+
+//Install projectiles.
+LAF add_projectiles STR_VAR
+    table = "%resources%/2da/projectiles.2da"
+    dir = "%resources%/pro"
+END
+
+//Install effects.
+LAF create_effects STR_VAR
+    table = "%resources%/2da/effects.2da"
+END
+
+//Install spells.
+//In its own component to force reloading of ids files.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/spells.tpa"
+END
+
+//Install ability tables.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/tables.tpa"
+END
+
+//Patch proficiencies.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/proficiencies.tpa"
+END
+
+//Patch descriptions.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/descriptions.tpa"
+    tra = "%tra%/kits.tra"
+END
