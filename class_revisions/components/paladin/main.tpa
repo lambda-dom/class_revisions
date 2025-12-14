@@ -13,8 +13,14 @@ LAF get_component_tra_dir RET tra = dir END
 
 
 //Install spell symbols.
-LAF install_symbols STR_VAR
-    table = "%resources%/2da/symbols.2da"
+ACTION_IF (GAME_IS "iwdee") BEGIN
+    LAF install_symbols STR_VAR
+        table = "%resources%/2da/symbols-ee.2da"
+    END
+END ELSE BEGIN
+    LAF install_symbols STR_VAR
+        table = "%resources%/2da/symbols-ee.2da"
+    END
 END
 
 //Install icons.

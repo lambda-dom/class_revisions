@@ -20,7 +20,7 @@ LANGUAGE "English" "english" "%MOD_FOLDER%/languages/english/main.tra"
 //Components.
 BEGIN @1 DESIGNATED 1
 LABEL "lambda_dom-class_revisions-paladin"
-REQUIRE_PREDICATE (GAME_IS "bg2ee eet") @100
+REQUIRE_PREDICATE (GAME_IS "bg2ee eet iwdee") @100
 REQUIRE_PREDICATE (MOD_IS_INSTALLED "spell_rev.tp2" 0) @151
 LAF install_component STR_VAR COMPONENT_NAME = "paladin" END
 
@@ -34,7 +34,7 @@ LAF install_component STR_VAR COMPONENT_NAME = "paladin_hlas" END
 
 BEGIN @3 DESIGNATED 3
 LABEL "lambda_dom-class_revisions-blackguard"
-REQUIRE_PREDICATE (GAME_IS "bg2ee eet") @100
+REQUIRE_PREDICATE (GAME_IS "bg2ee eet iwdee") @100
 REQUIRE_PREDICATE (MOD_IS_INSTALLED "spell_rev.tp2" 0) @151
 REQUIRE_PREDICATE (MOD_IS_INSTALLED "class_revisions.tp2" (ID_OF_LABEL "class_revisions.tp2" "lambda_dom-class_revisions-paladin")) @150
 LAF install_component STR_VAR COMPONENT_NAME = "blackguard" END
@@ -51,7 +51,7 @@ LAF install_component STR_VAR COMPONENT_NAME = "blackguard_hlas" END
 
 BEGIN @5 DESIGNATED 5
 LABEL "lambda_dom-class_revisions-ranger"
-REQUIRE_PREDICATE (GAME_IS "bg2ee eet") @100
+REQUIRE_PREDICATE (GAME_IS "bg2ee eet iwdee") @100
 REQUIRE_PREDICATE (MOD_IS_INSTALLED "spell_rev.tp2" 0) @151
 LAF install_component STR_VAR COMPONENT_NAME = "ranger" END
 
