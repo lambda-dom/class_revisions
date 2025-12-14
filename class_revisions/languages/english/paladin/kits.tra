@@ -19,7 +19,7 @@ Class features:
 - At level 3 can use Lay on Hands once per day. For every 3 levels, the ability can be used an additional time per day to a maximum of 5 uses at level 15. This ability improves at levels 6 and 9.
 - At level 4 gains the ability to cast priestly spells like a Cleric of the same level, but from a smaller spellbook.
 - At level 7 gains an additional half attack per round. This increases to a whole attack per round at 13th level.
-- At level 11 gains Aura of Protection, at level 14 gains Aura of Hope and at level 17 gains Aura of Faith.
+- At level 11 gains Aura of Hope.
 
 Smite Evil:
 During the round when this ability is activated the paladin gains +2 bonus to attack rolls, and any melee hit against an evil creature causes 1d6 additional points of magic damage. For every 4 levels, the additional damage increases by 1d6, up to 5d6 at level 16.
@@ -27,14 +27,8 @@ During the round when this ability is activated the paladin gains +2 bonus to at
 Lay on Hands:
 Heals a target for 2 hit points per level of the paladin, up to 40 hit points per use at 20th level. At 6th level, it also cures the target from any disease. At 9th level, it also neutralizes poison effects.
 
-Aura of Protection:
-Evil creatures within 15 feet of the paladin suffer -1 penalty to attack rolls.
-
 Aura of Hope:
-Evil creatures within 15 feet of the paladin suffer -1 penalty to damage rolls.
-
-Aura of Faith:
-All allies within 15 feet of the paladin gain a +1 bonus to all saves.
+Evil creatures within 15 feet of the paladin suffer -1 penalty to attack rolls. At level 14, it also inflicts a penalty of -1 to damage rolls on every evil enemy within range and at level 17 grants a bonus of +1 to all saves of every ally within range.
 "
 
 @1010 = "CAVALIER: While many warriors strive to perfect their art, spending all of their time honing their skill at martial arms, others spend as much effort dedicating themselves to a cause. These warriors, known as cavaliers, swear themselves to a purpose, serving it above all else. The cavalier represents the most common picture of the knight; the gentleman warrior who epitomises honour, courage and loyalty. The cavalier's true power comes from the conviction of his ideals, the oaths that he swears, and the challenges he makes. When all seems lost, the cavalier is a beacon of hope who continues to fight on despite the odds. No cause is yet lost when a cavalier still battles on its name.

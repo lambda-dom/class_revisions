@@ -79,15 +79,8 @@ Saving Throw: None
 During the round when this ability is activated the Paladin gains +2 bonus to attack rolls against evil creatures, and any melee hit against an evil creature inflicts 1d6 additional points of magic damage. For every 4 levels, the damage done increases by 1d6, up to a maximum of 5d6 at 16th level."
 
 //Auras.
-@1400 = "Aura of Protection"
-@1401 = "Permanent aura inflicting -1 thac0 penalty to every enemy within range."
-
-@1410 = "Aura of Hope"
-@1411 = "Permanent aura inflicting -1 penalty to damage rolls to every enemy within range."
-
-@1420 = "Aura of Faith"
-@1421 = "Permanent aura giving +1 bonus to all saves of every ally within range."
-
+@1400 = "Aura of Hope"
+@1401 = "Permanent aura inflicting -1 thac0 penalty to every evil enemy within range. At level 14, it also inflicts a penalty of -1 to damage rolls on every evil enemy within range and at level 17 grants a bonus of +1 to all saves of every ally within range."
 
 //Cavalier abilities.
 @2000 = "Cavalier Spellbook"
@@ -338,9 +331,7 @@ High-level Undead Hunters can use their necromantic powers to seek out and destr
 @10040 = "Gained immunity to charm."
 @10050 = "Gained immunity to paralysis."
 @10060 = "Gained immunity to confusion."
-@10100 = "Gained Aura of Protection."
-@10110 = "Gained Aura of Hope."
-@10120 = "Gained Aura of Faith."
+@10100 = "Gained Aura of Hope."
 
 //Cavalier ability gaining strings.
 @11000 = "Gained specialization in Sword and Shield style."

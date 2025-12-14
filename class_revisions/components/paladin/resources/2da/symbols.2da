@@ -10,9 +10,7 @@ PALADIN_CASTING_INITIAL_LEVEL               1       class   1       *
 PALADIN_CASTING_LEVEL_BONUS                 1       class   1       *
 PALADIN_SPELL_PENALTY                       1       class   1       *
 PALADIN_SPELLBOOK                           1       class   1       *
-PALADIN_AURA_PROTECTION                     1       class   1       *
 PALADIN_AURA_HOPE                           1       class   1       *
-PALADIN_AURA_FAITH                          1       class   1       *
 PALADIN_SMITE_EVIL                          1       class   1       *
 CAVALIER_SPELLBOOK                          1       class   1       *
 CAVALIER_SHIELD_SPECIALIZATION              1       class   1       *

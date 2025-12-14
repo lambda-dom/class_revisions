@@ -100,17 +100,16 @@ DEFINE_PATCH_FUNCTION paladin_smite_evil STR_VAR destination = "*" BEGIN
 END
 
 //Auras.
-DEFINE_PATCH_FUNCTION paladin_aura_protection STR_VAR destination = "*" BEGIN
-    LPF patch_resource_reference INT_VAR
-        match_opcode = 272                  //Use eff on condition.
-    STR_VAR
-        resource = "paladin_aura_protection_a"
-        match_resource = ""
-        references = "effects"
+DEFINE_PATCH_FUNCTION paladin_aura_hope_a STR_VAR destination = "*" BEGIN
+    FOR (i = i; i <= 3; ++i) BEGIN
+        LPF patch_resource_reference INT_VAR
+            match_opcode = 177              //Use eff.
+        STR_VAR
+            resource = "paladin_aura_hope_%i%"
+            match_resource = "eff%i%#res"
+            references = "effects"
+        END
     END
-
-    //User information.
-    LPF add_display_string INT_VAR tra_ref = 10100 END
 END
 
 DEFINE_PATCH_FUNCTION paladin_aura_hope STR_VAR destination = "*" BEGIN
@@ -123,20 +122,7 @@ DEFINE_PATCH_FUNCTION paladin_aura_hope STR_VAR destination = "*" BEGIN
     END
 
     //User information.
-    LPF add_display_string INT_VAR tra_ref = 10110 END
-END
-
-DEFINE_PATCH_FUNCTION paladin_aura_faith STR_VAR destination = "*" BEGIN
-    LPF patch_resource_reference INT_VAR
-        match_opcode = 272                  //Use eff on condition.
-    STR_VAR
-        resource = "paladin_aura_faith_a"
-        match_resource = ""
-        references = "effects"
-    END
-
-    //User information.
-    LPF add_display_string INT_VAR tra_ref = 10120 END
+    LPF add_display_string INT_VAR tra_ref = 10100 END
 END
 
 //Cavalier abilities and spells.
