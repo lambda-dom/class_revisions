@@ -5,7 +5,7 @@ RANGER_CASTING_INITIAL_LEVEL            1       class   1       *
 RANGER_CASTING_LEVEL_BONUS              1       class   1       *
 RANGER_SPELLBOOK                        1       class   1       *
 RANGER_WOODLAND_STRIDE                  1       class   1       *
-RANGER_QUARRY                           1       class   2       *
+RANGER_QUARRY                           1       innate  2       *
 RANGER_BLADES_FIRE                      1       priest  1       *
 RANGER_SNARE                            1       priest  2       *
 RANGER_SWIFT_HASTE                      1       priest  3       *
@@ -22,12 +22,12 @@ STALKER_SHADOW_STEP                     1       priest  4       *
 CLERIC_PROTECTION_RANGER_LEVEL_BONUS    1       class   1       *
 CLERIC_REMOVE_RANGER_LEVEL_BONUS        1       class   1       *
 BEASTMASTER_SPELLBOOK                   1       class   1       *
-BEASTMASTER_ANIMAL_COMPANION            1       class   1       *
+BEASTMASTER_ANIMAL_COMPANION            1       innate  1       *
 BEASTMASTER_ANIMAL_HARMONY              1       priest  1       *
 BEASTMASTER_ANIMAL_FANG                 1       priest  2       *
 BEASTMASTER_ANIMAL_GROWTH               1       priest  3       *
 BEASTMASTER_ANIMAL_FURY                 1       priest  4       *
-BEASTMASTER_ANIMAL_SUMMON_1             1       class   1       *
-BEASTMASTER_ANIMAL_SUMMON_2             1       class   2       *
-BEASTMASTER_ANIMAL_SUMMON_3             1       class   3       *
-BEASTMASTER_ANIMAL_SUMMON_4             1       class   4       *
+BEASTMASTER_ANIMAL_SUMMON_1             1       innate  1       *
+BEASTMASTER_ANIMAL_SUMMON_2             1       innate  2       *
+BEASTMASTER_ANIMAL_SUMMON_3             1       innate  3       *
+BEASTMASTER_ANIMAL_SUMMON_4             1       innate  4       *

@@ -4,7 +4,7 @@
 BLACKGUARD_SPELLBOOK                1       class   1       *
 BLACKGUARD_IMMUNITY_POISON          1       class   1       *
 BLACKGUARD_IMMUNITY_FEAR            1       class   1       *
-BLACKGUARD_POISON_WEAPON            1       class   1       *
+BLACKGUARD_POISON_WEAPON            1       innate  1       *
 BLACKGUARD_AURA_DESPAIR             1       class   1       *
 BLACKGUARD_PROTECTION_GOOD          1       priest  1       *
 BLACKGUARD_HELLSCORCH               1       priest  1       *
