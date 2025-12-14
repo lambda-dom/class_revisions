@@ -1,0 +1,25 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/ids.tpa"
+
+
+DEFINE_ACTION_FUNCTION list_spcl INT_VAR level = 1 start = 0 RET_ARRAY holes BEGIN
+    //Sanitize.
+    ACTION_IF NOT ((1 <= level) AND (level <= 9)) BEGIN
+        FAIL "list_spcl: level '%level%' not in the range [1,9]."
+    END
+
+    ACTION_DEFINE_ASSOCIATIVE_ARRAY holes BEGIN END
+
+    OUTER_FOR (i = start; i < 100; ++i) BEGIN
+        OUTER_TEXT_SPRINT index "%i%"
+        ACTION_IF (1 = STRING_LENGTH "%index%") BEGIN
+            OUTER_TEXT_SPRINT index "0%index%"
+        END
+
+        ACTION_IF NOT (FILE_EXISTS_IN_GAME "spcl%level%%index%.spl") BEGIN
+            OUTER_TEXT_SPRINT num_id "4%level%%index%"
+            LAF get_ids_from_id INT_VAR id = num_id STR_VAR ids = "spell" RET symbol = value END
+            OUTER_TEXT_SPRINT $"holes"("%index%") "%symbol%"
+        END
+    END
+END

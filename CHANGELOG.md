@@ -15,7 +15,8 @@
 * [#47](https://github.com/lambda-dom/class_revisions/pull/47): More fixes and code improvements.
 * [#48](https://github.com/lambda-dom/class_revisions/pull/48): Various improvements to paladin class and kits -- check the PR for full details.
 * [#50](https://github.com/lambda-dom/class_revisions/pull/50): Fix typo in Blackguard HLA spells table and logic of item table choice.
-* [#51](https://github.com/lambda-dom/class_revisions/pull/51): Update to weidu_library new standards.
+* [#52](https://github.com/lambda-dom/class_revisions/pull/52): Update to weidu_library new standards.
+* [#53](https://github.com/lambda-dom/class_revisions/pull/53): Compress auras.
 
 ## version v1.0alpha2.
 

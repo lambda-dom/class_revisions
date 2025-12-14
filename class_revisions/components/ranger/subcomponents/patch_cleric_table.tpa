@@ -30,6 +30,7 @@ DEFINE_ACTION_FUNCTION patch_cleric_clab BEGIN
             array = "spells"
             ext = "spl"
         RET res = resource END
+        TO_UPPER res
         SET_2DA_ENTRY row_count 1 cols "AP_%res%"
 
         LPF get_table_reference STR_VAR
@@ -37,6 +38,7 @@ DEFINE_ACTION_FUNCTION patch_cleric_clab BEGIN
             array = "spells"
             ext = "spl"
         RET res = resource END
+        TO_UPPER res
         SET_2DA_ENTRY (row_count + 1) 1 cols "AP_%res%"
 
         //Add abilities to handle multi classes.
@@ -46,6 +48,7 @@ DEFINE_ACTION_FUNCTION patch_cleric_clab BEGIN
             ext = "spl"
         RET res = resource END
         FOR (i = 1; i < cols; ++i) BEGIN
+            TO_UPPER res
             SET_2DA_ENTRY (row_count + 2) i cols "AP_%res%"
         END
     PRETTY_PRINT_2DA

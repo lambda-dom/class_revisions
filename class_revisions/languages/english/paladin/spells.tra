@@ -1,12 +1,12 @@
 //Spellcasting.
 @1000 = "Spellcasting Initial Level Bonus"
-@1001 = "Gives a permanent bonus of 4 levels to divine spellcasting."
+@1001 = "Gives a permanent bonus of +4 to divine casting level."
 
 @1010 = "Paladin Spellbook"
 @1011 = "Trims down the Paladin spellbook."
 
 @1020 = "Spell Slot Penalty"
-@1021 = "Gives a penalty of 1 spell slot for divine spells in levels 1 through 5."
+@1021 = "Gives a penalty of -1 spell slot for divine spells in levels 1 through 5."
 
 @1030 = "Spellcasting per Level Bonus"
 @1031 = "Gives a permanent bonus of +1 to divine caster level."
@@ -79,15 +79,8 @@ Saving Throw: None
 During the round when this ability is activated the Paladin gains +2 bonus to attack rolls against evil creatures, and any melee hit against an evil creature inflicts 1d6 additional points of magic damage. For every 4 levels, the damage done increases by 1d6, up to a maximum of 5d6 at 16th level."
 
 //Auras.
-@1400 = "Aura of Protection"
-@1401 = "Permanent aura inflicting -1 thac0 penalty to every enemy within range."
-
-@1410 = "Aura of Hope"
-@1411 = "Permanent aura inflicting -1 penalty to damage rolls to every enemy within range."
-
-@1420 = "Aura of Faith"
-@1421 = "Permanent aura giving +1 bonus to all saves of every ally within range."
-
+@1400 = "Aura of Hope"
+@1401 = "Permanent aura inflicting -1 thac0 penalty to every evil enemy within range. At level 14, it also inflicts a penalty of -1 to damage rolls on every evil enemy within range and at level 17 grants a bonus of +1 to all saves of every ally within range."
 
 //Cavalier abilities.
 @2000 = "Cavalier Spellbook"
@@ -158,15 +151,8 @@ Saving Throw: None
 When the Cavalier casts this spell he becomes protected against any effects that would repel him, like knockback, Dragon's wing buffet, etc."
 
 //Auras.
-@2400 = "Aura of Resilience"
-@2401 = "Permanent aura granting a bonus of +1 to ac to every ally within range."
-
-@2410 = "Aura of Hope"
-@2411 = "Permanent aura granting a bonus of +1 to melee thac0 to every ally within range."
-
-@2420 = "Aura of Faith"
-@2421 = "Permanent aura granting a bonus of +1 to melee damage to every ally within range."
-
+@2400 = "Aura of Righteousness"
+@2401 = "Permanent aura granting a bonus of +1 to ac to every ally within range. At level 14 it also grants a bonus of +1 to melee thac0 and at level 17, a bonus of +1 to melee damage."
 
 //Inquisitor abilities.
 //Spellcasting.
@@ -236,12 +222,8 @@ This ability also grants protection from spells cast from scrolls and innate spe
 @3301 = "Gives a permanent bonus of +1 to Save vs. spells."
 
 //Auras.
-@3400 = "Aura of Resistance"
-@3401 = "Permanent aura granting a bonus of +5% to magic resistance to every ally within range."
-
-@3410 = "Aura of Saintliness"
-@3411 = "Permanent aura granting protection from evil to every ally within range."
-
+@3400 = "Aura of Faith"
+@3401 = "Permanent aura granting a bonus of +5% to magic resistance to every ally within range. At level 14, allies also gain protection from evil and at level 17 they also gain a +1 bonus to all saves."
 
 //Undead hunter spells abilities.
 @4000 = "Undead Hunter Spellbook"
@@ -349,15 +331,11 @@ High-level Undead Hunters can use their necromantic powers to seek out and destr
 @10040 = "Gained immunity to charm."
 @10050 = "Gained immunity to paralysis."
 @10060 = "Gained immunity to confusion."
-@10100 = "Gained Aura of Protection."
-@10110 = "Gained Aura of Hope."
-@10120 = "Gained Aura of Faith."
+@10100 = "Gained Aura of Hope."
 
 //Cavalier ability gaining strings.
 @11000 = "Gained specialization in Sword and Shield style."
-@11100 = "Gained Aura of Resilience."
-@11110 = "Gained Aura of Justice."
-@11120 = "Gained Aura of Righteousness."
+@11100 = "Gained Aura of Righteousness."
 
 //Inquisitor ability gaining strings.
 @12000 = "Spellcasting Disabled."
@@ -365,8 +343,7 @@ High-level Undead Hunters can use their necromantic powers to seek out and destr
 @12002 = "Gained +1 to Saves vs. Spells."
 
 //Inquisitor ability gaining strings.
-@12100 = "Gained Aura of Resilience."
-@12110 = "Gained Aura of Justice."
+@12100 = "Gained Aura of Faith."
 
 //Undead hunter ability gaining strings.
 @13000 = "Gained immunity to level drain."
