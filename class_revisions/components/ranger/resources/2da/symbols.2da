@@ -5,7 +5,7 @@ RANGER_CASTING_INITIAL_LEVEL            1       class   1       *
 RANGER_CASTING_LEVEL_BONUS              1       class   1       *
 RANGER_SPELLBOOK                        1       class   1       *
 RANGER_WOODLAND_STRIDE                  1       class   1       *
-RANGER_QUARRY                           1       innate  1       *
+RANGER_QUARRY                           1       innate  2       *
 RANGER_BLADES_FIRE                      1       class   1       *
 RANGER_SNARE                            1       class   2       *
 RANGER_SWIFT_HASTE                      1       class   3       *
