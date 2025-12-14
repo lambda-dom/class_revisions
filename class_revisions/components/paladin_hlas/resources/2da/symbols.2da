@@ -2,8 +2,8 @@
 *
                                 install type    level   patch
 PALADIN_EXTRA_SPELLS            1       class   7       *
-PALADIN_HOLY_PURGE              1       class   7       *
-PALADIN_PURGE_EVIL              1       class   7       *
-PALADIN_FORTRESS_AGAINST_EVIL   1       class   7       *
-PALADIN_HOLY_SHIELD             1       class   7       *
-INQUISITOR_SIGHT                1       class   7       *
+PALADIN_HOLY_PURGE              1       innate  7       *
+PALADIN_PURGE_EVIL              1       innate  7       *
+PALADIN_FORTRESS_AGAINST_EVIL   1       innate  7       *
+PALADIN_HOLY_SHIELD             1       innate  7       *
+INQUISITOR_SIGHT                1       innate  7       *
