@@ -1,12 +1,12 @@
 //Spellcasting.
 @1000 = "Spellcasting Initial Level Bonus"
-@1001 = "Gives a permanent bonus of 4 levels to divine spellcasting."
+@1001 = "Gives a permanent bonus of +4 to divine casting level."
 
 @1010 = "Paladin Spellbook"
 @1011 = "Trims down the Paladin spellbook."
 
 @1020 = "Spell Slot Penalty"
-@1021 = "Gives a penalty of 1 spell slot for divine spells in levels 1 through 5."
+@1021 = "Gives a penalty of -1 spell slot for divine spells in levels 1 through 5."
 
 @1030 = "Spellcasting per Level Bonus"
 @1031 = "Gives a permanent bonus of +1 to divine caster level."
