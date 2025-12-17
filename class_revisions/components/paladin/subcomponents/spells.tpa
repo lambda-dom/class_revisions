@@ -10,9 +10,19 @@ LAF get_component_tra_dir RET tra = dir END
 
 
 //Install spells.
-LAF install_spells STR_VAR
-    table = "%resources_dir%/2da/spells.2da"
-    dir = "%resources_dir%/spl"
-    tra = "%tra%/spells.tra"
-    patches = "%root%/patches/spells.tpa"
+ACTION_IF (GAME_IS "iwdee") BEGIN
+    PRINT "copying spells: using spells-ee.2da table."
+    LAF install_spells STR_VAR
+        table = "%resources_dir%/2da/spells-ee.2da"
+        dir = "%resources_dir%/spl"
+        tra = "%tra%/spells.tra"
+        patches = "%root%/patches/spells.tpa"
+    END
+END ELSE BEGIN
+    LAF install_spells STR_VAR
+        table = "%resources_dir%/2da/spells.2da"
+        dir = "%resources_dir%/spl"
+        tra = "%tra%/spells.tra"
+        patches = "%root%/patches/spells.tpa"
+    END
 END

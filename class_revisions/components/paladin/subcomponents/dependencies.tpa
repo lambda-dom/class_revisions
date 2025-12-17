@@ -1,0 +1,33 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers/effects.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers/icons.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers/projectiles.tpa"
+
+
+//Initialization.
+LAF get_component_resources_dir RET resources = dir END
+
+
+//Install icons.
+LAF install_icons STR_VAR
+    table = "%resources%/2da/icons.2da"
+    dir = "%resources%/bam"
+END
+
+//Install projectiles.
+LAF add_projectiles STR_VAR
+    table = "%resources%/2da/projectiles.2da"
+    dir = "%resources%/pro"
+END
+
+//Install effects.
+ACTION_IF (GAME_IS "iwdee") BEGIN
+    LAF create_effects STR_VAR
+        table = "%resources%/2da/effects-ee.2da"
+    END
+END ELSE BEGIN
+    LAF create_effects STR_VAR
+        table = "%resources%/2da/effects.2da"
+    END
+END

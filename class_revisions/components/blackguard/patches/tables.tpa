@@ -18,9 +18,15 @@ DEFINE_PATCH_FUNCTION make_table_replacements STR_VAR destination = "*" BEGIN
     END
 
     //Get reference tables.
-    LPF load_table_references STR_VAR
-        table = "%MOD_FOLDER%/components/paladin/resources/2da/spells.2da"
-    RET_ARRAY paladin_spells = references END
+    PATCH_IF (GAME_IS "iwdee") BEGIN
+        LPF load_table_references STR_VAR
+            table = "%MOD_FOLDER%/components/paladin/resources/2da/spells-ee.2da"
+        RET_ARRAY paladin_spells = references END
+    END ELSE BEGIN
+        LPF load_table_references STR_VAR
+            table = "%MOD_FOLDER%/components/paladin/resources/2da/spells.2da"
+        RET_ARRAY paladin_spells = references END
+    END
 
     LPF load_table_references STR_VAR
         table = "%resources_dir%/2da/spells.2da"

@@ -194,7 +194,7 @@ Note: While this spell dispels the individual effects of Grease, Web, Stinking C
 //New abilities.
 @3200 = "Banish Evil"
 @3201 = "Banish Evil
-Level: 1
+Level: 6
 School: Abjuration
 Range: Long
 Duration: Instant
@@ -206,7 +206,7 @@ With this ability, the Inquisitor banishes evil, enemy summoned creatures in the
 
 @3210 = "Inquisitor's Shield"
 @3211 = "Inquisitor's Shield
-Level: 1
+Level: 7
 School: Abjuration
 Range: Personal
 Duration: 1 turn

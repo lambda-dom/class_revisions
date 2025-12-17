@@ -22,8 +22,8 @@ CAVALIER_HEROISM                            1       priest  3       *
 CAVALIER_HOLD_THE_LINE                      1       priest  3       *
 INQUISITOR_DISABLE_SPELLCASTING             1       class   1       *
 INQUISITOR_DISABLE_TURN_UNDEAD              1       class   1       *
-INQUISITOR_BANISH_EVIL                      1       innate  1       *
-INQUISITOR_SPELL_SHIELD                     1       innate  1       *
+INQUISITOR_BANISH_EVIL                      1       innate  6       *
+INQUISITOR_SPELL_SHIELD                     1       innate  7       *
 INQUISITOR_IRON_WILL                        1       class   1       *
 INQUISITOR_AURA_FAITH                       1       class   1       *
 UNDEAD_HUNTER_SPELLBOOK                     1       class   1       *

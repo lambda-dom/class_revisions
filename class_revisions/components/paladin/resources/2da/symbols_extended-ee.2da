@@ -1,0 +1,26 @@
+2DA V1.0
+*
+                                        install namespace   level   patch
+PALADIN_CASTING_INITIAL_LEVEL           1       paladin     1       *
+PALADIN_SPELLBOOK                       1       paladin     1       *
+PALADIN_SPELL_PENALTY                   1       paladin     1       *
+PALADIN_CASTING_LEVEL_BONUS             1       paladin     1       *
+PALADIN_DISEASE_IMMUNITY                1       paladin     1       *
+PALADIN_FEAR_IMMUNITY                   1       paladin     1       *
+PALADIN_CHARM_IMMUNITY                  1       paladin     1       *
+PALADIN_HOLD_IMMUNITY                   1       paladin     1       *
+PALADIN_CONFUSION_IMMUNITY              1       paladin     1       *
+PALADIN_AURA_HOPE                       1       paladin     1       *
+CAVALIER_SPELLBOOK                      1       paladin     1       *
+CAVALIER_SHIELD_SPECIALIZATION          1       paladin     1       *
+CAVALIER_AURA_RIGHTEOUSNESS             1       paladin     1       *
+INQUISITOR_DISABLE_SPELLCASTING         1       paladin     1       *
+INQUISITOR_DISABLE_TURN_UNDEAD          1       paladin     1       *
+INQUISITOR_IRON_WILL                    1       paladin     1       *
+INQUISITOR_AURA_FAITH                   1       paladin     1       *
+UNDEAD_HUNTER_SPELLBOOK                 1       paladin     1       *
+UNDEAD_HUNTER_TURN_UNDEAD_BONUS         1       paladin     1       *
+UNDEAD_HUNTER_LEVEL_DRAIN_IMMUNITY      1       paladin     1       *
+UNDEAD_HUNTER_UNDEAD_BANE               1       paladin     1       *
+UNDEAD_HUNTER_SMITE_UNDEAD              1       paladin     1       *
+UNDEAD_HUNTER_PROTECTION_FROM_UNDEAD    1       paladin     1       *
