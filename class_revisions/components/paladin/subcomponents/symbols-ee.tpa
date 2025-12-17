@@ -10,7 +10,7 @@ LAF get_component_resources_dir RET resources = dir END
 
 //Install spell symbols.
 LAF install_extended_symbols STR_VAR
-    table = "%resources%/2da/extended_symbols-ee.2da"
+    table = "%resources%/2da/symbols_extended-ee.2da"
 END
 
 LAF install_symbols STR_VAR
