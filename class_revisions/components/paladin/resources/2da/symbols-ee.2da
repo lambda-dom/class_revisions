@@ -11,3 +11,4 @@ UNDEAD_HUNTER_MAGIC_CIRCLE_AGAINST_UNDEAD   1       priest  2       *
 UNDEAD_HUNTER_EXORCISM                      1       priest  3       *
 UNDEAD_HUNTER_ANIMATE_SKELETON_WARRIOR      1       priest  4       *
 INQUISITOR_BANISH_EVIL                      1       class   6       *
+INQUISITOR_SPELL_SHIELD                     1       class   7       *
