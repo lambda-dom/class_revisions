@@ -25,4 +25,3 @@ END
 LAF create_effects STR_VAR
     table = "%resources%/2da/effects.2da"
 END
-
