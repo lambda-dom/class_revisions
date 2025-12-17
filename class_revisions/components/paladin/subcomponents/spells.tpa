@@ -26,4 +26,3 @@ END ELSE BEGIN
         patches = "%root%/patches/spells.tpa"
     END
 END
-

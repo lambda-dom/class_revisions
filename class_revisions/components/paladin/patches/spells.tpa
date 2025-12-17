@@ -14,14 +14,25 @@ INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
 LAF get_component_resources_dir RET resources_dir = dir END
 
 //Get reference tables.
-LAF load_table_references STR_VAR
-    table = "%resources_dir%/2da/effects.2da"
-RET_ARRAY effects = references END
+ACTION_IF (GAME_IS "iwdee") BEGIN
+    LAF load_table_references STR_VAR
+        table = "%resources_dir%/2da/effects-ee.2da"
+    RET_ARRAY effects = references END
+END ELSE BEGIN
+    LAF load_table_references STR_VAR
+        table = "%resources_dir%/2da/effects.2da"
+    RET_ARRAY effects = references END
+END
 
-LAF load_table_references STR_VAR
-    table = "%resources_dir%/2da/spells.2da"
-RET_ARRAY spells = references END
-
+ACTION_IF (GAME_IS "iwdee") BEGIN
+    LAF load_table_references STR_VAR
+        table = "%resources_dir%/2da/spells-ee.2da"
+    RET_ARRAY spells = references END
+END ELSE BEGIN
+    LAF load_table_references STR_VAR
+        table = "%resources_dir%/2da/spells.2da"
+    RET_ARRAY spells = references END
+END
 
 //Patches.
 //Paladin casting level.

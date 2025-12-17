@@ -20,29 +20,29 @@ END ELSE BEGIN
     END
 END
 
-// //Install dependent resources.
-// LAF install_subcomponent STR_VAR
-//     subcomponent = "%root%/subcomponents/dependencies.tpa"
-// END
-// 
-// //Install spells.
-// //In its own component to force reloading of ids files.
-// LAF install_subcomponent STR_VAR
-//     subcomponent = "%root%/subcomponents/spells.tpa"
-// END
-// 
-// //Install ability tables.
-// LAF install_subcomponent STR_VAR
-//     subcomponent = "%root%/subcomponents/tables.tpa"
-// END
-// 
-// //Patch proficiencies.
-// LAF install_subcomponent STR_VAR
-//     subcomponent = "%root%/subcomponents/proficiencies.tpa"
-// END
-// 
-// //Patch descriptions.
-// LAF install_subcomponent STR_VAR
-//     subcomponent = "%root%/subcomponents/descriptions.tpa"
-//     tra = "%tra%/kits.tra"
-// END
+//Install dependent resources.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/dependencies.tpa"
+END
+
+//Install spells.
+//In its own component to force reloading of ids files.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/spells.tpa"
+END
+
+//Install ability tables.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/tables.tpa"
+END
+
+//Patch proficiencies.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/proficiencies.tpa"
+END
+
+//Patch descriptions.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/descriptions.tpa"
+    tra = "%tra%/kits.tra"
+END

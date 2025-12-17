@@ -22,6 +22,12 @@ LAF add_projectiles STR_VAR
 END
 
 //Install effects.
-LAF create_effects STR_VAR
-    table = "%resources%/2da/effects.2da"
+ACTION_IF (GAME_IS "iwdee") BEGIN
+    LAF create_effects STR_VAR
+        table = "%resources%/2da/effects-ee.2da"
+    END
+END ELSE BEGIN
+    LAF create_effects STR_VAR
+        table = "%resources%/2da/effects.2da"
+    END
 END
