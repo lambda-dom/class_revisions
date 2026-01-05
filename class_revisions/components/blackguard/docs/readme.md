@@ -57,6 +57,7 @@ Level 3:
 
 note(s):
 * Undead-theme is inappropriate so remove Animate Dead?
+* Bring back Break Enchantment and Remove Paralysis?
 
 Level 4:
 
@@ -67,6 +68,7 @@ Level 4:
 * Free Action
 * Mental Domination
 * Negative Plane Protection
+* Neutralize Poison
 * Poison
 
 Level 5:
