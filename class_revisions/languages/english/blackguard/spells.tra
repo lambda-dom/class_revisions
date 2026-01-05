@@ -146,7 +146,7 @@ Casting Time: 9
 Area of Effect: Caster
 Saving Throw: None
 
-When the Blackguard casts this spell, he invokes the chaotic powers of the abyss and is infused with demonic rage. For the duration of this spell, he gains a +2 bonus to attack and damage rolls, a penalty of -2 to armor class, and a bonus of +15 temporary hit points. He also becomes immune to charm, confusion, fear, feeblemind, paralysis, sleep, imprisonment, maze and stun. While in this state, the Blackguard cannot perform any activities that require concentration like casting spells, using innate abilities or turn undead. At the end of the berserking spree, the dark powers that were invoked exact their pay in blood. All the temporary hit points are taken away, possibly knocking the Blackguard unconscious, and he becomes winded, suffering a -2 penalty to armor class, attack and damage rolls for 1 round."
+When the Blackguard casts this spell, he invokes the chaotic powers of the abyss and is infused with demonic rage. For the duration of this spell, he gains a +2 bonus to attack and damage rolls, a penalty of -2 to armor class, and a bonus of +15 temporary hit points. He also becomes immune to charm, confusion, fear, feeblemind, paralysis, sleep, imprisonment, maze and stun. While in this state, the Blackguard cannot perform any activities that require concentration like casting spells or turn undead. At the end of the berserking spree, the dark powers that were invoked exact their pay in blood. All the temporary hit points are taken away, possibly knocking the Blackguard unconscious, and he becomes winded, suffering a -2 penalty to armor class, attack and damage rolls for 1 round."
 
 @1480 = "Abyssal Fury"
 @1481 = "Abyssal Fury

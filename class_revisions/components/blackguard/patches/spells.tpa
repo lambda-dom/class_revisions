@@ -188,7 +188,7 @@ DEFINE_PATCH_FUNCTION blackguard_abyssal_rage STR_VAR destination = "*" BEGIN
         match_opcode = 146                  //Cast spell.
     STR_VAR
         resource = "blackguard_abyssal_rage_a"
-        match_resource = ""
+        match_resource = "wind#res"
         references = "spells"
     END
 
