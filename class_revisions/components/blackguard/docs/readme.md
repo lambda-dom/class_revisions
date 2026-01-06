@@ -32,6 +32,7 @@ Level 1:
 * Command
 * Doom
 * Resist Fear
+* Sanctuary
 
 Level 2:
 
@@ -57,7 +58,6 @@ Level 3:
 
 note(s):
 * Undead-theme is inappropriate so remove Animate Dead?
-* Bring back Break Enchantment and Remove Paralysis?
 
 Level 4:
 
@@ -98,9 +98,9 @@ Entirely new spells:
 * Flaming Shield, level 4: a version of Wizard's Fire Shield.
 * Abyssal Rage, level 5: essentially a spell version of berserk, replacing Champion's Strength.
 
-
-Possible Additions:
+TODO(s): Possible Additions:
 * Abyssal Pact: add Death Knight (or something similar) at level 5? Better as an HLA?
+* Self-targeted lesser restoration at level 4.
 
 Possible borrowings from IWD into EE:
 * Curse: Evil Chant already exists.
