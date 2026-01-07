@@ -63,6 +63,12 @@ REQUIRE_PREDICATE (MOD_IS_INSTALLED "spell_rev.tp2" 65) @155
 REQUIRE_PREDICATE (MOD_IS_INSTALLED "class_revisions.tp2" (ID_OF_LABEL "class_revisions.tp2" "lambda_dom-class_revisions-ranger")) @154
 LAF install_component STR_VAR COMPONENT_NAME = "ranger_hlas" END
 
+BEGIN @7 DESIGNATED 7
+LABEL "lambda_dom-class_revisions-mage_hlas"
+REQUIRE_PREDICATE (GAME_IS "bg2ee eet") @100
+REQUIRE_PREDICATE (MOD_IS_INSTALLED "spell_rev.tp2" 0) @151
+LAF install_component STR_VAR COMPONENT_NAME = "mage_hlas" END
+
 BEGIN @11 DESIGNATED 11
 LABEL "lambda_dom-class_revisions-weapon_styles"
 REQUIRE_PREDICATE (GAME_IS "bg2ee eet iwdee") @100
