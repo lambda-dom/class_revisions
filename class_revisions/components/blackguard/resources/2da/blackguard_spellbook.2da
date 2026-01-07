@@ -3,7 +3,6 @@
                                         level   base
 CLERIC_CURE_LIGHT_WOUNDS                1       1
 CLERIC_PROTECT_FROM_EVIL                1       1
-CLERIC_SANCTUARY                        1       1
 CLERIC_MAGIC_STONE                      1       1
 CLERIC_BLESS                            1       1
 CLERIC_ARMOR_OF_FAITH                   1       1

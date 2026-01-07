@@ -10,9 +10,9 @@ BLACKGUARD_PROTECTION_GOOD          1       priest  1       *
 BLACKGUARD_HELLSCORCH               1       priest  1       *
 BLACKGUARD_AURA_FEAR                1       priest  1       *
 BLACKGUARD_ABYSSAL_ARMOR            1       priest  1       *
-BLACKGUARD_AID_HELL                 1       priest  1       *
+BLACKGUARD_AID_HELL                 1       priest  2       *
 BLACKGUARD_EVIL_CHANT               1       priest  2       *
-BLACKGUARD_DARK_POWER               1       priest  2       *
+BLACKGUARD_DARK_POWERS              1       priest  3       *
 BLACKGUARD_EVIL_PRAYER              1       priest  4       *
 BLACKGUARD_ABYSSAL_FURY             1       priest  4       *
 BLACKGUARD_MIASMA_CLOUD             1       priest  4       *

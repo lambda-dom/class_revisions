@@ -1,0 +1,117 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/hlas.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/spells.tpa"
+
+
+//Patchers.
+DEFINE_ACTION_FUNCTION patch_spell_duration INT_VAR turns = 2 STR_VAR spell = "" BEGIN
+    LAF get_spell_res STR_VAR
+        spell = "%spell%"
+    RET res = resource END
+
+    ACTION_IF ("%res%" STRING_EQUAL_CASE "*") BEGIN
+        FAIL "patch_spell_duration: spell '%spell%' not found in 'spell.ids'"
+    END
+
+    COPY_EXISTING "%res%.spl" "override"
+        //Alter duration.
+        LPF ALTER_SPELL_EFFECT INT_VAR
+            check_globals = 0
+            verbose = 1
+            duration = turns * 60
+        END
+
+        //Patch description.
+        LPF get_spell_field STR_VAR field = "description" RET tlk = value END
+        GET_STRREF tlk description
+        INNER_PATCH_SAVE new "%description%" BEGIN
+            REPLACE_TEXTUALLY "^Duration: [1-9][0-9]* \(turn\|round\)\(s\)?" "Duration: %turns% turns"
+        END
+        ref = RESOLVE_STR_REF ("%new%")
+        LPF set_spell_field STR_VAR field = "description" value = "%ref%" END
+    BUT_ONLY
+END
+
+DEFINE_ACTION_FUNCTION patch_extra_spell_levels INT_VAR name = 0 descr = 0 levels = 0 STR_VAR spell = "" BEGIN
+    ACTION_IF NOT (FILE_EXISTS_IN_GAME "%spell%.spl") BEGIN
+        FAIL "patch_extra_spell_levels: spell '%spell%.spl' does not exist in game."
+    END
+
+    COPY_EXISTING "%spell%.spl" "override"
+        //Set name and description.
+        tlk_ref = RESOLVE_STR_REF ((AT name))
+        LPF set_spell_field STR_VAR field = "name" value = "%tlk_ref%" END
+
+        tlk_ref = RESOLVE_STR_REF ((AT descr))
+        LPF set_spell_field STR_VAR field = "description" value = "%tlk_ref%" END
+
+        //Patch spell levels.
+        LPF ALTER_EFFECT INT_VAR
+            check_globals = 0
+            verbose = 1
+            match_opcode = 42           //Wizard Spell Slots Modifier.
+            parameter2 = levels
+        END
+    BUT_ONLY
+END
+
+//Deduplicate tables.
+DEFINE_ACTION_FUNCTION deduplicate_mage_tables BEGIN
+    //Deduplicate tables.
+    ACTION_DEFINE_ASSOCIATIVE_ARRAY kits BEGIN
+        "abjurer"       => "ma1"
+        "conjurer"      => "ma2"
+        "diviner"       => "ma3"
+        "enchanter"     => "ma4"
+        "illusionist"   => "ma5"
+        "invoker"       => "ma6"
+        "necromancer"   => "ma7"
+        "transmuter"    => "ma8"
+    END
+
+    LAF get_hla_table STR_VAR kit = "mage" RET mage_table = table END
+    ACTION_PHP_EACH kits AS kit => table BEGIN
+        LAF get_hla_table STR_VAR kit = "%kit%" RET original = table END
+        ACTION_IF ("%mage_table%" STRING_EQUAL_CASE "%original%") BEGIN
+            LAF replace_table STR_VAR kit = "%kit%" original = "%original%" new = "%table%" END
+        END
+    END
+END
+
+//Patch extra spells.
+DEFINE_ACTION_FUNCTION patch_extra_spells BEGIN
+    //Patch levels.
+    LAF patch_spell_levels INT_VAR
+        name = 1000
+        descr = 1001
+        levels = 0x0f
+    STR_VAR spell = "spcl928" END
+
+    LAF patch_spell_levels INT_VAR
+        name = 1010
+        descr = 1011
+        levels = 0x70
+    STR_VAR spell = "spcl929" END
+    
+    LAF patch_spell_levels INT_VAR
+        name = 1020
+        descr = 1021
+        levels = 0x180
+    STR_VAR spell = "spcl930" END
+END
+
+//Patch summon planetar duration.
+DEFINE_ACTION_FUNCTION patch_planetar_duration BEGIN
+    ACTION_FOR_EACH spell IN
+        "WIZARD_SUMMON_PLANATAR_GOOD"
+        "WIZARD_SUMMON_PLANATAR_EVIL"
+    BEGIN
+        LAF patch_spell_duration INT_VAR turns = 2 STR_VAR spell = "%spell%" END
+    END
+END
+
+
+//Main loop.
+LAF deduplicate_mage_tables END
+LAF patch_extra_spells END
+LAF patch_planetar_duration END

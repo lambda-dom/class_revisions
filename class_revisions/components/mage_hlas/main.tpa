@@ -1,0 +1,12 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+
+
+//Initialization.
+LAF get_component_root RET root = dir END
+
+
+//subcomponents.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/patch_mage_hlas.tpa"
+END

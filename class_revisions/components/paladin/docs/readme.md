@@ -151,6 +151,9 @@ Inquisitors gain immunity to fear and charm.
 
 Dispel Magic is now Dispel Evil, an aoe Dispel Magic against evil enemies at 1.5 times the level of the caster, as in a similar SCS component [^4]. In addition they gain Banish Evil, a version of SR's banishment against evil enemy summons and Iron Will, a permanent bonus to save vs. spells. True Sight is also made undispellable. At level 12 gains Inquisitor's Shield, a version of Shield of the Archons. Like cavaliers, they also get their specialized auras.
 
+TODO(s):
+* Follow SR and add banishment of demons but with a save vs. spell at -2.
+
 # E. Undead Hunter.
 
 Keeps the vanilla Paralysis and Level Drain immunities but looses the extra thac0 and damage against undead, function now played by the new Undead Bane ability. Protection from Evil and Smite Evil become anti-undead dedicated abilities, with the latter now becoming an aoe magic damage bypassing mr. Differently from vanilla and KR, the Undead Hunter regains Lay on Hands. In exchange, looses one spell per level, Lay on Hands and Auras.

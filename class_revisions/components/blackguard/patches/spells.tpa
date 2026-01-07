@@ -147,8 +147,24 @@ DEFINE_PATCH_FUNCTION blackguard_aura_despair STR_VAR destination = "*" BEGIN
     LPF add_display_string INT_VAR tra_ref = 10100 END
 END
 
-//Aid from Hell.
+DEFINE_PATCH_FUNCTION blackguard_dark_powers STR_VAR destination = "*" BEGIN
+    //Correct power.
+    LPF ALTER_SPELL_EFFECT INT_VAR
+        verbose = 1
+        match_power = 2
+        power = 3
+    END
+END
+
+
 DEFINE_PATCH_FUNCTION blackguard_aid_hell STR_VAR destination = "*" BEGIN
+    //Correct power.
+    LPF ALTER_SPELL_EFFECT INT_VAR
+        verbose = 1
+        match_power = 1
+        power = 2
+    END
+
     LPF get_spell_header_count RET headers_count = count END
     FOR (i = 1; i <= headers_count; ++i) BEGIN
         //Patch header min level.
@@ -188,7 +204,7 @@ DEFINE_PATCH_FUNCTION blackguard_abyssal_rage STR_VAR destination = "*" BEGIN
         match_opcode = 146                  //Cast spell.
     STR_VAR
         resource = "blackguard_abyssal_rage_a"
-        match_resource = ""
+        match_resource = "wind#res"
         references = "spells"
     END
 
