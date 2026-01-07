@@ -1,0 +1,9 @@
+//Mage extra HLA's.
+@1000 = "Extra Spells Levels 1-4"
+@1001 = "Choosing this ability allows the Wizard to cast one additional spell in levels 1 to 4."
+
+@1010 = "Extra Spells Levels 5-7"
+@1011 = "Choosing this ability allows the Wizard to cast one additional spell in levels 5 to 7."
+
+@1020 = "Extra Spells Levels 8-9"
+@1021 = "Choosing this ability allows the Wizard to cast one additional spell in levels 8 and 9."
