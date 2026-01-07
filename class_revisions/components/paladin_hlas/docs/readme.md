@@ -47,7 +47,7 @@ But the real problem with frontline fighters is that they cannot compete with Ma
 
     * the second protection HLA.
 
-5. Extra Spells: can gain +1 spell from levels 1 to 5[^2].
+5. Extra Spells: can gain +1 spell from levels 1 to 4[^2].
 
 ## B. Additions.
 
