@@ -84,8 +84,8 @@ Level 5:
 Changed self-buffs:
 
 * Abyssal Armor, level 1: changes Armor of Faith; magic damage resistance is turned into fire resistance.
-* Aid from Hell, level 1: replaces Aid. Moved to level 1 since Blackguards loose Bless. Long duration, long casting time.
-* Dark Power, level 2: replaces Draw upon Holy Might. Long casting time.
+* Aid from Hell, level 2: replaces Aid. Long duration, long casting time.
+* Dark Powers, level 3: replaces Draw upon Holy Might but with a scaling closer to Champion's Strength. Long casting time.
 * Abyssal Fury, level 4: replaces Righteous Fury; +4 strength, +4 movement speed, +20 hps and a fire damage melee effect.
 
 Entirely new spells:
@@ -93,21 +93,15 @@ Entirely new spells:
 * Hellscorch, a version of Druid's sunscorch at level 1.
 * Aura of Fear, level 1: a spell version of Wizard's Horror.
 * Evil Chant, level 2: a debuff on enemies. Fast casting time.
-* Evil Prayer, level 4: an improved Evil Chant, it is cumulative with it. Fast casting time.
-* Miasma Cloud, level 4: a version of Wizard's Stinking Cloud, doing poison damage, disease attribute damage and half movement speed.
+* Evil Prayer, level 4: an improved Evil Chant, cumulative with it. Fast casting time.
+* Miasma Cloud, level 4: a version of Wizard's Stinking Cloud, doing disease poison damage, disease attribute damage and half movement speed.
 * Flaming Shield, level 4: a version of Wizard's Fire Shield.
 * Abyssal Rage, level 5: essentially a spell version of berserk, replacing Champion's Strength.
-
-TODO(s):
-* Move Aid from Hell to level 2.
-* Evil Chant moved to level 1. Evil Prayer to level 3.
-* Dark Power -> Dark Powers, moved to level 3 and scaling as cleric level 5 Champion's Strength.
-* Self-targeted lesser restoration at level 4.
 
 TODO(s): Possible Additions:
 * Abyssal Pact: add Death Knight (or something similar) at level 5? Better as an HLA?
 
-Possible borrowings from IWD into EE:
+Possible borrowings from IWD:
 * Curse: Evil Chant already exists.
 * Cause Disease: Contagion already exists.
 * Cloud of Pestilence: Miasma Cloud already exists, but could borrow projectile and animations?
