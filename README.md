@@ -40,7 +40,7 @@ The mod is in alpha stage, because while the basic design is set there are some 
 
 There are also some unresolved, or potentially problematic, issues. The ones I am aware of:
 
-* Paladins and Rangers get trimmed down spellbooks with some unique additions, but these differences are not reflected in the character creation screens. I do not know how to solve this; most likely, if there is a solution, it requires UI patching which I have never done, so for now the user will have to suffer the jank.
+* Paladins and Rangers get trimmed down spellbooks with some unique additions, but these differences are not reflected in the character creation screens. I do not know how to solve this; most likely, if there is a solution, it will require UI patching which I have never done, so for now the user will have to suffer the jank.
 
 * The way the spellbooks are updated at level up is by applying an ability with a spell removal opcode. The implementation was copied from KR and uses *delayed* timing by 1 second; some early testing showed that with *instant* timing sometimes it did not work correctly. So should wait a couple of seconds after level up to get the updated spellbook.
 
@@ -50,7 +50,7 @@ There are also some unresolved, or potentially problematic, issues. The ones I a
 
 * Balancing is an ever-present concern. I would say that in comparison to vanilla, all the classes and kits got more powerful, so the question is how much more powerful. As a general rule, I prefer underpowered to overpowered, but if a choice has to be made, fun over both.
 
-* Modder issues: currently, to make use of `spell.ids` to manage resource references, we dump all spells in the `spcl` namespace via `ADD_SPELL`, crowding it out. If this proves to be problematic (especially relevant for megamod installs), we might consider switching to some other scheme like the extended naming scheme of SCS.
+* Modder issues: currently, to make use of `spell.ids` to manage resource references, we dump all spells in the `spcl` namespace via `ADD_SPELL`, crowding it out. If this proves to be problematic (especially relevant for megamod installs), we might consider switching to some other scheme like the extended naming scheme of SCS (this *may* also solve the first issue).
 
 * Modding compatibility: my BG installs tend to be rather slim by megamod standards, so compatibility with other mods has not been extensively tested. Starting with the obvious: it is conceptually, if not technically, incompatible with any other mods that aim to do the same thing; install only the one you want or be prepared to suffer in purgatory and suffer alone.
 
