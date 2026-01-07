@@ -98,9 +98,14 @@ Entirely new spells:
 * Flaming Shield, level 4: a version of Wizard's Fire Shield.
 * Abyssal Rage, level 5: essentially a spell version of berserk, replacing Champion's Strength.
 
+TODO(s):
+* Move Aid from Hell to level 2.
+* Evil Chant moved to level 1. Evil Prayer to level 3.
+* Dark Power -> Dark Powers, moved to level 3 and scaling as cleric level 5 Champion's Strength.
+* Self-targeted lesser restoration at level 4.
+
 TODO(s): Possible Additions:
 * Abyssal Pact: add Death Knight (or something similar) at level 5? Better as an HLA?
-* Self-targeted lesser restoration at level 4.
 
 Possible borrowings from IWD into EE:
 * Curse: Evil Chant already exists.
