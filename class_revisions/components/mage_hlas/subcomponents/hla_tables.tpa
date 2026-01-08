@@ -1,0 +1,57 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/hlas.tpa"
+
+
+//Actions.
+DEFINE_ACTION_FUNCTION patch_hla_table STR_VAR kit = "" additions = "" BEGIN
+    LAF get_hla_table STR_VAR kit = "%kit%" RET table END
+
+    //Sanitize.
+    ACTION_IF ("%table%" STRING_EQUAL_CASE "*") BEGIN
+        FAIL "patch_hla_table: hla table of kit '%kit%' not found."
+    END
+
+    //Patch.
+    COPY_EXISTING "%table%.2da" "override"
+        //Additions.
+        LPF add_hlas STR_VAR table = "%additions%" END
+    PRETTY_PRINT_2DA
+    BUT_ONLY
+END
+
+DEFINE_ACTION_FUNCTION patch_mage_hla_tables BEGIN
+    LAF get_component_resources_dir RET resources = dir END
+
+    //Requires deduplicated tables.
+    ACTION_FOR_EACH kit IN
+        "mage"
+        "abjurer"
+        "conjurer"
+        "diviner"
+        "enchanter"
+        "illusionist"
+        "invoker"
+        "necromancer"
+        "transmuter"
+    BEGIN
+        LAF patch_hla_table STR_VAR
+            kit = "%kit%"
+            additions = "%resources%/2da/mage_hlas_add.2da"
+        END
+    END
+
+    ACTION_FOR_EACH kit IN
+        "mage_thief"
+        "fighter_mage"
+        "cleric_mage"
+    BEGIN
+        LAF patch_hla_table STR_VAR
+            kit = "%kit%"
+            additions = "%resources%/2da/double_mage_hlas_add.2da"
+        END
+    END
+END
+
+//Main loop.
+LAF patch_mage_hla_tables END

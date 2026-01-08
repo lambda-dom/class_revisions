@@ -4,8 +4,11 @@ This component does a few tweaks to Mage HLA's. First, it deduplicates the Mage 
 
 # B. New HLA's.
 
-This part of the component adds a few more HLA's to the mage pool. Specifcally:
+This part of the component adds a few more HLA's to the mage pool. Specifically:
 
 1. Arcane Knowledge: borrowed straight from Refinements.
 2. Aegis: changed into a magic defense: +25% mr, +2 saves and auto refreshing dispelling screen for 5 rounds.
 3. Foresight: a variation more proper to mages on the Inquisitor's HLA Inquisitor's Sight.
+
+note(s):
+* Aegis and Foresight are added to all mage multiclasses, except triple (e. g. fighter + mage + cleric and fighter + mage + thief). We *may* add Aegis to fighter + mage + cleric.
