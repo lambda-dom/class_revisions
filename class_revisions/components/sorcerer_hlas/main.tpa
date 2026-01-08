@@ -13,7 +13,11 @@ LAF install_symbols STR_VAR
     table = "%resources_dir%/2da/symbols.2da"
 END
 
-//Install spells: in subcomponent to force ids reloading.
+//Install spell data dependencies: in subcomponent to force ids reloading.
+LAF install_subcomponent STR_VAR
+    subcomponent = "%root%/subcomponents/dependencies.tpa"
+END
+
 LAF install_subcomponent STR_VAR
     subcomponent = "%root%/subcomponents/spells.tpa"
 END

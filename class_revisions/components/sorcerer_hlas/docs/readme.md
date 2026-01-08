@@ -18,7 +18,7 @@ note(s):
 * Add +1 charisma for parity with Arcane Knowledge?
 
 2. Casting Speed: decreases casting speed by 1. Can be chosen 3 times as in Refinements and requires Inner Focus.
-3. Magic Orbs: a version of Energy Blades for the sorcerer. Long range 50, bypasses mr, magic damage type.
+3. Magic Orbs: a version of Energy Blades for the sorcerer. Long range 50, bypasses mr, magic damage type. Does less damage tptal than Energy Blades and the APR is 5 against 9.
 4. Energy Resistance: grants the equivalent of protection from energy, +25% mr and +2 saves for 1 turn. It is breachable, but not dispellable.
 5. Shockwave: comparable in damage to Comet and Dragon's Breath; deals magic damage and stuns (a common immunity) vs. knockback + unconscious of Refinements. Also party-friendly vs. hit everyone.
 6. Channel magic: for 3 rounds can trap spell all spells and is immune to death, maze and imprisonment effects. Unable to cast spells, but can use innate abilities.
