@@ -1,0 +1,12 @@
+//Description strings.
+@1000 = "Magic Orb"
+@1001 = "Created by the Magic Orbs spell. When thrown at an opponent, it causes 3d6 points of magic damage.
+
+STATISTICS:
+
+Combat Abilities:
+  Long Range: due to the magical nature of orbs, they can be thrown at long distance.
+  Raw Magic: deals 3d6 points of magic damage, bypassing magic resistance.
+
+THAC0: +10
+Weight: 0"

@@ -1,0 +1,11 @@
+2DA V1.0
+*
+                            install name    descr   type    level   flags       school      sectype             book_icon                   abil_icon                   projectile      range   speed   patch       over    destination
+sorcerer_inner_focus        1       1000    1001    special 1       00011000    *           *                   *                           *                           *               1000    1       *           1       #spl:SORCERER_INNER_FOCUS
+sorcerer_casting_speed      1       1010    1011    special 1       00011000    *           *                   *                           *                           *               1000    1       sorcerer    1       #spl:SORCERER_CASTING_SPEED
+sorcerer_energy_resistance  1       1020    1021    innate  1       00000000    transmuter  specificprotections #lit:spcl904b               #lit:spcl904b               *               1       1       sorcerer    1       #spl:SORCERER_ENERGY_RESISTANCE
+sorcerer_channel_magic      1       1030    1031    innate  1       00000000    abjurer     *                   *                           *                           *               1       1       *           1       #spl:SORCERER_CHANNEL_MAGIC
+sorcerer_aura_cleansing     1       1040    1041    innate  1       00000000    transmuter  non-combat          #lit:spwi921c               #lit:spwi921b               *               1       1       *           1       #spl:SORCERER_AURA_CLEANSING
+sorcerer_shatter_magic      1       1050    1051    innate  1       11000000    abjurer     *                   #suf:c:WIZARD_REMOVE_MAGIC  #suf:b:WIZARD_REMOVE_MAGIC  #lit:inareanp   1       1       sorcerer    1       #spl:SORCERER_SHATTER_MAGIC
+sorcerer_shockwave          1       1060    1061    innate  1       11000000    invoker     offensivedamage     #lit:spcl239c               #lit:spcl239b               #lbl:shockwave  1       1       *           1       #spl:SORCERER_SHOCKWAVE
+sorcerer_magic_orbs         1       1070    1071    innate  1       00000000    invoker     combination         #lit:spcl820c               #lit:spcl820b               *               1       1       sorcerer    1       #spl:SORCERER_MAGIC_ORBS
