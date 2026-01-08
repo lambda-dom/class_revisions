@@ -1,0 +1,12 @@
+//Patches.
+DEFINE_PATCH_FUNCTION sorcerer_casting_speed STR_VAR destination = "*" BEGIN
+END
+
+DEFINE_PATCH_FUNCTION sorcerer_energy_resistance STR_VAR destination = "*" BEGIN
+END
+
+DEFINE_PATCH_FUNCTION sorcerer_shatter_magic STR_VAR destination = "*" BEGIN
+END
+
+DEFINE_PATCH_FUNCTION sorcerer_magic_orbs STR_VAR destination = "*" BEGIN
+END
