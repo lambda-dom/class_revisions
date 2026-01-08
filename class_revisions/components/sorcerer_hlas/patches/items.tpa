@@ -1,0 +1,26 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/items.tpa"
+
+
+//Patches.
+DEFINE_PATCH_FUNCTION magic_orb STR_VAR destination = "*" BEGIN
+    //Patch projectile reference.
+    LPF get_item_header_count RET header_count = count END
+    LPF get_missile_id STR_VAR missile = "magic_orb" RET pro_id = id END
+
+    FOR (i = 0; i < header_count; ++i) BEGIN
+        LPF get_item_header_field INT_VAR
+            header = i
+        STR_VAR
+            field = "type"
+        RET header_type = value END
+
+        PATCH_IF (header_type = 2) BEGIN
+            LPF set_item_header_field INT_VAR
+                header = i
+            STR_VAR
+                field = "projectile" value = "%pro_id%"
+            END
+        END
+    END
+END

@@ -1,6 +1,6 @@
 //Description strings.
 @1000 = "Magic Orb"
-@1001 = "Created by the Magic Orbs spell. When thrown at an opponent, it causes 3d6 points of magic damage.
+@1001 = "Orb created by the Magic Orbs spell.
 
 STATISTICS:
 
