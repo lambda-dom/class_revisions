@@ -1,6 +1,6 @@
 # Class Revisions.
 
-A WeiDU mod for BG2:EE revising and tweaking classes, following the, now seemingly abandoned, [Kit Revisions](https://www.gibberlings3.net/forums/forum/168-kit-revisions) mod. For now, only Paladins and Rangers are covered in full, while Mage and Sorcerer have tweaks and revisions inspired from [Refinements](https://github.com/UnearthedArcana/refinements).
+A WeiDU mod for BG2:EE revising and tweaking classes, following the, now seemingly abandoned, [Kit Revisions](https://www.gibberlings3.net/forums/forum/168-kit-revisions) mod. For now, only Paladins and Rangers are covered in full, while Mage and Sorcerer HLA's have tweaks inspired from [Refinements](https://github.com/UnearthedArcana/refinements).
 
 For documentation on each component start at the [docs](./class_revisions/docs/readme.md). They are, like the rest of the mod, still in alpha but it should give a decent idea of what my aim is.
 
