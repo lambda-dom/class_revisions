@@ -1,6 +1,6 @@
 # Class Revisions.
 
-A WeiDU mod for BG2:EE revising and tweaking classes, following the, now seemingly abandoned, [Kit Revisions](https://www.gibberlings3.net/forums/forum/168-kit-revisions) mod. For now, only Paladins and Rangers are covered.
+A WeiDU mod for BG2:EE revising and tweaking classes, following the, now seemingly abandoned, [Kit Revisions](https://www.gibberlings3.net/forums/forum/168-kit-revisions) mod. For now, only Paladins and Rangers are covered in full, while Mage and Sorcerer have tweaks and revisions inspired from [Refinements](https://github.com/UnearthedArcana/refinements).
 
 For documentation on each component start at the [docs](./class_revisions/docs/readme.md). They are, like the rest of the mod, still in alpha but it should give a decent idea of what my aim is.
 
@@ -64,6 +64,4 @@ Unless there is some very cogent reason not to, I try to be as accomodating of o
 
 In comparison with KR, for global components, the weapon styles component is in, but nothing else: no thac0, saves, xp, etc. changes. Some of these are taken care of by other mods, e.g. [Tweaks Anthology](https://github.com/Gibberlings3/Tweaks-Anthology), so *probably* they will not be covered.
 
-Currently, I prefer to leave thieves and bards to [Rogue Rebalancing](https://www.shsforums.net/files/category/62-rogue-rebalancing), as I think the mod has done a stellar job with them. Plus, it also has a bunch of other content. There are some changes planned to Fighters, Mages, Sorcerers, Clerics and Druids, but these are relatively low-key, as changes to these core classes have the potential to muck up [SCS](https://github.com/Gibberlings3/SwordCoastStratagems), which is a no-no for me. I like only one half of [Refinements](https://github.com/UnearthedArcana/refinements) changes to Sorcerer HLAs, so have to think what to do about the other half; at any rate, SCS compatibility is a must.
-
-This leaves Monks; I like both what KR and [Monk Overhaul](https://forums.beamdog.com/discussion/33618/mod-monk-overhaul) have done with monks but have no firm design in mind yet.
+Currently, I prefer to leave thieves and bards to [Rogue Rebalancing](https://www.shsforums.net/files/category/62-rogue-rebalancing), as I think the mod has done a stellar job with them. Plus, it also has a bunch of other content. Some tweaks to Mage and Sorcerer HLA's are implemented, and there are some changes planned to Fighters, Clerics and Druids, but these are relatively low-key, as changes to these core classes have the potential to muck up [SCS](https://github.com/Gibberlings3/SwordCoastStratagems), which is a no-no for me. This leaves Monks; I like both what KR and [Monk Overhaul](https://forums.beamdog.com/discussion/33618/mod-monk-overhaul) have done with monks but have no firm design in mind yet.
