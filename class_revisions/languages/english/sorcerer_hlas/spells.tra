@@ -1,0 +1,99 @@
+//Description strings.
+@1000 = "Inner Focus"
+@1001 = "High-level Sorcerers can focus their inner energies and develop the passive ability to cast spells without a verbal component. The arcane energies are so focused in their bodies that they only need to concentrate on the desired magical effect and perform a few gestures to cast spells.
+
+This ability can be chosen once."
+
+@1010 = "Spell Casting Speed Increase"
+@1011 = "Choosing this passive ability allows the Sorcerer to cast spells faster than normal. Spell casting speed will be increased by 1 permanently.
+
+This ability can be chosen up to three times. Requires Inner Focus."
+
+@1020 = "Energy Resistance"
+@1021 = "Energy Resistance
+Level: Epic
+School: Alteration
+Range: Personal
+Duration: 1 turn
+Casting Time: 5
+Area of Effect: Caster
+Saving Throw: None
+
+This ability allows the Sorcerer to temporarily tap a great inner power and fight off the effects of opposing magic. For 1 turn, the Sorcerer's resistance to the elements and magic damage is set to 100%, his magic resistance is increased by 25% and he gains +2 bonus to all his saves. This is cumulative with other forms of magic resistance but not with magic spells such as Magic Resistance. The effects of this ability are not dispellable but they can be breached.
+
+This ability can be chosen once. Requires Inner Focus."
+
+@1030 = "Channel Magic"
+@1031 = "Channel Magic
+Level: Epic
+School: Abjuration
+Range: Personal
+Duration: 3 rounds
+Casting Time: 5
+Area of Effect: Caster
+Saving Throw: None
+
+This high level ability allows the Sorcerer to completely protect himself from all spells centered on him and devour them. For a short time the Sorcerer will become immune to death, maze and imprisonment effects. In addition, all spells directed at the caster will be absorbed and this allows previously cast spells to be recalled. The shell cannot be removed by conventional anti-spell protection spells and there is no limit to the number of absorbable spells. To achieve these results, the Sorcerer must concentrate totally on the magical energies around him and will lose spell casting abilities until the duration expires, which is 3 rounds.
+
+This ability can be chosen once. Requires Inner Focus."
+
+@1040 = "Aura Cleansing"
+@1041 = "Aura Cleansing
+Level: Epic
+School: Alteration
+Range: Personal
+Duration: 1 round
+Casting Time: 5
+Area of Effect: Caster
+Saving Throw: None
+
+By using this innate high-level ability the Sorcerer is able, by strength of will, to disperse the spell energy residues on his aura for one round. The Sorcerer can take advantage of this window to unleash a torrent of spells, thanks to his improved spellcasting speed abilities.
+
+This ability can be chosen twice. Requires Spell Casting Speed Increase."
+
+@1050 = "Shatter Magic"
+@1051 = "Shatter Magic
+Level: Epic
+School: Abjuration
+Range: Long
+Duration: 1 turn
+Casting Time: 5
+Area of Effect: 30' feet
+Saving Throw: Negates
+
+By using this high level ability the Sorcerer makes an attempt to break any magical enchantments. All enemies within 30' radius of a designated point will have their Dispelling Screen shattered and must save vs. spell at -2 to avoid the dispelling of all magical effects. In addition, all opponents will have their Magic Resistance lowered by 20% and suffer a -2 penalty to save vs. spells. The effects of this ability last for 1 turn and are not affected by magic resistance.
+
+This ability can be chosen once. Requires Inner Focus."
+
+@1060 = "Shockwave"
+@1061 = "Shockwave
+Level: Epic
+School: Evocation
+Range: Long
+Duration: 1 round
+Casting Time: 5
+Area of Effect: 30' feet
+Saving Throw: Half
+
+Channeling pure magical energies through their bodies, Sorcerers are able to unleash a powerful blast of energy. The Sorcerer focuses his power at a spot somewhere in his line of sight and with a moment's thought, creates a powerful outburst of magical energy at the point. This magic shockwave deals 20d6 magic damage to every enemy in the target area and stuns them for one round. If the victims make their save vs. breath at a penalty of -2, the damage is halved and the stun is avoided.
+
+This ability can be chosen once. Requires Inner Focus."
+
+@1070 = "Magic Orbs"
+@1071 = "Magic Orbs
+Level: Epic
+School: Evocation
+Range: Personal
+Duration: 5 Turns
+Casting Time: 5
+Area of Effect: Caster
+Saving Throw: None
+
+With this high-level ability, the Sorcerer charges his hands with pure magic energy and creates several magic orbs that last for a maximum of 5 turns. A magic orb is a small, glowing sphere of pure energy. The orbs are thrown with a +10 bonus to THAC0, dealing 3d6 magic damage, and are considered to be of +5 enchantment to determine what they can hit. This spell creates 20 orbs and sets the caster's number of attacks per round to 5 as long as the orbs are held.
+
+This ability can be chosen once."
+
+
+//Gain strings.
+@10000 = "Gained Vocalize."
+@10001 = "Gained permanent +1 bonus to casting speed."

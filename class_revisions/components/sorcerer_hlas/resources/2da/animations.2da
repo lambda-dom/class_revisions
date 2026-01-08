@@ -1,0 +1,6 @@
+2DA V1.0
+*
+                install patch   override    destination
+shockwave_a     1       *       0           #suf:a:SORCERER_SHOCKWAVE
+shockwave_b     1       *       0           #suf:b:SORCERER_SHOCKWAVE
+shockwave_c     1       *       0           #suf:c:SORCERER_SHOCKWAVE

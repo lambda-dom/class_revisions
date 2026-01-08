@@ -1,11 +1,11 @@
 //Mage HLA's.
-@5000 = "Arcane Knowledge"
-@5001 = "The time and effort powerful wizards put into the study of complex spells, magical artifacts and the very essence of magic does not happen without rewards. A mage's studies open his mind to new ways of thinking and perceiving the multiverse. His extensive knowledge will give him the answer to even the most obscure problem; the broadening of the mage's mental faculties makes the wizard capable of learning and memorizing an even greater variety of magic. This passive ability grants the mage a permanent +1 point bonus to Intelligence and +15 point bonus to Lore.
+@1000 = "Arcane Knowledge"
+@1001 = "The time and effort powerful wizards put into the study of complex spells, magical artifacts and the very essence of magic does not happen without rewards. A mage's studies open his mind to new ways of thinking and perceiving the multiverse. His extensive knowledge will give him the answer to even the most obscure problem; the broadening of the mage's mental faculties makes the wizard capable of learning and memorizing an even greater variety of magic. This passive ability grants the mage a permanent +1 point bonus to Intelligence and +15 point bonus to Lore.
 
 This ability can be chosen once."
 
-@5010 = "Foresight"
-@5011 = "Foresight
+@1010 = "Foresight"
+@1011 = "Foresight
 Level: Epic
 School: Divination
 Range: Personal
@@ -18,8 +18,8 @@ This high-level ability grants the Mage a powerful sixth sense about imminent ev
 
 This ability can be chosen once."
 
-@5020 = "Aegis"
-@5021 = "Aegis
+@1020 = "Aegis"
+@1021 = "Aegis
 Level: Epic
 School: Abjuration
 Range: Personal
@@ -33,5 +33,5 @@ This high-level Abjuration spell confers the mage very powerful protections agai
 This ability can be chosen once."
 
 //Aux spells.
-@5030 = "Dispelling Screen"
-@5031 = "Self-targeted 1 round dispelling screen."
+@1030 = "Dispelling Screen"
+@1031 = "Self-targeted 1 round dispelling screen."

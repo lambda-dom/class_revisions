@@ -6,6 +6,7 @@
 @5 = "Ranger"
 @6 = "Ranger HLA's"
 @7 = "Mage HLA's"
+@8 = "Sorcerer HLA's"
 @11 = "Weapon Styles"
 
 //Error strings.

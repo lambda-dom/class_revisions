@@ -1,0 +1,6 @@
+2DA V1.0
+*
+                install animation                   patch   over    destination
+shockwave_a     1       #suf:b:SORCERER_SHOCKWAVE   *       0       #suf:a:SORCERER_SHOCKWAVE
+shockwave_b     1       #suf:b:SORCERER_SHOCKWAVE   *       0       #suf:b:SORCERER_SHOCKWAVE
+shockwave_c     1       #suf:c:SORCERER_SHOCKWAVE   *       0       #suf:c:SORCERER_SHOCKWAVE

@@ -79,21 +79,21 @@ DEFINE_ACTION_FUNCTION deduplicate_mage_tables BEGIN
 END
 
 //Patch extra spells.
-DEFINE_ACTION_FUNCTION patch_extra_spells BEGIN
+DEFINE_ACTION_FUNCTION patch_extra_spells_hla BEGIN
     //Patch levels.
-    LAF patch_spell_levels INT_VAR
+    LAF patch_extra_spell_levels INT_VAR
         name = 1000
         descr = 1001
         levels = 0x0f
     STR_VAR spell = "spcl928" END
 
-    LAF patch_spell_levels INT_VAR
+    LAF patch_extra_spell_levels INT_VAR
         name = 1010
         descr = 1011
         levels = 0x70
     STR_VAR spell = "spcl929" END
     
-    LAF patch_spell_levels INT_VAR
+    LAF patch_extra_spell_levels INT_VAR
         name = 1020
         descr = 1021
         levels = 0x180
@@ -113,5 +113,5 @@ END
 
 //Main loop.
 LAF deduplicate_mage_tables END
-LAF patch_extra_spells END
+LAF patch_extra_spells_hla END
 LAF patch_planetar_duration END
