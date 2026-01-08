@@ -17,7 +17,7 @@ note(s):
 * Casting by Intent renamed and dropped original Inner Focus.
 * Add +1 charisma for parity with Arcane Knowledge?
 
-2. Casting Speed: decreases casting speed by 1. Can be chosen twice (vs. 3 times in Refinements) and requires Inner Focus.
+2. Casting Speed: decreases casting speed by 1. Can be chosen 3 times as in Refinements and requires Inner Focus.
 3. Magic Orbs: a version of Energy Blades for the sorcerer. Long range 50, bypasses mr, magic damage type.
 4. Energy Resistance: grants the equivalent of protection from energy, +25% mr and +2 saves for 1 turn. It is breachable, but not dispellable.
 5. Shockwave: comparable in damage to Comet and Dragon's Breath; deals magic damage and stuns (a common immunity) vs. knockback + unconscious of Refinements. Also party-friendly vs. hit everyone.

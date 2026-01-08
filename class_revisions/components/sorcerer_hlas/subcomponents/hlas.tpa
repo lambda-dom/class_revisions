@@ -1,0 +1,24 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/hlas.tpa"
+
+
+//Actions.
+DEFINE_ACTION_FUNCTION patch_sorcerer_hla_tables BEGIN
+    LAF get_component_resources_dir RET resources = dir END
+
+    //Requires deduplicated tables.
+    ACTION_FOR_EACH kit IN
+        "sorcerer"
+        "dragon_disciple"
+    BEGIN
+        LAF patch_hla_table STR_VAR
+            kit = "%kit%"
+            additions = "%resources%/2da/hlas_add.2da"
+            deletions = "%resources%/2da/hlas_delete.2da"
+        END
+    END
+END
+
+//Main loop.
+LAF patch_sorcerer_hla_tables END
