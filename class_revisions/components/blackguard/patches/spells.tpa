@@ -1,7 +1,9 @@
 //Libraries.
 INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/encoders.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/sectypes.tpa"
 
 //Mod libraries.
 INCLUDE "%MOD_FOLDER%/lib/utils.tpa"
@@ -246,38 +248,49 @@ DEFINE_PATCH_FUNCTION blackguard_abyssal_rage STR_VAR destination = "*" BEGIN
     END
 
     PATCH_WITH_SCOPE BEGIN
-        LPF get_spell_res STR_VAR spell = "WIZARD_IMPRISONMENT" RET res = resource END
-        PATCH_IF NOT ("%res%" STRING_EQUAL_CASE "*") BEGIN
-            LPF CLONE_EFFECT INT_VAR
-                check_globals = 0
-                check_headers = 1
-                verbose = 1
-                match_opcode = 101              //Immunity to effect.
-                match_parameter2 = 211          //Imprisonment.
-                multi_match = 1
-                opcode = 206                    //Protection from spell.
-                parameter1 = 0                  //Cleaning.
-                parameter2 = 0
-            STR_VAR
-                resource = "%res%"
-                insert = "below"
-            END
+        LPF CLONE_EFFECT INT_VAR
+            check_globals = 0
+            check_headers = 1
+            verbose = 1
+            match_opcode = 101              //Immunity to effect.
+            match_parameter2 = 211          //Imprisonment.
+            multi_match = 1
+            opcode = 169                    //Prevent icon.
+            parameter1 = 0                  //Cleaning.
+            parameter2 = 79                 //Imprisonment.
+        STR_VAR
+            insert = "below"
+        END
 
-            LPF CLONE_EFFECT INT_VAR
-                check_globals = 0
-                check_headers = 1
-                verbose = 1
-                match_opcode = 101              //Immunity to effect.
-                match_parameter2 = 211          //Imprisonment.
-                multi_match = 1
-                opcode = 169                    //Prevent icon.
-                parameter1 = 0                  //Cleaning.
-                parameter2 = 79                 //Imprisonment.
-            STR_VAR
-                insert = "below"
-            END
-        END ELSE BEGIN
-            PATCH_FAIL "blackguard_abyssal_rage: id of '%res%' not found."
+        LPF encode_spell_res STR_VAR value = "WIZARD_IMPRISONMENT" RET res = return END
+        LPF CLONE_EFFECT INT_VAR
+            check_globals = 0
+            check_headers = 1
+            verbose = 1
+            match_opcode = 101              //Immunity to effect.
+            match_parameter2 = 211          //Imprisonment.
+            multi_match = 1
+            opcode = 206                    //Protection from spell.
+            parameter1 = 0                  //Cleaning.
+            parameter2 = 0
+        STR_VAR
+            resource = "%res%"
+            insert = "below"
+        END
+
+        LPF encode_spell_sectype STR_VAR value = "imprisonment" RET sectype_id = return END
+        LPF CLONE_EFFECT INT_VAR
+            check_globals = 0
+            check_headers = 1
+            verbose = 1
+            match_opcode = 101              //Immunity to effect.
+            match_parameter2 = 211          //Imprisonment.
+            multi_match = 1
+            opcode = 205                    //Protection from sectype.
+            parameter1 = 0                  //Cleaning.
+            parameter2 = sectype_id
+        STR_VAR
+            insert = "below"
         END
     END
 END
