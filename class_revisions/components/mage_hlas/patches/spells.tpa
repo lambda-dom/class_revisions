@@ -1,6 +1,8 @@
 //Libraries.
 INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/encoders.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/patchers.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/spells.tpa"
 
 
@@ -14,24 +16,20 @@ RET_ARRAY spells = references END
 
 
 //Patches.
-DEFINE_PATCH_FUNCTION mage_aegis_a BEGIN
-    LPF get_sectype_id STR_VAR sectype = "k1#dispel" RET sectype = id END
-    PATCH_IF (sectype = 0 - 1) BEGIN
-        PATCH_FAIL "mage_aegis_a: sectype 'k1#dispel' not found in 'msectype.2da'"
-    END
-
-    LPF set_spell_field STR_VAR field = "sectype" value = "%sectype%" END
-END
-
 DEFINE_PATCH_FUNCTION mage_aegis STR_VAR destination = "*" BEGIN
     //Patch references.
-    LPF spell_res STR_VAR spell = "WIZARD_DISPELLING_SCREEN" RET res = resource END
-    PATCH_IF ("%res%" STRING_EQUAL_CASE "*") BEGIN
-        PATCH_FAIL "mage_aegis: spell 'WIZARD_DISPELLING_SCREEN' does not exist."
+    LPF encode_spell_res STR_VAR value = "WIZARD_DISPELLING_SCREEN" RET res = return END
+    LPF ALTER_EFFECT INT_VAR
+        verbose = 1
+        match_opcode = 321                  //remove effects by resource.
+    STR_VAR
+        match_resource = "dsps#res"
+        resource = "%res%"
     END
 
-    LPF ALTER_SPELL_EFFECT INT_VAR
+    LPF ALTER_EFFECT INT_VAR
         verbose = 1
+        match_opcode = 206                  //Protection from spell.
     STR_VAR
         match_resource = "dsps#res"
         resource = "%res%"
