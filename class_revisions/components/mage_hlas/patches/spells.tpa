@@ -1,0 +1,47 @@
+//Libraries.
+INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/spells.tpa"
+
+
+//Initialize
+LAF get_component_resources_dir RET resources = dir END
+
+//Get reference tables.
+LAF load_table_references STR_VAR
+    table = "%resources%/2da/spells.2da"
+RET_ARRAY spells = references END
+
+
+//Patches.
+DEFINE_PATCH_FUNCTION mage_aegis_a BEGIN
+    LPF get_sectype_id STR_VAR sectype = "k1#dispel" RET sectype = id END
+    PATCH_IF (sectype = 0 - 1) BEGIN
+        PATCH_FAIL "mage_aegis_a: sectype 'k1#dispel' not found in 'msectype.2da'"
+    END
+
+    LPF set_spell_field STR_VAR field = "sectype" value = "%sectype%" END
+END
+
+DEFINE_PATCH_FUNCTION mage_aegis STR_VAR destination = "*" BEGIN
+    //Patch references.
+    LPF spell_res STR_VAR spell = "WIZARD_DISPELLING_SCREEN" RET res = resource END
+    PATCH_IF ("%res%" STRING_EQUAL_CASE "*") BEGIN
+        PATCH_FAIL "mage_aegis: spell 'WIZARD_DISPELLING_SCREEN' does not exist."
+    END
+
+    LPF ALTER_SPELL_EFFECT INT_VAR
+        verbose = 1
+    STR_VAR
+        match_resource = "dsps#res"
+        resource = "%res%"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 146                  //Cast spell.
+    STR_VAR
+        resource = "mage_aegis_a"
+        match_resource = "dscr#res"
+        references = "spells"
+    END
+END

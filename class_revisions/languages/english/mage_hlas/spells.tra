@@ -1,0 +1,37 @@
+//Mage HLA's.
+@5000 = "Arcane Knowledge"
+@5001 = "The time and effort powerful wizards put into the study of complex spells, magical artifacts and the very essence of magic does not happen without rewards. A mage's studies open his mind to new ways of thinking and perceiving the multiverse. His extensive knowledge will give him the answer to even the most obscure problem; the broadening of the mage's mental faculties makes the wizard capable of learning and memorizing an even greater variety of magic. This passive ability grants the mage a permanent +1 point bonus to Intelligence and +15 point bonus to Lore.
+
+This ability can be chosen once."
+
+@5010 = "Foresight"
+@5011 = "Foresight
+Level: Epic
+School: Divination
+Range: Personal
+Duration: 1 Turn
+Casting Time: 9
+Area of Effect: Caster
+Saving Throw: None
+
+This high-level ability grants the Mage a powerful sixth sense about imminent events involving himself. Once the spell is cast, the caster receives instantaneous warnings of impending danger or harm. The mage will never be surprised and cannot be backstabbed. In addition, the spell gives him a general idea of what action he might take to best protect himself. For one turn, he receives an insight bonus of +5 to his armor class and a +5 bonus to save vs. breath. Furthermore, for the duration of the spell, he is under True Seeing and cannot be blinded or fooled by invisibility and illusions. These effects cannot be dispelled. This ability is not cumulative with similar spells like Clairvoyance and True Sight.
+
+This ability can be chosen once."
+
+@5020 = "Aegis"
+@5021 = "Aegis
+Level: Epic
+School: Abjuration
+Range: Personal
+Duration: 5 rounds
+Casting Time: 3
+Area of Effect: Caster
+Saving Throw: None
+
+This high-level Abjuration spell confers the mage very powerful protections against hostile magic for a short time. For 5 rounds his magic resistance is increased by 25% and he gains a bonus of +2 to all saves. On the first round, a self-targeted dispelling screen protecting against dispelling effects and breach is erected around the mage, and this screen is refreshed in subsequent rounds until the end of the spell's duration. Although cumulative with other means of increasing magic resistance, it is not cumulative with similar magics like Dispelling Screen or Magic Resistance.
+
+This ability can be chosen once."
+
+//Aux spells.
+@5030 = "Dispelling Screen"
+@5031 = "Self-targeted 1 round dispelling screen."
