@@ -1,0 +1,7 @@
+2DA V1.0
+*
+                        install name    descr   type    lvl flags       school      sectype             book_icon                       abil_icon                       projectile  range   speed   patch           over    destination
+mage_arcane_knowledge   1       5000    5001    special 1   00000000    *           none                #lit:spcl919b                   #lit:spcl919b                   *           1000    1       *               1       #spl:WIZARD_ARCANE_KNOWLEDGE
+mage_aegis_a            1       5030    5031    special 1   00000000    abjurer     none                *                               *                               *           1       1       mage_aegis_a    0       #suf:a:WIZARD_AEGIS
+mage_aegis              1       5010    5011    innate  1   00000000    abjurer     none                #suf:c:WIZARD_DISPELLING_SCREEN #suf:b:WIZARD_DISPELLING_SCREEN *           1       3       mage_aegis      1       #spl:WIZARD_AEGIS
+mage_foresight          1       5020    5021    innate  1   00000000    diviner     divinationattack    #suf:c:WIZARD_CLAIRVOYANCE      #suf:b:WIZARD_CLAIRVOYANCE      *           1       9       *               1       #spl:WIZARD_FORESIGHT
