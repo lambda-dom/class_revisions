@@ -1,6 +1,10 @@
 //Libraries.
 INCLUDE "%WEIDU_LIBRARY_DIR%/components.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers/icons.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers/items.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers/projectiles.tpa"
 INCLUDE "%WEIDU_LIBRARY_DIR%/installers/spells.tpa"
+INCLUDE "%WEIDU_LIBRARY_DIR%/installers/vvcs.tpa"
 
 
 //Initialize.
@@ -8,6 +12,31 @@ LAF get_component_root RET root = dir END
 LAF get_component_resources_dir RET resources_dir = dir END
 LAF get_component_tra_dir RET tra = dir END
 
+
+//Install animations.
+LAF install_icons STR_VAR
+    table = "%resources_dir%/2da/animations.2da"
+    dir = "%resources_dir%/bam"
+END
+
+LAF install_vvcs STR_VAR
+    table = "%resources_dir%/2da/vvcs.2da"
+    dir = "%resources_dir%/vvc"
+END
+
+//Items for spells.
+LAF install_items STR_VAR
+    table = "%resources_dir%/2da/items.2da"
+    dir = "%resources_dir%/itm"
+    tra = "%tra%/items.tra"
+    patches = "%root%/patches/items.tpa"
+END
+
+//Projectiles.
+LAF copy_projectiles STR_VAR
+    table = "%resources_dir%/2da/projectiles.2da"
+    dir = "%resources_dir%/pro"
+END
 
 //Install spells.
 LAF install_spells STR_VAR
