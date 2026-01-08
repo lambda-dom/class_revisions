@@ -18,6 +18,10 @@ LAF load_table_references STR_VAR
     table = "%resources%/2da/spells.2da"
 RET_ARRAY spells = references END
 
+LAF load_table_references STR_VAR
+    table = "%resources%/2da/vvcs.2da"
+RET_ARRAY vvcs = references END
+
 
 //Patches.
 DEFINE_PATCH_FUNCTION sorcerer_inner_focus STR_VAR destination = "*" BEGIN
@@ -116,7 +120,7 @@ DEFINE_PATCH_FUNCTION sorcerer_channel_magic STR_VAR destination = "*" BEGIN
             insert = "below"
         END
 
-        LPF encode_spell_sectype STR_VAR value = "imprisonment" RET sectype_id = return END
+        LPF encode_spell_sectype STR_VAR value = "imprisonment" RET sectype = return END
         LPF CLONE_EFFECT INT_VAR
             check_globals = 0
             check_headers = 1
@@ -126,7 +130,7 @@ DEFINE_PATCH_FUNCTION sorcerer_channel_magic STR_VAR destination = "*" BEGIN
             multi_match = 1
             opcode = 205                    //Protection from sectype.
             parameter1 = 0                  //Cleaning.
-            parameter2 = sectype_id
+            parameter2 = sectype
         STR_VAR
             insert = "below"
         END
@@ -155,5 +159,34 @@ DEFINE_PATCH_FUNCTION sorcerer_magic_orbs STR_VAR destination = "*" BEGIN
         ext = "itm"
         match_resource = "item#res"
         references = "items"
+    END
+END
+
+DEFINE_PATCH_FUNCTION sorcerer_shockwave STR_VAR destination = "*" BEGIN
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 215              //Play visual effect.
+    STR_VAR
+        resource = "shockwave_a"
+        ext = "vvc"
+        match_resource = "vvc1#res"
+        references = "vvcs"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 215              //Play visual effect.
+    STR_VAR
+        resource = "shockwave_b"
+        ext = "vvc"
+        match_resource = "vvc2#res"
+        references = "vvcs"
+    END
+
+    LPF patch_resource_reference INT_VAR
+        match_opcode = 215              //Play visual effect.
+    STR_VAR
+        resource = "shockwave_c"
+        ext = "vvc"
+        match_resource = "vvc3#res"
+        references = "vvcs"
     END
 END

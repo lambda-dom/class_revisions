@@ -4,7 +4,7 @@ This component tweaks existing HLA's and adopts more than half of [Refinements](
 
 # A. HLA's.
 
-Sorcerers loose all mage HLA's, except extra spells, and gets Sorcerer specific HLA's, with the exception of Summon Planetar, for which I have found no good replacement.
+Sorcerers loose all mage HLA's and gets Sorcerer specific HLA's, with the exception of Extra Spells andSummon Planetar (for which I have found no good replacement).
 
 note(s): possibilities:
 * one idea is to add an adamantine golem with a longer duration of 8 hours. The problem is that the tome of the golem already gives one golem. Another option is to shift the boneguard from Kaza to the Sorcerer, but the problem is that the boneguard is more suitable for a necromancer. Another option is to tweak the planetar.
