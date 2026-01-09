@@ -1,4 +1,4 @@
 2DA V1.0
 *
             install name    descr   id_name id_desc type    proficiency flags       inventory_icon  ground_icon description_icon    price   stack   lore    weight  enchant patch       override    destination
-magic_orb   1       1000    1001    *       *       dart    dart        0010000000  #lit:iserious   *           *                   0       20      0       0       5       magic_orb   0           #lit:dlmagorb
+magic_orb   1       1000    1001    *       *       *       *           0010000000  #lit:iserious   *           *                   0       20      0       0       5       magic_orb   0           #lit:dlmagorb
